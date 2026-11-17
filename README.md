@@ -12,7 +12,7 @@ Data pipeline behind the GB grid connection queue figures on www.benzene-group.c
 ```
 mkdir -p out
 python3 -I scripts/build.py inputs/tec-register-13-november-2026.csv inputs/REPD_Publication_Q3_2026.csv inputs/cfd_contract_portfolio_status.csv out reference/pypsa-gb
-python3 -I scripts/make_page.py out
+cp reference/ni.json out/ && python3 -I scripts/make_page.py out
 python3 -I scripts/update_home.py out site
 ```
 `build.py` writes `out/platform.json`; `make_page.py` builds the queue map; `update_home.py` refreshes the marked figures in `site/index.html` and `site/llms.txt` and prints what changed.
@@ -21,3 +21,6 @@ python3 -I scripts/update_home.py out site
 - Figures come only from the opened primary sources above.
 - If any headline figure moves by more than 10%, the refresh holds and asks for a human check before publishing.
 - No em or en dashes in public text (the updater refuses to write them).
+
+## Twice-weekly refresh
+`python3 -I scripts/refresh.py` reads the newest TEC register through NESO's datastore API, rebuilds, and writes `out/refresh.json` (status `no_new_register`, `ready` or `hold`), `out/home.json` (homepage figures) and `out/map_pairs.json` (small verified edits that turn `published/queue-map.html`, the exact live map page, into the new one). After publishing, copy `out/index.html` to `published/queue-map.html` and commit.

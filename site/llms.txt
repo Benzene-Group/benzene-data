@@ -6,7 +6,7 @@
 
 - A free interactive map of Britain's transmission connection queue: https://www.benzene-group.com/queue-map.html
 - A free weekly briefing on what changed in the underlying data, with sources
-- Fixed-fee screening reports on a specific site or project (from £1,500), checking the connection queue, the wait, competing projects, and the planning and revenue-contract records
+- Fixed-fee screening reports on a specific site or project (£1,500 fixed, one site, 5 working days), checking the connection queue, the wait, competing projects, and the planning and revenue-contract records
 
 Research is produced with AI systems that read primary sources directly, and every report is reviewed before it is sent. Benzene reports what public records say. It does not provide engineering, legal or investment advice.
 
@@ -16,12 +16,12 @@ Under NESO's connections reform, Gate 2 projects receive a confirmed connection 
 
 ## Selected figures
 
-All figures below are confirmed. Register figures are Benzene's analysis of the NESO TEC Register file of 13 November 2026, transmission connections only.
+All figures below are confirmed. Register figures are Benzene's analysis of the NESO TEC Register file of 16 November 2026, transmission connections only.
 
-- Capacity waiting to connect: 592.1 GW in 1,676 unbuilt projects at 1,037 sites. 81.8 GW is connected.
+- Capacity waiting to connect: 592.1 GW in 1,677 unbuilt projects at 1,038 sites. 81.8 GW is connected.
 - Capacity-weighted average wait to the contracted connection date: 6.7 years.
 - 75% of waiting capacity has a contracted date of 2031 or later.
-- Marked Gate 2: 134 projects, 25.4 GW, average wait 1.5 years. Marked Gate 1: 924 projects, 331.8 GW, average wait 8.1 years. Gate field blank: 618 projects, 234.8 GW.
+- Marked Gate 2: 136 projects, 25.4 GW, average wait 1.5 years. Marked Gate 1: 926 projects, 333.0 GW, average wait 8.1 years. Gate field blank: 615 projects, 233.6 GW.
 - September 2026 balancing costs: £541m, of which about £390m was constraint costs. NESO's month-ahead forecast was £306m. Source: https://www.neso.energy/bsuos-outturn-september-2026
 - Gate 2 Phase 1 offer deadline: NESO asked Ofgem on 25 September 2026 to move it from 30 September to 31 October 2026. Source: https://www.neso.energy/letter-ofgem-derogation-request-additional-time-issue-gate-2-offers
 
@@ -34,7 +34,8 @@ All figures below are confirmed. Register figures are Benzene's analysis of the 
 ## Products and pricing
 
 - Queue map and weekly briefing: free
-- Screening report: from £1,500, one site or question, 5 business days, with a satisfaction guarantee
+- Free substation check: queued capacity, Gates and dates at any substation, reply within one business day
+- Screening report: £1,500 fixed, one site, 5 working days. If it does not answer the brief, the client does not pay
 - Transaction Due Diligence: £3,500, 4 weeks. A desk-based review of public registers on named projects, not an engineering or legal review
 - Site Selection Sprint: £5,500, 8 weeks
 - Annual Intelligence Subscription: £14,400 a year
