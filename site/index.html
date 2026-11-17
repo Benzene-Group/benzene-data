@@ -18,11 +18,11 @@
 <meta property="og:url" content="https://www.benzene-group.com/">
 <meta property="og:site_name" content="Benzene">
 <meta property="og:title" content="Benzene | UK Grid Connection Intelligence">
-<meta property="og:description" content="Know whether a site can connect to the grid, and when, before you spend money on it. Built from NESO's connection register and other primary public sources.">
+<meta property="og:description" content="Know whether a UK site can connect to the grid, and when, before you spend money on it. Benzene reads NESO's connection register, planning and CfD records and tells you what they mean for a specific site.">
 <meta property="og:image" content="https://www.benzene-group.com/benzene-og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Benzene | UK Grid Connection Intelligence">
-<meta name="twitter:description" content="Know whether a site can connect to the grid, and when, before you spend money on it.">
+<meta name="twitter:description" content="Know whether a UK site can connect to the grid, and when, before you spend money on it. Benzene reads NESO's connection register, planning and CfD records and tells you what they mean for a specific site.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root {
@@ -209,22 +209,30 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .stat .v { font-size: 24px }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
+a.sig { color: inherit; text-decoration: none; transition: border-color .15s }
+a.sig:hover { border-color: var(--accent) }
+a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
+.nav-links a[aria-current="page"] { color: var(--fg); font-weight: 500 }
+.foot-links { display: flex; flex-wrap: wrap; gap: 6px 18px; width: 100%; margin-bottom: 8px }
+.foot-links a { color: var(--fg-2); text-decoration: none }
+.page-head { padding-block: 48px 8px; border-bottom: 0 }
 </style>
 </head>
 <body>
 
+<body>
+
 <nav>
   <div class="wrap nav-inner">
-    <a href="#" class="logo" aria-label="Benzene home">
+    <a href="/" class="logo" aria-label="Benzene home">
       <svg width="34" height="34" viewBox="0 0 28 28" fill="none" aria-hidden="true"><polygon points="14.00,1.60 24.74,7.80 24.74,20.20 14.00,26.40 3.26,20.20 3.26,7.80" fill="none" stroke="#07738d" stroke-width="2.00" stroke-linejoin="round"/><line x1="15.27" y1="5.56" x2="20.68" y2="8.68" stroke="#009fc0" stroke-width="2.00" stroke-linecap="round"/><line x1="20.68" y1="19.32" x2="15.27" y2="22.44" stroke="#009fc0" stroke-width="2.00" stroke-linecap="round"/><line x1="6.05" y1="17.12" x2="6.05" y2="10.88" stroke="#009fc0" stroke-width="2.00" stroke-linecap="round"/></svg>
       Benzene
     </a>
     <div class="nav-links">
-      <a href="#why">Why it matters</a>
-      <a href="#gates">Gates explained</a>
       <a href="/queue-map.html">Queue map</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" class="btn">Get in touch</a>
+      <a href="/how-it-works.html">How it works</a>
+      <a href="/pricing.html">Services and pricing</a>
+      <a href="#contact" class="btn">Free substation check</a>
     </div>
   </div>
 </nav>
@@ -257,134 +265,30 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   </div>
 </header>
 
-<section id="why">
+<section id="start">
   <div class="wrap">
-    <p class="eyebrow">Why it matters</p>
-    <h2>A bad grid date costs money long before anyone notices</h2>
-    <p class="lead">Land options, surveys and planning applications are paid for up front. If the site cannot connect for ten years, that money is tied up or lost, and someone signed off on it. The answer is in public records, but it is spread across registers that few people have time to read. A short, sourced report means the decision rests on evidence, not on a guess.</p>
-    <div class="cards3">
-      <div class="card">
-        <div class="num">1</div>
-        <h3>Drop weak sites early</h3>
-        <div class="cmp">
-          <div><b>Today</b>Download a 2,000-row spreadsheet and filter it by hand, or apply and wait months for an offer.</div>
-          <div class="new"><b>With Benzene</b>The queue, the wait and the competition at the substations near your site, in one report.</div>
-        </div>
-        <p class="so">So what: you stop paying for sites that cannot connect in time.</p>
-      </div>
-      <div class="card">
-        <div class="num">2</div>
-        <h3>See who is ahead of you</h3>
-        <div class="cmp">
-          <div><b>Today</b>Competing projects are buried in the register, under company names that change.</div>
-          <div class="new"><b>With Benzene</b>Every project at the substation, its size, its Gate, its date and who holds it.</div>
-        </div>
-        <p class="so">So what: you know your real place in the line before you negotiate land or finance.</p>
-      </div>
-      <div class="card">
-        <div class="num">3</div>
-        <h3>Check the dates you rely on</h3>
-        <div class="cmp">
-          <div><b>Today</b>A developer's stated date, a news story, or nothing at all.</div>
-          <div class="new"><b>With Benzene</b>The register date set against the planning record, the revenue contract and the grid works it depends on.</div>
-        </div>
-        <p class="so">So what: you catch a date that has drifted before it costs you. In one project we checked, three public sources gave dates more than three years apart.</p>
-      </div>
+    <p class="eyebrow">Start here</p>
+    <h2>Three ways in</h2>
+    <div class="signals">
+      <a class="sig" href="/queue-map.html">
+        <span class="when">Free tool</span>
+        <div class="big">Queue map</div>
+        <p>Every transmission connection site in Britain: how much is waiting, the Gate 1 and Gate 2 split, and the contracted dates.</p>
+        <span class="go">Open the map &rarr;</span>
+      </a>
+      <a class="sig" href="/how-it-works.html">
+        <span class="when">Explained</span>
+        <div class="big">How it works</div>
+        <p>Why a grid date costs money, what Gate 1 and Gate 2 really mean, and where every figure we publish comes from.</p>
+        <span class="go">Read how it works &rarr;</span>
+      </a>
+      <a class="sig" href="/pricing.html">
+        <span class="when">Services</span>
+        <div class="big">From &pound;0</div>
+        <p>Start with a free substation check. Take a fixed-fee screening report when you need the full picture.</p>
+        <span class="go">See services and pricing &rarr;</span>
+      </a>
     </div>
-    <div class="roi">
-      <p><strong>A screening report costs £1,500, fixed.</strong> Set that against months of option payments, surveys and a planning application on a site that cannot connect. If the report does not answer the brief, you do not pay.</p>
-      <a href="#contact" class="btn">Ask about a site</a>
-    </div>
-    <div class="calc" id="calc">
-      <div>
-        <h3>What would a late grid date cost you?</h3>
-        <p class="hint">Put in your own figures. Nothing is sent anywhere; the sum runs in your browser.</p>
-      </div>
-      <div class="fields">
-        <label>Holding costs per month (£)<input id="cMonth" type="number" inputmode="numeric" min="0" step="100" placeholder="e.g. option payments, consultants"></label>
-        <label>Delay to the grid date (years)<input id="cYears" type="number" inputmode="decimal" min="0" step="0.5" placeholder="e.g. 3"></label>
-      </div>
-      <p class="out" id="cOut" aria-live="polite">Enter both figures to see the total.</p>
-    </div>
-  </div>
-</section>
-
-<section id="gates" class="band">
-  <div class="wrap">
-    <p class="eyebrow">Gates explained</p>
-    <h2>Gate 1, Gate 2 and blank: what the labels in the register mean</h2>
-    <p class="lead">Since connections reform, NESO sorts the queue by whether a project is ready and needed. The label tells you how firm a project's date and place in the queue are. Think of it as the difference between a reserved seat and a standby ticket.</p>
-    <div class="gates">
-      <div class="gate" style="--gc: var(--g2)">
-        <div class="name"><h3>Gate 2</h3><span class="gnum">firm</span></div>
-        <p class="means">A firm offer, for projects that showed NESO they are ready (for example, land secured) and needed for the 2030 clean power plan.</p>
-        <ul><li>Confirmed connection date</li><li>Confirmed connection point</li><li>Secure place in the reordered queue</li></ul>
-        <p class="like">Like a reserved seat. <span>You know where you sit and when the show starts.</span></p>
-        <p class="fig"><strong><!--f:n_g2-->136<!--/f--></strong> unbuilt projects, <strong><!--f:gw_g2-->25.4<!--/f--> GW</strong>. Average wait <!--f:wait_g2-->1.5<!--/f--> years.</p>
-      </div>
-      <div class="gate" style="--gc: var(--g1)">
-        <div class="name"><h3>Gate 1</h3><span class="gnum">indicative</span></div>
-        <p class="means">A holding position for projects not yet ready or needed. They can apply for Gate 2 later.</p>
-        <ul><li>Indicative date only, which can move</li><li>Indicative location only</li><li class="no">No firm place in the queue</li></ul>
-        <p class="like">Like a standby ticket. <span>You are in the building, but your seat and time can change.</span></p>
-        <p class="fig"><strong><!--f:n_g1-->926<!--/f--></strong> unbuilt projects, <strong><!--f:gw_g1-->333.0<!--/f--> GW</strong>. Average wait <!--f:wait_g1-->8.1<!--/f--> years.</p>
-      </div>
-      <div class="gate" style="--gc: var(--gn)">
-        <div class="name"><h3>Blank</h3><span class="gnum">not stated</span></div>
-        <p class="means">The register's Gate field is empty. The register does not say why, so we do not treat these as either gate.</p>
-        <ul><li class="no">Status not stated in the register</li><li class="no">Ask the project or NESO before relying on it</li></ul>
-        <p class="like">No ticket shown. <span>The register does not say which kind it holds.</span></p>
-        <p class="fig"><strong><!--f:n_gn-->615<!--/f--></strong> unbuilt projects, <strong><!--f:gw_gn-->233.6<!--/f--> GW</strong>.</p>
-      </div>
-    </div>
-    <p class="src"><span class="tag c">Confirmed</span>Definitions: <a href="https://www.neso.energy/news/connections-reform-key-unlocking-gb-growth" target="_blank" rel="noopener">NESO, connections reform</a>. Figures: our analysis of the NESO TEC Register, <!--f:tec_date-->16 November 2026<!--/f-->.</p>
-    <h3 style="margin-top:40px">When the queue is due to connect</h3>
-    <p style="color:var(--fg-2);margin-top:6px;max-width:70ch">Capacity by contracted connection year. Gate 2 projects are mostly due by 2029 (<!--f:g2by2029-->87<!--/f-->% of Gate 2 capacity). Most of the rest is dated 2031 or later.</p>
-    <div class="chartbox"><svg id="chart" viewBox="0 0 640 260" role="img" aria-label="Stacked columns of capacity waiting to connect by contracted year, split by Gate 2, Gate 1 and blank"></svg></div>
-    <div class="legend"><span><i style="background:var(--g2)"></i>Gate 2</span><span><i style="background:var(--g1)"></i>Gate 1</span><span><i style="background:var(--gn)"></i>Blank</span></div>
-  </div>
-</section>
-
-<section id="who">
-  <div class="wrap">
-    <p class="eyebrow">Who it is for</p>
-    <h2>Pick the question you are trying to answer</h2>
-    <p class="lead">Open the one that sounds like you.</p>
-    <details class="drop" open>
-      <summary><h3>Solar, wind and battery developers</h3><span class="q">"Which of my sites can actually connect, and when?"</span></summary>
-      <div class="body">
-        <ul><li>The queue, wait and Gate mix at the substations near each site</li><li>Competing projects, their size, date and owner</li><li>Planning and revenue-contract status of the projects ahead of you</li></ul>
-        <p class="prod">Screening report, £1,500 fixed. Several sites: Site Selection Sprint.</p>
-      </div>
-    </details>
-    <details class="drop">
-      <summary><h3>Land agents and planning consultants</h3><span class="q">"Is this landowner's site worth an option?"</span></summary>
-      <div class="body">
-        <ul><li>A plain answer on grid prospects before your client signs anything</li><li>How crowded the nearest connection points are, and how far out the dates run</li><li>Sources cited, so you can pass the findings on to your client</li></ul>
-        <p class="prod">Screening report, £1,500 fixed.</p>
-      </div>
-    </details>
-    <details class="drop">
-      <summary><h3>Lawyers and buyers on a transaction</h3><span class="q">"Does this project's connection date stand up?"</span></summary>
-      <div class="body">
-        <ul><li>Register, planning and CfD records checked against each other for named projects</li><li>Where the public dates disagree, and what to ask the seller</li><li>A desk-based review of public registers, not an engineering or legal review</li></ul>
-        <p class="prod">Transaction Due Diligence, £3,500.</p>
-      </div>
-    </details>
-    <details class="drop">
-      <summary><h3>Investors and funds</h3><span class="q">"What changed in the queue this week that affects our assets?"</span></summary>
-      <div class="body">
-        <ul><li>Changes in the register on the projects and substations you care about</li><li>A weekly briefing with every figure sourced and tagged</li><li>Reports on demand across a portfolio</li></ul>
-        <p class="prod">Annual Intelligence Subscription.</p>
-      </div>
-    </details>
-    <details class="drop">
-      <summary><h3>Large demand users, including data centres</h3><span class="q">"Where could a large new demand connect?"</span></summary>
-      <div class="body">
-        <ul><li>How crowded the connection points are in the areas you are considering</li><li>Which projects already hold capacity there, and with what dates</li></ul>
-        <p class="prod">Screening report or Site Selection Sprint.</p>
-      </div>
-    </details>
   </div>
 </section>
 
@@ -419,72 +323,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   </div>
 </section>
 
-<section id="pricing">
-  <div class="wrap">
-    <p class="eyebrow">Pricing</p>
-    <h2>Start free. Pay only when you want the full picture.</h2>
-    <p class="lead">The queue map and the weekly briefing are free too. Paid work is a fixed fee, agreed before we start.</p>
-    <div class="offer2">
-      <div class="plan">
-        <span class="pname">Free substation check</span>
-        <span class="price">£0</span>
-        <span class="dur">Any substation, site or postcode. Reply within 1 business day.</span>
-        <ul class="incl"><li>How much capacity is queued there</li><li>Which Gates those projects hold</li><li>Their contracted connection dates</li></ul>
-        <a href="#contact" class="btn alt">Ask for a free check</a>
-      </div>
-      <div class="arrow" aria-hidden="true">&rarr;</div>
-      <div class="plan main">
-        <span class="pname">Screening report</span>
-        <span class="price">£1,500 <small>fixed, one site</small></span>
-        <span class="dur">Delivered in 5 working days.</span>
-        <ul class="incl"><li>The queue, the wait and the Gate mix at the substations near your site</li><li>Every competing project: size, date and who holds it</li><li>Planning and CfD status of the projects ahead of you</li><li>What could move your date, and what to ask NESO or the seller</li><li>Every source cited, plus a scoping call and a 30-minute follow-up</li></ul>
-        <p class="promise-sm"><strong>If it does not answer your brief, you do not pay.</strong></p>
-        <a href="#contact" class="btn">Book a screening report</a>
-      </div>
-    </div>
-    <p class="nudge">NESO updates the connection register every Tuesday and Friday, so the queue at your substation can change within days. Check it before you commit money.</p>
-    <details class="drop more">
-      <summary><h3>Need more? Larger pieces of work</h3><span class="q">Due diligence, multi-site searches and ongoing support</span></summary>
-      <div class="body">
-        <ul class="morelist">
-          <li><b>Transaction Due Diligence, £3,500, 4 weeks.</b> Connection, planning and CfD records checked for the named projects in a deal. A desk-based review of public registers, not an engineering or legal review.</li>
-          <li><b>Site Selection Sprint, £5,500, 8 weeks.</b> Compare several areas or sites, with weekly updates on competing projects while you decide.</li>
-          <li><b>Annual subscription, £14,400 a year.</b> Briefing for up to three people, eight reports, a monthly call and priority turnaround.</li>
-        </ul>
-        <p><a href="#contact">Tell us what you need</a> and we will scope it with you.</p>
-      </div>
-    </details>
-  </div>
-</section>
-
-<section id="how" class="band">
-  <div class="wrap how">
-    <div>
-      <p class="eyebrow">How we work</p>
-      <h2>Primary sources, tagged and checked before release</h2>
-      <p class="lead">We read the registers themselves, not the press. Our research is produced with AI systems that read and cross-reference the source files, and every report is reviewed before it is sent.</p>
-      <div class="tags">
-        <div><span class="tag c">Confirmed</span> read directly from a primary source, such as a register or a regulator's letter</div>
-        <div><span class="tag r">Reported</span> from a named secondary source, not yet confirmed at source</div>
-        <div><span class="tag i">Inferred</span> our own deduction from confirmed facts, with the reasoning shown</div>
-      </div>
-      <p class="src">We report what public records say. We do not give engineering, legal or investment advice.</p>
-    </div>
-    <div>
-      <h3>Sources we read</h3>
-      <div class="pills"><span>NESO TEC Register</span><span>NESO connections reform</span><span>NESO balancing costs</span><span>Ofgem decisions</span><span>Renewable Energy Planning Database</span><span>CfD register (LCCC)</span><span>Council and Scottish Government planning records</span><span>Companies House</span></div>
-      <details class="drop" style="margin-top:22px">
-        <summary><h3>In plain English</h3></summary>
-        <div class="body">
-          <p>New wind farms, solar parks and batteries cannot plug into the grid whenever they like. They join a queue, and right now about <!--f:queued_gw-->592<!--/f--> GW of projects are in it.</p>
-          <p>The queue is public, but it lives in large spreadsheets and documents that change every week. We read them, work out what changed, and tell you what it means for the site you care about, with the sources attached so you can check.</p>
-          <p>And yes, we named a grid company after a molecule.</p>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
 <section id="contact" class="contact">
   <div class="wrap">
     <p class="eyebrow">Contact</p>
@@ -502,7 +340,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 </section>
 
 <footer>
-  <div class="wrap"><span><strong style="color:var(--fg-2)">Benzene</strong> UK grid connection intelligence &middot; &copy; 2026 &middot; Tunbridge Wells, UK</span><span>info@benzene-group.com</span></div>
+  <div class="wrap"><nav class="foot-links" aria-label="Site"><a href="/">Home</a><a href="/queue-map.html">Queue map</a><a href="/how-it-works.html">How it works</a><a href="/pricing.html">Services and pricing</a></nav><span><strong style="color:var(--fg-2)">Benzene</strong> UK grid connection intelligence &middot; &copy; 2026 &middot; Tunbridge Wells, UK</span><span>info@benzene-group.com</span></div>
 </footer>
 
 <script>
@@ -512,7 +350,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   var C = ['#f2a7ad', '#e47883', '#cc4a5a', '#a3303f', '#6b1d2a'];
   var m = '<path d="' + P + '" fill="#dde5ee" stroke="#dde5ee" stroke-width=".8"/><g fill-opacity=".9" stroke="#fff" stroke-width=".5">';
   for (var i = 0; i < D.length; i += 4) m += '<circle cx="' + D[i] + '" cy="' + D[i + 1] + '" r="' + D[i + 2] / 10 + '" fill="' + C[D[i + 3]] + '"/>';
-  document.getElementById('minimap').innerHTML = m + '</g>';
+  var mmEl = document.getElementById('minimap'); if (mmEl) mmEl.innerHTML = m + '</g>';
 
   var Y = /*Y*/[['2026 or earlier', 3658, 1362, 11681], ['2027', 7221, 3878, 4568], ['2028', 7163, 4857, 22116], ['2029', 4179, 9330, 31451], ['2030', 911, 10955, 23351], ['2031', 1265, 26226, 25951], ['2032', 195, 15200, 13754], ['2033', 49, 46972, 31847], ['2034', 0, 56020, 14797], ['2035', 0, 42476, 23802], ['2036', 0, 21757, 10487], ['2037', 0, 79064, 15566], ['2038', 0, 11871, 3035], ['2039', 0, 3051, 2012]]/*/Y*/;
   var W = 640, H = 260, L = 40, R = 8, T = 22, B = 40, iw = W - L - R, ih = H - T - B, top = /*TOP*/100000/*/TOP*/;
@@ -531,10 +369,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
     var lab = y[0] === '2026 or earlier' ? ['2026', 'or earlier'] : ["'" + y[0].slice(2)];
     lab.forEach(function (t, k) { g += '<text x="' + cx + '" y="' + (H - B + 15 + k * 11) + '" text-anchor="middle">' + t + '</text>'; });
   });
-  document.getElementById('chart').innerHTML = g;
+  var chEl = document.getElementById('chart'); if (chEl) chEl.innerHTML = g;
 })();
 
-document.getElementById('ctaBtn').addEventListener('click', async function() {
+(document.getElementById('ctaBtn') || { addEventListener: function () {} }).addEventListener('click', async function() {
   var btn = this, input = document.getElementById('emailInput'), email = input.value.trim(), site = document.getElementById('siteInput').value.trim();
   if (!email || !email.includes('@')) { input.style.borderColor = '#b4232f'; input.focus(); return; }
   btn.disabled = true; btn.textContent = 'Sending...';
@@ -552,9 +390,10 @@ document.getElementById('ctaBtn').addEventListener('click', async function() {
   document.getElementById('successMsg').style.display = 'block';
   btn.disabled = false; btn.textContent = 'Sent';
 });
-document.getElementById('emailInput').addEventListener('input', function() { this.style.borderColor = ''; });
+(document.getElementById('emailInput') || { addEventListener: function () {} }).addEventListener('input', function() { this.style.borderColor = ''; });
 (function () {
   var m = document.getElementById('cMonth'), y = document.getElementById('cYears'), o = document.getElementById('cOut');
+  if (!m) return;
   function run() {
     var a = parseFloat(m.value), b = parseFloat(y.value);
     if (!(a > 0) || !(b > 0)) { o.textContent = 'Enter both figures to see the total.'; return; }

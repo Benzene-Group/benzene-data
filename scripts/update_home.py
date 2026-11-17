@@ -55,24 +55,28 @@ for s in sorted(S, key=lambda s: s['q']):
     r = 3.2 + 3.3 * (math.sqrt(s['q']) - math.sqrt(qmin)) / ((math.sqrt(qmax) - math.sqrt(qmin)) or 1)
     D += [round(s['x'] / 3990), round(307.3 - s['y'] / 3990), round(r * 10), wbin(s['w'])]
 
-html = open(f'{site}/index.html', encoding='utf-8').read()
+import glob, os
 changes = []
+total, seen = 0, set()
 def sub_f(m):
     k, old = m.group(1), m.group(2)
     new = F[k]
     if new != old:
         changes.append({'figure': k, 'was': old, 'now': new})
     return f'<!--f:{k}-->{new}<!--/f-->'
-html, n = re.subn(r'<!--f:(\w+)-->(.*?)<!--/f-->', sub_f, html)
-assert n >= 15, f'only {n} figure markers found'
-for key, val in (('D', json.dumps(D, separators=(',', ':'))), ('Y', json.dumps(Y, separators=(', ', ', ')).replace('"', "'"))):
-    html, k = re.subn(r'/\*' + key + r'\*/.*?/\*/' + key + r'\*/', lambda m: f'/*{key}*/{val}/*/{key}*/', html, flags=re.S)
-    assert k == 1, f'marker {key} missing'
-html, k = re.subn(r'/\*TOP\*/\d+/\*/TOP\*/', f'/*TOP*/{top}/*/TOP*/', html)
-assert k == 1
-assert '—' not in html and '–' not in html, 'dash found'
-open(f'{site}/index.html', 'w', encoding='utf-8').write(html)
-
+for path in sorted(glob.glob(f'{site}/*.html')):
+    html = open(path, encoding='utf-8').read()
+    html, n = re.subn(r'<!--f:(\w+)-->(.*?)<!--/f-->', sub_f, html)
+    total += n
+    for key, val in (('D', json.dumps(D, separators=(',', ':'))), ('Y', json.dumps(Y, separators=(', ', ', ')).replace('"', "'"))):
+        html, k = re.subn(r'/\*' + key + r'\*/.*?/\*/' + key + r'\*/', lambda m: f'/*{key}*/{val}/*/{key}*/', html, flags=re.S)
+        if k: seen.add(key)
+    html, k = re.subn(r'/\*TOP\*/\d+/\*/TOP\*/', f'/*TOP*/{top}/*/TOP*/', html)
+    if k: seen.add('TOP')
+    assert '\u2014' not in html and '\u2013' not in html, f'dash found in {path}'
+    open(path, 'w', encoding='utf-8').write(html)
+assert total >= 15, f'only {total} figure markers found'
+assert seen == {'D', 'Y', 'TOP'}, f'missing blocks {seen}'
 llms = open(f'{site}/llms.template.txt', encoding='utf-8').read().format(**F_llms)
 open(f'{site}/llms.txt', 'w', encoding='utf-8').write(llms)
 print(json.dumps({'tec_date': d['tec_date'], 'changes': changes, 'chart_top_gw': top // 1000}, indent=1))

@@ -93,8 +93,10 @@ for old in current:
         os.remove(old)
 
 # Payloads for publishing: homepage figures and blocks, llms.txt, and the map page edits
+F = {}
+for pg in sorted(glob.glob('site/*.html')):
+    F.update(dict(re.findall(r'<!--f:(\w+)-->(.*?)<!--/f-->', open(pg, encoding='utf-8').read())))
 h = open('site/index.html', encoding='utf-8').read()
-F = dict(re.findall(r'<!--f:(\w+)-->(.*?)<!--/f-->', h))
 B = {k: re.search(r'/\*' + k + r'\*/(.*?)/\*/' + k + r'\*/', h, re.S).group(1) for k in ('D', 'Y', 'TOP')}
 json.dump({'F': F, 'B': B, 'llms': open('site/llms.txt', encoding='utf-8').read()},
           open('out/home.json', 'w', encoding='utf-8'), ensure_ascii=False)
