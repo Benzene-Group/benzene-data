@@ -1,0 +1,15 @@
+HEAD = """<script>(function(){try{var t=localStorage.getItem('bz-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>"""
+BTN = """<button type="button" class="themebtn" id="themebtn" aria-label="Switch between light and dark mode" title="Light or dark mode"><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>"""
+JS = """<script>(function(){var b=document.getElementById('themebtn');if(!b)return;b.addEventListener('click',function(){var r=document.documentElement,c=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'),n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('bz-theme',n)}catch(e){}if(window.bzThemeChanged)window.bzThemeChanged(n)})})();</script>"""
+def logo(s):
+    return (s.replace('stroke="#07738d"', 'style="stroke:var(--ring)"')
+             .replace('stroke="#009fc0"', 'style="stroke:var(--bond)"'))
+SHARE_BTN = """<button type="button" class="sharebtn" id="sharebtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg><span id="sharetxt">Share this page</span></button>"""
+SHARE_CSS = """.sharebtn { display: inline-flex; align-items: center; gap: 7px; background: transparent; border: 1px solid var(--line-2); border-radius: 6px; color: var(--fg-2); font: 500 13px var(--sans); padding: 6px 12px; cursor: pointer }
+.sharebtn:hover { color: var(--fg); border-color: var(--fg-3) }
+"""
+SHARE_JS = """<script>(function(){var b=document.getElementById('sharebtn');if(!b)return;var s=document.getElementById('sharetxt');b.addEventListener('click',function(){var c=document.querySelector('link[rel=canonical]'),u=(c&&c.href)||location.href.split('#')[0],t=document.title;function done(m){s.textContent=m;setTimeout(function(){s.textContent='Share this page'},4000)}if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}try{navigator.clipboard.writeText(u).then(function(){done('Link copied')},function(){done(u)})}catch(e){done(u)}})})();</script>"""
+OG_EXTRA = """<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Benzene: UK grid connection intelligence">
+<meta name="twitter:image" content="https://www.benzene-group.com/benzene-og.png">"""

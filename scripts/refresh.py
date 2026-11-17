@@ -88,9 +88,11 @@ for c in upd['changes']:
             hold.append(c)
     moves.append(c)
 
+# Keep every register: older files move to archive/tec/ so the queue can be compared over time.
+os.makedirs('archive/tec', exist_ok=True)
 for old in current:
     if old != f'inputs/{name}':
-        os.remove(old)
+        shutil.move(old, os.path.join('archive/tec', os.path.basename(old)))
 
 # Payloads for publishing: homepage figures and blocks, llms.txt, and the map page edits
 F = {}
