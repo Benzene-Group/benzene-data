@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK Grid Connection Queue Map | Benzene</title>
+<meta name="robots" content="index, follow">
+<meta name="description" content="Free interactive map of Great Britain's transmission connection queue from the NESO TEC Register: capacity waiting at each substation, Gate 1 and Gate 2 status, and average wait to connect.">
+<link rel="canonical" href="https://www.benzene-group.com/queue-map.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.benzene-group.com/queue-map.html">
+<meta property="og:title" content="UK Grid Connection Queue Map | Benzene">
+<meta property="og:description" content="Where Britain's grid connection queue is, and how long the wait is. Free, from the NESO TEC Register.">
+<meta property="og:image" content="https://www.benzene-group.com/benzene-og.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: full-width dark bands, 1180px inner; map left, site detail right; tables below. Single dark theme, matching benzene-group.com. */
+:root {
+  color-scheme: light;
+  --bg: #f6f8fb; --bg-2: #ffffff; --card: #ffffff; --land: #dde5ee; --line: #dbe3ec; --line-2: #c9d5e1;
+  --fg: #13243a; --fg-2: #3c4f66; --fg-3: #5d6f85;
+  --accent: #07738d; --accent-bg: #e3f5f9; --hover: #eef3f8;
+  --g2: #0e8fae; --g1: #c27c00; --gn: #7a6ee0;
+  --w1: #f2a7ad; --w2: #e47883; --w3: #cc4a5a; --w4: #a3303f; --w5: #6b1d2a;
+  --sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+* { box-sizing: border-box }
+[hidden] { display: none !important }
+html, body { margin: 0 }
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.55 }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+a { color: var(--accent) }
+h1 { font-size: clamp(26px, 4vw, 38px); line-height: 1.15; font-weight: 600; margin: 0 0 10px; text-wrap: balance }
+h2 { font-size: 21px; font-weight: 600; margin: 0 0 6px; text-wrap: balance }
+h3 { font-size: 15px; font-weight: 600; margin: 0 }
+p { margin: 0 }
+.lede { color: var(--fg-2); max-width: 68ch }
+.sub { color: var(--fg-2); max-width: 72ch; margin-bottom: 18px }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums }
+header.top { border-bottom: 1px solid var(--line); background: var(--bg-2) }
+header.top .wrap { padding-block: 28px 26px }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: .02em; margin-bottom: 22px }
+.brand small { font-weight: 400; color: var(--fg-3); letter-spacing: 0 }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px }
+.chip { font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--fg-2); border: 1px solid var(--line-2); border-radius: 3px; padding: 4px 8px }
+.chip.draft { color: #8a5a00; border-color: #e6cf9f }
+.sowhat { margin-top: 18px; padding: 14px 16px; background: var(--accent-bg); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; max-width: 78ch; color: var(--fg) }
+.sowhat b { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-right: 6px }
+.gatekey { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 16px; max-width: 900px }
+.gatekey div { background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--gc); border-radius: 6px; padding: 10px 12px; font-size: 13.5px; color: var(--fg-2); min-width: 0 }
+.gatekey strong { display: block; color: var(--fg); font-size: 14px }
+.brand a { color: inherit; text-decoration: none; display: flex; align-items: center; gap: 10px }
+.brand .home { margin-left: auto; font-size: 13.5px; font-weight: 500; color: var(--accent); text-decoration: none }
+@media (max-width: 700px) { .gatekey { grid-template-columns: minmax(0, 1fr) } }
+section { padding-block: 34px; border-bottom: 1px solid var(--line) }
+.tabs { position: sticky; top: 0; z-index: 7; background: var(--bg); border-bottom: 1px solid var(--line) }
+.tablist { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none }
+.tablist::-webkit-scrollbar { display: none }
+.tablist button { flex: 0 0 auto; background: transparent; border: 0; border-bottom: 2px solid transparent; color: var(--fg-2); font: inherit; font-size: 14px; padding: 13px 12px 11px; cursor: pointer; white-space: nowrap }
+.tablist button:hover { color: var(--fg) }
+.tablist button[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); font-weight: 500 }
+.pane { min-height: 60vh }
+.tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px }
+.tile { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 14px 14px 12px; min-width: 0 }
+.tile .k { font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: var(--fg-3) }
+.tile .v { font-family: var(--mono); font-size: 26px; font-weight: 500; margin-top: 4px; line-height: 1.15 }
+.tile .v small { font-size: 14px; color: var(--fg-2); font-weight: 400 }
+.tile .d { font-size: 12.5px; color: var(--fg-2); margin-top: 4px }
+.tile .sw { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px; vertical-align: 1px }
+.controls { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; margin-bottom: 16px }
+.seg { display: inline-flex; border: 1px solid var(--line-2); border-radius: 6px; overflow: hidden; flex-wrap: wrap }
+.seg button { background: transparent; color: var(--fg-2); border: 0; padding: 8px 12px; font: inherit; font-size: 13.5px; cursor: pointer; border-right: 1px solid var(--line-2) }
+.seg button:last-child { border-right: 0 }
+.seg button[aria-pressed="true"] { background: var(--accent-bg); color: var(--fg) }
+button:focus-visible, input:focus-visible, select:focus-visible, tr[tabindex]:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.search { position: relative; flex: 1 1 260px; max-width: 380px }
+.search input { width: 100%; background: var(--card); border: 1px solid var(--line-2); border-radius: 6px; color: var(--fg); font: inherit; font-size: 14px; padding: 8px 12px }
+.search input::placeholder { color: var(--fg-3) }
+.results { position: absolute; z-index: 6; max-height: 70vh; overflow-y: auto; left: 0; right: 0; top: calc(100% + 4px); background: #fff; box-shadow: 0 8px 24px rgba(19,36,58,.12); border: 1px solid var(--line-2); border-radius: 6px }
+.results button { display: block; width: 100%; text-align: left; background: transparent; border: 0; border-bottom: 1px solid var(--line); color: var(--fg); font: inherit; font-size: 13.5px; padding: 8px 12px; cursor: pointer }
+.results button:last-child { border-bottom: 0 }
+.results button:hover { background: var(--hover) }
+.results small { color: var(--fg-3); display: block }
+.mapgrid { display: grid; grid-template-columns: minmax(0, 540px) minmax(0, 1fr); gap: 22px; align-items: start; scroll-margin-top: 58px }
+.mapbox { position: relative; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; padding: 8px }
+.mapbox svg { display: block; width: 100%; height: auto; touch-action: pan-y; user-select: none; -webkit-user-select: none }
+.mapbox.zoomed svg { touch-action: none; cursor: grab }
+.mapbox.dragging svg { cursor: grabbing }
+.land { fill: var(--land); stroke: var(--land); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-linejoin: round }
+.ni { fill: #eef2f6; stroke: var(--line-2); stroke-width: 1px; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke }
+.nilab { font-family: var(--sans); fill: var(--fg-3); pointer-events: none }
+.dot { fill: currentColor; fill-opacity: .9; stroke: var(--bg-2); stroke-width: 1.5px; vector-effect: non-scaling-stroke; cursor: pointer }
+.dot.rough { fill-opacity: .22; stroke: currentColor; stroke-width: 1.4px; stroke-dasharray: 3.5 2.5 }
+.dot.sel { stroke: #fff; stroke-width: 2.5px; stroke-dasharray: none }
+.ctx { fill: var(--fg-3); fill-opacity: .55; cursor: pointer }
+.pl { fill: none; stroke-linecap: round; stroke-width: 2.6px; vector-effect: non-scaling-stroke; pointer-events: none; opacity: .85 }
+.mapbox.close .pl { stroke-width: 4.5px }
+.lab { font-family: var(--sans); font-weight: 500; fill: var(--fg); stroke: var(--bg-2); paint-order: stroke; stroke-linejoin: round; pointer-events: none }
+.zoom { position: absolute; top: 14px; right: 14px; display: flex; flex-direction: column; gap: 6px; z-index: 3 }
+.zoom button { min-width: 36px; height: 36px; padding: 0 8px; background: #fff; color: var(--fg); border: 1px solid var(--line-2); border-radius: 6px; font: inherit; font-size: 17px; line-height: 1; cursor: pointer; box-shadow: 0 2px 6px rgba(19,36,58,.1) }
+.zoom button#zreset { font-size: 12px }
+.zoom button:disabled { opacity: .4; cursor: default }
+.hint { font-size: 12.5px; color: var(--fg-3); margin-top: 8px }
+.field { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; color: var(--fg-2); min-width: 0 }
+.field.grow { flex: 1 1 240px; max-width: 420px }
+.field select { background: var(--card); border: 1px solid var(--line-2); border-radius: 6px; color: var(--fg); font: inherit; font-size: 14px; padding: 7px 10px; max-width: 100% }
+.field input[type=range] { width: 100%; accent-color: var(--accent); margin: 6px 0 0 }
+.field output { color: var(--fg); font-size: 13.5px }
+.check { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--fg-2); cursor: pointer }
+.check input { width: 16px; height: 16px; accent-color: var(--accent) }
+.viewbar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: 13.5px; color: var(--fg-2); margin-bottom: 14px; min-height: 30px }
+.viewbar b { color: var(--fg); font-weight: 500 }
+.btn { background: transparent; color: var(--accent); border: 1px solid var(--line-2); border-radius: 6px; font: inherit; font-size: 13px; padding: 5px 10px; cursor: pointer }
+.btn:hover { background: var(--hover) }
+.lnk { background: none; border: 0; padding: 0; font: inherit; color: var(--fg-3); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 2px; cursor: pointer; text-align: left }
+.lnk:hover { color: var(--accent) }
+.rh { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); padding: 7px 12px 3px; border-bottom: 1px solid var(--line) }
+tr.mine td { background: var(--accent-bg) }
+tr.mine td:first-child { box-shadow: inset 3px 0 0 var(--accent) }
+.legend i.sm { width: 7px; height: 7px; vertical-align: 0 }
+.legend i.dash { background: transparent; border: 1.5px dashed var(--w3) }
+.tip { position: absolute; pointer-events: none; z-index: 4; background: #fff; border: 1px solid var(--line-2); border-radius: 6px; padding: 8px 10px; font-size: 12.5px; max-width: 240px; box-shadow: 0 6px 20px rgba(19,36,58,.16) }
+.tip b { display: block; font-weight: 600; margin-bottom: 2px }
+.tip span { color: var(--fg-2); display: block }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 12.5px; color: var(--fg-2); align-items: center }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 5px; vertical-align: -1px }
+.legend i.sq { border-radius: 2px }
+.note { font-size: 13px; color: var(--fg-2); margin-top: 12px; max-width: 72ch }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 18px; min-width: 0 }
+.panel .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3) }
+.panel h3 { font-size: 20px; margin: 2px 0 2px; overflow-wrap: anywhere }
+.panel .basis { font-size: 12.5px; color: var(--fg-3) }
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 10px; margin: 14px 0 }
+.kv > div { border-top: 1px solid var(--line-2); padding-top: 7px }
+.kv .k { font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--fg-3) }
+.kv .v { font-family: var(--mono); font-size: 17px }
+.split { display: flex; height: 12px; gap: 2px; margin: 4px 0 8px }
+.split span { display: block; height: 100%; border-radius: 2px; min-width: 2px }
+.mini { font-size: 13px; color: var(--fg-2) }
+.mini b { color: var(--fg); font-weight: 500 }
+.scroll { overflow-x: auto }
+.pscroll { max-height: 420px; overflow: auto; border: 1px solid var(--line); border-radius: 6px; margin-top: 12px }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px }
+th { text-align: left; font-weight: 500; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--fg-3); padding: 9px 10px; border-bottom: 1px solid var(--line-2); white-space: nowrap; position: sticky; top: 0; background: var(--card) }
+td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top }
+td.n, th.n { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap }
+td small { display: block; color: var(--fg-3); font-size: 12px }
+tbody tr:last-child td { border-bottom: 0 }
+.tablecard { background: var(--card); border: 1px solid var(--line); border-radius: 6px }
+tr.click { cursor: pointer }
+tr.click:hover td { background: var(--hover) }
+.pill { font-family: var(--mono); font-size: 11px; border-radius: 3px; padding: 2px 6px; white-space: nowrap; border: 1px solid var(--line-2); color: var(--fg-2) }
+.pill.g2 { border-color: var(--g2); color: #08708a }
+.pill.g1 { border-color: var(--g1); color: #8a5a00 }
+.pill.gn { border-color: var(--gn); color: #5a4ec2 }
+.chart svg { display: block; width: 100%; height: auto }
+.chart { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 16px 12px 8px }
+.axis { font-family: var(--mono); font-size: 11px; fill: var(--fg-3) }
+.grid { stroke: var(--line); stroke-width: 1 }
+details { margin-top: 12px }
+summary { cursor: pointer; color: var(--fg-2); font-size: 13.5px }
+.method { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px }
+.method h3 { margin-bottom: 4px }
+.method p, .method li { color: var(--fg-2); font-size: 14px }
+.method ul { margin: 0; padding-left: 18px }
+footer { padding-block: 26px 40px; color: var(--fg-3); font-size: 13px }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between }
+@media (min-width: 901px) { .panel { position: sticky; top: 60px; max-height: calc(100vh - 72px); overflow: auto } }
+@media (max-width: 900px) {
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .mapgrid { grid-template-columns: minmax(0, 1fr) }
+  .method { grid-template-columns: minmax(0, 1fr) }
+}
+@media (prefers-reduced-motion: no-preference) { .dot { transition: opacity .15s } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <a href="/" aria-label="Benzene home"><svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true"><polygon points="14,2 24.4,8 24.4,20 14,26 3.6,20 3.6,8" stroke="#07738d" stroke-width="1.6"/><circle cx="14" cy="14" r="3" fill="#05c8e8"/></svg>
+      <span>Benzene <small>UK grid intelligence</small></span></a>
+      <a class="home" href="/#contact">Free substation check &rarr;</a>
+    </div>
+    <h1>Where Britain's grid connection queue is, and how long the wait is</h1>
+    <p class="lede" id="lede"></p>
+    <p class="sowhat"><b>So what</b>Most capacity in the queue is not due until 2031 or later. Before you pay for land, surveys or planning, find the substation nearest your site below and check how much is queued there and how long it is waiting. Want it checked for you? <a href="/#contact">Ask for a free substation check</a>.</p>
+    <div class="gatekey" aria-label="What the Gate labels mean">
+      <div style="--gc: var(--g2)"><strong>Gate 2: a reserved seat</strong>Confirmed connection date and point, and a secure place in the reordered queue.</div>
+      <div style="--gc: var(--g1)"><strong>Gate 1: a standby ticket</strong>Indicative date and location only. Can apply for Gate 2 later.</div>
+      <div style="--gc: var(--gn)"><strong>No Gate shown</strong>The register's Gate field is blank, so it does not say which.</div>
+    </div>
+    <p class="lede" style="margin-top:10px;font-size:13.5px">Gate definitions from <a href="https://www.neso.energy/news/connections-reform-key-unlocking-gb-growth" target="_blank" rel="noopener">NESO, connections reform</a>. <a href="/#gates">More on the Gates</a>.</p>
+    <div class="chips"><span class="chip" id="asof"></span><span class="chip">Transmission connections only</span></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tiles" id="tiles"></div>
+  </div>
+</section>
+
+<nav class="tabs" id="tabs" aria-label="Sections"><div class="wrap"><div class="tablist" role="tablist" id="tablist"></div></div></nav>
+
+<section id="pane-map" class="pane" role="tabpanel" aria-labelledby="tb-map">
+  <div class="wrap">
+    <h2>Where the queue is</h2>
+    <p class="sub">Each circle is a connection site. Size shows the capacity waiting to connect there. Colour shows the average wait until the contracted connection date. Select a circle to see who is in the queue.</p>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Which projects to show" id="seg"></div>
+      <div class="search">
+        <input id="q" type="search" placeholder="Search a site, project or developer" autocomplete="off" aria-label="Search a site, project or developer">
+        <div class="results" id="results" hidden></div>
+      </div>
+    </div>
+    <div class="controls">
+      <label class="field">Technology
+        <select id="tech" aria-label="Technology"></select>
+      </label>
+      <label class="field grow">Contracted to connect by the end of <output id="yearout" class="mono"></output>
+        <input id="year" type="range" step="1" aria-label="Latest contracted connection year to include">
+      </label>
+      <label class="check"><input id="plan" type="checkbox"> Show planning records</label>
+    </div>
+    <div class="viewbar" id="viewbar" aria-live="polite"></div>
+    <div class="mapgrid" id="mapgrid">
+      <div>
+        <div class="mapbox" id="mapbox">
+          <svg id="map" role="img" aria-label="Map of Great Britain showing connection sites sized by queued capacity and coloured by average wait"><g id="gland"></g><g id="gplan"></g><g id="gdots"></g><g id="glab"></g></svg>
+          <div class="zoom" role="group" aria-label="Map zoom">
+            <button type="button" id="zin" aria-label="Zoom in">+</button>
+            <button type="button" id="zout" aria-label="Zoom out">&minus;</button>
+            <button type="button" id="zreset" aria-label="Show the whole of Great Britain">Reset</button>
+          </div>
+          <div class="tip" id="tip" hidden></div>
+        </div>
+        <p class="hint">Zoom with the buttons, a double-click, or Ctrl and scroll. Drag to move once zoomed in. Site names appear as you zoom.</p>
+        <div class="legend" id="legend"></div>
+        <p class="note">Northern Ireland is drawn but not covered. Its grid is run separately by SONI as part of the all-island electricity market, so its connections are not in the NESO register and Gate 1 and Gate 2 do not apply there.</p>
+        <div class="legend" id="planlegend" hidden></div>
+        <p class="note" id="unmapped"></p>
+        <details><summary id="unsum"></summary><div class="tablecard pscroll" style="margin-top:10px"><table id="untable"></table></div></details>
+      </div>
+      <div class="panel" id="panel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="pane-nodes" class="pane" role="tabpanel" aria-labelledby="tb-nodes" hidden>
+  <div class="wrap">
+    <h2>Future connection nodes, by region</h2>
+    <p class="sub" id="nodesub"></p>
+    <div class="tablecard scroll"><table id="nodes"></table></div>
+  </div>
+</section>
+
+<section id="pane-timeline" class="pane" role="tabpanel" aria-labelledby="tb-timeline" hidden>
+  <div class="wrap">
+    <h2>When the queue is due to connect</h2>
+    <p class="sub" id="yearsub"></p>
+    <div class="chart" id="chart"><svg id="bars" role="img" aria-label="Stacked column chart of queued capacity by contracted connection year and Gate"></svg><div class="tip" id="tip2" hidden></div></div>
+    <div class="legend" id="legend2"></div>
+    <details><summary>View these figures as a table</summary><div class="tablecard scroll" style="margin-top:10px"><table id="yeartable"></table></div></details>
+  </div>
+</section>
+
+<section id="pane-top" class="pane" role="tabpanel" aria-labelledby="tb-top" hidden>
+  <div class="wrap">
+    <h2>The 20 most contested connection sites</h2>
+    <p class="sub">Ranked by capacity waiting to connect, in the view chosen above. Select a row to open the site on the Map tab.</p>
+    <div class="tablecard scroll"><table id="top"></table></div>
+  </div>
+</section>
+
+<section id="pane-areas" class="pane" role="tabpanel" aria-labelledby="tb-areas" hidden>
+  <div class="wrap">
+    <h2>Average wait by region</h2>
+    <p class="sub">Capacity-weighted years from today to the contracted connection date, by transmission owner area.</p>
+    <div class="tablecard scroll"><table id="regions"></table></div>
+  </div>
+</section>
+
+<section id="pane-watch" class="pane" role="tabpanel" aria-labelledby="tb-watch" hidden>
+  <div class="wrap">
+    <h2>Project Watch: CfD holders in the connection queue</h2>
+    <p class="sub" id="cfdsub"></p>
+    <div class="tablecard scroll"><table id="cfd"></table></div>
+    <p class="note">These rows place two public registers side by side. They carry no rating and no view on any project. If a match or a figure is wrong, tell us at info@benzene-group.com and we will correct it.</p>
+  </div>
+</section>
+
+<section id="pane-method" class="pane" role="tabpanel" aria-labelledby="tb-method" hidden>
+  <div class="wrap">
+    <h2>Method and limits</h2>
+    <p class="sub">Every figure on this page is computed from the files named below. The only values typed in by hand are the rough map positions that say so.</p>
+    <div class="method" id="method"></div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>Benzene. UK grid intelligence from primary public sources.</span><span>info@benzene-group.com</span></div></footer>
+
+<script>
+const D = /*DATA*/;
+const OUTLINE = /*OUTLINE*/;
+const NI = /*NI*/;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const gw = mw => (mw / 1000).toFixed(1);
+const nf = n => Math.round(n).toLocaleString('en-GB');
+const pl = (n, w) => n + ' ' + w + (n === 1 ? '' : 's');
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const fdate = s => s ? (+s.slice(8, 10)) + ' ' + MON[+s.slice(5, 7) - 1] + ' ' + s.slice(0, 4) : 'No date';
+const TODAY = new Date(D.built + 'T00:00:00Z');
+const yearsTo = s => Math.max(0, (new Date(s + 'T00:00:00Z') - TODAY) / (365.25 * 864e5));
+const GATE = {'2': ['Gate 2', 'g2'], '1': ['Gate 1', 'g1'], '': ['Not shown', 'gn']};
+const gatePill = g => { const x = GATE[g] || [g, 'gn']; return `<span class="pill ${x[1]}">${x[0]}</span>`; };
+const TO = {NGET: 'England and Wales (NGET)', SPT: 'Central and southern Scotland (SPT)', SHET: 'Northern Scotland (SHET)', OFTO: 'Offshore link (OFTO)'};
+const WBINS = [[2, 'w1', 'Under 2 years'], [4, 'w2', '2 to 4'], [6, 'w3', '4 to 6'], [8, 'w4', '6 to 8'], [1e9, 'w5', '8 years or more']];
+const wcol = w => w == null ? 'var(--fg-3)' : `var(--${WBINS.find(b => w < b[0])[1]})`;
+const FILTERS = [['all', 'All queued'], ['2', 'Gate 2'], ['1', 'Gate 1'], ['', 'No Gate shown']];
+const slug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const short = n => { let s = n.replace(/\s*\(.*$/, '').replace(/\s+\d+(\s*\/\s*\d+)*\s*k[vw]\b.*$/i, '').replace(/\s+(gsp|substation|sub station|collector|switching station|offshore platform|offshore substation)\b.*$/i, '').replace(/\bconnection node\b/i, 'node').trim(); if (s === s.toUpperCase()) s = s.toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase()); return s || n; };
+const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ---------- indexes ----------
+// project row: [name, customer, tech, mw, date, status, gate, developer key]
+const DEV = new Map(), SITESLUG = {}, DEVSLUG = {}, REGION = new Map(), REGSLUG = {};
+const YEARS = []; let YMIN = 9999, YMAX = 0;
+D.sites.forEach((s, i) => {
+  let k = 'site-' + slug(s.n); while (SITESLUG[k] != null) k += '-' + i; SITESLUG[k] = i; s.h = k;
+  if (s.rg) { if (!REGION.has(s.rg)) { REGION.set(s.rg, []); REGSLUG['region-' + slug(s.rg)] = s.rg; } REGION.get(s.rg).push(i); }
+  for (const p of s.p) {
+    const key = p[1].toUpperCase().replace(/\s+/g, ' ').trim(); p[7] = key;
+    let d = DEV.get(key); if (!d) { d = {key, name: p[1], n: 0, mw: 0, sites: new Set(), h: 'dev-' + slug(p[1])}; DEV.set(key, d); DEVSLUG[d.h] = key; }
+    d.n++; d.mw += p[3]; d.sites.add(i);
+    const y = +p[4].slice(0, 4); if (y > YMAX) YMAX = y; if (y < YMIN) YMIN = y;
+  }
+});
+YMIN = Math.max(YMIN, TODAY.getUTCFullYear());
+const TECHS = D.tech.map(t => t.name);
+
+// ---------- tabs ----------
+const TABS = [['map', 'Map'], ['nodes', 'Node regions'], ['timeline', 'Timeline'], ['top', 'Top 20 sites'], ['areas', 'By area'], ['watch', 'Project Watch'], ['method', 'Method']];
+let tab = 'map';
+$('tablist').innerHTML = TABS.map(([k, n]) => `<button type="button" role="tab" id="tb-${k}" data-t="${k}" aria-controls="pane-${k}" aria-selected="${k === tab}" tabindex="${k === tab ? 0 : -1}">${n}</button>`).join('');
+function showTab(t) {
+  if (!TABS.some(x => x[0] === t)) return false; tab = t;
+  for (const [k] of TABS) { $('pane-' + k).hidden = k !== t; const b = $('tb-' + k); b.setAttribute('aria-selected', k === t); b.tabIndex = k === t ? 0 : -1; }
+  if (t === 'map' && V.length) drawDots();
+  return true;
+}
+function pickTab(t, focus) {
+  showTab(t); setHash('view-' + t); const b = $('tb-' + t); if (focus) b.focus();
+  b.scrollIntoView({block: 'nearest', inline: 'nearest'});
+  const y = $('pane-' + t).getBoundingClientRect().top + window.scrollY - $('tabs').offsetHeight; if (window.scrollY > y) window.scrollTo(0, y);
+}
+$('tablist').addEventListener('click', e => { const b = e.target.closest('button[data-t]'); if (b) pickTab(b.dataset.t); });
+$('tablist').addEventListener('keydown', e => { const i = TABS.findIndex(x => x[0] === tab), d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!d) return; e.preventDefault(); pickTab(TABS[(i + d + TABS.length) % TABS.length][0], true); });
+
+// ---------- state ----------
+const F = {gate: 'all', tech: '', dev: '', year: YMAX};
+let sel = null, selRegion = null, mode = 'site', V = [];
+const match = p => (F.gate === 'all' || p[6] === F.gate) && (!F.tech || p[2] === F.tech) && +p[4].slice(0, 4) <= F.year;
+function wavg(ps) { let a = 0, b = 0; for (const p of ps) if (p[4] && p[3] > 0) { a += p[3] * yearsTo(p[4]); b += p[3]; } return b ? a / b : null; }
+const sum = ps => ps.reduce((t, p) => t + p[3], 0);
+function recompute() {
+  V = D.sites.map(s => { const ps = s.p.filter(match), mine = F.dev ? ps.filter(p => p[7] === F.dev) : ps; return {ps, mine, v: sum(mine), w: wavg(mine)}; });
+}
+const active = () => F.gate !== 'all' || F.tech || F.dev || F.year < YMAX;
+
+// ---------- header and tiles ----------
+const H = D.head;
+$('asof').textContent = 'NESO TEC Register, ' + D.tec_date;
+$('lede').textContent = `${nf(H.projects)} projects totalling ${gw(H.queued)} GW hold agreements to connect to the transmission network and are not yet built. ${gw(H.connected)} GW is connected today. The capacity-weighted wait to the contracted connection date is ${H.wait} years.`;
+$('tiles').innerHTML = [
+  ['Connected today', gw(H.connected), 'GW', 'Capacity already on the transmission network'],
+  ['Waiting to connect', gw(H.queued), 'GW', `${nf(H.projects)} projects at ${nf(H.sites)} sites`],
+  ['<i class="sw" style="background:var(--g2)"></i>Gate 2', gw(H.gate2), 'GW', `${nf(H.n_gate2)} projects. Average wait ${H.wait_g2} years`],
+  ['<i class="sw" style="background:var(--g1)"></i>Gate 1', gw(H.gate1), 'GW', `${nf(H.n_gate1)} projects. Average wait ${H.wait_g1} years`],
+  ['<i class="sw" style="background:var(--gn)"></i>No Gate shown', gw(H.nogate), 'GW', `${nf(H.n_nogate)} projects with a blank Gate field`]
+].map(t => `<div class="tile"><div class="k">${t[0]}</div><div class="v">${t[1]} <small>${t[2]}</small></div><div class="d">${t[3]}</div></div>`).join('');
+
+// ---------- map geometry ----------
+const located = D.sites.map((s, i) => [s, i]).filter(a => a[0].x !== '');
+let x0 = 1e9, x1 = -1e9, y0 = 1e9, y1 = -1e9;
+const grow = (x, y) => { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; };
+for (const r of OUTLINE) for (const [x, y] of r) grow(x, y);
+for (const [s] of located) grow(s.x, s.y);
+for (const r of NI) for (const [x, y] of r) grow(x, y);
+const PAD = 15000; x0 -= PAD; x1 += PAD; y0 -= PAD; y1 += PAD;
+const K = 1000, FW = (x1 - x0) / K, FH = (y1 - y0) / K;
+const ux = x => (x - x0) / K, uy = y => (y1 - y) / K;
+const map = $('map'), box = $('mapbox'), tip = $('tip');
+const view = {x: 0, y: 0, w: FW, h: FH};
+const scale = () => FW / view.w;
+const unit = () => view.w / (map.clientWidth || 480);
+const ringPath = rs => rs.map(r => 'M' + r.map(p => ux(p[0]).toFixed(1) + ' ' + uy(p[1]).toFixed(1)).join('L') + 'Z').join('');
+const niC = (() => { let a = 0, b = 0, n = 0; for (const p of NI[0] || []) { a += p[0]; b += p[1]; n++; } return n ? [ux(a / n), uy(b / n)] : null; })();
+$('gland').innerHTML = `<path class="ni" d="${ringPath(NI)}"/><path class="land" d="${ringPath(OUTLINE)}"/><g id="gni"></g>`;
+function drawNi() { if (!niC) return; const u = unit(); $('gni').innerHTML = `<text class="nilab" x="${niC[0].toFixed(1)}" y="${niC[1].toFixed(1)}" font-size="${(10.5 * u).toFixed(3)}" text-anchor="middle">Northern Ireland<tspan x="${niC[0].toFixed(1)}" dy="${(13 * u).toFixed(3)}">not covered</tspan></text>`; }
+const QMAX = Math.max(...located.map(a => a[0].q));
+const rpx = v => (3 + 15 * Math.sqrt(v / QMAX)) * Math.max(.62, Math.min(1, (map.clientWidth || 520) / 520));
+
+function drawDots() {
+  const u = unit(), reg = selRegion ? new Set(REGION.get(selRegion)) : null;
+  const items = located.map(([s, i]) => ({s, i, v: V[i].v, w: V[i].w, cx: ux(s.x), cy: uy(s.y)}));
+  const on = items.filter(o => o.v > 0).sort((a, b) => b.v - a.v);
+  let h = '';
+  if (F.dev) h += items.filter(o => o.v <= 0 && V[o.i].ps.length).map(o => `<circle class="ctx" data-i="${o.i}" cx="${o.cx.toFixed(1)}" cy="${o.cy.toFixed(1)}" r="${(2.2 * u).toFixed(2)}"/>`).join('');
+  h += on.map(o => { const c = wcol(o.w), hot = o.i === sel || (reg && reg.has(o.i));
+    return `<circle class="dot${o.s.lq === 'r' ? ' rough' : ''}${hot ? ' sel' : ''}" data-i="${o.i}" cx="${o.cx.toFixed(1)}" cy="${o.cy.toFixed(1)}" r="${(rpx(o.v) * u).toFixed(2)}" style="color:${c}"/>`; }).join('');
+  $('gdots').innerHTML = h;
+  for (const d of $('gdots').querySelectorAll('.sel')) $('gdots').appendChild(d);
+  let lab = '';
+  if (scale() >= 2.2) {
+    const placed = [], inView = on.filter(o => o.cx > view.x && o.cx < view.x + view.w && o.cy > view.y && o.cy < view.y + view.h);
+    for (const o of inView) {
+      if (placed.length >= 18) break;
+      const t = short(o.s.n), wpx = t.length * 6.4 + 6, r = rpx(o.v), X = (o.cx - view.x) / u + r + 4, Y = (o.cy - view.y) / u;
+      if (X + wpx > map.clientWidth - 2 || (X + wpx > map.clientWidth - 70 && Y < 150)) continue;
+      if (placed.some(b => X < b.X + b.w && X + wpx > b.X && Math.abs(Y - b.Y) < 14)) continue;
+      placed.push({X, Y, w: wpx});
+      lab += `<text class="lab" x="${(o.cx + (r + 4) * u).toFixed(2)}" y="${(o.cy + 4 * u).toFixed(2)}" font-size="${(11.5 * u).toFixed(3)}" stroke-width="${(3 * u).toFixed(3)}">${esc(t)}</text>`;
+    }
+  }
+  $('glab').innerHTML = lab; drawNi();
+}
+function applyView(redraw) {
+  view.w = Math.min(FW, view.w); view.h = view.w * FH / FW;
+  view.x = Math.max(0, Math.min(FW - view.w, view.x)); view.y = Math.max(0, Math.min(FH - view.h, view.y));
+  map.setAttribute('viewBox', `${view.x.toFixed(2)} ${view.y.toFixed(2)} ${view.w.toFixed(2)} ${view.h.toFixed(2)}`);
+  box.classList.toggle('zoomed', scale() > 1.01); box.classList.toggle('close', scale() > 4);
+  $('zout').disabled = $('zreset').disabled = scale() <= 1.01; $('zin').disabled = scale() >= 47.9;
+  if (redraw) drawDots();
+}
+function zoomAt(f, cx, cy) {
+  const s = Math.max(1, Math.min(48, scale() * f)), nw = FW / s, nh = FH / s;
+  view.x = cx - (cx - view.x) * nw / view.w; view.y = cy - (cy - view.y) * nh / view.h; view.w = nw; view.h = nh; applyView(true);
+}
+const centre = () => [view.x + view.w / 2, view.y + view.h / 2];
+function fit(pts, minKm) {
+  if (!pts.length) return;
+  let a = 1e9, b = -1e9, c = 1e9, d = -1e9; for (const [x, y] of pts) { a = Math.min(a, x); b = Math.max(b, x); c = Math.min(c, y); d = Math.max(d, y); }
+  const w = Math.max(minKm || 80, (b - a) * 1.5 + 30, ((d - c) * 1.5 + 30) * FW / FH);
+  view.w = Math.min(FW, w); view.h = view.w * FH / FW; view.x = (a + b) / 2 - view.w / 2; view.y = (c + d) / 2 - view.h / 2; applyView(true);
+}
+const evPoint = e => { const b = map.getBoundingClientRect(); return [view.x + (e.clientX - b.left) / b.width * view.w, view.y + (e.clientY - b.top) / b.height * view.h]; };
+$('zin').addEventListener('click', () => zoomAt(1.8, ...centre()));
+$('zout').addEventListener('click', () => zoomAt(1 / 1.8, ...centre()));
+$('zreset').addEventListener('click', () => { view.x = 0; view.y = 0; view.w = FW; applyView(true); });
+map.addEventListener('dblclick', e => { e.preventDefault(); zoomAt(2, ...evPoint(e)); });
+map.addEventListener('wheel', e => { if (!(e.ctrlKey || e.metaKey)) return; e.preventDefault(); zoomAt(Math.exp(-e.deltaY * 0.01), ...evPoint(e)); }, {passive: false});
+const pts = new Map(); let drag = null, pinch = null, suppress = false;
+map.addEventListener('pointerdown', e => {
+  pts.set(e.pointerId, [e.clientX, e.clientY]);
+  if (pts.size === 1) drag = {x: e.clientX, y: e.clientY, vx: view.x, vy: view.y, moved: false};
+  else if (pts.size === 2) { const [a, b] = [...pts.values()]; pinch = {d: Math.hypot(a[0] - b[0], a[1] - b[1]), s: scale()}; drag = null; }
+});
+window.addEventListener('pointermove', e => {
+  if (!pts.has(e.pointerId)) return; pts.set(e.pointerId, [e.clientX, e.clientY]);
+  if (pinch && pts.size === 2) { const [a, b] = [...pts.values()], d = Math.hypot(a[0] - b[0], a[1] - b[1]), r = map.getBoundingClientRect();
+    const mx = view.x + ((a[0] + b[0]) / 2 - r.left) / r.width * view.w, my = view.y + ((a[1] + b[1]) / 2 - r.top) / r.height * view.h;
+    zoomAt(pinch.s * d / pinch.d / scale(), mx, my); suppress = true; return; }
+  if (!drag) return; const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (!drag.moved && Math.hypot(dx, dy) < 5) return;
+  drag.moved = true; suppress = true; tip.hidden = true; if (scale() <= 1.01) return;
+  const u = unit(); view.x = drag.vx - dx * u; view.y = drag.vy - dy * u; box.classList.add('dragging'); applyView(false);
+});
+const endPtr = e => { if (!pts.has(e.pointerId)) return; pts.delete(e.pointerId); if (pts.size < 2) pinch = null; if (!pts.size) { if (drag && drag.moved) drawDots(); drag = null; box.classList.remove('dragging'); setTimeout(() => { suppress = false; }, 0); } };
+window.addEventListener('pointerup', endPtr); window.addEventListener('pointercancel', endPtr);
+
+function showTip(el, e, html, t) { t.innerHTML = html; t.hidden = false; const b = el.getBoundingClientRect(); let x = e.clientX - b.left + 14, y = e.clientY - b.top + 14; if (x + t.offsetWidth > b.width - 4) x = Math.max(4, e.clientX - b.left - t.offsetWidth - 14); if (y + t.offsetHeight > b.height - 4) y = Math.max(4, y - t.offsetHeight - 28); t.style.left = x + 'px'; t.style.top = y + 'px'; }
+map.addEventListener('pointermove', e => {
+  const c = e.target.closest('[data-i]'); if (!c || (drag && drag.moved)) { tip.hidden = true; return; }
+  const i = +c.dataset.i, s = D.sites[i], o = V[i], all = o.ps.length;
+  showTip(box, e, `<b>${esc(s.n)}</b>` + (o.v > 0 ? `<span>${nf(o.v)} MW waiting, ${pl(o.mine.length, 'project')}</span><span>${o.w == null ? 'No contracted date' : 'Average wait ' + o.w.toFixed(1) + ' years'}</span>` : `<span>${pl(all, 'project')} from other developers</span>`) + (s.lq === 'r' ? '<span>Rough position</span>' : ''), tip);
+});
+map.addEventListener('pointerleave', () => { tip.hidden = true; });
+map.addEventListener('click', e => { if (suppress) return; const c = e.target.closest('[data-i]'); if (c) select(+c.dataset.i); });
+
+// ---------- planning layer ----------
+const PLAN = [['o', 'Operational', '#2b6cb0'], ['c', 'Consented or under construction', '#2e8b57'], ['p', 'In planning', '#e08a3c']];
+$('plan').addEventListener('change', () => {
+  const on = $('plan').checked, g = $('gplan');
+  if (on && !g.firstChild) g.innerHTML = PLAN.map(([k, , c]) => { const a = D.plan[k]; let d = ''; for (let i = 0; i < a.length; i += 2) d += `M${ux(a[i] * 100).toFixed(1)} ${uy(a[i + 1] * 100).toFixed(1)}h.01`; return `<path class="pl" stroke="${c}" d="${d}"/>`; }).join('');
+  g.style.display = on ? '' : 'none'; $('planlegend').hidden = !on;
+});
+$('planlegend').innerHTML = `<span>Planning records of 1 MW or more (${esc(D.repd_date)}):</span>` + PLAN.map(([k, n, c]) => `<span><i class="sm" style="background:${c}"></i>${n} (${nf(D.plan[k].length / 2)})</span>`).join('');
+
+$('legend').innerHTML = '<span>Average wait:</span>' + WBINS.map(b => `<span><i style="background:var(--${b[1]})"></i>${b[2]}</span>`).join('') +
+  `<span style="flex-basis:100%"></span><span><i style="background:var(--w3)"></i>Solid: approximate position</span><span><i class="dash"></i>Dashed: rough position</span><span>Circle size: capacity waiting, up to ${gw(QMAX)} GW</span>`;
+(function () {
+  const g = k => D.sites.filter(s => s.lq === k), q = a => a.reduce((t, s) => t + s.q, 0);
+  const a = g('a'), r = g('r'), un = g(''), nodes = r.filter(s => s.rg), hand = r.filter(s => !s.rg && s.b.includes('by hand')), off = un.filter(s => /offshore|platform/i.test(s.n));
+  $('unmapped').textContent = `${nf(a.length + r.length)} of ${nf(D.sites.length)} sites are on the map, holding ${gw(q(a) + q(r))} of the ${gw(H.queued)} GW waiting. ${nf(a.length)} have an approximate position (${gw(q(a))} GW). ${nf(r.length)} have a rough position (${gw(q(r))} GW): ${nodes.length} future connection nodes drawn in their region, ${hand.length} sites placed by hand from the place name, and ${r.length - nodes.length - hand.length} placed from a single planning record. The register gives no coordinates, so no position here is exact.`;
+  $('unsum').textContent = `${un.length} sites are not on the map (${gw(q(un))} GW), including ${off.length} offshore substations (${gw(q(off))} GW)`;
+  $('untable').innerHTML = '<thead><tr><th>Connection site</th><th>Area</th><th class="n">Waiting, MW</th><th class="n">Projects</th></tr></thead><tbody>' +
+    un.sort((x, y) => y.q - x.q).map(s => `<tr class="click" tabindex="0" data-i="${D.sites.indexOf(s)}"><td>${esc(s.n)}</td><td>${s.to}</td><td class="n">${nf(s.q)}</td><td class="n">${s.p.length}</td></tr>`).join('') + '</tbody>';
+})();
+
+// ---------- panels ----------
+const scrollToMap = smooth => $('mapgrid').scrollIntoView({behavior: smooth && !reduced() ? 'smooth' : 'auto', block: 'start'});
+function setHash(h) { try { if (location.hash !== '#' + h) location.hash = h; } catch (e) {} }
+const framed = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
+function linkLine(h, what) {
+  return framed ? `<p class="note">Link to this ${what}: the page address now ends in <span class="mono">#${esc(h)}</span></p>`
+    : `<p class="note"><button type="button" class="btn" id="copy">Copy a link to this ${what}</button> <span id="copied" class="mono"></span></p>`;
+}
+function wireCopy() {
+  const b = $('copy'); if (!b) return;
+  b.addEventListener('click', () => { const done = t => { $('copied').textContent = t; };
+    try { navigator.clipboard.writeText(location.href).then(() => done('Copied'), () => done(location.href)); } catch (e) { done(location.href); } });
+}
+const kv = a => `<div class="kv">${a.map(x => `<div><div class="k">${x[0]}</div><div class="v">${x[1]}</div></div>`).join('')}</div>`;
+const viewNote = () => { const b = []; if (F.gate !== 'all') b.push(FILTERS.find(f => f[0] === F.gate)[1]); if (F.tech) b.push(F.tech); if (F.year < YMAX) b.push('by end of ' + F.year); return b.length ? ', ' + esc(b.join(', ')) : ''; };
+
+function sitePanel() {
+  const s = D.sites[sel], o = V[sel], ps = o.ps, tot = s.g2 + s.g1 + s.gn || 1, dev = F.dev && DEV.get(F.dev);
+  const tech = {}; for (const p of ps) tech[p[2]] = (tech[p[2]] || 0) + p[3];
+  const tl = Object.entries(tech).sort((a, b) => b[1] - a[1]);
+  const pos = s.x === '' ? 'Not on the map: we could not find a location for this site.' : (s.lq === 'r' ? 'Rough position: ' : 'Approximate position: ') + esc(s.b) + '.' + (s.lq === 'r' ? ' It may be 15 km or more from the real site.' : '');
+  $('panel').innerHTML = `<div class="eyebrow">${esc(TO[s.to] || s.to)}${s.rg ? ' &middot; ' + esc(s.rg) + ' region' : ''}</div><h3>${esc(s.n)}</h3>
+    <div class="basis">${pos}</div>
+    ${dev ? `<p class="note"><button type="button" class="btn" id="backdev">Back to ${esc(dev.name)}</button></p>` : ''}
+    ${kv([['Waiting' + viewNote(), nf(sum(ps)) + ' MW'], ['Connected', nf(s.c) + ' MW'], ['Projects', ps.length], ['Developers', new Set(ps.map(p => p[7])).size], ['Average wait', (w => w == null ? 'n/a' : w.toFixed(1) + ' yrs')(wavg(ps))]])}
+    <div class="mini">Whole queue at this site, by Gate</div>
+    <div class="split" role="img" aria-label="Queue split by Gate">${[['g2', s.g2], ['g1', s.g1], ['gn', s.gn]].filter(a => a[1] > 0).map(a => `<span style="background:var(--${a[0]});flex:${a[1] / tot}"></span>`).join('')}</div>
+    <div class="mini">Gate 2 <b>${nf(s.g2)} MW</b> &nbsp; Gate 1 <b>${nf(s.g1)} MW</b> &nbsp; No Gate shown <b>${nf(s.gn)} MW</b></div>
+    <div class="mini" style="margin-top:10px">Technology: ${tl.length ? tl.map(t => `${esc(t[0])} <b>${nf(t[1])} MW</b>`).join(', ') : 'none in this view'}</div>
+    <div class="pscroll"><table><thead><tr><th>Project</th><th>Technology</th><th class="n">MW</th><th>Contracted date</th><th>Gate</th><th>Status</th></tr></thead><tbody>${
+      ps.length ? ps.map(p => `<tr${F.dev && p[7] === F.dev ? ' class="mine"' : ''}><td>${esc(p[0])}<small><button type="button" class="lnk" data-d="${esc(p[7])}">${esc(p[1])}</button></small></td><td>${esc(p[2])}</td><td class="n">${nf(p[3])}</td><td style="white-space:nowrap">${fdate(p[4])}</td><td>${gatePill(p[6])}</td><td>${esc(p[5])}</td></tr>`).join('') : '<tr><td colspan="6">No projects at this site in this view.</td></tr>'
+    }</tbody></table></div>
+    <p class="note">Select a developer's name to see every site where it is queued. Register facts only. Planning status, revenue contracts, ownership and change alerts for these projects are part of a Benzene screening report.</p>
+    ${linkLine(s.h, 'site')}`;
+  wireCopy();
+}
+function regionPanel() {
+  const ids = REGION.get(selRegion), ps = ids.flatMap(i => V[i].ps);
+  $('panel').innerHTML = `<div class="eyebrow">Future connection nodes</div><h3>${esc(selRegion)}</h3>
+    <div class="basis">The register names these nodes by region and gives no site. They are drawn as dashed circles near the centre of the region, so read them as "somewhere in ${esc(selRegion)}".</div>
+    ${kv([['Waiting' + viewNote(), gw(sum(ps)) + ' GW'], ['Nodes', ids.length], ['Projects', ps.length], ['Developers', new Set(ps.map(p => p[7])).size], ['Average wait', (w => w == null ? 'n/a' : w.toFixed(1) + ' yrs')(wavg(ps))]])}
+    <div class="pscroll"><table><thead><tr><th>Node</th><th class="n">Waiting, MW</th><th class="n">Projects</th><th class="n">Average wait</th></tr></thead><tbody>${
+      ids.map(i => ({i, o: V[i]})).sort((a, b) => sum(b.o.ps) - sum(a.o.ps)).map(({i, o}) => { const w = wavg(o.ps); return `<tr class="click" tabindex="0" data-i="${i}"><td>${esc(D.sites[i].n)}</td><td class="n">${nf(sum(o.ps))}</td><td class="n">${o.ps.length}</td><td class="n">${w == null ? 'n/a' : w.toFixed(1) + ' yrs'}</td></tr>`; }).join('')
+    }</tbody></table></div>
+    ${linkLine('region-' + slug(selRegion), 'region')}`;
+  wireCopy();
+}
+function devPanel() {
+  const d = DEV.get(F.dev), rows = []; let onMap = 0;
+  D.sites.forEach((s, i) => { if (V[i].mine.length && s.x !== '') onMap++; for (const p of V[i].mine) rows.push([i, s, p]); });
+  rows.sort((a, b) => b[2][3] - a[2][3]);
+  const ps = rows.map(r => r[2]), ns = new Set(rows.map(r => r[0])).size;
+  $('panel').innerHTML = `<div class="eyebrow">Developer view</div><h3>${esc(d.name)}</h3>
+    <div class="basis">Every site where this company name holds a connection agreement in the register. Related companies with a different name are listed separately.</div>
+    ${kv([['Waiting' + viewNote(), gw(sum(ps)) + ' GW'], ['Projects', ps.length], ['Sites', ns], ['On the map', onMap], ['Average wait', (w => w == null ? 'n/a' : w.toFixed(1) + ' yrs')(wavg(ps))]])}
+    <div class="pscroll"><table><thead><tr><th>Project</th><th>Connection site</th><th class="n">MW</th><th>Contracted date</th><th>Gate</th></tr></thead><tbody>${
+      rows.length ? rows.map(([i, s, p]) => `<tr class="click" tabindex="0" data-i="${i}"><td>${esc(p[0])}<small>${esc(p[2])}</small></td><td>${esc(short(s.n))}</td><td class="n">${nf(p[3])}</td><td style="white-space:nowrap">${fdate(p[4])}</td><td>${gatePill(p[6])}</td></tr>`).join('') : '<tr><td colspan="5">No projects for this developer in this view.</td></tr>'
+    }</tbody></table></div>
+    <p class="note">Sites where this developer is queued are in colour. Grey points are other sites.</p>
+    ${linkLine(d.h, 'developer')}`;
+  wireCopy();
+}
+function renderPanel() { if (mode === 'region') regionPanel(); else if (mode === 'dev') devPanel(); else sitePanel(); }
+function select(i, o) {
+  o = o || {}; sel = i; selRegion = null; mode = 'site'; const s = D.sites[i]; if (tab !== 'map') showTab('map');
+  if (o.zoom && s.x !== '') { const cx = ux(s.x), cy = uy(s.y), w = Math.min(view.w, FW / 6); view.w = w; view.h = w * FH / FW; view.x = cx - w / 2; view.y = cy - view.h / 2; applyView(false); }
+  drawDots(); sitePanel(); if (!o.quiet) setHash(s.h); if (o.scroll) scrollToMap(o.smooth);
+}
+function selectRegion(name, o) {
+  o = o || {}; sel = null; selRegion = name; mode = 'region'; if (tab !== 'map') showTab('map');
+  fit(REGION.get(name).map(i => D.sites[i]).filter(s => s.x !== '').map(s => [ux(s.x), uy(s.y)]), 140);
+  drawDots(); regionPanel(); setHash('region-' + slug(name)); if (o.scroll) scrollToMap(o.smooth);
+}
+function setDev(key, o) {
+  o = o || {}; const prev = sel; F.dev = key; sel = key ? null : prev; selRegion = null; mode = key ? 'dev' : 'site'; recompute(); if (tab !== 'map') showTab('map');
+  if (key) { fit(located.filter(([, i]) => V[i].mine.length).map(([s]) => [ux(s.x), uy(s.y)]), 160); setHash(DEV.get(key).h); }
+  refresh(); if (o.scroll) scrollToMap(o.smooth);
+}
+$('panel').addEventListener('click', e => {
+  const d = e.target.closest('[data-d]'); if (d) { setDev(d.dataset.d); return; }
+  if (e.target.closest('#backdev')) { sel = null; mode = 'dev'; drawDots(); devPanel(); setHash(DEV.get(F.dev).h); return; }
+  const r = e.target.closest('tr[data-i]'); if (r) select(+r.dataset.i, {zoom: true});
+});
+const rowKeys = (el, fn) => el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { const r = e.target.closest('tr[tabindex]'); if (r) { e.preventDefault(); fn(r); } } });
+rowKeys($('panel'), r => select(+r.dataset.i, {zoom: true}));
+
+// ---------- filters, summary and search ----------
+function drawBar() {
+  let mw = 0, n = 0, ns = 0; for (const o of V) if (o.mine.length) { mw += o.v; n += o.mine.length; ns++; }
+  const d = F.dev && DEV.get(F.dev);
+  $('viewbar').innerHTML = `<span>${d ? `<b>${esc(d.name)}</b>: ` : 'Showing '}<b class="mono">${gw(mw)} GW</b> in ${nf(n)} projects at ${nf(ns)} sites${viewNote()}</span>` +
+    (d ? '<button type="button" class="btn" id="cleardev">Leave developer view</button>' : '') + (active() ? '<button type="button" class="btn" id="reset">Reset all filters</button>' : '');
+}
+$('viewbar').addEventListener('click', e => {
+  if (e.target.closest('#cleardev')) setDev('');
+  else if (e.target.closest('#reset')) { F.gate = 'all'; F.tech = ''; F.year = YMAX; $('tech').value = ''; $('year').value = YMAX; syncSeg(); syncYear(); if (F.dev) setDev(''); else { recompute(); refresh(); } }
+});
+function refresh() { if (mode === 'site' && sel == null) sel = located.length ? located[0][1] : 0; drawDots(); drawBar(); drawTop(); drawNodes(); renderPanel(); }
+const syncSeg = () => { for (const x of $('seg').children) x.setAttribute('aria-pressed', x.dataset.f === F.gate); };
+const syncYear = () => { $('yearout').textContent = F.year >= YMAX ? YMAX + ' (all dates)' : F.year; };
+$('seg').innerHTML = FILTERS.map(f => `<button type="button" data-f="${f[0]}" aria-pressed="${f[0] === F.gate}">${f[1]}</button>`).join('');
+$('seg').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; F.gate = b.dataset.f; syncSeg(); recompute(); refresh(); });
+$('tech').innerHTML = '<option value="">All technologies</option>' + TECHS.map(t => `<option>${esc(t)}</option>`).join('');
+$('tech').addEventListener('change', () => { F.tech = $('tech').value; recompute(); refresh(); });
+const yr = $('year'); yr.min = YMIN; yr.max = YMAX; yr.value = YMAX; syncYear();
+yr.addEventListener('input', () => { F.year = +yr.value; syncYear(); recompute(); refresh(); });
+
+const q = $('q'), res = $('results');
+q.addEventListener('input', () => {
+  const t = q.value.trim().toLowerCase(); if (t.length < 2) { res.hidden = true; return; }
+  const sites = D.sites.map((s, i) => [s, i]).filter(a => a[0].n.toLowerCase().includes(t)).sort((a, b) => b[0].q - a[0].q).slice(0, 4);
+  const devs = [...DEV.values()].filter(d => d.name.toLowerCase().includes(t)).sort((a, b) => b.mw - a.mw).slice(0, 4);
+  const projs = []; D.sites.forEach((s, i) => { for (const p of s.p) if (p[0].toLowerCase().includes(t)) projs.push([p, s, i]); }); projs.sort((a, b) => b[0][3] - a[0][3]);
+  let h = '';
+  if (sites.length) h += '<div class="rh">Connection sites</div>' + sites.map(([s, i]) => `<button type="button" data-i="${i}">${esc(s.n)}<small>${nf(s.q)} MW waiting</small></button>`).join('');
+  if (devs.length) h += '<div class="rh">Developers</div>' + devs.map(d => `<button type="button" data-d="${esc(d.key)}">${esc(d.name)}<small>${pl(d.n, 'project')}, ${gw(d.mw)} GW at ${pl(d.sites.size, 'site')}</small></button>`).join('');
+  if (projs.length) h += '<div class="rh">Projects</div>' + projs.slice(0, 4).map(([p, s, i]) => `<button type="button" data-i="${i}">${esc(p[0])}<small>${esc(p[1])}, at ${esc(short(s.n))}</small></button>`).join('');
+  res.innerHTML = h || '<button type="button" disabled>No site, project or developer matches</button>'; res.hidden = false;
+});
+res.addEventListener('click', e => {
+  const b = e.target.closest('button[data-i], button[data-d]'); if (!b) return; res.hidden = true; q.value = '';
+  if (b.dataset.d != null) setDev(b.dataset.d, {scroll: true, smooth: true}); else select(+b.dataset.i, {zoom: true, scroll: true, smooth: true});
+});
+document.addEventListener('click', e => { if (!e.target.closest('.search')) res.hidden = true; });
+
+// ---------- year chart ----------
+(function () {
+  const Y = D.years, W = 860, Hh = 320, L = 46, R = 10, T = 30, B = 44, iw = W - L - R, ih = Hh - T - B;
+  const max = Math.max(...Y.map(y => y.g2 + y.g1 + y.none)), step = 25000, top = Math.ceil(max / step) * step;
+  const band = iw / Y.length, bw = Math.min(24, band * 0.6), sy = v => T + ih - v / top * ih;
+  let g = '';
+  for (let v = 0; v <= top; v += step) g += `<line class="grid" x1="${L}" x2="${W - R}" y1="${sy(v)}" y2="${sy(v)}"/><text class="axis" x="${L - 8}" y="${sy(v) + 4}" text-anchor="end">${v / 1000}</text>`;
+  g += `<text class="axis" x="${L - 8}" y="${T - 16}" text-anchor="end">GW</text>`;
+  Y.forEach((y, i) => {
+    const cx = L + band * i + band / 2, x = cx - bw / 2; let base = 0;
+    const segs = [['g2', y.g2], ['g1', y.g1], ['gn', y.none]].filter(s => s[1] > 0);
+    segs.forEach((s, j) => {
+      const yb = sy(base), yt = sy(base + s[1]), gap = j ? 2 : 0, h = Math.max(1, yb - yt - gap), last = j === segs.length - 1, r = last ? Math.min(4, h) : 0;
+      g += r ? `<path fill="var(--${s[0]})" d="M${x} ${yt + h}V${yt + r}Q${x} ${yt} ${x + r} ${yt}H${x + bw - r}Q${x + bw} ${yt} ${x + bw} ${yt + r}V${yt + h}Z"/>` : `<rect fill="var(--${s[0]})" x="${x}" y="${yt}" width="${bw}" height="${h}"/>`;
+      base += s[1];
+    });
+    const lab = y.y === '2026 or earlier' ? ['2026 or', 'earlier'] : [y.y];
+    lab.forEach((t, k) => { g += `<text class="axis" x="${cx}" y="${Hh - B + 16 + k * 12}" text-anchor="middle">${t}</text>`; });
+    g += `<rect class="hit" data-i="${i}" x="${L + band * i}" y="${T}" width="${band}" height="${ih}" fill="transparent"/>`;
+  });
+  const svg = $('bars'); svg.setAttribute('viewBox', `0 0 ${W} ${Hh}`); svg.innerHTML = g;
+  const tip2 = $('tip2'), cbox = $('chart');
+  svg.addEventListener('pointermove', e => { const h = e.target.closest('.hit'); if (!h) { tip2.hidden = true; return; } const y = Y[+h.dataset.i];
+    showTip(cbox, e, `<b>${y.y}</b><span>Gate 2: ${gw(y.g2)} GW</span><span>Gate 1: ${gw(y.g1)} GW</span><span>No Gate shown: ${gw(y.none)} GW</span><span>Total: ${gw(y.g2 + y.g1 + y.none)} GW</span>`, tip2); });
+  svg.addEventListener('pointerleave', () => { tip2.hidden = true; });
+  $('legend2').innerHTML = [['g2', 'Gate 2'], ['g1', 'Gate 1'], ['gn', 'No Gate shown in the register']].map(a => `<span><i class="sq" style="background:var(--${a[0]})"></i>${a[1]}</span>`).join('');
+  $('yeartable').innerHTML = '<thead><tr><th>Contracted year</th><th class="n">Gate 2, GW</th><th class="n">Gate 1, GW</th><th class="n">No Gate shown, GW</th><th class="n">Total, GW</th></tr></thead><tbody>' +
+    Y.map(y => `<tr><td>${y.y}</td><td class="n">${gw(y.g2)}</td><td class="n">${gw(y.g1)}</td><td class="n">${gw(y.none)}</td><td class="n">${gw(y.g2 + y.g1 + y.none)}</td></tr>`).join('') + '</tbody>';
+  const by = n => Y.filter(y => +y.y >= n).reduce((t, y) => t + y.g2 + y.g1 + y.none, 0), all = Y.reduce((t, y) => t + y.g2 + y.g1 + y.none, 0);
+  const g2early = Y.filter(y => y.y === '2026 or earlier' || +y.y <= 2029).reduce((t, y) => t + y.g2, 0);
+  $('yearsub').textContent = `${Math.round(100 * by(2031) / all)}% of the capacity waiting has a contracted date of 2031 or later. ${Math.round(100 * g2early / H.gate2)}% of Gate 2 capacity is contracted for 2029 or earlier. Each column is the capacity contracted to connect in that year.`;
+})();
+
+// ---------- tables ----------
+const ONMAP = {a: 'Yes', r: 'Rough', '': 'No'};
+function drawTop() {
+  const rows = D.sites.map((s, i) => ({s, i, o: V[i]})).filter(r => r.o.v > 0).sort((a, b) => b.o.v - a.o.v).slice(0, 20);
+  $('top').innerHTML = '<thead><tr><th>Connection site</th><th>Area</th><th class="n">Waiting, MW</th><th class="n">Projects</th><th class="n">Developers</th><th class="n">Average wait</th><th class="n">Connected, MW</th><th>On map</th></tr></thead><tbody>' +
+    (rows.map(({s, i, o}) => `<tr class="click" tabindex="0" data-i="${i}"><td>${esc(s.n)}</td><td>${s.to}</td><td class="n">${nf(o.v)}</td><td class="n">${o.mine.length}</td><td class="n">${new Set(o.mine.map(p => p[7])).size}</td><td class="n">${o.w == null ? 'n/a' : o.w.toFixed(1) + ' yrs'}</td><td class="n">${nf(s.c)}</td><td>${ONMAP[s.lq]}</td></tr>`).join('') || '<tr><td colspan="8">No sites in this view.</td></tr>') + '</tbody>';
+}
+function drawNodes() {
+  const rows = [...REGION.entries()].map(([name, ids]) => { const ps = ids.flatMap(i => V[i].mine); return {name, ids, ps, v: sum(ps)}; }).sort((a, b) => b.v - a.v);
+  $('nodes').innerHTML = '<thead><tr><th>Region</th><th class="n">Nodes</th><th class="n">Waiting, GW</th><th class="n">Projects</th><th class="n">Developers</th><th class="n">Average wait</th></tr></thead><tbody>' +
+    rows.map(r => { const w = wavg(r.ps); return `<tr class="click" tabindex="0" data-r="${esc(r.name)}"><td>${esc(r.name)}</td><td class="n">${r.ids.length}</td><td class="n">${gw(r.v)}</td><td class="n">${r.ps.length}</td><td class="n">${new Set(r.ps.map(p => p[7])).size}</td><td class="n">${w == null ? 'n/a' : w.toFixed(1) + ' yrs'}</td></tr>`; }).join('') + '</tbody>';
+}
+(function () { let n = 0, mw = 0; for (const ids of REGION.values()) for (const i of ids) { n++; mw += D.sites[i].q; }
+  $('nodesub').textContent = `The register lists ${n} future connection nodes, holding ${gw(mw)} GW, by region name only. No site has been published for them. Select a region to see its nodes and who is queued at each. Figures follow the view chosen above.`; })();
+for (const id of ['top', 'untable']) { $(id).addEventListener('click', e => { const r = e.target.closest('tr[data-i]'); if (r) select(+r.dataset.i, {zoom: true, scroll: true, smooth: true}); }); rowKeys($(id), r => select(+r.dataset.i, {zoom: true, scroll: true, smooth: true})); }
+$('nodes').addEventListener('click', e => { const r = e.target.closest('tr[data-r]'); if (r) selectRegion(r.dataset.r, {scroll: true, smooth: true}); });
+rowKeys($('nodes'), r => selectRegion(r.dataset.r, {scroll: true, smooth: true}));
+
+$('regions').innerHTML = '<thead><tr><th>Area</th><th class="n">Waiting, GW</th><th class="n">Projects</th><th class="n">Average wait</th><th class="n">Connected, GW</th></tr></thead><tbody>' +
+  D.regions.filter(r => r.n > 0).map(r => `<tr><td>${esc(r.name)}</td><td class="n">${gw(r.queued)}</td><td class="n">${nf(r.n)}</td><td class="n">${r.wait} yrs</td><td class="n">${gw(r.connected)}</td></tr>`).join('') + '</tbody>';
+
+$('cfdsub').textContent = `${D.cfd.length} unbuilt projects in the connection register also appear in the Contracts for Difference register. Each row shows what each register says, as published.`;
+$('cfd').innerHTML = '<thead><tr><th>Project (connection register)</th><th class="n">MW</th><th>Connects</th><th>Gate</th><th>Status</th><th>Unit (CfD register)</th><th>Round</th><th>CfD status</th><th>CfD start</th><th class="n">CfD MW</th></tr></thead><tbody>' +
+  D.cfd.map(c => `<tr><td>${esc(c.name)}<small>${esc(c.customer)}</small></td><td class="n">${nf(c.mw)}</td><td style="white-space:nowrap">${fdate(c.date)}</td><td>${gatePill(c.gate)}</td><td>${esc(c.status)}</td><td>${esc(c.cfd_names.split(';').join(', '))}<small>${esc(c.cfd_ids.split(';').join(', '))}</small></td><td>${esc(c.cfd_round)}</td><td>${esc(c.cfd_status.split(';').join(', '))}</td><td style="white-space:nowrap">${fdate(c.cfd_start)}</td><td class="n">${nf(c.cfd_mw)}</td></tr>`).join('') + '</tbody>';
+
+$('method').innerHTML = `
+<div><h3>Sources</h3><ul>
+<li>NESO Transmission Entry Capacity (TEC) Register, file dated ${D.tec_date}.</li>
+<li>Low Carbon Contracts Company, CfD contract portfolio status, downloaded 15 November 2026.</li>
+<li>DESNZ Renewable Energy Planning Database, ${esc(D.repd_date)} extract, used to place sites and for the planning layer.</li>
+<li>Substation, supply point and power station lists and the map outline from the open PyPSA-GB dataset (MIT licence, Andrew Lyden). Northern Ireland outline from Natural Earth (public domain).</li></ul></div>
+<div><h3>What "waiting to connect" means</h3><p>The sum of capacity increases in the register for projects not marked Built. The register covers transmission connections and distribution projects with a transmission agreement. It does not cover the rest of the distribution queue or demand-only connections.</p></div>
+<div><h3>Gate</h3><p>Gate 1 and Gate 2 are shown exactly as the register's Gate field gives them. ${nf(H.n_nogate)} unbuilt projects have a blank Gate field. The register does not say why, so this page does not treat a blank as either gate.</p></div>
+<div><h3>Wait and the year control</h3><p>Years from 15 November 2026 to the register's "MW Effective From" date, weighted by capacity. Dates already passed count as zero. On the map and in the year control, a project with several stages is counted in full at its first stage. The column chart counts each stage at its own date. These are contracted dates, not forecasts of when projects will connect.</p></div>
+<div><h3>Map positions</h3><p>The register names each connection site but gives no coordinates. A solid circle is an approximate position, taken from open substation and supply point lists or from the planning database locations of matched projects. A dashed circle is a rough position: one planning record that names the place, a point placed by hand from the place name, or, for future connection nodes, a point near the centre of the named region. No position is exact, and a rough one may be 15 km or more out.</p></div>
+<div><h3>Planning layer</h3><p>Planning database records of 1 MW or more in Great Britain that are operational, consented, under construction or in planning. Rooftop solar and refused, withdrawn, abandoned and expired records are left out. The layer is context for the queue. It is not matched to connection agreements here.</p></div>
+<div><h3>Developers</h3><p>Developer names are shown as the register writes them. Two companies in the same group with different names are counted separately, and one company written two ways may appear twice.</p></div>
+<div><h3>CfD matching</h3><p>A project is matched when its name agrees in both registers, the technology agrees, and the CfD capacity is between 65% and 150% of the register capacity. Both names are shown so the match can be checked.</p></div>
+<div><h3>Limits</h3><p>This page reports what public registers say. It is not engineering, legal or investment advice, and it makes no statement about whether any project will be built.</p></div>
+<div><h3>Corrections</h3><p>If anything here is wrong, write to info@benzene-group.com. Corrections are made at the next data refresh and noted on this page.</p></div>`;
+
+// ---------- links and start ----------
+function route(first) {
+  const h = location.hash.slice(1), o = {zoom: true, scroll: first};
+  if (h.startsWith('view-')) return showTab(h.slice(5));
+  if (SITESLUG[h] != null) { if (!(mode === 'site' && sel === SITESLUG[h])) select(SITESLUG[h], o); return true; }
+  if (REGSLUG[h]) { if (!(mode === 'region' && selRegion === REGSLUG[h])) selectRegion(REGSLUG[h], o); return true; }
+  if (DEVSLUG[h]) { if (!(mode === 'dev' && F.dev === DEVSLUG[h])) setDev(DEVSLUG[h], o); return true; }
+  return false;
+}
+recompute(); applyView(false); drawBar(); drawTop(); drawNodes();
+if (!route(true)) select(located.length ? located[0][1] : 0, {quiet: true});
+window.addEventListener('hashchange', () => route(false));
+let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(drawDots, 120); });
+</script>
+</body>
+</html>
