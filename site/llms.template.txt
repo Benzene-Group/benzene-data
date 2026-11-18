@@ -36,6 +36,7 @@ All figures below are confirmed. Register figures are Benzene's analysis of the 
 - Queue map and weekly briefing: free
 - Free substation check: queued capacity, Gates and dates at any substation, reply within one business day
 - Screening report: £1,950 fixed, one site, 5 working days. If it does not answer the brief, the client does not pay
+- Landowner grid note: £495 fixed, one site, 3 working days. A two-page note for land agents and landowners pricing an option on how crowded the grid is near the land. Not a valuation or advice on option terms
 - Transaction Due Diligence: £3,950, 4 weeks. A desk-based review of public registers on named projects, not an engineering or legal review
 - Site Selection Sprint: £6,450, 8 weeks
 - Queue watch: £99 a month per watched site, five sites for the price of four. An email after each new NESO register on what changed at those sites
