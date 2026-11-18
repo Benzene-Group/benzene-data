@@ -38,6 +38,7 @@ All figures below are confirmed. Register figures are Benzene's analysis of the 
 - Screening report: £1,950 fixed, one site, 5 working days. If it does not answer the brief, the client does not pay
 - Transaction Due Diligence: £3,950, 4 weeks. A desk-based review of public registers on named projects, not an engineering or legal review
 - Site Selection Sprint: £6,450, 8 weeks
+- Queue watch: £99 a month per watched site, five sites for the price of four. An email after each new NESO register on what changed at those sites
 - Annual Intelligence Subscription: £15,600 a year
 
 ## Contact
