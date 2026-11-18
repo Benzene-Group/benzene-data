@@ -6,7 +6,7 @@
 
 - A free interactive map of Britain's transmission connection queue: https://www.benzene-group.com/queue-map.html
 - A free weekly briefing on what changed in the underlying data, with sources
-- Fixed-fee screening reports on a specific site or project (£1,500 fixed, one site, 5 working days), checking the connection queue, the wait, competing projects, and the planning and revenue-contract records
+- Fixed-fee screening reports on a specific site or project (£1,950 fixed, one site, 5 working days), checking the connection queue, the wait, competing projects, and the planning and revenue-contract records
 
 Research is produced with AI systems that read primary sources directly, and every report is reviewed before it is sent. Benzene reports what public records say. It does not provide engineering, legal or investment advice.
 
@@ -35,10 +35,10 @@ All figures below are confirmed. Register figures are Benzene's analysis of the 
 
 - Queue map and weekly briefing: free
 - Free substation check: queued capacity, Gates and dates at any substation, reply within one business day
-- Screening report: £1,500 fixed, one site, 5 working days. If it does not answer the brief, the client does not pay
-- Transaction Due Diligence: £3,500, 4 weeks. A desk-based review of public registers on named projects, not an engineering or legal review
-- Site Selection Sprint: £5,500, 8 weeks
-- Annual Intelligence Subscription: £14,400 a year
+- Screening report: £1,950 fixed, one site, 5 working days. If it does not answer the brief, the client does not pay
+- Transaction Due Diligence: £3,950, 4 weeks. A desk-based review of public registers on named projects, not an engineering or legal review
+- Site Selection Sprint: £6,450, 8 weeks
+- Annual Intelligence Subscription: £15,600 a year
 
 ## Contact
 

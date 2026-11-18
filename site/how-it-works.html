@@ -329,7 +329,7 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
       </div>
     </div>
     <div class="roi">
-      <p><strong>A screening report costs £1,500, fixed.</strong> Set that against months of option payments, surveys and a planning application on a site that cannot connect. If the report does not answer the brief, you do not pay.</p>
+      <p><strong>A screening report costs £1,950, fixed.</strong> Set that against months of option payments, surveys and a planning application on a site that cannot connect. If the report does not answer the brief, you do not pay.</p>
       <a href="#contact" class="btn">Ask about a site</a>
     </div>
     <div class="calc" id="calc">
@@ -485,7 +485,7 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
     var a = parseFloat(m.value), b = parseFloat(y.value);
     if (!(a > 0) || !(b > 0)) { o.textContent = 'Enter both figures to see the total.'; return; }
     var t = Math.round(a * 12 * b);
-    o.innerHTML = 'A ' + b + '-year slip would tie up about <b>&pound;' + t.toLocaleString('en-GB') + '</b> in holding costs. A screening report costs &pound;1,500.';
+    o.innerHTML = 'A ' + b + '-year slip would tie up about <b>&pound;' + t.toLocaleString('en-GB') + '</b> in holding costs. A screening report costs &pound;1,950.';
   }
   m.addEventListener('input', run); y.addEventListener('input', run);
 })();
