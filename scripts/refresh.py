@@ -94,6 +94,17 @@ for old in current:
     if old != f'inputs/{name}':
         shutil.move(old, os.path.join('archive/tec', os.path.basename(old)))
 
+# Queue watch: compare the newest archived register with the new one.
+def _regdate(p):
+    import datetime as _dt
+    m = re.search(r'(\d{1,2})-([a-z]+)-(\d{4})', os.path.basename(p))
+    return _dt.datetime.strptime(' '.join(m.groups()), '%d %B %Y') if m else _dt.datetime.min
+prev = sorted(glob.glob('archive/tec/*.csv'), key=_regdate)
+if prev:
+    wdir = os.path.join('out', 'watch', name.replace('.csv', ''))
+    subprocess.run([sys.executable, 'scripts/queue_watch.py', prev[-1], f'inputs/{name}', 'watch/watchlist.json', wdir], check=True)
+    subprocess.run([sys.executable, 'scripts/queue_watch.py', prev[-1], f'inputs/{name}', '--all', os.path.join(wdir, 'all')], check=True)
+
 # Payloads for publishing: homepage figures and blocks, llms.txt, and the map page edits
 F = {}
 for pg in sorted(glob.glob('site/*.html')):
