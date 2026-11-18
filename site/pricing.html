@@ -227,6 +227,16 @@ details.drop .body .prod { font: 500 13px var(--mono); color: var(--accent) }
 footer { padding-block: 28px 40px; color: var(--fg-3); font-size: 13.5px }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between }
 a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.qw { margin-top: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 22px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 20px 28px; align-items: start }
+.qw .plan { border: 0; padding: 0; background: transparent }
+.qw .plan p { font-size: 14.5px; color: var(--fg-2) }
+.qw .btn { align-self: flex-start }
+.mail { min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); font-size: 14px; color: var(--fg-2) }
+.mail .hd { padding: 10px 14px; border-bottom: 1px solid var(--line); font: 12.5px var(--mono); color: var(--fg-3); overflow-wrap: anywhere }
+.mail .bd { padding: 14px; display: grid; gap: 10px }
+.mail .bd b { color: var(--fg) }
+.mail ul { padding-left: 18px; display: grid; gap: 4px }
+.mail .src { font-size: 12.5px; color: var(--fg-3) }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 32px }
   .mapcard { max-width: 360px }
@@ -235,6 +245,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .plans { grid-template-columns: repeat(2, minmax(0, 1fr)) }
   .offer2 { grid-template-columns: minmax(0, 1fr) }
   .offer2 .arrow { justify-self: center; transform: rotate(90deg) }
+  .qw { grid-template-columns: minmax(0, 1fr) }
   .how { grid-template-columns: minmax(0, 1fr); gap: 24px }
   .calc { grid-template-columns: minmax(0, 1fr) }
   .nav-links a:not(.btn) { display: none }
@@ -361,13 +372,36 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
       </div>
     </div>
     <p class="nudge">NESO updates the connection register every Tuesday and Friday, so the queue at your substation can change within days. Check it before you commit money.</p>
+    <div class="qw" id="queue-watch">
+      <div class="plan">
+        <span class="pname">Queue watch</span>
+        <span class="price">£99 <small>a month per site</small></span>
+        <span class="dur">Five sites for the price of four.</span>
+        <p>Every time NESO publishes a new register, we read it against the last one and email you what moved at the substations or projects you watch: projects joining or leaving, dates slipping, Gates changing.</p>
+        <a href="#contact" class="btn alt">Watch a site</a>
+      </div>
+      <div class="mail" aria-label="Sample queue watch alert">
+        <div class="hd">A real alert from the register of 16 November 2026</div>
+        <div class="bd">
+          <p><b>Clachan 2 132/33kV GSP Substation</b><br>Waiting to connect: 27 MW, one project (down 11 MW). Holding Gate 2: 27 MW, contracted for October 2032.</p>
+          <ul>
+            <li>Creag Dhubh (onshore wind) moved into Gate 2.</li>
+            <li>Its connection date moved two years later, from October 2030 to October 2032.</li>
+            <li>It shrank from 38.3 MW to 27 MW.</li>
+            <li>Its status went from Scoping to Consents Approved.</li>
+          </ul>
+          <p>Four changes to one project between two registers three days apart.</p>
+          <p><span class="tag i">Inferred</span> If your project shares this substation, less capacity ahead of you can help, though NESO decides the order.</p>
+          <p class="src">Source: NESO TEC Register, 13 and 16 November 2026. Confirmed from the register unless marked Inferred.</p>
+        </div>
+      </div>
+    </div>
     <details class="drop more">
       <summary><h3>Need more? Larger pieces of work</h3><span class="q">Due diligence, multi-site searches and ongoing support</span></summary>
       <div class="body">
         <ul class="morelist">
           <li><b>Transaction Due Diligence, £3,950, 4 weeks.</b> Connection, planning and CfD records checked for the named projects in a deal. A desk-based review of public registers, not an engineering or legal review.</li>
           <li><b>Site Selection Sprint, £6,450, 8 weeks.</b> Compare several areas or sites, with weekly updates on competing projects while you decide.</li>
-          <li><b>Queue watch, £99 a month per site.</b> After every new NESO register, an email on what changed at the substations or projects you watch: projects joining or leaving, dates moving, Gate changes. Five sites for the price of four.</li>
           <li><b>Annual subscription, £15,600 a year.</b> Briefing for up to three people, eight reports, a monthly call and priority turnaround.</li>
         </ul>
         <p><a href="#contact">Tell us what you need</a> and we will scope it with you.</p>
