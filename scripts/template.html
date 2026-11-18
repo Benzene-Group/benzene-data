@@ -136,6 +136,8 @@ button:focus-visible, input:focus-visible, select:focus-visible, tr[tabindex]:fo
 .dot.rough { fill-opacity: .22; stroke: currentColor; stroke-width: 1.4px; stroke-dasharray: 3.5 2.5 }
 .dot.sel { stroke: var(--selring); stroke-width: 2.5px; stroke-dasharray: none }
 .ctx { fill: var(--fg-3); fill-opacity: .55; cursor: pointer }
+.loc { fill-opacity: .85; stroke: var(--bg-2); stroke-width: 1px; vector-effect: non-scaling-stroke; cursor: help }
+.legend a { color: inherit }
 .pl { fill: none; stroke-linecap: round; stroke-width: 2.6px; vector-effect: non-scaling-stroke; pointer-events: none; opacity: .85 }
 .mapbox.close .pl { stroke-width: 4.5px }
 .lab { font-family: var(--sans); font-weight: 500; fill: var(--fg); stroke: var(--bg-2); paint-order: stroke; stroke-linejoin: round; pointer-events: none }
@@ -383,13 +385,14 @@ body.noscroll { overflow: hidden }
           <div class="ysteps" id="ysteps" role="group" aria-label="Jump to a year"></div>
         </div>
         <label class="check"><input id="plan" type="checkbox"> Show planning records</label>
+        <label class="check"><input id="loc" type="checkbox"> Show local network capacity (Yorkshire and the North East)</label>
       </div>
     </details>
     <div class="viewbar" id="viewbar" aria-live="polite"></div>
     <div class="mapgrid" id="mapgrid">
       <div>
         <div class="mapbox" id="mapbox">
-          <svg id="map" role="img" aria-label="Map of Great Britain showing connection sites sized by queued capacity and coloured by average wait"><g id="gland"></g><g id="gplan"></g><g id="gdots"></g><g id="glab"></g></svg>
+          <svg id="map" role="img" aria-label="Map of Great Britain showing connection sites sized by queued capacity and coloured by average wait"><g id="gland"></g><g id="gplan"></g><g id="gdots"></g><g id="gloc"></g><g id="glab"></g></svg>
           <div class="zoom" role="group" aria-label="Map zoom">
             <button type="button" id="zin" aria-label="Zoom in">+</button>
             <button type="button" id="zout" aria-label="Zoom out">&minus;</button>
@@ -402,6 +405,7 @@ body.noscroll { overflow: hidden }
         <div class="legend" id="legend"></div>
         <p class="note">Northern Ireland is drawn but not covered. Its grid is run separately by SONI as part of the all-island electricity market, so its connections are not in the NESO register and Gate 1 and Gate 2 do not apply there.</p>
         <div class="legend" id="planlegend" hidden></div>
+        <div class="legend" id="loclegend" hidden></div>
         <p class="note" id="unmapped"></p>
         <details><summary id="unsum"></summary><div class="tablecard pscroll" style="margin-top:10px"><table id="untable"></table></div></details>
       </div>
@@ -607,7 +611,7 @@ function drawDots() {
       lab += `<text class="lab" x="${(o.cx + (r + 4) * u).toFixed(2)}" y="${(o.cy + 4 * u).toFixed(2)}" font-size="${(11.5 * u).toFixed(3)}" stroke-width="${(3 * u).toFixed(3)}">${esc(t)}</text>`;
     }
   }
-  $('glab').innerHTML = lab; drawNi();
+  $('glab').innerHTML = lab; drawNi(); drawLoc();
 }
 function applyView(redraw) {
   view.w = Math.min(FW, view.w); view.h = view.w * FH / FW;
@@ -654,7 +658,44 @@ const endPtr = e => { if (!pts.has(e.pointerId)) return; pts.delete(e.pointerId)
 window.addEventListener('pointerup', endPtr); window.addEventListener('pointercancel', endPtr);
 
 function showTip(el, e, html, t) { t.innerHTML = html; t.hidden = false; const b = el.getBoundingClientRect(); let x = e.clientX - b.left + 14, y = e.clientY - b.top + 14; if (x + t.offsetWidth > b.width - 4) x = Math.max(4, e.clientX - b.left - t.offsetWidth - 14); if (y + t.offsetHeight > b.height - 4) y = Math.max(4, y - t.offsetHeight - 28); t.style.left = x + 'px'; t.style.top = y + 'px'; }
+
+// ---------- local network capacity: Northern Powergrid open data, read live in the visitor's browser ----------
+const LOC = {on: false, rows: null, when: ''};
+const LOCAPI = 'https://northernpowergrid.opendatasoft.com/api/explore/v2.1/catalog/datasets/heatmapdatatable';
+const LOCC = {Green: 'var(--ok)', Amber: '#d99a00', Red: '#d64541'};
+const LOCT = {Primary: 'Primary substation', 'Supply Point': 'Bulk supply point', GSP: 'Grid supply point'};
+async function loadLoc() {
+  if (LOC.rows) return;
+  const f = 'psp_name,typetable,pvoltage,genhr,demhr,worst_case_constraint_gen_colour,worst_case_constraint_dem_colour,grid_easting,grid_northing', out = [];
+  for (let o = 0; o < 3000; o += 100) {
+    const j = await (await fetch(`${LOCAPI}/records?select=${f}&limit=100&offset=${o}`)).json();
+    if (!j.results) throw new Error('no data');
+    out.push(...j.results); if (j.results.length < 100) break;
+  }
+  LOC.rows = out.filter(r => +r.grid_easting > 0 && +r.grid_northing > 0);
+  try { const m = (await (await fetch(LOCAPI)).json()).metas.default; LOC.when = m.data_processed ? fdate(m.data_processed.slice(0, 10)) : ''; } catch (e) {}
+}
+function drawLoc() {
+  const g = $('gloc'); if (!g) return; if (!LOC.on || !LOC.rows) { g.innerHTML = ''; return; }
+  const u = unit();
+  g.innerHTML = LOC.rows.map((r, k) => { const big = r.typetable !== 'Primary', z = (big ? 8 : 5) * u, cx = ux(+r.grid_easting), cy = uy(+r.grid_northing);
+    return `<rect class="loc" data-l="${k}" x="${(cx - z / 2).toFixed(2)}" y="${(cy - z / 2).toFixed(2)}" width="${z.toFixed(2)}" height="${z.toFixed(2)}" style="fill:${LOCC[r.worst_case_constraint_gen_colour] || 'var(--fg-3)'}"/>`; }).join('');
+}
+function locLegend() {
+  return '<span>Local substations, coloured by Northern Powergrid\'s own traffic light for new generation:</span>' +
+    [['Green', 'Green: headroom shown'], ['Amber', 'Amber: limited'], ['Red', 'Red: constrained']].map(a => `<span><i style="background:${LOCC[a[0]]};border-radius:2px"></i>${a[1]}</span>`).join('') +
+    '<span style="flex-basis:100%"></span><span>Large squares: grid and bulk supply points. Small squares: primary substations. Hover or tap a square for the figures. Covers Northern Powergrid\'s area only for now: Yorkshire, the North East and northern Lincolnshire.</span>' +
+    `<span style="flex-basis:100%"></span><span>Supported by <a href="https://northernpowergrid.opendatasoft.com/p/opendatalicence/" target="_blank" rel="noopener">Northern Powergrid Open Data</a>. Read live from Northern Powergrid's open data portal${LOC.when ? ', data last processed ' + LOC.when : ''}. Operator figures, shown as published.</span>`;
+}
+$('loc').addEventListener('change', async e => {
+  LOC.on = e.target.checked; const L = $('loclegend'); L.hidden = !LOC.on;
+  if (LOC.on && !LOC.rows) { L.innerHTML = '<span>Loading local network data from Northern Powergrid...</span>';
+    try { await loadLoc(); } catch (err) { L.innerHTML = '<span>Northern Powergrid\'s data could not be loaded just now. Please try again later.</span>'; return; } }
+  if (LOC.on) L.innerHTML = locLegend(); drawLoc();
+});
 map.addEventListener('pointermove', e => {
+  const l = e.target.closest('[data-l]'); if (l && !(drag && drag.moved)) { const r = LOC.rows[+l.dataset.l];
+    showTip(box, e, `<b>${esc(r.psp_name)}</b><span>${LOCT[r.typetable] || esc(r.typetable)}, ${r.pvoltage} kV</span><span>Generation headroom: ${(+r.genhr || 0).toFixed(1)} MW (${esc(r.worst_case_constraint_gen_colour || 'no rating')})</span><span>Demand headroom: ${(+r.demhr || 0).toFixed(1)} MW (${esc(r.worst_case_constraint_dem_colour || 'no rating')})</span><span>Source: Northern Powergrid open data</span>`, tip); return; }
   const c = e.target.closest('[data-i]'); if (!c || (drag && drag.moved)) { tip.hidden = true; return; }
   const i = +c.dataset.i, s = D.sites[i], o = V[i], all = o.ps.length;
   showTip(box, e, `<b>${esc(s.n)}</b>` + (o.v > 0 ? `<span>${nf(o.v)} MW waiting, ${pl(o.mine.length, 'project')}</span><span>${o.w == null ? 'No contracted date' : 'Average wait ' + o.w.toFixed(1) + ' years'}</span>` : `<span>${pl(all, 'project')} from other developers</span>`) + (s.lq === 'r' ? '<span>Rough position</span>' : ''), tip);
