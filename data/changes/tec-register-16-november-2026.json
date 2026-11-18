@@ -1,0 +1,88 @@
+{
+ "old": "13 November 2026",
+ "new": "16 November 2026",
+ "joined": [
+  {
+   "project": "Dyce Energy Storage Facility",
+   "developer": "Cbs Energy Storage Assets UK Limited",
+   "site": "Dyce 132/33kV Substation",
+   "tech": "Energy Storage System",
+   "mw": 30.0,
+   "date": "31/03/2026",
+   "gate": "2",
+   "status": "Awaiting Consents"
+  }
+ ],
+ "left": [],
+ "dates": [
+  {
+   "project": "Creag Dhubh",
+   "developer": "Muirden Energy LLP",
+   "site": "Clachan 2 132/33kV GSP Substation",
+   "tech": "Wind Onshore",
+   "mw": 27.0,
+   "date": "31/10/2032",
+   "gate": "2",
+   "status": "Consents Approved",
+   "was": "31/10/2030",
+   "years": 2.0
+  }
+ ],
+ "other": [
+  {
+   "project": "Creag Riabhach Wind Farm",
+   "developer": "Creag Riabhach Wind Farm Ltd",
+   "site": "Creag Riabhach 132/33kV Substation",
+   "tech": "Wind Onshore",
+   "mw": 0.0,
+   "date": "",
+   "gate": "",
+   "status": "Built",
+   "what": "Gate 1 to not shown"
+  },
+  {
+   "project": "Edinbane Windfarm",
+   "developer": "Vattenfall Wind Power Ltd",
+   "site": "Edinbane 132/33kV Substation",
+   "tech": "Energy Storage System;Wind Onshore",
+   "mw": 0.0,
+   "date": "",
+   "gate": "",
+   "status": "Built",
+   "what": "Gate 1 to not shown"
+  },
+  {
+   "project": "PVDP Scarning",
+   "developer": "Solarfour Ltd",
+   "site": "North Anglia Connection Node C 400kV Substation",
+   "tech": "Energy Storage System;PV Array (Photo Voltaic/solar)",
+   "mw": 650.0,
+   "date": "31/10/2034",
+   "gate": "1",
+   "status": "Scoping",
+   "what": "Gate not shown to 1"
+  },
+  {
+   "project": "Cottered - PVDP",
+   "developer": "Solarnine Ltd",
+   "site": "West Anglia Connection Node D 400kV Substation",
+   "tech": "Energy Storage System;PV Array (Photo Voltaic/solar)",
+   "mw": 520.0,
+   "date": "31/10/2034",
+   "gate": "1",
+   "status": "Scoping",
+   "what": "Gate not shown to 1"
+  },
+  {
+   "project": "Creag Dhubh",
+   "developer": "Muirden Energy LLP",
+   "site": "Clachan 2 132/33kV GSP Substation",
+   "tech": "Wind Onshore",
+   "mw": 27.0,
+   "date": "31/10/2032",
+   "gate": "2",
+   "status": "Consents Approved",
+   "what": "size 38.3 MW to 27.0 MW; Gate not shown to 2; status Scoping to Consents Approved"
+  }
+ ]
+}

@@ -104,6 +104,7 @@ if prev:
     wdir = os.path.join('out', 'watch', name.replace('.csv', ''))
     subprocess.run([sys.executable, 'scripts/queue_watch.py', prev[-1], f'inputs/{name}', 'watch/watchlist.json', wdir], check=True)
     subprocess.run([sys.executable, 'scripts/queue_watch.py', prev[-1], f'inputs/{name}', '--all', os.path.join(wdir, 'all')], check=True)
+    subprocess.run([sys.executable, 'scripts/changes_page.py'], check=True)
 
 # Payloads for publishing: homepage figures and blocks, llms.txt, and the map page edits
 F = {}

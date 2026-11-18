@@ -125,14 +125,14 @@ def site_block(site, ch, old, new):
 
 def alert(customer, sites, changes, old, new, od, nd):
     out = [f"Subject: Queue watch: {', '.join(sites[:2])}{' and more' if len(sites) > 2 else ''}, register of {nd}", '',
-           f"Hello{(' ' + customer['first_name']) if customer.get('first_name') else ''},", '',
+           f"Hi {customer['first_name']}," if customer.get('first_name') else "Hi there,", '',
            f"NESO published a new connection register ({nd}). Here is what changed at the "
            f"site{'s' if len(sites) > 1 else ''} you watch, compared with the register of {od}.", '']
     for s in sites:
         out += [site_block(s, changes.get(s, []), old, new), '']
     out += ["Source: NESO TEC Register, files of " + od + " and " + nd + ". Transmission connections only. "
             "Figures are Confirmed from the register; anything marked Inferred is our reading.", '',
-            "Best regards,", "Benzene", "info@benzene-group.com", "www.benzene-group.com"]
+            "Thanks,", "Ben"]
     text = '\n'.join(out)
     assert '—' not in text and '–' not in text
     return text

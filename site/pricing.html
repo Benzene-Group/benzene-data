@@ -231,6 +231,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .qw .plan { border: 0; padding: 0; background: transparent }
 .qw .plan p { font-size: 14.5px; color: var(--fg-2) }
 .qw .btn { align-self: flex-start }
+.qwform { display: grid; gap: 10px; margin-top: 4px }
+.qwform label { display: grid; gap: 4px; font-size: 13px; color: var(--fg-2) }
+.qwform textarea, .qwform input { font: inherit; font-size: 14px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--fg); width: 100%; box-sizing: border-box }
+.qwform textarea { resize: vertical; min-height: 64px }
+.qwnote { font-size: 12.5px; color: var(--fg-3) }
+.qwok { color: var(--ok); font-weight: 600 }
 .mail { min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); font-size: 14px; color: var(--fg-2) }
 .mail .hd { padding: 10px 14px; border-bottom: 1px solid var(--line); font: 12.5px var(--mono); color: var(--fg-3); overflow-wrap: anywhere }
 .mail .bd { padding: 14px; display: grid; gap: 10px }
@@ -321,7 +327,7 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
       <summary><h3>Land agents and planning consultants</h3><span class="q">"Is this landowner's site worth an option?"</span></summary>
       <div class="body">
         <ul><li>A plain answer on grid prospects before your client signs anything</li><li>How crowded the nearest connection points are, and how far out the dates run</li><li>Sources cited, so you can pass the findings on to your client</li></ul>
-        <p class="prod">Landowner grid note, £495 fixed, 3 working days. Weighing a specific developer's offer: screening report, £1,950.</p>
+        <p class="prod">Landowner grid note, £495 fixed, 3 working days. Weighing a specific developer's offer: screening report, £1,950. <a href="/sample-landowner-note.html">See a sample note</a>.</p>
       </div>
     </details>
     <details class="drop">
@@ -377,8 +383,14 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
         <span class="pname">Queue watch</span>
         <span class="price">£99 <small>a month per site</small></span>
         <span class="dur">Five sites for the price of four.</span>
-        <p>Every time NESO publishes a new register, we read it against the last one and email you what moved at the substations or projects you watch: projects joining or leaving, dates slipping, Gates changing.</p>
-        <a href="#contact" class="btn alt">Watch a site</a>
+        <p>Every time NESO publishes a new register, we read it against the last one and email you what moved at the substations or projects you watch: projects joining or leaving, dates slipping, Gates changing. <a href="/changes.html">See every change in the latest register</a>.</p>
+        <form class="qwform" id="qwform" novalidate>
+          <label>Substations or projects to watch<textarea id="qwSites" rows="3" placeholder="One per line, for example Clachan 2"></textarea></label>
+          <label>Your email<input type="email" id="qwEmail" placeholder="your@firm.com" autocomplete="email"></label>
+          <button type="submit" class="btn alt" id="qwBtn">Start queue watch</button>
+          <p class="qwnote">We will reply within one business day to confirm the sites and the monthly price. Nothing is charged until you agree.</p>
+          <p class="qwok" id="qwOk" hidden>Received. We will email you within one business day.</p>
+        </form>
       </div>
       <div class="mail" aria-label="Sample queue watch alert">
         <div class="hd">A real alert from the register of 16 November 2026</div>
@@ -400,7 +412,7 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
       <summary><h3>Need more? Larger pieces of work</h3><span class="q">Due diligence, multi-site searches and ongoing support</span></summary>
       <div class="body">
         <ul class="morelist">
-          <li><b>Landowner grid note, £495, 3 working days.</b> A two-page note for a land agent or landowner pricing an option: how crowded the grid is near the land, who else is queuing nearby, and the questions to put to the developer. A desk review of public registers, not a valuation or advice on option terms.</li>
+          <li><b>Landowner grid note, £495, 3 working days.</b> A two-page note for a land agent or landowner pricing an option: how crowded the grid is near the land, who else is queuing nearby, and the questions to put to the developer. A desk review of public registers, not a valuation or advice on option terms. <a href="/sample-landowner-note.html">See a sample</a>.</li>
           <li><b>Transaction Due Diligence, £3,950, 4 weeks.</b> Connection, planning and CfD records checked for the named projects in a deal. A desk-based review of public registers, not an engineering or legal review.</li>
           <li><b>Site Selection Sprint, £6,450, 8 weeks.</b> Compare several areas or sites, with weekly updates on competing projects while you decide.</li>
           <li><b>Annual subscription, £15,600 a year.</b> Briefing for up to three people, eight reports, a monthly call and priority turnaround.</li>
@@ -428,7 +440,7 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
 </section>
 
 <footer>
-  <div class="wrap"><nav class="foot-links" aria-label="Site"><a href="/">Home</a><a href="/queue-map.html">Queue map</a><a href="/how-it-works.html">How it works</a><a href="/pricing.html">Services and pricing</a></nav><span><strong style="color:var(--fg-2)">Benzene</strong> UK grid connection intelligence &middot; &copy; 2026 &middot; Tunbridge Wells, UK</span><button type="button" class="sharebtn" id="sharebtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg><span id="sharetxt">Share this page</span></button> <span>info@benzene-group.com</span></div>
+  <div class="wrap"><nav class="foot-links" aria-label="Site"><a href="/">Home</a><a href="/queue-map.html">Queue map</a><a href="/how-it-works.html">How it works</a><a href="/pricing.html">Services and pricing</a><a href="/changes.html">Register changes</a><a href="/sample-landowner-note.html">Sample note</a></nav><span><strong style="color:var(--fg-2)">Benzene</strong> UK grid connection intelligence &middot; &copy; 2026 &middot; Tunbridge Wells, UK</span><button type="button" class="sharebtn" id="sharebtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg><span id="sharetxt">Share this page</span></button> <span>info@benzene-group.com</span></div>
 </footer>
 
 <script>
@@ -490,6 +502,27 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
   }
   m.addEventListener('input', run); y.addEventListener('input', run);
 })();
+(document.getElementById('qwform') || { addEventListener: function () {} }).addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var f = this, em = document.getElementById('qwEmail'), st = document.getElementById('qwSites'), btn = document.getElementById('qwBtn');
+  var email = em.value.trim(), sites = st.value.trim();
+  st.style.borderColor = ''; em.style.borderColor = '';
+  if (!sites) { st.style.borderColor = 'var(--err)'; st.focus(); return; }
+  if (!email || email.indexOf('@') < 1) { em.style.borderColor = 'var(--err)'; em.focus(); return; }
+  btn.disabled = true; btn.textContent = 'Sending...';
+  var n = sites.split(/\n+/).filter(function (x) { return x.trim(); }).length;
+  try {
+    var res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ access_key: '2be75126-773f-4b76-892a-e8f152b6b4d8', subject: 'Queue watch request (' + n + ' site' + (n === 1 ? '' : 's') + ')', from_name: 'benzene-group.com', email: email, sites: sites, message: 'Queue watch requested for:\n' + sites }) });
+    var data = await res.json();
+    if (!res.ok || !data.success) throw new Error('err');
+    document.getElementById('qwOk').hidden = false; btn.textContent = 'Sent';
+    st.disabled = true; em.disabled = true;
+  } catch (err) {
+    btn.disabled = false; btn.textContent = 'Start queue watch';
+    var ok = document.getElementById('qwOk'); ok.hidden = false; ok.style.color = 'var(--fg-2)';
+    ok.textContent = 'That did not go through. Please email the sites to info@benzene-group.com instead.';
+  }
+});
 </script>
 <script>(function(){var b=document.getElementById('themebtn');if(!b)return;b.addEventListener('click',function(){var r=document.documentElement,c=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'),n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('bz-theme',n)}catch(e){}if(window.bzThemeChanged)window.bzThemeChanged(n)})})();</script>
 <script>(function(){var b=document.getElementById('sharebtn');if(!b)return;var s=document.getElementById('sharetxt');b.addEventListener('click',function(){var c=document.querySelector('link[rel=canonical]'),u=(c&&c.href)||location.href.split('#')[0],t=document.title;function done(m){s.textContent=m;setTimeout(function(){s.textContent='Share this page'},4000)}if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}try{navigator.clipboard.writeText(u).then(function(){done('Link copied')},function(){done(u)})}catch(e){done(u)}})})();</script>

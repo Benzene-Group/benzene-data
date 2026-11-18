@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sample landowner grid note | Benzene</title>
+<meta name="description" content="A worked sample of the Benzene landowner grid note for land near Creyke Beck: the transmission queue, local network headroom and the questions to ask a developer.">
+<meta name="keywords" content="UK grid connection, NESO TEC Register, Gate 2 connections reform, grid connection queue, site selection, connection date, renewable development, grid due diligence">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.benzene-group.com/sample-landowner-note.html">
+<link rel="icon" href="/benzene-icon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/benzene-icon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png?v=2" type="image/png" sizes="48x48">
+<link rel="icon" href="/favicon-192.png?v=2" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<meta name="google-site-verification" content="1cZIpM3592GeEPh2idF_tcbg9cJTRCF6LZPQxV-aG6g">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.benzene-group.com/sample-landowner-note.html">
+<meta property="og:site_name" content="Benzene">
+<meta property="og:title" content="Sample landowner grid note | Benzene">
+<meta property="og:description" content="A worked sample of the Benzene landowner grid note for land near Creyke Beck: the transmission queue, local network headroom and the questions to ask a developer.">
+<meta property="og:image" content="https://static.wixstatic.com/media/6c3d77_12eda6f8edd04df69ca8a3171b349701~mv2.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Benzene: UK grid connection intelligence">
+<meta name="twitter:image" content="https://static.wixstatic.com/media/6c3d77_12eda6f8edd04df69ca8a3171b349701~mv2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sample landowner grid note | Benzene">
+<meta name="twitter:description" content="A worked sample of the Benzene landowner grid note for land near Creyke Beck: the transmission queue, local network headroom and the questions to ask a developer.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script>(function(){try{var t=localStorage.getItem('bz-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+<style>
+:root {
+  --bg: #f6f8fb; --band: #eaf1f7; --card: #ffffff;
+  --fg: #13243a; --fg-2: #3c4f66; --fg-3: #5d6f85;
+  --line: #dbe3ec; --line-2: #c9d5e1;
+  --brand: #05c8e8; --accent: #07738d; --accent-bg: #e3f5f9;
+  --g2: #0e8fae; --g1: #c27c00; --gn: #7a6ee0;
+  --ok: #157a52; --ok-bg: #e4f4ec; --warn: #8a5a00; --warn-bg: #fbf0dc; --inf-bg: #eceff4;
+  --sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  --nav-bg: rgba(255,255,255,.94); --cta: #13243a; --cta-h: #24405f; --cta-fg: #ffffff;
+  --input: #ffffff; --hero-top: #ffffff; --shadow: rgba(19,36,58,.06); --shadow-2: rgba(19,36,58,.1);
+  --land: #dde5ee; --gridline: #e1e7ee; --dotring: #ffffff; --err: #b4232f;
+  --w1: #f2a7ad; --w2: #e47883; --w3: #cc4a5a; --w4: #a3303f; --w5: #6b1d2a;
+  --roi-bg: #13243a; --roi-fg: #ffffff; --roi-p: #e8eef5; --roi-btn-h: #3fd6ef;
+  --ring: #07738d; --bond: #009fc0; --hover: #eef3f8;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0d1521; --band: #111c2b; --card: #152132;
+  --fg: #e7edf5; --fg-2: #b4c1d0; --fg-3: #8b9aad;
+  --line: #22324a; --line-2: #34465f;
+  --brand: #05c8e8; --accent: #4cc0dc; --accent-bg: #0f3442;
+  --g2: #2bb3d4; --g1: #e3a535; --gn: #9d93f2;
+  --ok: #4fd29a; --ok-bg: #12382a; --warn: #f0bd5c; --warn-bg: #3a2c10; --inf-bg: #22314a;
+  --nav-bg: rgba(13,21,33,.92); --cta: #4cc0dc; --cta-h: #74d2e8; --cta-fg: #0d1521;
+  --input: #0f1a28; --hero-top: #111c2b; --shadow: rgba(0,0,0,.35); --shadow-2: rgba(0,0,0,.5);
+  --land: #2a3a50; --gridline: #22324a; --dotring: #152132; --err: #ff6b78;
+  --w1: #5a2731; --w2: #8c3444; --w3: #c64b5e; --w4: #ec7584; --w5: #ffb4bd;
+  --roi-bg: #0a2a35; --roi-fg: #ffffff; --roi-p: #cfe3ec; --roi-btn-h: #74d2e8;
+  --ring: #3aa6c0; --bond: #05c8e8; --hover: #1b2a3e;
+  color-scheme: dark;
+} }
+:root[data-theme="dark"] {
+  --bg: #0d1521; --band: #111c2b; --card: #152132;
+  --fg: #e7edf5; --fg-2: #b4c1d0; --fg-3: #8b9aad;
+  --line: #22324a; --line-2: #34465f;
+  --brand: #05c8e8; --accent: #4cc0dc; --accent-bg: #0f3442;
+  --g2: #2bb3d4; --g1: #e3a535; --gn: #9d93f2;
+  --ok: #4fd29a; --ok-bg: #12382a; --warn: #f0bd5c; --warn-bg: #3a2c10; --inf-bg: #22314a;
+  --nav-bg: rgba(13,21,33,.92); --cta: #4cc0dc; --cta-h: #74d2e8; --cta-fg: #0d1521;
+  --input: #0f1a28; --hero-top: #111c2b; --shadow: rgba(0,0,0,.35); --shadow-2: rgba(0,0,0,.5);
+  --land: #2a3a50; --gridline: #22324a; --dotring: #152132; --err: #ff6b78;
+  --w1: #5a2731; --w2: #8c3444; --w3: #c64b5e; --w4: #ec7584; --w5: #ffb4bd;
+  --roi-bg: #0a2a35; --roi-fg: #ffffff; --roi-p: #cfe3ec; --roi-btn-h: #74d2e8;
+  --ring: #3aa6c0; --bond: #05c8e8; --hover: #1b2a3e;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+html { scroll-behavior: smooth; scroll-padding-top: 72px }
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased }
+a { color: var(--accent) }
+.wrap { max-width: 1100px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)) }
+nav { position: sticky; top: 0; z-index: 50; background: var(--nav-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px) }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--fg); font-weight: 600; font-size: 19px; letter-spacing: -.02em }
+.nav-links { display: flex; align-items: center; gap: 24px }
+.nav-links a { font-size: 14px; color: var(--fg-2); text-decoration: none }
+.nav-links a:hover { color: var(--fg) }
+.nav-links a.btn, .nav-links a.btn:hover { color: var(--cta-fg) }
+.btn { display: inline-block; background: var(--cta); color: var(--cta-fg); font: 600 14px var(--sans); border: 0; border-radius: 6px; padding: 10px 18px; text-decoration: none; cursor: pointer }
+.btn:hover { background: var(--cta-h) }
+.btn.alt { background: transparent; color: var(--fg); border: 1px solid var(--line-2) }
+.btn.alt:hover { background: var(--card); border-color: var(--fg-3) }
+section { padding-block: 64px; border-bottom: 1px solid var(--line) }
+.band { background: var(--band) }
+.eyebrow { font: 500 12px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px }
+h1 { font-size: clamp(30px, 4.6vw, 50px); line-height: 1.12; letter-spacing: -.03em; font-weight: 600; text-wrap: balance; max-width: 20ch }
+h2 { font-size: clamp(24px, 3vw, 34px); line-height: 1.2; letter-spacing: -.02em; font-weight: 600; text-wrap: balance; margin-bottom: 12px }
+h3 { font-size: 17px; font-weight: 600; line-height: 1.35 }
+.lead { font-size: 18px; color: var(--fg-2); max-width: 60ch }
+.sowhat { display: flex; gap: 10px; align-items: baseline; margin-top: 18px; padding: 12px 16px; background: var(--accent-bg); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; max-width: 72ch; font-size: 15px; color: var(--fg) }
+.sowhat b { font: 600 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); white-space: nowrap }
+.hero { padding-block: 64px 56px; background: linear-gradient(180deg, var(--hero-top) 0%, var(--bg) 100%) }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 48px; align-items: center }
+.hero .lead { margin-top: 18px }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px }
+.mapcard { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; text-decoration: none; color: var(--fg); box-shadow: 0 6px 24px var(--shadow) }
+.mapcard:hover { border-color: var(--line-2); box-shadow: 0 8px 28px var(--shadow-2) }
+.mapcard svg { display: block; width: 100%; max-width: 300px; height: auto; margin: 0 auto }
+.mapcard .cap { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin-top: 10px; font-size: 13px; color: var(--fg-3) }
+.mapcard .cap b { color: var(--accent); font-weight: 600 }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 40px }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px }
+.stat .v { font: 500 28px var(--mono); letter-spacing: -.02em; line-height: 1.1 }
+.stat .v small { font-size: 15px; color: var(--fg-3) }
+.stat .k { font-size: 14px; color: var(--fg-2); margin-top: 4px; line-height: 1.4 }
+.src { font-size: 13px; color: var(--fg-3); margin-top: 12px }
+.src .tag { margin-right: 6px }
+.tag { display: inline-block; font: 600 11px var(--mono); letter-spacing: .04em; text-transform: uppercase; border-radius: 4px; padding: 2px 7px; vertical-align: 1px }
+.tag.c { background: var(--ok-bg); color: var(--ok) }
+.tag.r { background: var(--warn-bg); color: var(--warn) }
+.tag.i { background: var(--inf-bg); color: var(--fg-2) }
+.cards3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 32px }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 22px; min-width: 0; display: flex; flex-direction: column; gap: 12px }
+.num { width: 32px; height: 32px; border-radius: 50%; background: var(--accent-bg); color: var(--accent); font: 600 15px var(--mono); display: grid; place-items: center }
+.cmp { display: grid; gap: 8px; font-size: 14.5px; color: var(--fg-2) }
+.cmp div { padding: 9px 12px; border-radius: 6px; background: var(--bg) }
+.cmp div b { display: block; font: 600 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); margin-bottom: 2px }
+.cmp .new { background: var(--accent-bg) }
+.cmp .new b { color: var(--accent) }
+.card .so { font-size: 14.5px; font-weight: 500; color: var(--fg); margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line) }
+.roi { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; justify-content: space-between; background: var(--roi-bg); color: var(--roi-fg); border-radius: 10px; padding: 20px 24px }
+.roi p { font-size: 16px; max-width: 62ch; color: var(--roi-p) }
+.roi strong { color: var(--roi-fg) }
+.roi .btn { background: var(--brand); color: var(--fg) }
+.roi .btn:hover { background: var(--roi-btn-h) }
+.gates { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px }
+.gate { background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--gc); border-radius: 10px; padding: 20px; min-width: 0 }
+.gate .name { display: flex; align-items: center; justify-content: space-between; gap: 8px }
+.gate .gnum { font: 500 13px var(--mono); color: var(--fg-3) }
+.gate .means { font-size: 15px; color: var(--fg-2); margin-top: 10px }
+.gate ul { list-style: none; margin-top: 12px; display: grid; gap: 6px; font-size: 14.5px }
+.gate li { padding-left: 22px; position: relative }
+.gate li::before { content: ''; position: absolute; left: 2px; top: .55em; width: 10px; height: 10px; border-radius: 50%; background: var(--gc) }
+.gate li.no::before { background: transparent; border: 2px solid var(--line-2) }
+.gate .fig { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; color: var(--fg-2) }
+.gate .fig strong { font: 500 18px var(--mono); color: var(--fg) }
+.chartbox { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px 14px 10px; margin-top: 24px; overflow-x: auto }
+.chartbox svg { display: block; width: 100%; min-width: 520px; height: auto; font: 11px var(--mono); fill: var(--fg-3) }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--fg-2); margin-top: 12px }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 6px; vertical-align: -1px }
+details.drop { background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin-top: 10px }
+details.drop > summary { list-style: none; cursor: pointer; padding: 16px 48px 16px 20px; position: relative; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline }
+details.drop > summary::-webkit-details-marker { display: none }
+details.drop > summary::after { content: '+'; position: absolute; right: 18px; top: 12px; font: 400 24px var(--sans); color: var(--accent) }
+details.drop[open] > summary::after { content: '\2212' }
+details.drop > summary .q { font-size: 14.5px; color: var(--fg-3); font-style: italic }
+details.drop .body { padding: 0 20px 18px; color: var(--fg-2); font-size: 15px; display: grid; gap: 10px }
+details.drop .body ul { padding-left: 18px; display: grid; gap: 4px }
+details.drop .body .prod { font: 500 13px var(--mono); color: var(--accent) }
+.signals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px }
+.sig { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0 }
+.sig .when { font: 500 12px var(--mono); color: var(--fg-3); letter-spacing: .04em; text-transform: uppercase }
+.sig .big { font: 500 30px var(--mono); letter-spacing: -.02em; line-height: 1.1 }
+.sig p { font-size: 14.5px; color: var(--fg-2) }
+.sig .so { font-size: 14.5px; font-weight: 500; color: var(--fg); padding-top: 10px; border-top: 1px solid var(--line); margin-top: auto }
+.sig .from { font-size: 12.5px; color: var(--fg-3) }
+.plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 28px }
+.plan { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 8px; min-width: 0 }
+.plan.main { border: 2px solid var(--accent) }
+.plan .pname { font-weight: 600; font-size: 15.5px }
+.plan .price { font: 500 26px var(--mono); letter-spacing: -.02em }
+.plan .price small { font-size: 14px; color: var(--fg-3) }
+.plan .dur { font-size: 13px; color: var(--fg-3) }
+.plan .what { font-size: 14.5px; color: var(--fg-2) }
+.plan details { margin-top: auto; font-size: 14px; color: var(--fg-2) }
+.plan summary { cursor: pointer; color: var(--accent); font-weight: 500; padding-top: 8px; border-top: 1px solid var(--line) }
+.plan details ul { padding: 8px 0 0 18px; display: grid; gap: 4px }
+.guarantee { margin-top: 16px; font-size: 15px; color: var(--fg-2) }
+.offer2 { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.25fr); gap: 16px; align-items: stretch; margin-top: 28px }
+.offer2 .arrow { align-self: center; font-size: 28px; color: var(--accent) }
+.offer2 .plan { gap: 10px }
+.offer2 .btn { align-self: flex-start; margin-top: auto }
+.incl { list-style: none; display: grid; gap: 6px; font-size: 14.5px; color: var(--fg-2) }
+.incl li { padding-left: 22px; position: relative }
+.incl li::before { content: '\2713'; position: absolute; left: 0; color: var(--ok); font-weight: 600 }
+.promise-sm { font-size: 14.5px; color: var(--ok) }
+.nudge { margin-top: 18px; font-size: 15px; color: var(--fg-2); max-width: 70ch }
+.drop.more { margin-top: 20px }
+.morelist { list-style: none; padding-left: 0 !important; display: grid; gap: 10px }
+.morelist b { color: var(--fg) }
+.promise { display: flex; gap: 10px; align-items: flex-start; margin-top: 20px; max-width: 60ch; font-size: 15px; color: var(--fg-2) }
+.promise svg { flex: none; margin-top: 2px }
+.promise strong { color: var(--fg) }
+.like { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--fg) }
+.like span { font-weight: 400; color: var(--fg-2) }
+.calc { margin-top: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 32px; align-items: center }
+.calc h3 { margin-bottom: 6px }
+.calc .hint { font-size: 14px; color: var(--fg-3) }
+.calc .fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px }
+.calc label { display: grid; gap: 4px; font-size: 13.5px; color: var(--fg-2) }
+.calc input { width: 100%; border: 1px solid var(--line-2); border-radius: 6px; padding: 10px 12px; font: 16px var(--mono); color: var(--fg); background: var(--input) }
+.calc input:focus { border-color: var(--accent); outline: none }
+.calc .out { grid-column: 1 / -1; padding: 12px 16px; border-radius: 6px; background: var(--accent-bg); font-size: 15.5px; color: var(--fg); min-height: 48px }
+.calc .out b { font: 600 20px var(--mono) }
+.form.two { max-width: 640px; gap: 0 }
+.site-in { flex: 1.1; min-width: 0; border: 1px solid var(--line-2); border-right: 0; border-radius: 6px 0 0 6px; padding: 13px 15px; font: 15px var(--sans); color: var(--fg); background: var(--input); outline: none }
+.site-in:focus { border-color: var(--accent) }
+.form.two .email-in { border-radius: 0 }
+.how { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start }
+.tags { display: grid; gap: 10px; margin-top: 18px }
+.tags div { font-size: 15px; color: var(--fg-2) }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px }
+.pills span { font: 12.5px var(--mono); color: var(--fg-2); background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 4px 9px }
+.contact { text-align: center; background: var(--card) }
+.contact .lead { margin: 10px auto 0 }
+.form { display: flex; max-width: 480px; margin: 28px auto 0 }
+.email-in { flex: 1; min-width: 0; border: 1px solid var(--line-2); border-right: 0; border-radius: 6px 0 0 6px; padding: 13px 15px; font: 15px var(--sans); color: var(--fg); background: var(--input); outline: none }
+.email-in:focus { border-color: var(--accent) }
+.cta-btn { background: var(--cta); color: var(--cta-fg); border: 0; border-radius: 0 6px 6px 0; padding: 13px 22px; font: 600 14px var(--sans); cursor: pointer; white-space: nowrap }
+.cta-btn:hover { background: var(--cta-h) }
+.cta-note { font-size: 13.5px; color: var(--fg-3); margin-top: 10px }
+.success { display: none; font-size: 15px; color: var(--ok); margin-top: 14px; font-weight: 500 }
+.addr { margin-top: 18px; font-size: 14.5px; color: var(--fg-2) }
+footer { padding-block: 28px 40px; color: var(--fg-3); font-size: 13.5px }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 32px }
+  .mapcard { max-width: 360px }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .cards3, .gates, .signals { grid-template-columns: minmax(0, 1fr) }
+  .plans { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .offer2 { grid-template-columns: minmax(0, 1fr) }
+  .offer2 .arrow { justify-self: center; transform: rotate(90deg) }
+  .how { grid-template-columns: minmax(0, 1fr); gap: 24px }
+  .calc { grid-template-columns: minmax(0, 1fr) }
+  .nav-links a:not(.btn) { display: none }
+}
+@media (max-width: 520px) {
+  section { padding-block: 48px }
+  .plans { grid-template-columns: minmax(0, 1fr) }
+  .form { flex-direction: column }
+  .email-in, .form.two .email-in { border-right: 1px solid var(--line-2); border-radius: 0; border-top: 0 }
+  .site-in { border-right: 1px solid var(--line-2); border-radius: 6px 6px 0 0 }
+  .calc .fields { grid-template-columns: minmax(0, 1fr) }
+  .cta-btn { border-radius: 0 0 6px 6px }
+  .stat .v { font-size: 24px }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
+a.sig { color: inherit; text-decoration: none; transition: border-color .15s }
+a.sig:hover { border-color: var(--accent) }
+a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
+.nav-links a[aria-current="page"] { color: var(--fg); font-weight: 500 }
+.foot-links { display: flex; flex-wrap: wrap; gap: 6px 18px; width: 100%; margin-bottom: 8px }
+.foot-links a { color: var(--fg-2); text-decoration: none }
+.page-head { padding-block: 48px 8px; border-bottom: 0 }
+.themebtn { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 6px; border: 1px solid var(--line-2); background: transparent; color: var(--fg-2); cursor: pointer; padding: 0 }
+.themebtn:hover { color: var(--fg); background: var(--hover) }
+.themebtn .moon { display: none }
+:root[data-theme="dark"] .themebtn .sun { display: none } :root[data-theme="dark"] .themebtn .moon { display: inline }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .themebtn .sun { display: none } :root:not([data-theme="light"]) .themebtn .moon { display: inline } }
+.sharebtn { display: inline-flex; align-items: center; gap: 7px; background: transparent; border: 1px solid var(--line-2); border-radius: 6px; color: var(--fg-2); font: 500 13px var(--sans); padding: 6px 12px; cursor: pointer }
+.sharebtn:hover { color: var(--fg); border-color: var(--fg-3) }
+</style>
+<style>
+
+.note { padding-block: 8px 56px }
+.paper { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: clamp(18px, 4vw, 40px); max-width: 920px }
+.paper h2 { font-size: 22px; margin: 30px 0 10px }
+.paper h2:first-of-type { margin-top: 14px }
+.paper h3 { font-size: 16px; margin: 18px 0 8px; font-weight: 600 }
+.paper p, .paper li { color: var(--fg-2); max-width: 72ch; margin-bottom: 10px }
+.paper ul, .paper ol { padding-left: 20px }
+.paper b { color: var(--fg) }
+.meta { font: 12.5px var(--mono); color: var(--fg-3) !important }
+.small { font-size: 13px; color: var(--fg-3) !important }
+.tw { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; margin: 10px 0 12px }
+.tw table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 520px }
+.tw th { text-align: left; font: 600 11px var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--fg-3); padding: 9px 11px; border-bottom: 1px solid var(--line); vertical-align: bottom }
+.tw td { padding: 9px 11px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--fg-2) }
+.tw tr:last-child td, .tw tr:last-child th { border-bottom: 0 }
+.tw td b { color: var(--fg); font-weight: 600; display: block }
+.tw .dev { display: block; font-size: 12.5px; color: var(--fg-3) }
+.tw .n { text-align: right; font-family: var(--mono); white-space: nowrap }
+.kv { min-width: 0 !important }
+.kv th { width: 34%; text-transform: none; letter-spacing: 0; font: 600 13px var(--sans, inherit); color: var(--fg-2) }
+.rag { font: 600 11px var(--mono); padding: 2px 7px; border-radius: 4px }
+.rag.G { background: var(--ok-bg); color: var(--ok) }
+.rag.A { background: var(--warn-bg); color: var(--warn) }
+.rag.R { background: var(--err-bg, var(--warn-bg)); color: var(--err, var(--warn)) }
+.qwcta { margin-top: 28px; max-width: 920px; padding: 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between }
+.qwcta p { max-width: 60ch; color: var(--fg-2) }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="/" class="logo" aria-label="Benzene home">
+      <svg width="34" height="34" viewBox="0 0 28 28" fill="none" aria-hidden="true"><polygon points="14.00,1.60 24.74,7.80 24.74,20.20 14.00,26.40 3.26,20.20 3.26,7.80" fill="none" style="stroke:var(--ring)" stroke-width="2.00" stroke-linejoin="round"/><line x1="15.27" y1="5.56" x2="20.68" y2="8.68" style="stroke:var(--bond)" stroke-width="2.00" stroke-linecap="round"/><line x1="20.68" y1="19.32" x2="15.27" y2="22.44" style="stroke:var(--bond)" stroke-width="2.00" stroke-linecap="round"/><line x1="6.05" y1="17.12" x2="6.05" y2="10.88" style="stroke:var(--bond)" stroke-width="2.00" stroke-linecap="round"/></svg>
+      Benzene
+    </a>
+    <div class="nav-links">
+      <a href="/queue-map.html">Queue map</a>
+      <a href="/how-it-works.html">How it works</a>
+      <a href="/pricing.html">Services and pricing</a>
+      <button type="button" class="themebtn" id="themebtn" aria-label="Switch between light and dark mode" title="Light or dark mode"><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      <a href="#contact" class="btn">Free substation check</a>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-head"><div class="wrap">
+  <p class="eyebrow">Sample landowner grid note</p>
+  <h1>Land near Creyke Beck, East Riding of Yorkshire</h1>
+  <p class="lead">A worked example of our £495 landowner grid note, built from real public data. There is no client and no named landowner: the land is a notional field next to Creyke Beck substation, near Cottingham. A real note follows the same six sections and arrives within three working days.</p>
+</div></section>
+
+<section class="note"><div class="wrap">
+<div class="paper">
+  <p class="meta">18 November 2026 &middot; Prepared by Benzene as a sample &middot; A desk review of public registers. Not a valuation, legal advice or an engineering study.</p>
+
+  <h2>1. The short answer</h2>
+  <p>The transmission queue here is long. <b>7,578 MW</b> is queued at Creyke Beck 400kV across 6 projects, none of it holding Gate 2, with contracted dates running from 2028 to 2039. <span class="tag c">Confirmed</span></p>
+  <p>The local network looks different. Northern Powergrid shows 323 MW of generation headroom at its Creyke Beck grid supply point, rated Green, but rates the nearest 33 kV and most nearby 11 kV substations Red for new generation. <span class="tag c">Confirmed</span></p>
+  <p>A large scheme needing a transmission connection here would join the back of a long queue. A smaller scheme on the local network would be judged mainly on Northern Powergrid's capacity, and the nearest substations are the constrained ones. Only a connection offer settles either. <span class="tag i">Inferred</span></p>
+
+  <div class="tw"><table class="kv"><tbody>
+    <tr><th>Land</th><td>Notional field next to Creyke Beck substation, near Cottingham (sample only)</td></tr>
+    <tr><th>Use being proposed</th><td>Solar and battery storage, size not given</td></tr>
+    <tr><th>Proposed buyer or developer</th><td>Not shared</td></tr>
+    <tr><th>Register data as of</th><td>NESO TEC Register file of 16 November 2026</td></tr>
+    <tr><th>Local network data as of</th><td>Northern Powergrid heat map data, last processed 27 July 2026</td></tr>
+  </tbody></table></div>
+
+  <h2>2. The grid near the land</h2>
+  <h3>Transmission connection points</h3>
+  <div class="tw"><table><thead><tr><th>Connection site</th><th>Distance</th><th class=n>MW waiting</th><th class=n>Projects</th><th class=n>Gate 2 MW</th><th>Contracted dates</th></tr></thead><tbody>
+    <tr><td><b>Creyke Beck 400kV Substation</b></td><td>At the land</td><td class=n>7,578</td><td class=n>6</td><td class=n>0</td><td>2028 to 2039</td></tr><tr><td><b>Creyke Beck GSP</b></td><td>At the land</td><td class=n>470</td><td class=n>2</td><td class=n>0</td><td>2033 to 2039</td></tr><tr><td><b>Creyke Beck 132kV</b></td><td>At the land</td><td class=n>100</td><td class=n>1</td><td class=n>0</td><td>2034</td></tr><tr><td><b>Birkhill Wood 400kV Substation</b></td><td>About 3 km, position approximate</td><td class=n>4,350</td><td class=n>3</td><td class=n>0</td><td>2030 to 2031</td></tr>
+    <tr><td><b>North Humber Connection Nodes</b><span class=dev>6 future nodes</span></td><td>Locations not given in the register</td><td class=n>3,320</td><td class=n>9</td><td class=n>0</td><td>2033 to 2039</td></tr>
+  </tbody></table></div>
+  <p class="small">All rows Confirmed from the NESO TEC Register of 16 November 2026. Distances are straight-line and approximate; cable routes are longer.</p>
+  <h3>Local network (Northern Powergrid)</h3>
+  <div class="tw"><table><thead><tr><th>Substation</th><th>Type</th><th>Distance</th><th class=n>Generation headroom MW</th><th>Rating</th><th class=n>Demand headroom MW</th><th>Rating</th></tr></thead><tbody><tr><td><b>Creyke Beck</b></td><td>Grid supply point, 132 kV</td><td>0.0 km</td><td class=n>323.3</td><td><span class='rag G'>Green</span></td><td class=n>314.8</td><td><span class='rag G'>Green</span></td></tr><tr><td><b>Beverley 132/33kV</b></td><td>Bulk supply point, 33 kV</td><td>2.2 km</td><td class=n>57.0</td><td><span class='rag R'>Red</span></td><td class=n>23.6</td><td><span class='rag R'>Red</span></td></tr><tr><td><b>Southwood Road</b></td><td>Primary, 11 kV</td><td>2.9 km</td><td class=n>2.2</td><td><span class='rag R'>Red</span></td><td class=n>9.5</td><td><span class='rag R'>Red</span></td></tr><tr><td><b>Endike Lane</b></td><td>Primary, 11 kV</td><td>2.9 km</td><td class=n>23.9</td><td><span class='rag R'>Red</span></td><td class=n>11.4</td><td><span class='rag R'>Red</span></td></tr><tr><td><b>Spark Mill Lane</b></td><td>Primary, 11 kV</td><td>4.0 km</td><td class=n>15.7</td><td><span class='rag R'>Red</span></td><td class=n>7.3</td><td><span class='rag R'>Red</span></td></tr><tr><td><b>County Road North</b></td><td>Primary, 11 kV</td><td>5.1 km</td><td class=n>13.3</td><td><span class='rag G'>Green</span></td><td class=n>6.6</td><td><span class='rag G'>Green</span></td></tr></tbody></table></div>
+  <p class="small">Confirmed from Northern Powergrid's heat map data, shown as published, with the operator's caveats. Supported by <a href="https://northernpowergrid.opendatasoft.com/p/opendatalicence/" target="_blank" rel="noopener">Northern Powergrid Open Data</a>. A substation can show headroom in MW and still be rated Red where a constraint further up the network applies.</p>
+  <p><b>What this means.</b> Every project queued at Creyke Beck 400kV is Gate 1 or shows no Gate, so some of it may fall away as NESO applies its readiness tests. We cannot say how much. <span class="tag i">Inferred</span></p>
+
+  <h2>3. Who else is queuing here</h2>
+  <div class="tw"><table><thead><tr><th>Project</th><th>Site</th><th class=n>MW</th><th>Technology</th><th>Gate</th><th>Contracted date</th><th>Register status</th></tr></thead><tbody><tr><td><b>Creyke Beck Battery 2</b><span class=dev>Cbb Spv Limited</span></td><td>Creyke Beck 400kV</td><td class=n>28</td><td>Battery storage</td><td>Not shown</td><td>30 June 2028</td><td>Consents Approved</td></tr><tr><td><b>Hornsea Power Station 4</b><span class=dev>Orsted Hornsea Project Four Limited</span></td><td>Creyke Beck 400kV</td><td class=n>2,600</td><td>Offshore wind</td><td>Not shown</td><td>30 October 2028</td><td>Scoping</td></tr><tr><td><b>CREYKE BECK</b><span class=dev>Clean Air Renewables Limited</span></td><td>Creyke Beck 400kV</td><td class=n>500</td><td>Solar + storage</td><td>Not shown</td><td>31 May 2033</td><td>Scoping</td></tr><tr><td><b>Creyke Beck Solar Farm</b><span class=dev>RWE Renewables UK Solar And Storage Limited</span></td><td>Creyke Beck GSP</td><td class=n>320</td><td>Solar</td><td>Not shown</td><td>31 May 2033</td><td>Scoping</td></tr><tr><td><b>Hall Ings Farm Substation</b><span class=dev>O&amp;G Group Limited</span></td><td>Creyke Beck 132kV</td><td class=n>100</td><td>Solar</td><td>Not shown</td><td>30 October 2034</td><td>Scoping</td></tr><tr><td><b>Creyke Beck PV &amp; BESS Sub</b><span class=dev>Beferleah Energy Park Limited</span></td><td>Creyke Beck 400kV</td><td class=n>250</td><td>Solar + storage</td><td>Gate 1</td><td>30 May 2035</td><td>Scoping</td></tr><tr><td><b>Bute Hydrogen Project 2</b><span class=dev>Haldane Energy Project 2 Limited</span></td><td>Creyke Beck 400kV</td><td class=n>3,600</td><td>Gas and thermal</td><td>Gate 1</td><td>30 October 2035</td><td>Scoping</td></tr><tr><td><b>KENLEY HOUSE SOLAR PARK</b><span class=dev>Boom Developments Ltd</span></td><td>Creyke Beck GSP</td><td class=n>150</td><td>Solar</td><td>Not shown</td><td>30 October 2039</td><td>Scoping</td></tr><tr><td><b>Flinton Road</b><span class=dev>Flinton Road Solar Limited</span></td><td>Creyke Beck 400kV</td><td class=n>600</td><td>Solar + storage</td><td>Not shown</td><td>31 October 2039</td><td>Scoping</td></tr></tbody></table></div>
+  <p class="small">All rows Confirmed from the NESO TEC Register of 16 November 2026. The developer names are as the register shows them.</p>
+
+  <h2>4. What this means for an option</h2>
+  <p>Facts first, then our reading. None of this is advice on option terms.</p>
+  <ul>
+    <li><b>Gate 2 land test.</b> NESO's guidance says an option agreement used as Gate 2 land evidence needs a minimum term of three years from the date it was signed, unless an exception applies. <span class="tag c">Confirmed</span> NESO's lease pro forma sets a default lease term of 20 years from the date the option is exercised. <span class="tag r">Reported</span></li>
+    <li><b>Timing.</b> Contracted dates at Creyke Beck run to 2039. If a developer's plan depends on a new transmission connection here, its date could fall after a three to five year option has run. Ask how the two line up. <span class="tag i">Inferred</span></li>
+    <li><b>Local headroom.</b> The grid supply point shows headroom; the nearer 33 kV and 11 kV substations are mostly rated Red. Ask which one the developer would connect to.</li>
+  </ul>
+
+  <h2>5. Questions to put to the developer</h2>
+  <ol>
+    <li>Which substation do you plan to connect to, and do you hold a connection offer or have you applied?</li>
+    <li>If you hold an offer, what is its Gate status and its connection date?</li>
+    <li>Is the plan a transmission connection at Creyke Beck, or a local connection through Northern Powergrid?</li>
+    <li>If local, what has Northern Powergrid said about the Red ratings at Beverley and the nearby 11 kV substations?</li>
+    <li>What happens to the option payments if the connection date moves?</li>
+  </ol>
+
+  <h2>6. Sources and limits</h2>
+  <div class="tw"><table><thead><tr><th>Source</th><th>Used for</th></tr></thead><tbody>
+    <tr><td>NESO TEC Register, file of 16 November 2026</td><td>Sections 1 to 3</td></tr>
+    <tr><td>Northern Powergrid heat map data (Heat Map Data, Table), last processed 27 July 2026</td><td>Section 2, local network</td></tr>
+    <tr><td>NESO, Connections Reform: Supporting your resubmission after initial checks, September 2025</td><td>Section 4, option term</td></tr>
+    <tr><td>NESO, Pro Forma: Option Agreement, Lease Agreement or Existing Land Lease</td><td>Section 4, lease term</td></tr>
+  </tbody></table></div>
+  <p class="small"><span class="tag c">Confirmed</span> read on a primary source. <span class="tag r">Reported</span> taken from a named source we have not checked against the original document. <span class="tag i">Inferred</span> our reading of confirmed facts. This note uses public data only. Registers change, so findings are correct only as of the dates shown. It does not forecast whether or when a project on this land would connect.</p>
+</div>
+
+<div class="qwcta"><p><b>Want one for a real piece of land?</b> A landowner grid note costs £495 for one site and takes three working days. Or start with a free check: tell us the nearest substation and we will send you what is queued there.</p><a class="btn" href="#contact">Free substation check</a></div>
+</div></section>
+
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Name a substation. We will send you its queue, free.</h2>
+    <p class="lead">Tell us a substation, a site or a postcode. Within one business day we will email you what is queued there: how much capacity, which Gates and what dates. No charge and no obligation.</p>
+    <div class="form two cta-form-row">
+      <input class="site-in" type="text" id="siteInput" placeholder="Substation, site or postcode" aria-label="Substation, site or postcode">
+      <input class="email-in" type="email" id="emailInput" placeholder="your@firm.com" autocomplete="email" aria-label="Your email address">
+      <button class="cta-btn" id="ctaBtn">Send me the queue</button>
+    </div>
+    <p class="cta-note">No mailing lists. A person will reply. Want to talk about something else? Leave the first box blank.</p>
+    <p class="success" id="successMsg">&#10003; Received. We will email you within one business day.</p>
+    <p class="addr">Or email <span style="font-family:var(--mono)">info@benzene-group.com</span></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><nav class="foot-links" aria-label="Site"><a href="/">Home</a><a href="/queue-map.html">Queue map</a><a href="/how-it-works.html">How it works</a><a href="/pricing.html">Services and pricing</a><a href="/changes.html">Register changes</a><a href="/sample-landowner-note.html">Sample note</a></nav><span><strong style="color:var(--fg-2)">Benzene</strong> UK grid connection intelligence &middot; &copy; 2026 &middot; Tunbridge Wells, UK</span><button type="button" class="sharebtn" id="sharebtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg><span id="sharetxt">Share this page</span></button> <span>info@benzene-group.com</span></div>
+</footer>
+
+<script>
+(document.getElementById('ctaBtn') || { addEventListener: function () {} }).addEventListener('click', async function() {
+  var btn = this, input = document.getElementById('emailInput'), email = input.value.trim(), site = document.getElementById('siteInput').value.trim();
+  if (!email || !email.includes('@')) { input.style.borderColor = 'var(--err)'; input.focus(); return; }
+  btn.disabled = true; btn.textContent = 'Sending...';
+  var W3F_KEY = '2be75126-773f-4b76-892a-e8f152b6b4d8';
+  try {
+    var res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ access_key: W3F_KEY, subject: 'Benzene website enquiry', from_name: 'benzene-group.com', email: email, site: site, message: site ? 'Free substation check requested for: ' + site : 'Enquiry from the contact form on benzene-group.com' }) });
+    var data = await res.json();
+    if (!res.ok || !data.success) throw new Error('err');
+  } catch(e) {
+    window.location.href = 'mailto:info@benzene-group.com?subject=' + encodeURIComponent('Benzene enquiry') + '&body=' + encodeURIComponent('Email: ' + email + '\n\n' + (site ? 'Free substation check for: ' + site : 'I would like to talk about a site or decision.'));
+  }
+  input.style.borderColor = 'var(--ok)';
+  document.querySelector('.cta-form-row').style.opacity = '0.4';
+  document.querySelector('.cta-form-row').style.pointerEvents = 'none';
+  document.getElementById('successMsg').style.display = 'block';
+  btn.disabled = false; btn.textContent = 'Sent';
+});
+</script>
+<script>(function(){var b=document.getElementById('themebtn');if(!b)return;b.addEventListener('click',function(){var r=document.documentElement,c=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'),n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('bz-theme',n)}catch(e){}if(window.bzThemeChanged)window.bzThemeChanged(n)})})();</script>
+<script>(function(){var b=document.getElementById('sharebtn');if(!b)return;var s=document.getElementById('sharetxt');b.addEventListener('click',function(){var c=document.querySelector('link[rel=canonical]'),u=(c&&c.href)||location.href.split('#')[0],t=document.title;function done(m){s.textContent=m;setTimeout(function(){s.textContent='Share this page'},4000)}if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}try{navigator.clipboard.writeText(u).then(function(){done('Link copied')},function(){done(u)})}catch(e){done(u)}})})();</script>
+</body>
+</html>
