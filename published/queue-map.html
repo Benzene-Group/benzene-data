@@ -385,7 +385,7 @@ body.noscroll { overflow: hidden }
           <div class="ysteps" id="ysteps" role="group" aria-label="Jump to a year"></div>
         </div>
         <label class="check"><input id="plan" type="checkbox"> Show planning records</label>
-        <label class="check"><input id="loc" type="checkbox"> Show local network capacity (four of the six regional operators)</label>
+        <label class="check"><input id="loc" type="checkbox"> Show local network capacity (five of the six regional operators)</label>
       </div>
     </details>
     <div class="viewbar" id="viewbar" aria-live="polite"></div>
@@ -660,15 +660,14 @@ window.addEventListener('pointerup', endPtr); window.addEventListener('pointerca
 function showTip(el, e, html, t) { t.innerHTML = html; t.hidden = false; const b = el.getBoundingClientRect(); let x = e.clientX - b.left + 14, y = e.clientY - b.top + 14; if (x + t.offsetWidth > b.width - 4) x = Math.max(4, e.clientX - b.left - t.offsetWidth - 14); if (y + t.offsetHeight > b.height - 4) y = Math.max(4, y - t.offsetHeight - 28); t.style.left = x + 'px'; t.style.top = y + 'px'; }
 
 // ---------- local network capacity: operators' own heat maps ----------
-// Northern Powergrid is read live in the visitor's browser. UK Power Networks, SP Energy Networks and
-// Electricity North West need a sign-in to read, so we publish a dated snapshot (CC BY 4.0) built by scripts/headroom.py.
+// Northern Powergrid is read live in the visitor's browser. The other operators are a dated snapshot (CC BY 4.0) built by scripts/headroom.py.
 const LOC = {on: false, rows: null, ops: [], when: '', npgOk: true, snapOk: true};
 const LOCAPI = 'https://northernpowergrid.opendatasoft.com/api/explore/v2.1/catalog/datasets/heatmapdatatable';
 const LOCSNAP = 'https://raw.githubusercontent.com/Benzene-Group/benzene-data/main/data/headroom.json';
 const LOCC = {G: 'var(--ok)', A: '#d99a00', R: '#d64541', '': 'var(--fg-3)'};
 const LOCN = {G: 'Green', A: 'Amber', R: 'Red', '': 'no rating published'};
 const LOCT = {G: 'Grid supply point', B: 'Bulk supply point', P: 'Primary substation'};
-const LOCNOTE = {ENWL: 'Generation figure: non-firm, inverter based. Demand: firm.'};
+const LOCNOTE = {ENWL: 'Generation figure: non-firm, inverter based. Demand: firm.', SSEN: 'SSEN publishes demand headroom in MVA; shown as published.'};
 async function loadNpg() {
   const f = 'psp_name,typetable,pvoltage,genhr,demhr,worst_case_constraint_gen_colour,worst_case_constraint_dem_colour,grid_easting,grid_northing', out = [];
   for (let o = 0; o < 3000; o += 100) {
@@ -704,7 +703,7 @@ function locLegend() {
   if (LOC.snapOk) LOC.ops.forEach(o => credits.push(`${esc(o.name)}: <a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.credit)}</a>, snapshot of data published ${esc(o.date)}`));
   return '<span>Local substations, coloured by each operator\'s own traffic light for new generation:</span>' +
     [['G', 'Green: headroom shown'], ['A', 'Amber: limited'], ['R', 'Red: constrained'], ['', 'Grey: operator publishes no rating']].map(a => `<span><i style="background:${LOCC[a[0]]};border-radius:2px"></i>${a[1]}</span>`).join('') +
-    '<span style="flex-basis:100%"></span><span>Large squares: grid and bulk supply points. Small squares: primary substations. Hover or tap a square for the figures. Covers Northern Powergrid, UK Power Networks, SP Energy Networks and Electricity North West. SSEN and National Grid Electricity Distribution areas are not shown yet.</span>' +
+    '<span style="flex-basis:100%"></span><span>Large squares: grid and bulk supply points. Small squares: primary substations. Hover or tap a square for the figures. Covers Northern Powergrid, UK Power Networks, SP Energy Networks, Electricity North West and SSEN Distribution. National Grid Electricity Distribution (the Midlands, the South West and South Wales) is not shown yet.</span>' +
     '<span style="flex-basis:100%"></span><span>Operator figures, shown as published. Each operator works out headroom its own way, so compare within an area rather than across them. ' + credits.join('. ') + '.</span>' +
     (!LOC.npgOk ? '<span style="flex-basis:100%"></span><span>Northern Powergrid\'s live data could not be loaded just now.</span>' : '') +
     (!LOC.snapOk ? '<span style="flex-basis:100%"></span><span>The snapshot for the other operators could not be loaded just now.</span>' : '');
