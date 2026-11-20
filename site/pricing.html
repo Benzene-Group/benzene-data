@@ -235,6 +235,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .qwform label { display: grid; gap: 4px; font-size: 13px; color: var(--fg-2) }
 .qwform textarea, .qwform input { font: inherit; font-size: 14px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--fg); width: 100%; box-sizing: border-box }
 .qwform textarea { resize: vertical; min-height: 64px }
+.callsec { padding-block: 40px; border-top: 1px solid var(--line) }
+.callbox { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: clamp(18px, 4vw, 32px) }
+.callbox > * { min-width: 0 }
+.callbox h2 { margin: 4px 0 10px }
+.callbox p { color: var(--fg-2) }
+@media (max-width: 760px) { .callbox { grid-template-columns: 1fr } }
 .qwnote { font-size: 12.5px; color: var(--fg-3) }
 .qwok { color: var(--ok); font-weight: 600 }
 .mail { min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); font-size: 14px; color: var(--fg-2) }
@@ -424,6 +430,27 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
   </div>
 </section>
 
+<section id="call" class="callsec">
+  <div class="wrap">
+    <div class="callbox">
+      <div>
+        <p class="eyebrow">Talk it through</p>
+        <h2>Book a 15-minute call</h2>
+        <p>Not sure which report fits, or want to see what the register says about your sites before you commit? Tell us when suits you and we will confirm a time by email within one business day. No sales script, and no charge.</p>
+      </div>
+      <form class="qwform" id="callform" novalidate>
+        <label>Your name<input type="text" id="cName" autocomplete="name"></label>
+        <label>Your email<input type="email" id="cEmail" placeholder="your@firm.com" autocomplete="email"></label>
+        <label>Company (optional)<input type="text" id="cCo" autocomplete="organization"></label>
+        <label>When suits you<input type="text" id="cWhen" placeholder="For example: Tuesday or Wednesday afternoon"></label>
+        <label>What would you like to cover? (optional)<textarea id="cWhat" rows="2" placeholder="A site, a substation or a question"></textarea></label>
+        <button type="submit" class="btn" id="cBtn">Request a call</button>
+        <p class="qwok" id="cOk" hidden>Thanks. We will email you within one business day to confirm a time.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <div class="wrap">
     <p class="eyebrow">Contact</p>
@@ -522,6 +549,28 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
     btn.disabled = false; btn.textContent = 'Start queue watch';
     var ok = document.getElementById('qwOk'); ok.hidden = false; ok.style.color = 'var(--fg-2)';
     ok.textContent = 'That did not go through. Please email the sites to info@benzene-group.com instead.';
+  }
+});
+</script>
+<script>
+(document.getElementById('callform') || { addEventListener: function () {} }).addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var g = function (id) { return document.getElementById(id); };
+  var nm = g('cName'), em = g('cEmail'), btn = g('cBtn');
+  nm.style.borderColor = ''; em.style.borderColor = '';
+  if (!nm.value.trim()) { nm.style.borderColor = 'var(--err)'; nm.focus(); return; }
+  if (!em.value.trim() || em.value.indexOf('@') < 1) { em.style.borderColor = 'var(--err)'; em.focus(); return; }
+  btn.disabled = true; btn.textContent = 'Sending...';
+  try {
+    var res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ access_key: '2be75126-773f-4b76-892a-e8f152b6b4d8', subject: 'Call request: ' + nm.value.trim(), from_name: 'benzene-group.com', name: nm.value.trim(), email: em.value.trim(), company: g('cCo').value.trim(), when: g('cWhen').value.trim(), message: 'Call request\nWhen: ' + g('cWhen').value.trim() + '\nCompany: ' + g('cCo').value.trim() + '\nTopic: ' + g('cWhat').value.trim() }) });
+    var data = await res.json();
+    if (!res.ok || !data.success) throw new Error('err');
+    g('cOk').hidden = false; btn.textContent = 'Sent';
+    [nm, em, g('cCo'), g('cWhen'), g('cWhat')].forEach(function (x) { x.disabled = true; });
+  } catch (err) {
+    btn.disabled = false; btn.textContent = 'Request a call';
+    var ok = g('cOk'); ok.hidden = false; ok.style.color = 'var(--fg-2)';
+    ok.textContent = 'That did not go through. Please email info@benzene-group.com and we will set up a time.';
   }
 });
 </script>
