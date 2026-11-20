@@ -37,13 +37,30 @@ nh_n = sum(len(S[n]['p']) for n in nh)
 nh_d = sorted(p[4] for n in nh for p in S[n]['p'] if p[4])
 q400 = S[cb[0]]
 
+import csv
+REG = list(csv.DictReader(open('inputs/tec-register-16-november-2026.csv', encoding='utf-8-sig')))
+
+
+def stages(name, site):
+    # Staged projects: the platform keeps one row per project, so show each stage's date from the register itself
+    rs = [r for r in REG if r['Project Name'] == name and r['Connection Site'] == site and float(r['MW Increase / Decrease'] or 0) > 0]
+    if len(rs) < 2:
+        return None
+    rs.sort(key=lambda r: r['MW Effective From'][6:] + r['MW Effective From'][3:5] + r['MW Effective From'][:2])
+    out = []
+    for r in rs:
+        d = r['MW Effective From']
+        out.append(f"{int(d[:2])} {MON[int(d[3:5]) - 1]} {d[6:]}: {float(r['Cumulative Total Capacity (MW)']):,.0f} MW total")
+    return '<br>'.join(out)
+
+
 projects = []
 for n in cb:
     for p in S[n]['p']:
         projects.append((p[4], n, p))
 projects.sort()
 prow = ''.join(f"<tr><td><b>{E(p[0])}</b><span class=dev>{E(firm(p[1]))}</span></td><td>{E(n.replace(' Substation', ''))}</td>"
-               f"<td class=n>{p[3]:,.0f}</td><td>{E(p[2])}</td><td>{'Gate ' + p[6] if p[6] else 'Not shown'}</td><td>{E(fd(p[4]))}</td><td>{E(p[5])}</td></tr>"
+               f"<td class=n>{p[3]:,.0f}</td><td>{E(p[2])}</td><td>{'Gate ' + p[6] if p[6] else 'Not shown'}</td><td>{stages(p[0], n) or E(fd(p[4]))}</td><td>{E(p[5])}</td></tr>"
                for _, n, p in projects)
 
 LOCAL = [  # Northern Powergrid heat map data, read 18 Nov 2026 (data last processed 27 Jul 2026)

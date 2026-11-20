@@ -24,7 +24,7 @@ All figures below are confirmed. Register figures are Benzene's analysis of the 
 - {pct2031}% of waiting capacity has a contracted date of 2031 or later.
 - Marked Gate 2: {n_g2} projects, {gw_g2} GW, average wait {wait_g2} years. Marked Gate 1: {n_g1} projects, {gw_g1} GW, average wait {wait_g1} years. Gate field blank: {n_gn} projects, {gw_gn} GW.
 - September 2026 balancing costs: £541m, of which about £390m was constraint costs. NESO's month-ahead forecast was £306m. Source: https://www.neso.energy/bsuos-outturn-september-2026
-- Gate 2 Phase 1 offer deadline: NESO asked Ofgem on 25 September 2026 to move it from 30 September to 31 October 2026. Source: https://www.neso.energy/letter-ofgem-derogation-request-additional-time-issue-gate-2-offers
+- Gate 2 Phase 1 offer deadline: Ofgem agreed on 2 October 2026 to extend it from 30 September to 31 October 2026 (its second extension). Gate 2 Phase 2 offers stay due by 31 January 2027. We have not yet seen a NESO statement that every Phase 1 offer was issued. Source: https://www.ofgem.gov.uk/transparency-document/ofgem-agreement-alternative-gate-2-whole-queue-g2twq-timetable
 
 ## Status tags
 
@@ -37,6 +37,7 @@ All figures below are confirmed. Register figures are Benzene's analysis of the 
 - Queue map and weekly briefing: free
 - Free substation check: queued capacity, Gates and dates at any substation, reply within one business day
 - Screening report: £1,950 fixed, one site, 5 working days. If it does not answer the brief, the client does not pay
+- Data centre power brief: £2,950 fixed for up to three sites (£1,950 for one), 7 working days. Compares candidate sites for a large demand connection: transmission queue, local demand headroom, nearby generation and Ofgem's proposed data centre commitment fee at the requested size. Not an engineering study or legal advice. Sample: https://www.benzene-group.com/sample-data-centre-brief.html
 - Landowner grid note: £495 fixed, one site, 3 working days. A two-page note for land agents and landowners pricing an option on how crowded the grid is near the land. Not a valuation or advice on option terms. Sample: https://www.benzene-group.com/sample-landowner-note.html
 - Transaction Due Diligence: £3,950, 4 weeks. A desk-based review of public registers on named projects, not an engineering or legal review
 - Site Selection Sprint: £6,450, 8 weeks
