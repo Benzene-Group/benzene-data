@@ -1,0 +1,619 @@
+customer,projects,date_later,date_earlier,gate_changes,joined,left,mw_on_moved_rows,sites,latest_change,example_projects
+QAIR RENEWABLES UK LIMITED,7,3,4,5,0,0,2260.0,Capenhurst GSP; East Anglia Connection Node E 400kV Substation; North Anglia Connection Node A 132kV Substation; Red Moss Farm 132kV Substation,2026-11-03,Church Road Farm; Hill Farm; Manor Farm; Red Moss Farm; Strawberry Farm; Wacton Road Farm; Wymondham Road Farm
+Downing Renewable Developments LLP,5,4,2,3,0,0,3099.8,Leeds North Connection Node B 400kV Substation; Leeds North Connection Node C 400kV Substation; Margam B 400kV Substation; WEST ANGLIA CONNECTION NODE B 400KV SUBSTATION,2026-11-03,Ashbrook Lane BESS; Caegarw Farm; FCC Thurcroft BESS; Jackdaw BESS; Taigh an Uillt Energy Storage Park
+Lightsource Renewable UK Development Limited,10,1,4,8,0,0,1200.0,Derbyshire Connection Node B 400kV Substation; Marston Vale 400kV Substation; South Wales West Connection Node C 400kV,2026-11-17,Brentford (SSEN-FBT624) -120MW BESS; Lightsource Enderby PV+BESS; Lightsource Ferryside PV; Lightsource Grendon PV+BESS; Lightsource Marston Vale 240MW PV+BESS; Lightsource Middleton; Lightsource Mount Annan BESS; Lightsource Newchurch PV/BESS; Lightsource Rhigos BESS; Lightsourcebp Wakeleys Wind an
+RWE Renewables UK Onshore Wind Limited,7,3,2,3,1,2,554.3,Ceislien Wind Farm; DEUCHERAN HILL 2 132KV SUBSTATION; Enoch Hill 132/33kV Substation; Lorg Wind Farm 132/32kV,2026-10-27,Ceislein Wind Farm; Deucheran Hill 2 Wind Farm; Enoch Hill; Enoch Hill 2 Wind Farm; Eredine Wind Farm; Lorg Wind Farm; Strathy Wood Wind Farm
+TELIS ENERGY UK LIMITED,7,3,2,5,0,0,5000.0,Derbyshire Connection Node A 400kV Substation; Enderby 400kV Substation; Trent Valley South Connection Node A 400kV,2026-11-17,Biggleswade High Impact Green Energy Hub; Daventry High Impact Green Energy Hub (HIGEH) 1; Eaton Socon High Impact Green Energy Hub (HIGEH) 1; Leadenham High Impact Green Energy Hub; Market Harborough Green Energy Hub; Rugby High Impact Green Energy Hub (HIGEH) 1; Wymondley High Impact Green Energy 
+PERIGUS ENERGY UK LIMITED,4,1,3,4,0,0,679.8,Dunan Hill 400kV substation; Seat Hill 132kV Substation,2026-11-17,Dunan Hill; Knockton Wind Farm; Scaw Law Wind Farm; Seat Hill Wind Farm
+ENSO GREEN HOLDINGS X LIMITED,3,2,2,1,0,0,1600.0,Cellarhead 400kV Substation; West Anglia Connection Node E 400kV Substation,2026-10-20,Cellarhead; Feckenham; Pelham 400
+S4 UK DEV LTD,2,2,2,1,0,0,750.0,L48 BESS GLEN APP 275/132KV SUBSTATION; New Deer 2 132kV Substation,2026-10-20,L48 BESS Glen App; UPPER GREENFIELDS BESS
+TAGENERGY DEVELOPMENT UK LIMITED,2,2,2,0,0,0,1000.0,Conland Substation; Letham 400/275kV substation,2026-10-20,Glenrothes Hybrid BESS & Solar PV; Grangemouth  Hybrid BESS & Solar PV
+ENSO GREEN HOLDINGS LIMITED,2,3,1,0,0,0,1400.0,Stoke Bardolph 400kV Substation; Wymondley 400kV Substation,2026-10-20,Stoke Bardolph 400; Wymondley
+ZENOBE ENERGY LIMITED,5,1,2,2,0,0,930.0,Butlers Wood 400kV Substation; Wearside Connection Node B 400kV Substation; Wearside Connection Node D 400kV Substation,2026-11-17,Zenobe Butler's Wood BESS; Zenobe Hawthorn Pit BESS; Zenobe New Deer Battery Storage; Zenobe Spennymoor BESS; Zenobe Yaxley BESS
+IB VOGT UK LTD,4,1,2,2,0,0,1040.0,Feckenham 400kV Substation; High Marnham 400kV Substation; Trent Valley South Connection Node C 400kV Substation,2026-11-17,Bicker Fen; Cellarhead PV & BESS Station; Feckenham PV & BESS Station; Morton Manor PV & BESS Station
+ANESCO LIMITED,2,1,2,1,0,0,630.6,High Marnham 400kV Substation; Shrewsbury 400kV Substation,2026-10-20,High Marnham Solar Farm; Kenwick Solar
+SSE FIDDLERS FERRY BATTERY LIMITED,1,2,1,1,0,0,450.0,Fiddlers Ferry 275kV Substation,2026-09-22,SSE Fiddlers Ferry Battery Energy Storage
+EPL NEWCO9 LIMITED,1,2,1,1,0,0,1440.0,North Anglia Connection Node E 400kV Substation,2026-11-03,EPL Suffolk
+BLUEFLOAT ENERGY UK HOLDINGS LIMITED,1,2,1,1,0,0,900.0,Alverdiscott 400kV Substation,2026-11-03,Petroc Offshore Wind Farm
+GPC 2008 Ltd,1,0,3,1,0,0,300.0,Leeds North Connection Node C 132kV Substation,2026-11-03,Fryston Lane 100MW BESS
+GF Norwich Energy Ltd,1,2,1,0,0,0,1200.0,NORTH ANGLIA CONNECTION NODE A 400kV SUBSTATION,2026-11-03,GF Norwich BESS
+BRUTON ONE BESS LIMITED,1,2,1,0,0,0,900.0,Grimsby West 400kV Substation,2026-11-03,Great Coates BESS
+Bluestone Energy Ltd,16,2,0,15,0,0,98.7,Bonnybridge 132/33kV; Elderslie 132/33kV,2026-11-17,Beddington 2 BESS; CRT Keadby 2; Dougliehill BESS; Drakelow Power Station 1 BESS; Drakelow Power Station 2 BESS; Drakelow Power Station 3 BESS; Drakelow Power Station 4; Grovers Farm BESS; Middleton Farm Solar; RAF Newton PV solar; SEC 1 BESS; Scottish Water Bonnybridge STW 60MW BESS; Scottish Water
+SCOTTISHPOWER RENEWABLES (UK) LIMITED,4,1,1,4,1,2,168.0,Sheirdrim 132kV Substation,2026-10-27,Beinn an Tuirc 1; Kilgallioch Wind Farm; SPR CS1; Sheirdrim Wind Farm
+Econergy International Limited,4,1,1,3,0,0,498.0,Kincardine North 400kV Substation; Wymondley 2 400kV Substation,2026-10-27,EcoGrainWest; EcoKilwinning; EcoKincardine; EcoWymondley
+BROCKWELL STORAGE & SOLAR LIMITED,3,2,0,2,0,0,560.0,Kilmarnock Town 275/33kV Substation; Willington 400kV Substation,2026-09-29,Dolphingstone Farm; Inchbean  Energy Park; Willington Energy Park
+SolarFour Ltd,3,1,1,1,0,0,1740.0,Cheshire Connection Node A 400kV Substation; Staffordshire Connection Node A 400kV Substation,2026-11-17,Bradford Solar Farm; New Marton Solar Farm - PVDP; PVDP Scarning
+PIVOTED POWER LLP,3,2,0,2,1,2,106.9,Alverdiscott 400kV Substation; Braintree 400kV Substation,2026-11-03,Alverdiscott; Braintree; Kearsley
+GWYNT GLAS OFFSHORE WIND FARM LIMITED,2,1,1,2,0,0,600.0,Alverdiscott 400kV Substation,2026-11-17,Gwynt Glas Offshore Wind Farm; Gwynt Glas Offshore Wind Farm 2
+BROCKWELL ENERGY LIMITED,2,2,0,0,0,0,155.0,CHALMERSTON WINDFARM 132kV SUBSTATION; New Cumnock North 132kV Substation,2026-10-13,Chalmerston Windfarm; Upper Beoch Windfarm
+ALCEMI STORAGE DEVELOPMENTS 5 LIMITED,2,2,0,1,0,0,1000.0,ALCEMI SCORE BATTERY ENERGY STORAGE FACILITY 400KV SUBSTATION; Alcemi Score Battery 400kV Substation,2026-10-13,Alcemi Score 2 Battery Energy Storage Facility; Alcemi Score Battery Energy Storage Facility
+Invenergy Development UK Ltd,2,0,2,1,0,0,456.0,Mid Hill 132kV Substation,2026-10-20,Mid Hill; Tioram Wind Farm
+ENSO GREEN HOLDINGS Q LIMITED,2,0,2,0,0,0,457.0,Capenhurst 275kV Substation; Capenhurst 400kV Substation,2026-10-13,Capenhurst; Capenhurst Tertiary
+ONPATH ENERGY LIMITED,1,0,2,1,0,0,160.0,Airds Hill WindFarm 132kV Substation,2026-10-20,Airds Hill Wind Farm
+Bluestone Beddington 1 Ltd,1,0,2,1,0,0,480.0,London South Connection Node A 132kV Substation,2026-11-03,Beddington 1 BESS
+HUNTERSTON GRID 3 LTD,1,1,1,1,0,0,0.0,Ayrshire Grid 400kV Collector Substation,2026-06-23,Ayrshire Grid Services Facility
+BLACKHILLOCK FLEXPOWER LTD,1,2,0,1,0,0,698.0,Blackhillock 400kV Substation,2026-06-16,Blackhillock Battery
+Mooir Vannin Offshore Wind Farm Limited,1,1,1,1,0,0,2640.0,IMW01 OFFSHORE 275/66KV OFFSHORE SUBSTATION,2026-10-20,Isle of Man Offshore Wind Farm
+Frodsham Devco Limited,1,1,1,1,0,0,480.0,Frodsham 400kV Substation,2026-11-03,Weaver BESS
+COWLEY 7 RENEWABLES LTD,1,1,1,1,0,0,1400.0,Cowley 400kV Substation,2026-11-03,Cowley Farm 2
+Field Netherton Ltd,1,1,1,1,0,0,400.0,Longside 400kV Substation,2026-10-20,Netherton Hub Bess
+ALCEMI STORAGE DEVELOPMENTS 8 LTD,1,1,1,1,0,0,560.0,Whitburn 400kV substation,2026-10-20,Alcemi Armadale BESS
+GALILEO 02 LIMITED,1,1,1,1,0,0,154.0,CRAIGHEAD WIND FARM 132kV SUBSTATION,2026-10-20,Craighead Wind Farm
+AGR SOLAR 2 LIMITED,1,1,1,4,0,0,107.1,Bicker Fen 400kV Substation,2026-11-03,Bicker Fen 1 Solar
+LONDON AND ESSEX ENERGY LIMITED,1,1,1,1,0,0,400.0,Warley 275kV Substation,2026-10-20,Warley Battery Energy Storage
+LETHANS EAST WIND FARM LIMITED,1,1,1,1,0,0,170.0,Lethans Collector 132kV Substation,2026-07-14,Lethans Wind Farm Extension
+Geocore (Newarthill) Ltd,1,2,0,1,0,0,600.4,Newarthill Energy Park 275kV Substation,2026-07-14,Newarthill Energy Park
+Lethans Wind Farm Limited,1,1,1,1,0,0,264.0,Lethans Collector Substation,2026-07-14,Lethans Wind Farm
+FIELD BEAULY LTD,1,1,1,1,0,0,200.0,BEAULY 02 BESS 132kV SUBSTATION,2026-10-20,Beauly 02 BESS
+Asuk Holdco 2 Limited,1,1,1,2,0,0,100.0,Breakish 132kV Substation,2026-10-27,Breakish Windfarm
+Persley Croft BESS Ltd,1,0,2,1,0,0,100.0,Persley 132/33kV GSP Substation,2026-09-22,Persley Croft BESS
+ASTWOOD GREEN ENERGY LTD,1,1,1,1,0,0,1040.0,West Anglia Connection Node G 400kV Substation,2026-11-03,Astwood  Solar Farm GEC
+EPPING ENERGY PARK LIMITED,1,1,1,1,0,0,499.8,Waltham Cross B 400kV Substation,2026-11-03,Waltham Cross PV & BESS Sub
+ARM Cedar Limited,1,0,2,0,0,0,960.0,Trent Valley South Connection Node B 400kV Substation,2026-11-03,Worksop BESS
+GLEN ULLINISH WF 2 LTD,1,2,0,1,0,0,480.0,Glen Ullinish Extension 132/33kV Substation,2026-11-03,Glen Ullinish Extension
+Kirkton Wind Farm Limited,1,1,1,1,0,0,120.0,Connagill 275kV Substation,2026-10-20,Kirkton Wind Farm
+IRONBRIDGE GREEN NG LIMITED,1,1,1,0,0,0,800.0,Ironbridge 400kV Substation,2026-10-20,Ironbridge Green Energy Centre
+CODDINGTON 10 RENEWABLES LTD,1,1,1,0,0,0,2000.0,Coddington 400kV Substation,2026-11-03,Navenby Farm
+Pittlesheugh Farm BESS Limited,1,0,2,0,0,0,680.0,Eccles 400/132kV,2026-10-20,Pittlesheugh Farm
+HALDANE ENERGY PROJECT 5 LIMITED,1,0,2,0,0,0,7200.0,Teeside Connection Node B,2026-10-20,Bute Hydrogen Project 5
+Shama BESS Limited,1,1,1,1,0,0,1000.0,Grimsby West 400kV Substation,2026-10-20,Grimsby BESS
+KEITH SOLAR PV LIMITED,1,1,1,0,0,0,300.0,Keith Solar Farm 275kV Substation,2026-10-20,Keith Solar Farm
+SSE RENEWABLES SOLAR & BATTERY HOLDINGS LIMITED,1,1,1,0,0,0,900.0,Blyth 275kV Substation,2026-10-20,Blyth BESS
+HALDANE ENERGY PROJECT 7 LIMITED,1,1,1,0,0,0,4800.0,Solent Connection Node C 400kV,2026-10-20,Bute Hydrogen Project 7.1
+GLENDOE STORAGE LIMITED,1,1,1,0,0,0,1800.0,Loch Nan Eun 275/18kV,2026-10-20,Fort Augustus Storage
+HAMS HALL NG LIMITED,1,0,2,0,0,0,800.0,Hams Hall 400kV Substation,2026-10-20,Hams Hall Green Energy Centre
+AW1 ENERGY STORAGE LIMITED,1,1,1,1,0,0,240.0,Uskmouth 132kV Substation,2026-10-20,Uskmouth - New Connection
+IGP ENERGY STORAGE 6 LIMITED,1,1,1,0,0,0,1000.0,Kincardine North 400kV Substation,2026-10-20,Tulliallan BESS
+OFFSHORE WIND LIMITED,1,1,1,0,0,0,600.0,Alverdiscott 400kV Substation,2026-11-03,Merlin Offshore Wind Farm
+Greta IV Limited,1,1,1,0,0,0,1000.0,North Anglia Connection Node B 400kV Substation,2026-10-20,Greta IV (b)
+West Saval Battery Storage Ltd,1,1,1,0,0,0,400.0,West Saval Substation 132 kV,2026-10-20,West Saval Battery Storage
+Cilfynydd BESS Limited,1,1,1,0,0,0,699.8,Cilfynydd 400kV Substation,2026-11-03,Cilfynydd BESS
+Noventum Power Solar 8 Limited,1,1,1,0,0,0,920.0,North Anglia Connection Node A 400kV,2026-11-03,Noventum -Long Stratton
+FIELD KNOCKNAGAEL LTD,1,1,1,0,0,0,400.0,Knocknagael 132kV Substation,2026-10-20,Knocknagael BESS
+Norfolk Vanguard East Ltd,1,1,1,2,0,0,800.0,Necton 400kV Substation,2026-10-27,Vanguard East
+SANQUHAR II COMMUNITY WIND CO LTD,1,2,0,2,0,0,387.0,Sanquhar II Wind Farm Substation,2026-11-10,Sanquhar II Wind Farm
+STATKRAFT HIGHLANDS PSH LIMITED,1,2,0,2,0,0,1000.0,Loch na Cathrach 275kV Switching Station,2026-11-10,Loch na Cathrach Pumped Storage Hydro
+ELGIN ENERGY ES CO LIMITED,7,1,0,7,0,0,129.0,Navenby 132kV Substation,2026-11-17,Balrobert Farm BESS; Bellbroughton Energy Park; Denton Estate Solar PV and BESS; Lanehurst Farm BESS; Saver & Pashley Farm Energy Park; Vale of Neath (Rhigos Road); West Grimsby Farm
+Renewable Energy Systems Limited,6,1,0,5,0,0,600.0,Derbyshire Connection Node B 400kV Substation,2026-11-17,Blair Hill Wind Farm; Cliff Hill Energy Farm; Fairgreen Energy Storage; Fauldielaw; Killean Wind Farm; Lower Pool Energy Park
+FRED OLSEN RENEWABLES LIMITED,3,0,1,2,0,0,114.0,Lethen Wind Farm 132/33kV Substation,2026-11-17,Balnespick Wind Farm; Lethen Wind Farm; Scawd Law Wind Farm
+HEADWIND DEVELOPMENT SERVICES LIMITED,3,0,1,3,0,0,35.0,Taynuilt 132/33kV GSP Substation,2026-11-10,Beinn Ghlas; Causeymire 2 Wind Farm; Novar 2 Wind Farm
+INNOVA RENEWABLES LIMITED,2,0,1,1,0,0,1025.0,Pentir 400kV Substation,2026-10-13,Patmores (Mott Street); Pentir Green Energy Centre
+EAST CLAYDON STORAGE LIMITED,2,1,0,2,0,0,1000.0,East Claydon 400kV Substation,2026-10-13,East Claydon High Impact Green Energy Hub (HIGEH) 1; East Claydon Storage
+MUIRDEN ENERGY LLP,2,1,0,2,0,0,27.0,Clachan 2 132/33kV GSP Substation,2026-11-17,Creag Dhubh; Talladh a Bheithe
+KXP ALPHA I LIMITED,2,1,0,2,0,0,150.0,Ayr 275/33kV Substation,2026-11-17,Ayr Energy Storage; KX Alpha 1 Iron Acton
+WINDBURN WIND FARM LIMITED,2,1,0,1,0,0,75.0,Devonside 132kV Substation,2026-10-13,Windburn; Windburn Wind Farm
+Net Zero One Ltd,2,0,1,1,0,0,249.9,Staythorpe 400kv,2026-10-13,Field Farm; Penketh Hall Farm
+Cairn Duhie Energy Limited,2,1,0,1,0,1,67.2,Berryburn 275/33kV GSP Substation,2026-11-17,Cairn Duhie Wind Farm; Lawfield and Branxton Energy Park
+SSE GENERATION LIMITED,2,1,0,2,0,0,207.6,Strathy South 132/33kV Substation,2026-11-03,Bhlaraidh Extension Wind Farm; Strathy South Wind
+E Power Limited,2,1,0,2,0,0,63.0,Tomchrasky Wind Farm 132/33kV Substation,2026-11-10,Callisterhall Wind Farm; Tomchrasky Wind Farm
+EQUINOR NEW ENERGY LIMITED,2,0,1,2,0,0,350.0,South Wales East Node A 275kV Substation,2026-11-10,Equinor Celtic Sea 2; Whitson BESS NP
+EL (WEST WEYBRIDGE) LIMITED,2,1,0,1,0,2,57.0,West Weybridge 275kV Substation,2026-11-03,West Weybridge; West Weybridge (Tertiary)
+REWE 8 LIMITED,2,1,0,1,0,0,200.0,Wearside Connection Node B 400kV Substation,2026-11-17,Cilfynydd 2; Hawthorn BESS
+STARLIGHT ENERGY UK LIMITED,2,0,1,2,0,0,200.0,Axminster 132kV Substation,2026-11-03,Kennishead; Old Park Farm
+WIND 2 LIMITED,2,1,0,1,0,0,15.0,Rothienorman 2 400/33kV GSP,2026-11-17,Brae WF; Stoneyfield
+ScottishPower Renewables (UK) Limited,2,0,1,1,0,0,108.0,Clauchrie 132/33KV Substation,2026-11-17,Clauchrie Windfarm; Earraghail Renewable Energy Development (formerly Skipness & Corranbuie)
+GALILEO 19 LIMITED,1,1,0,1,0,0,290.0,NEW TAYNUILT 132 KV SUBSTATION,2026-10-13,Beinn Dearg
+VPI IMMINGHAM LLP,1,1,0,0,2,1,1318.0,Humber Refinery 400kV Substation,2026-10-20,Immingham
+NORIKER POWER LTD,1,0,1,1,0,0,500.0,Kingsnorth 400kV Substation,2026-10-13,Kingsnorth BESS NP
+Carrington Storage Limited,1,1,0,0,0,0,680.0,Carrington 400KV Substation,2026-06-02,Carrington
+BROXBURN ENERGY STORAGE LIMITED,1,0,1,1,0,0,50.0,Broxburn 132/33kV,2026-06-23,Almondell Lodge BESS & Solar Development
+Starlight Energy SPV 4 Limited,1,1,0,1,0,0,200.0,Derbyshire Connection Node F 132KV,2026-10-13,Ratcliffe on Soar
+CRH RENEWABLES LIMITED,1,0,1,1,0,0,400.0,Trent Valley South Connection Node B 400kV Substation,2026-10-13,Cottam-Ryhall Solar & BESS
+RE Projects Development Limited,1,1,0,1,0,0,100.0,Staffordshire Connection Node B 132kV Substation,2026-10-13,Orchard BESS
+KINCARDINE GRID 1 LTD,1,1,0,1,0,0,200.0,Fife Grid Services Facility 275kV Substation,2026-06-09,Kincardine Battery Storage Facility
+HUNTERSTON GRID 1 LTD,1,1,0,1,0,0,200.0,Hunterston East 400kV substation,2026-06-09,Hunterston Battery Storage Facility
+HUNTERSTON GRID 2 LTD,1,1,0,1,0,0,200.0,Ayrshire Grid 400kV Substation,2026-06-09,Hunterston Energy Storage Facility
+KINCARDINE GRID 2 LTD,1,1,0,1,0,0,200.0,Fife Grid Services Facility 275kV Substation,2026-06-09,Kincardine Energy Storage Facility
+Intwood BESS Ltd,1,1,0,1,0,0,240.0,North Anglia Connection Node A 132kV Substation,2026-10-13,Intwood Farm BESS
+ELSTREE BATTERY STORAGE LIMITED,1,1,0,0,0,0,170.0,Letchmore Heath 132kV Substation,2026-10-13,Elstree Energy Storage
+Windy Standard III Limited,1,1,0,2,0,1,87.6,Dun Hill 132/33kV,2026-06-30,Windy Standard III Wind Farm
+Kingsway Solar Farm Limited,1,0,1,2,0,0,200.0,South Anglia Connection Node C 400kV Substation,2026-10-13,Rat Hall Mod App
+Leoda Solar Farm Limited,1,1,0,1,0,0,500.0,Navenby 400kV Substation,2026-10-13,Ewerby
+ALCEMI STORAGE DEVELOPMENTS 4 LIMITED,1,1,0,1,0,0,500.0,Coalburn 400kV Substation,2026-06-23,Coalburn Battery Energy Storage Facility
+Balbougie Energy Centre II Limited,1,1,0,1,0,0,42.0,Inverkeithing 132/33kV,2026-06-23,Balbougie Energy Centre
+BAYWA R.E. UK LIMITED,1,0,1,0,0,0,47.5,Mannington 400kV Substation,2026-08-11,Mannington
+COCKENZIE STORAGE LIMITED,1,1,0,1,0,0,240.0,Meadowmill 400/132kV Substation,2026-06-23,Gresham House Cockenzie BESS
+ALCEMI STORAGE DEVELOPMENTS 6 LIMITED,1,1,0,1,0,0,500.0,Coalburn 400kV GIS Substation,2026-06-23,Rawhills Battery Energy Storage Facility
+Koehler Renewable Energy UK Limited,1,1,0,0,0,0,40.0,ROWANCRAIG WIND FARM 33KV SUBSTATION,2026-10-13,Rowancraig Wind Farm
+Gas Generation Property Limited,1,1,0,1,0,0,49.9,Elderslie 132/33kV,2026-06-23,Well Street Paisley
+AGR SOLAR 4 LIMITED,1,1,0,1,0,0,50.0,Wymondley 400/33kV Substation,2026-10-20,Wymondley Solar Farm
+IGP INTERNATIONAL PROSPECTING LIMITED,1,1,0,1,0,0,249.0,Whitehouse 275kV Substation,2026-10-13,Whitehouse BESS station
+BRAMLEY BESS LIMITED,1,1,0,3,0,0,50.0,Bramley 400kV Substation,2026-10-20,Bramley BESS
+BRAMFORD GREEN ENERGY CENTRE LTD,1,0,1,1,0,0,650.0,Bramford B 400kV Substation,2026-10-13,Bramford GEC (Ethos Green)
+KINCRAIG ENERGY CENTRE LIMITED,1,0,1,1,0,0,20.6,Dyce 132/33kV GSP,2026-09-01,Kincraig Energy Centre
+SETT WIND DEVELOPMENT LIMITED,1,1,0,1,0,0,84.6,Shepards Rig 132/33kV,2026-06-30,Shepherds Rig Wind Farm
+KILMARNOCK FLEXPOWER LTD,1,1,0,1,0,0,350.0,Boydston 400kV substation,2026-06-30,Kilmarnock BESS
+Windyhill Grid 1 LTD,1,1,0,1,0,0,200.0,Windyhill 132kV,2026-06-30,WindyHill Energy Storage Facility
+DALMARNOCK BESS LTD,1,1,0,1,0,0,40.0,DALMARNOCK 132/33KV SUBSTATION,2026-07-07,Dalmarnock Road BESS
+EKU ENERGY FAUNE PROJECTS (UK) LIMITED,1,0,1,1,0,0,39.9,Helensburgh 132/33kV,2026-07-07,Drumfad Battery Storage System
+COCKENZIE STORAGE B LTD,1,1,0,1,0,0,102.0,Meadowmill 400/132kV Substation,2026-07-07,Cockenzie BESS
+Recell Energy Bloom Developments Limited,1,1,0,2,0,0,210.0,Penrhos GSP,2026-11-17,Recell at Penrhos (BEGA)
+CUMBERHEAD WEST WIND FARM LTD.,1,1,0,2,0,0,114.0,Cumberhead 33kV,2026-07-14,Cumberhead West Wind Farm
+LAIRG II LLP,1,1,0,1,0,0,50.0,Lairg II 132kV Substation,2026-07-07,Lairg II Wind Farm
+Field Holmston Ltd,1,1,0,1,0,0,49.9,Ayr 275/33kV,2026-07-07,Holmston Farm Battery Energy Storage System
+REG GREENBURN LIMITED,1,1,0,1,0,0,90.0,Greenburn Mixed Technology 132kV Substation,2026-07-07,Greenburn Mixed Technology
+DOUGLAS WEST EXTENSION LTD,1,1,0,2,0,0,60.0,Douglas West Extension Windfarm,2026-07-14,Douglas West Extension
+MONETS GARDEN BATTERY LTD,1,1,0,1,0,0,57.0,Osbaldwick 400kV Substation,2026-07-21,Monets Garden
+BRAMLEY SOLAR  LIMITED,1,1,0,1,0,0,57.0,Bramley 400kV Substation,2026-08-11,Bramley (tertiary)
+GRUPOTEC SOLAR UK 5 LIMITED,1,1,0,1,0,0,36.0,Tongland 132/33kV Substation,2026-08-18,St Marys Isle Solar Farm
+AGILE ENERGY RECOVERY (INVERURIE) LIMITED,1,0,1,0,2,2,40.0,Kintore GSP,2026-10-13,Thainstone Energy Park
+Drax BESS Neilston Limited,1,1,0,1,0,0,150.0,Glennifer Road BESS 132kV substation,2026-07-21,Glennifer Road BESS
+LISTER BATTERY LTD,1,1,0,1,0,0,57.0,Lister Drive 275kV Substation,2026-09-22,Lister Battery (formerly Lister Drive)
+VPI Power Limited,1,1,0,0,0,0,1800.0,Kingsnorth 400kV Substation,2026-07-21,Damhead Creek 2
+Conrad (Walpole) Limited,1,1,0,0,0,0,0.0,Walpole 400kV Substation,2026-07-21,Walpole Grid Services Facility
+ROTHIENORMAN FLEXPOWER LTD,1,1,0,1,0,0,50.0,Rothienorman 400/33kV Substation,2026-07-21,Rothienorman 50MW BESS
+DRAX BESS EK LIMITED,1,1,0,1,0,0,55.0,East Kilbride 275/33kV GSP,2026-07-21,Rogerton Cottage BESS
+LIGHTSOURCE SPV 191 LIMITED,1,1,0,1,0,0,57.0,Pentir 400kV Substation,2026-07-21,Fferm Solar Pentir
+Berkswell Battery Storage Limited,1,1,0,1,0,0,200.0,Berkswell 275kV Substation,2026-07-28,Berkswell Energy Storage
+P3P PARTNERS LLP,1,1,0,0,0,0,49.9,Braehead Park 132/33kV,2026-07-28,Wright Street BESS
+Eccles Energy Centre Limited,1,0,1,1,0,0,500.0,Eccles 400kV Substation,2026-09-15,Eccles BESS
+Worcestershire Solar 1 Limited,1,1,0,1,0,0,37.5,Hartmoor 275kV Substation,2026-07-28,Worset PV & BESS Park
+KIRKBY BATTERY STORAGE LTD,1,1,0,3,0,0,49.9,Kirkby 275kV Substation,2026-10-20,Kirkby
+ENSO GREEN HOLDINGS K LIMITED,1,1,0,1,0,0,57.0,High Marnham 400kV Substation,2026-10-20,High Marnham (Tertiary)
+FIELD HARTMOOR LTD,1,1,0,1,0,0,200.0,Hartmoor 275kV Substation,2026-07-28,WORSET LANE BESS
+Rochdale (BES) Ltd,1,1,0,1,0,0,57.0,Rochdale 275kV Substation,2026-07-28,Rochdale BESS
+PENWORTHAM (BES) LTD,1,1,0,1,0,0,57.0,Penwortham 400kV Substation,2026-07-28,Penwortham BESS
+KEITH STORAGE SOLUTIONS LIMITED,1,1,0,1,0,0,48.0,Keith 132kV Substation,2026-08-04,Keith 132 Greener Grid Park
+COYLTON ENERGY LIMITED,1,1,0,1,0,0,50.0,Coylton 275kV substation,2026-08-04,Coylton 275kV Greener Grid Park
+HIGH CONSTELLATION WINDFARM LIMITED,1,1,0,1,0,0,50.0,High Constellation 132/33kV Substation,2026-08-04,High Constellation Windfarm
+ESB ASSET DEVELOPMENT UK LIMITED,1,1,0,1,0,0,96.0,Chleansaid Wind Farm 132kV Substation,2026-08-04,Chleansaid Wind Farm
+MEDWAY POWER LIMITED,1,1,0,1,0,0,500.0,Kingsnorth 400kV Substation,2026-10-13,Medway 3 Power Station
+BB2 WIND FARM LIMITED,1,1,0,1,0,0,43.2,Berryburn 275/33kV GSP Substation,2026-08-11,Berryburn Extension Wind Farm
+CULHAM STORAGE LIMITED,1,1,0,1,0,0,500.0,Culham Jet 400kV Substation,2026-09-22,Culham Storage
+CILFYNYDD GRID SERVICES LIMITED,1,1,0,1,0,0,0.0,Cilfynydd 400kV Substation,2026-08-11,Cilfynydd Grid Stability Services
+IQ ENERGY CENTRE LIMITED,1,1,0,1,0,0,47.5,Indian Queens 400kV Substation,2026-09-22,Indian Queens Energy Centre
+FLEET SOLAR LIMITED,1,1,0,1,0,0,47.5,Fleet 400kV Substation,2026-10-13,Fleet Tertiary
+LEL BILBO SOLAR LIMITED,1,0,1,4,0,0,25.0,Strichen 132/33kV GSP Substation,2026-10-27,Bilbo Farm
+ALUDRA BESS LTD,1,1,0,1,0,0,90.0,Drakelow 132kV Substation,2026-08-18,Royle Farm BESS
+PERWINNES SOLAR AND BATTERY STORAGE LIMITED,1,1,0,1,0,0,45.0,Dyce 132/33kV Substation,2026-08-18,Perwinnes
+Statkraft UK Ltd,1,1,0,1,0,0,600.0,Neilston 400kV Substation,2026-08-18,Neilston 400kV Greener Grid Park
+WKN SALLACHY LIMITED,1,1,0,0,0,0,49.5,Cassley GSP,2026-08-18,Sallachy Wind Farm
+ASUK HOLDCO 1 LIMITED,1,1,0,0,0,0,70.0,Mybster 3 132/33kV Substation,2026-08-18,Tormsdale Windfarm
+ECODEV (SOUTH) LTD,1,1,0,0,0,0,300.0,Littlebrook 132kV Substation,2026-08-18,Littlebrook BESS
+SSE Generation Limited,1,1,0,0,0,0,207.6,Strathy South 132/33kV Substation,2026-08-25,Strathy South Wind
+Stranoch Windfarm Limited,1,1,0,1,0,0,102.0,Stranoch Wind 132/33kV Substation,2026-09-01,Stranoch Wind Farm
+Geocore (Kellwood) Ltd,1,1,0,1,0,0,40.0,Dumfries 132/33kV,2026-10-20,Kellwood Road BESS
+PENCLOE WIND ENERGY LIMITED,1,1,0,2,0,0,85.0,Pencloe 132/33kV Substation,2026-09-01,Pencloe Windfarm
+DRAX PUMPED STORAGE LIMITED,1,1,0,1,0,0,480.0,Cruachan 275kV Substation,2026-09-22,Cruachan U3&4 Replacement
+Corshellach Energy Storage Limited,1,1,0,1,0,0,49.9,Berryburn 275/33kV GSP Substation,2026-09-01,Corshellach Battery Energy Storage System
+SIRIUS ECODEV (STIRLING) LTD,1,1,0,1,0,0,50.0,Coupar Angus 132/33kV GSP,2026-09-01,Keithick Estate
+RAMPION EXTENSION DEVELOPMENT LIMITED,1,1,0,0,0,0,1200.0,Bolney 400kV Substation,2026-09-08,Rampion Extension Offshore Wind Farm
+Field Drum Farm Ltd,1,0,1,1,0,0,49.9,Keith 2 132/33kV GSP Substation,2026-09-22,Drum Farm Energy Storage Facility
+GLEN ULLINISH WF LIMITED,1,1,0,0,0,0,49.9,Glen Ullinish 132/33kV Substation,2026-09-08,Glen Ullinish Wind Farm
+HIGHLAND WIND LIMITED,1,1,0,1,0,0,100.0,Pentland Floating Offshore Wind Farm 132/66kV substation,2026-09-22,Pentland Floating Offshore Wind Farm
+SIRIUS ECODEV (KEITHICK) LTD,1,1,0,1,0,0,16.0,Coupar Angus 132/33kV GSP,2026-09-22,Keithick 16 Solar & BESS
+Priory Generation Limited,1,1,0,1,0,0,57.0,Wymondley 400kV Substation,2026-10-20,Wymondley
+DIDCOT BATTERY LIMITED,1,0,1,0,0,0,100.0,DIDCOT 400/132KV SUBSTATION,2026-09-22,Didcot Battery
+Sunshine Project 03 Limited,1,0,1,1,0,0,400.0,Devol Moor 400/132kV,2026-09-29,Devol Moor Battery & Solar Project
+KONA ASSET 3 LIMITED,1,1,0,1,0,0,228.0,Smeaton 400kV,2026-10-06,Smeaton BESS
+RHIWLAS ENERGY PARK LIMITED,1,0,1,0,0,0,106.0,Chirk GSP,2026-09-29,Bryn Tilti
+CILFYNYDD NG LIMITED,1,1,0,0,0,0,400.0,Cilfynydd 400kV Substation,2026-10-06,Cilfynydd Green Energy Centre
+C & S ENERGY LIMITED,1,1,0,1,0,0,300.0,Cellarhead 400kV Substation,2026-10-27,Cellarhead 400kV Energy Storage
+Middleton Energy Storage Limited,1,1,0,1,0,0,200.0,Middleton 400KV Substation,2026-10-06,Middleton BESS
+WARLEY BATTERY STORAGE LIMITED,1,1,0,1,0,0,57.0,Warley 275kV Substation,2026-10-20,Warley
+CLUMP FARM SOLAR LIMITED,1,1,0,1,0,0,57.0,Enderby 400kV Substation,2026-10-20,Enderby Tertiary
+CSE23 LIMITED,1,1,0,1,0,0,47.5,Fleet 400kV Substation,2026-10-20,Fleet (Tertiary)
+Milligansbush Battery Storage Ltd,1,0,1,0,0,0,200.0,Milligansbush Battery Storage 132kV Substation,2026-10-13,Milligansbush Battery Storage
+HALDANE ENERGY PROJECT 3 LIMITED,1,0,1,0,0,0,3600.0,Grimsby West 400kV Substation,2026-10-13,Bute Hydrogen Project 3
+SHAW-ENERGI LTD,1,0,1,0,0,0,300.0,Trent Valley South Connection Node A 400kV,2026-10-13,CODDINGTON BESS
+MOELFRE ENERGY PARK LIMITED,1,0,1,0,0,0,158.4,Bodelwyddan 400kV Substation,2026-10-13,Moelfre Energy Park
+IBV WILLINGTON ENERGY PARK LIMITED,1,1,0,0,0,0,240.0,Derbyshire Connection Node D 400kV Substation,2026-10-13,Willington BESS Station
+BIOSOUTH ENERGY LIMITED,1,1,0,0,0,0,43.2,Chickerell-Mannington 400kV Substation,2026-10-13,Frome Valley Energy Park
+Aitkenhead Storage Facility Limited,1,1,0,0,0,0,300.0,Clydesmill 275/33kV,2026-10-13,Aitkenhead Farm BESS
+HALDANE ENERGY PROJECT 1 LIMITED,1,0,1,0,0,0,4800.0,Trent Valley South Connection Node D 400kV Substation,2026-10-13,Bute Hydrogen Project 1
+HALDANE ENERGY PROJECT 2 LIMITED,1,0,1,0,0,0,3600.0,Creyke Beck 400kV Substation,2026-10-13,Bute Hydrogen Project 2
+CAPELLA BESS LTD,1,1,0,1,0,0,78.0,Stella South GSP,2026-10-13,Stella Battery Energy Storage
+SAGE NORTH SEA LIMITED,1,1,0,0,0,0,20.0,St Fergus Mobil 132/11kV Substation,2026-10-13,SAGE
+THORNTON ENERGY LTD,1,1,0,0,0,0,400.0,North Humber Connection Node A 400kV Substation,2026-10-13,GF Thornton Energy BESS
+Haldane Energy Project 6 Limited,1,0,1,0,0,0,3600.0,Cheshire Connection Node A 400kV Substation,2026-10-13,Bute Hydrogen Project 6
+NP SPV 30 LIMITED,1,1,0,0,0,0,47.5,South Wales West Connection Node C 400kV,2026-10-13,NatPower Llanteg Green Energy Park
+Solomons BESS Ltd,1,1,0,1,0,0,240.0,North Kent Connection Node B 132kV Substation,2026-10-13,Solomons Farm BESS
+Daines Flexpower Limited,1,0,1,0,0,0,500.0,Manchester South connection node A 400kv,2026-10-13,Daines NP BESS
+GPC 1154 Ltd,1,0,1,0,0,0,700.0,Walham 400kV Substation,2026-10-13,Walham 700MW BESS
+REWE 12 Limited,1,1,0,1,0,0,200.0,Aberthaw 275kV Substation,2026-10-13,Aberthaw PV & BESS Generation
+TARENNI ENERGY PARK LIMITED,1,0,1,1,0,0,188.0,Rhigos 400kV Substation,2026-10-13,Tarenni
+IBV WEST MELTON SOLAR PARK LIMITED,1,1,0,0,0,0,200.0,Leeds North Connection Node C 400kV Substation,2026-10-13,West Melton PV & BESS Station
+HAVBREDEY LIMITED,1,0,1,0,0,0,1500.0,New Dounreay 400kV substation,2026-10-13,Havbredey
+ABBOTSHAUGH ENERGY STORAGE LIMITED,1,1,0,0,0,0,500.0,New Deer 2 400kV Substation,2026-10-13,New Deer BESS Station
+IBV KELFIELD SOLAR LTD,1,0,1,0,0,0,150.0,Trent Valley North Connection Node B 400kV Substation,2026-10-13,Epworth PV & BESS Station
+DALBY ENERGY LIMITED,1,0,1,0,0,0,1330.0,West Anglia Connection Node C 400kV Substation,2026-10-13,NatPower Kinoulton Green Energy Park
+Ninfield 10 Renewables Limited,1,1,0,0,0,0,1000.0,Sussex and Romney Connection Node A 400kV Substation,2026-10-13,Ninfield
+Glen Lednock Wind Farm Limited,1,1,0,1,0,0,165.0,Glen Lednock 132kV Substation,2026-10-13,Glen Lednock
+Central Bedfordshire Council,1,0,1,0,0,0,57.0,Biggleswade 400kV Substation,2026-10-13,Biggleswade BESS
+BLACKFORD RENEWABLES LTD,1,0,1,0,0,0,500.0,Rothienorman 400kV Substation,2026-10-13,Rothienorman Battery
+IBV BIRTLES HILL ENERGY PARK LTD,1,0,1,0,0,0,240.0,Manchester South connection node A 400kv,2026-10-13,Siddington BESS Station
+MOSEDALE ENERGY LIMITED,1,1,0,0,0,0,249.0,High Marnham 400kV Substation,2026-10-13,Mosedale Energy
+SOLAR SECURITIES LIMITED,1,0,1,0,0,0,500.0,South Wales West Connection Node A 400kV Substation,2026-10-13,Nant Helen
+LEITH ENERGY LIMITED,1,0,1,1,0,0,1000.0,Lancashire Connection Node B 400kV Substation,2026-10-13,NatPower Penrith Green Energy Park
+HALDANE ENERGY PROJECT 4 LIMITED,1,0,1,0,0,0,2400.0,Teeside Connection Node 2 C 132/400kV Substation,2026-10-13,Bute Hydrogen Project 4
+Montreathmont Energy Centre Limited,1,0,1,1,0,0,34.4,Lunanhead GSP,2026-10-20,Montreathmont Moor Forest
+SIRIUS ECODEV (TEALING) LTD,1,1,0,1,0,0,80.0,Tealing IDNO 132/33kV GSP,2026-10-27,Tealing Solar & Storage
+SOLARFIVE LTD,1,1,0,1,0,0,840.0,Farmoor 400kV Substation,2026-10-20,Botley West - Cote Solar Power Station
+Ocker Hill Storage Limited,1,1,0,1,0,0,240.0,Ocker Hill 275kV Substation,2026-10-27,Ocker Hill - Gresham House
+WEST BURTON SOLAR PROJECT LIMITED,1,0,1,1,0,0,480.0,West Burton 400kV Substation,2026-10-27,West Burton Solar Project
+SUNDON BATTERY STORAGE LIMITED,1,1,0,1,0,0,50.0,Sundon 400kV Substation,2026-10-27,Sundon
+Meygrid Limited,1,1,0,0,0,2,287.0,Gills Bay GSP,2026-11-03,MeyGen Tidal
+MOSSY HILL SHETLAND LIMITED,1,1,0,1,0,0,40.0,Mossy Hill 132kV Substation,2026-11-03,Mossy Hill Wind Farm
+O&G Solar (SPV 36) Limited,1,0,1,0,0,0,249.0,Bradford West 275kV Substation,2026-11-03,Bradford West BESS Substation
+DIDCOT BESS LIMITED,1,1,0,1,0,0,300.0,Didcot 400kV Substation,2026-11-03,Didcot Road
+OURACK WIND FARM LLP,1,1,0,1,0,0,105.0,Ourack 132/33kV Substation,2026-11-10,Ourack Wind Farm
+DRUIM LEATHANN WINDFARM LIMITED,1,1,0,1,0,0,49.7,Stornoway GSP,2026-11-10,Druim Leathann BEGA
+GARVARY WIND FARM LIMITED,1,1,0,1,0,0,144.0,Garvary 132kV Substation,2026-11-10,Garvary Wind Farm
+Connectid 9 Limited,1,0,1,0,0,0,600.0,West Anglia Connection Node A 400kV Substation,2026-11-17,Dunstable
+Stoke Bardolph 10 Renewables Limited,1,0,1,1,0,0,1000.0,Trent Valley South Connection Node D 400kV Substation,2026-11-17,Stoke Bardolph
+548 UK INVESTMENT HOLDINGS LIMITED,12,0,0,0,12,23,0.0,,2026-11-17,Bulls Lodge Farm; Bulls Lodge Farm 2; Enderby Farm; Enderby Farm 2; Marston Farm 2; Patford Bridge Farm; Patford Bridge Farm 2; Pelham Farm 2; Ryhall Farm; Sundon Farm; Sundon Farm 2; Yaxley Farm
+GARLOGIE ENERGY CENTRE LIMITED,6,0,0,6,0,0,0.0,,2026-10-27,Garlogie B-1; Garlogie B-2; Garlogie C-1; Garlogie C-2; Garlogie PV and BESS A-1; Garlogie PV and BESS A-2
+BSR APPLICATIONS LIMITED,5,0,0,5,0,0,0.0,,2026-11-17,Barry Road Storage; Martindale Farm; Stockhills Farm; Thurcroft Storage; Wick Moor Drove
+Advance Grid Solutions Limited,5,0,0,6,0,0,0.0,,2026-10-13,AGS Calderside Battery Energy Storage System; AGS Coatbridge; AGS Nerston 2 BESS; AGS Nerston 3 BESS; AGS Nerston BESS
+Voltwise Power Holdings Limited,4,0,0,4,0,0,0.0,,2026-11-17,Ebstree Road BESS; Pigeon House BESS; Water Orton; Witney BESS
+CARLTON POWER LIMITED,4,0,0,4,0,0,0.0,,2026-11-17,Devonside BESS; Fife 2 BESS; Fife Battery Storage; Lanarkshire BESS
+OPDE UK LIMITED,3,0,0,3,0,0,0.0,,2026-07-07,AULTCRAGGIE BESS; NAVAS BESS; YAMAL BESS
+RWE Generation UK Plc,3,0,0,3,1,0,0.0,,2026-11-03,Didcot B; Grimsby; Little Barford
+PULSE CLEAN ENERGY LIMITED,3,0,0,3,0,0,0.0,,2026-11-10,Elland BESS; Greenock Road BESS; Hunterston PARC BESS
+ER PROJECT DEVELOPMENT CO LIMITED,2,0,0,2,0,0,0.0,,2026-10-27,ER BUR Energy; ER LBR Energy
+"BUCCLEUCH ESTATES, LTD. (THE)",2,0,0,2,0,0,0.0,,2026-09-01,Borders Solar; Drinkstone Hybrid
+Juniper Energy Limited,2,0,0,3,0,0,0.0,,2026-10-20,Iver; Laleham
+Enviromena Project Management UK Limited,2,0,0,2,0,0,0.0,,2026-09-29,Crookedstone PV; Stoneygroves PV
+Renantis UK Limited,2,0,0,2,0,0,0.0,,2026-10-13,Llywelyn Extension Offshore Wind Farm; Millennium East
+High Brenfield Wind Farm Limited,2,0,0,2,0,0,0.0,,2026-07-07,High Brenfield 1; High Brenfield 2
+RENEWCO POWER LIMITED,2,0,0,2,0,0,0.0,,2026-10-27,Clyde South Energy Park; Lessnessock Energy Park
+VATTENFALL WIND POWER LTD,2,0,0,3,2,2,0.0,,2026-10-27,Clashindarroch 2; Edinbane Windfarm
+GREENTECH PROJECTS HOLDING UK LIMITED,2,0,0,2,0,0,0.0,,2026-11-17,Graeme Road Solar & BESS; Prestwold BESS
+ENERGYHUBDEVELOPMENTS LIMITED,2,0,0,2,0,0,0.0,,2026-10-20,Gresham House Connagill BESS; Gresham House Dalmarnock BESS
+INCH CAPE OFFSHORE LIMITED,2,0,0,2,0,0,0.0,,2026-08-18,Inch Cape Offshore Wind Farm Platform 1; Inch Cape Offshore Wind Farm Platform 2
+ABEI ENERGY LIMITED,2,0,0,2,0,0,0.0,,2026-10-27,Craigdow Hill Wind Farm; Killeal
+Vital Energi Solutions Limited,2,0,0,2,0,0,0.0,,2026-09-15,Cleveden Road BESS; Provan Gas Works BESS
+Apatura Battery Ltd,2,0,0,2,0,0,0.0,,2026-11-17,Bridge BESS; Murroch BESS
+XLINKS 1 LTD,2,0,0,0,0,2,0.0,,2026-09-15,Alverdiscott; Alverdiscott 2
+PEAK GEN TOP CO LIMITED,2,0,0,0,2,0,0.0,,2026-10-13,PeakGen BEGA - Coventry; PeakGen BEGA - Hatfield
+PEAK GEN POWER LIMITED,2,0,0,0,2,0,0.0,,2026-10-13,PeakGen BEGA - Didcot; PeakGen BEGA - Haydock
+LEUCHLAND ENERGY CENTRE LIMITED,2,0,0,2,0,0,0.0,,2026-10-27,Leuchland Energy Centre A; Leuchland Energy Centre B
+BORALEX LIMITED,2,0,0,2,0,0,0.0,,2026-11-17,Cott's Farm; Limekiln Extension 2
+SSE DE SOLAR HOLDCO LIMITED,2,0,0,2,0,0,0.0,,2026-11-10,St Asaph SSE; West Haddon
+EDF ENERGY RENEWABLES LIMITED,2,0,0,0,0,2,0.0,,2026-11-17,Penninghame Wind Farm; Watten Wind Farm
+EXAGEN GROUP LIMITED,2,0,0,2,0,0,0.0,,2026-11-17,Bridgwater Energy Park; Killingholme Energy Park
+Waltham Cross 7 Renewables Limited,1,0,0,0,1,1,0.0,,2026-06-02,Waltham Cross Farm 2
+Statera Energy Limited,1,0,0,1,0,0,0.0,,2026-06-02,Sundon Storage
+GALILEO 01 LIMITED,1,0,0,1,0,0,0.0,,2026-06-02,Hunterston Wind Farm
+REWE 5 LIMITED,1,0,0,1,0,0,0.0,,2026-06-02,BESS North Farm
+GALILEO 04 LIMITED,1,0,0,1,0,0,0.0,,2026-06-02,Dunach Wind Farm
+Kilmarnock Energy Centre Limited,1,0,0,1,0,0,0.0,,2026-06-02,Kilmarnock South Battery Storage
+Greentech Invest UK (15) Limited,1,0,0,1,0,0,0.0,,2026-06-02,Nethercourt Solar & BESS Farm
+ABERTHAW ENERGY LIMITED,1,0,0,1,0,0,0.0,,2026-06-02,Aberthaw Energy
+Redshaw Energy Park Developments LLP,1,0,0,1,0,0,0.0,,2026-06-02,Redshaw Energy Park
+WP Grid Storage 3 Limited,1,0,0,1,0,0,0.0,,2026-06-02,Thurso South BESS
+ENSO GREEN HOLDINGS V LIMITED,1,0,0,1,0,0,0.0,,2026-06-02,Drakelow
+Zenobe Energy Limited,1,0,0,1,0,0,0.0,,2026-06-02,Zenobe Norton
+FPC ELECTRIC LAND LIMITED,1,0,0,1,0,0,0.0,,2026-06-09,Lincomb Farm 120MW BESS Scheme
+URUK BESS LIMITED,1,0,0,1,0,0,0.0,,2026-06-09,UK105-B Upland Arms
+Sandbrook Capital BES Ltd,1,0,0,1,0,0,0.0,,2026-06-09,Amersham Substation
+CAR DUIBH WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-06-09,Car Duibh Wind Farm
+Melvich Wind Energy Hub Limited,1,0,0,1,0,0,0.0,,2026-10-20,Melvich Wind Energy Hub (BEGA)
+COILLE BEITH WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-06-09,Coille Beith Wind Farm
+Northumberland Estates Limited,1,0,0,1,0,0,0.0,,2026-06-09,Dewley Hill PV and BESS
+ZENOBE ECCLES LIMITED,1,0,0,1,0,0,0.0,,2026-06-09,Zenobe Eccles Battery Storage
+Oliver Forest Wind Farm Limited,1,0,0,1,0,0,0.0,,2026-06-09,Olivers Forest Wind Farm
+FIRSTWAY SOLAR LTD,1,0,0,1,0,0,0.0,,2026-06-09,Manor Farm_Sidcup
+SKY UK DEVELOPMENT LIMITED,1,0,0,1,0,0,0.0,,2026-06-09,Woodlands Farm BESS
+HB825AXM LTD,1,0,0,1,0,0,0.0,,2026-06-09,Axminster
+Newton Energi Limited,1,0,0,1,0,0,0.0,,2026-06-09,NEL Lackenby
+FOREPOWER LINCOLN (250) LIMITED,1,0,0,1,0,0,0.0,,2026-06-09,Forepower Lincoln (250) Ltd
+RPC ELMYA CARNATION BATHGATE LIMITED,1,0,0,1,1,2,0.0,,2026-11-17,Elmya Bathgate BESS
+Bluestone Butt Lane 1 LTD,1,0,0,1,0,0,0.0,,2026-06-09,Butt Lane - Grimsby BESS
+Acorn Power Limited,1,0,0,1,0,0,0.0,,2026-06-16,Laleham BESS
+Zenobe Coalburn Limited,1,0,0,1,0,0,0.0,,2026-06-16,Zenobe Coalburn Battery Storage
+ONE PLANET DEVELOPMENTS LIMITED,1,0,0,1,0,0,0.0,,2026-06-16,Keadby
+Vox Charlie Ltd,1,0,0,1,0,0,0.0,,2026-06-16,Vox Charlie
+SHAW LANE BESS LIMITED,1,0,0,1,0,0,0.0,,2026-06-16,Shaw Lane BESS
+NINFIELD BESS LTD,1,0,0,1,0,0,0.0,,2026-06-16,Henley Downs Farm BESS
+Derwent Solar 2 Limited,1,0,0,1,0,0,0.0,,2026-06-16,Derwent Solar 2
+Sedgeby Solar Limited,1,0,0,1,0,0,0.0,,2026-06-16,Sedgeby Solar Farm
+West Common BESS Limited,1,0,0,1,0,0,0.0,,2026-06-16,West Common Ipers Lane
+BUK23 LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Whitelaw Brae BESS
+SOLAR 2 LIMITED,1,0,0,1,0,0,0.0,,2026-06-16,Acton Reynald
+BROADHAVEN DISTRIBUTION LIMITED,1,0,0,1,0,0,0.0,,2026-06-16,Drum of Clunas Wind and Solar Park
+SHREWSBURY ENERGY LTD,1,0,0,1,0,0,0.0,,2026-06-16,Shrewsbury Energy
+Weaver Island BESS Ltd,1,0,0,1,0,0,0.0,,2026-06-16,Weaver Island 150MW BESS
+NORTH RAY SOLAR FARM 2 LTD,1,0,0,1,0,0,0.0,,2026-06-16,North Ray Solar Farm 2
+Sheilhill Battery Storage Limited,1,0,0,1,0,0,0.0,,2026-06-16,Sheilhill Battery Storage
+Chessington BESS Ltd,1,0,0,1,0,0,0.0,,2026-06-16,Chessington Estate
+JJS 3 Limited,1,0,0,1,0,0,0.0,,2026-06-16,NEL Conway2
+Shotwick Land Limited,1,0,0,1,0,0,0.0,,2026-06-16,Shotwick BESS
+BOULTBEE BROOKS ENERGY STORAGE LIMITED,1,0,0,0,0,1,0.0,,2026-06-23,Mansfield Road BESS
+WILSON RENEWABLES IV LLP,1,0,0,1,0,0,0.0,,2026-06-23,Hawkwood Wind Farm
+MOSTYN SEAPOWER LIMITED,1,0,0,3,0,0,0.0,,2026-06-23,Port of Mostyn
+ENSO GREEN HOLDINGS U LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Willington East 1 (Tertiary)
+PRIESTGILL WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Priestgill Wind Farm
+Ayr Flexpower Limited,1,0,0,1,0,0,0.0,,2026-06-23,Ayr Flexpower
+ENERGYFARM ALLT DOMHAIN LTD,1,0,0,1,0,0,0.0,,2026-06-30,Allt Domhain Wind Farm
+IGP SOLAR 17 LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Rugeley
+ENSO GREEN HOLDINGS SS LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Willington East 2 (Tertiary)
+TURBINE MARKETING SPV LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Airtnoch BESS
+RPC ELMYA CARNATION KILWORTH LIMITED,1,0,0,1,1,2,0.0,,2026-11-17,Elmya Kilworth BESS & PV
+Old Rides Energy Storage Limited,1,0,0,1,0,0,0.0,,2026-06-23,NatPower-Medway Energy Park
+CSE45 LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Bolney BESS
+BEARSDEN BESS LTD,1,0,0,0,2,4,0.0,,2026-11-17,Bearsden BESS
+WHITELAW BRAE WINDFARM LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Whitelaw Brae Windfarm
+ELMYA RPC UK HUNTERSTON LIMITED,1,0,0,1,1,2,0.0,,2026-11-17,Elmya Hunterston
+Cerulisia Ltd,1,0,0,1,0,0,0.0,,2026-06-23,50MW BESS Connagill
+Aberthaw Green Limited,1,0,0,1,0,0,0.0,,2026-06-23,Aberthaw (Tertiary)
+LEGACY GREEN ENERGY LIMITED,1,0,0,2,0,0,0.0,,2026-10-06,Legacy Green Energy Centre
+POTENCIA ENERGY (MYBSTER) LTD,1,0,0,1,0,0,0.0,,2026-10-27,Mybster 2 Battery Storage
+HIGHLAND WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Highland Wind Farm
+IPC GRID CONNECTION LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,IPC Grid Tremorfa
+BRYNGWYN ENERGY PARK LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,BrynGwyn Energy Park
+ELMYA RPC UK BRAYBROOKE LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Elmya Braybrooke BESS
+FALKIRK POWER LTD,1,0,0,1,0,0,0.0,,2026-06-23,Bankside BESS
+M2 Energy Storage Limited,1,0,0,1,0,0,0.0,,2026-06-23,Riccarton
+GLENTAGGART WIND LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Glentaggart 42MW BESS
+KXP ALPHA III LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,KXP ALPHA 3 AYR BESS
+DOWNIEBRAE BESS LTD,1,0,0,1,0,0,0.0,,2026-06-23,Downiebrae BESS
+NAVENBY GREEN ENERGY CENTRE LTD,1,0,0,1,0,0,0.0,,2026-06-23,Navenby GEC (Ethos Green)
+RPC ELMYA CARNATION GISSING LIMITED,1,0,0,1,1,2,0.0,,2026-11-17,Elmya Gissing BESS & PV
+Wheaten Hill BESS Limited,1,0,0,1,0,0,0.0,,2026-06-23,Boom Power Feckenham Generation Hub
+ELVANFOOT ENERGY STORAGE LIMITED,1,0,0,1,0,0,0.0,,2026-06-23,Elvanfoot (9.8 MW) Energy Storage
+WARLEY GREEN LIMITED,1,0,0,0,1,2,0.0,,2026-06-30,Warley (tertiary)
+GLENROTHES BESS LTD,1,0,0,1,0,0,0.0,,2026-06-30,Glenrothes BESS
+BALWEN LIMITED,1,0,0,2,0,0,0.0,,2026-07-14,Thornton Facility
+CENIN RENEWABLES LIMITED,1,0,0,1,0,0,0.0,,2026-06-30,Mwyndy Storage
+FIELD CORRIEMOILLIE LTD,1,0,0,1,0,0,0.0,,2026-06-30,Corriemoillie BESS
+Sellindge West 10 Renewables Limited,1,0,0,1,0,0,0.0,,2026-06-30,Sellindge West
+Tasway Energy Park Limited,1,0,0,1,0,0,0.0,,2026-06-30,Norwich Main BESS
+ALCEMI STORAGE DEVELOPMENTS 3 LIMITED,1,0,0,1,0,0,0.0,,2026-06-30,Alcemi Devilla Battery Energy Storage Facility
+NECTON GREEN ENERGY CENTRE LTD,1,0,0,1,0,0,0.0,,2026-06-30,Bradenham - Thetford (Necton) GEC (Ethos Green)
+Biggleswade 10 Renewables Limited,1,0,0,1,0,0,0.0,,2026-06-30,Biggleswade
+CHIRMORIE WIND FARM LIMITED,1,0,0,0,2,2,0.0,,2026-08-04,Chirmorie Wind Farm
+LOGANHEAD WF LIMITED,1,0,0,1,0,0,0.0,,2026-07-07,Loganhead Windfarm
+Opdenergy UK 16 Limited,1,0,0,1,0,0,0.0,,2026-07-07,Newton of Park BESS 2
+CRAKAIG WIND ENERGY HUB LIMITED,1,0,0,1,0,0,0.0,,2026-07-07,Crakaig Wind Energy Hub
+CRYSTAL RIG IV LIMITED,1,0,0,2,0,0,0.0,,2026-07-14,Crystal Rig IV Wind Farm
+ADTEK LIMITED,1,0,0,1,0,0,0.0,,2026-07-07,Achanalt Battery Storage
+BPUWL 29 LIMITED,1,0,0,1,0,0,0.0,,2026-07-07,Cairnborrow Wind Energy Hub
+COGLE MOSS RENEWABLES LLP,1,0,0,1,0,0,0.0,,2026-07-07,Cogle Moss Wind Farm
+VIRIDISIA LTD,1,0,0,1,0,0,0.0,,2026-07-07,Dalmarnock Storage BESS
+CUBICO UK DEVELOPMENT LIMITED,1,0,0,1,0,0,0.0,,2026-07-07,Daviot Windfarm BEGA
+HOPSRIG WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-07-07,Hopsrig Wind Farm
+NORTH KYLE WIND FARM LIMITED,1,0,0,2,3,3,0.0,,2026-09-15,North Kyle New Cumnock
+Lovat Estates Limited,1,0,0,0,1,1,0.0,,2026-07-14,Lovat Estate BESS
+GARBET WIND FARM LLP,1,0,0,0,2,2,0.0,,2026-08-04,Garbet Wind Farm
+Field Keith Ltd,1,0,0,0,2,2,0.0,,2026-07-28,Keith Battery Storage
+BENTHEAD SOLAR LIMITED,1,0,0,1,0,0,0.0,,2026-09-29,Benthead Solar
+NOVENTUM POWER SOLAR 3 LIMITED,1,0,0,1,0,0,0.0,,2026-07-14,Noventum Yaxley
+ENSO GREEN HOLDINGS A LIMITED,1,0,0,1,0,0,0.0,,2026-07-14,West Burton
+CARE POWER (ERSKINE) LIMITED,1,0,0,0,1,0,0.0,,2026-07-21,Care Erskine BEGA
+OCKER HILL BESS LIMITED,1,0,0,0,1,0,0.0,,2026-07-21,Danks Way BESS
+AURORA FLOATING OFFSHORE WIND LIMITED,1,0,0,0,0,1,0.0,,2026-07-28,Aurora Offshore Windfarm
+REWE 6 LIMITED,1,0,0,1,0,0,0.0,,2026-07-21,Kingfisher Farm
+EEB74 LIMITED,1,0,0,1,0,0,0.0,,2026-07-21,Saltend North BESS & PV
+JG PEARS GRID CONNECTION LIMITED,1,0,0,0,1,3,0.0,,2026-07-28,JG Pears
+MERSEY REACTIVE POWER LIMITED,1,0,0,0,1,0,0.0,,2026-07-28,Mersey Reactive 1
+CONRAD (BISPHAM) LIMITED,1,0,0,0,1,0,0.0,,2026-07-28,Bispham BEGA
+LG-B-50a Limited,1,0,0,0,1,1,0.0,,2026-08-04,Lovat Estate BESS
+ACKRON WIND FARM LTD,1,0,0,0,0,1,0.0,,2026-08-04,Ackron Wind Farm
+TASWAY ENERGY PARK LIMITED,1,0,0,1,0,0,0.0,,2026-08-04,Norwich Main BESS
+PETERHEAD FLEXPOWER LTD,1,0,0,1,0,0,0.0,,2026-08-04,Peterhead Battery
+ZENOBE STALYBRIDGE LIMITED,1,0,0,0,1,2,0.0,,2026-08-11,Zenobe Stalybridge Project
+ENSO GREEN HOLDINGS C LIMITED,1,0,0,0,0,1,0.0,,2026-08-11,Ratcliffe-on-Soar
+SLATE ISLAND DEVELOPMENTS LIMITED,1,0,0,1,0,0,0.0,,2026-08-11,AGS Inverclyde BESS
+Darlington Solar 1 Limited,1,0,0,1,0,0,0.0,,2026-10-20,Norton PV and BESS
+IRON ACTON GREEN LIMITED,1,0,0,1,0,0,0.0,,2026-10-06,Iron Acton
+TEVIOT WF LIMITED,1,0,0,1,0,0,0.0,,2026-08-11,Teviot Wind Farm
+AWEL Y MOR OFFSHORE WIND FARM LIMITED,1,0,0,0,1,2,0.0,,2026-08-18,Awel Y Mor
+ELMYA ENERGY UK 17 LIMITED,1,0,0,0,1,2,0.0,,2026-11-17,Elmya Dalry BESS & PV
+WOODSIDE BESS LTD,1,0,0,0,1,2,0.0,,2026-11-17,Blairgowrie BESS
+ELMYA ENERGY UK 1 LIMITED,1,0,0,0,1,2,0.0,,2026-11-17,Elmya Dunbar BESS
+ELMYA ENERGY UK 13 LIMITED,1,0,0,0,1,2,0.0,,2026-11-17,Elmya Ryston BESS & PV
+Geocore Ltd,1,0,0,1,0,0,0.0,,2026-10-20,Lyndhurst Camperdown BESS
+FIDDLERS FERRY LTD,1,0,0,3,0,0,0.0,,2026-10-27,Fiddlers Ferry BESS
+RPC ELMYA CARNATION TOWCESTER LIMITED,1,0,0,0,1,2,0.0,,2026-11-17,Elmya Towcester BESS
+ELMYA RPC UK MORNINGSIDE LIMITED,1,0,0,0,1,2,0.0,,2026-11-17,Elmya Morningside BESS & PV
+RPC ELMYA CARNATION FOXDALE LIMITED,1,0,0,0,1,2,0.0,,2026-11-17,Elmya Foxdale BESS
+MARKET HARBOROUGH GREEN ENERGY CENTRE LTD,1,0,0,1,0,0,0.0,,2026-08-25,Market Harborough GEC (Ethos Green)
+SWANSEA NORTH GREEN NG LIMITED,1,0,0,0,2,1,0.0,,2026-09-01,Swansea North Green Energy Centre
+WILLINGTON NG LIMITED,1,0,0,0,1,1,0.0,,2026-09-22,Willington Green Energy Centre
+Field Spittal Ltd,1,0,0,1,0,0,0.0,,2026-09-01,Spittal BESS
+GALILEO 09 LIMITED,1,0,0,1,0,0,0.0,,2026-09-01,Galileo 09
+BOTLEY GREEN ENERGY CENTRE LTD,1,0,0,1,0,0,0.0,,2026-09-01,Botley GEC (Ethos Green)
+SOUTH GRANTHAM ENERGY CENTRE LIMITED,1,0,0,1,0,0,0.0,,2026-09-01,Grantham Solar Farm - RSL
+Field High Marnham Ltd,1,0,0,1,0,0,0.0,,2026-09-01,High Marnham 400MW Field BESS
+Craig Nab Wind Energy Hub Limited,1,0,0,1,0,0,0.0,,2026-09-01,Craig Nab Wind Energy Hub
+HP Trotter t/a Printonan Farm,1,0,0,1,0,0,0.0,,2026-09-01,Kaimes Energy Park
+HARKER ENERGY PARK LIMITED,1,0,0,1,0,0,0.0,,2026-09-01,Harker PV & BESS Sub
+RWE GENERATION UK PLC,1,0,0,0,2,1,0.0,,2026-09-08,Pembroke BESS
+FORSA ENERGY HOLDINGS LIMITED,1,0,0,1,0,0,0.0,,2026-09-08,Forsa Energy Denny BESS
+FRV Powertek Limited,1,0,0,1,0,0,0.0,,2026-11-17,TH Knaresborough
+RWE Renewables UK Solar and Storage Limited,1,0,0,0,0,1,0.0,,2026-11-17,Claydon Solar B (A033)
+RUGELEY POWER GENERATION LIMITED,1,0,0,0,0,1,0.0,,2026-09-15,Rugeley Battery Storage
+Conrad Energy (Developments) II Limited,1,0,0,1,0,0,0.0,,2026-09-15,Coldstream Solar PV Plant
+Greyland Energy Park Limited,1,0,0,1,0,0,0.0,,2026-10-27,D&G 2
+Fig Power Limited,1,0,0,1,0,0,0.0,,2026-09-15,Eggborough BESS
+WYMONDLEY GREEN ENERGY CENTRE LTD,1,0,0,1,0,0,0.0,,2026-10-20,Wymondley GEC (Ethos Green)
+South Street BESS Limited,1,0,0,1,0,0,0.0,,2026-09-15,South Street BESS
+CARE POWER (BRENTWOOD) LIMITED,1,0,0,0,1,0,0.0,,2026-09-22,Care Brentwood BEGA
+Care Power (Berkeley) Limited,1,0,0,0,1,0,0.0,,2026-09-22,Care Power Berkeley BEGA
+RWE Offshore Wind,1,0,0,0,1,1,0.0,,2026-10-13,Celtic 2 Offshore Wind Farm
+BLAENCOTHI ENERGY PARK LIMITED,1,0,0,1,0,0,0.0,,2026-09-22,BlaenCothi Energy Park
+Braintree 10 Renewables Limited,1,0,0,1,0,0,0.0,,2026-09-22,Braintree
+Maesnant Energy Park Limited,1,0,0,1,0,0,0.0,,2026-09-22,Maesnant Energy Park
+STRANOCH WINDFARM LIMITED,1,0,0,0,2,1,0.0,,2026-11-03,Stranoch Wind Farm
+Community Windpower Limited,1,0,0,1,0,0,0.0,,2026-11-03,Scoop Hill Wind Farm
+EPL NEWCO6 LIMITED,1,0,0,1,0,0,0.0,,2026-09-22,Wakeleys BESS
+BERWICK RENEWABLES TX LIMITED,1,0,0,1,0,0,0.0,,2026-09-22,Berwick Solar Wind and Battery Storage
+DEESIDE POWER (UK) LIMITED,1,0,0,1,0,0,0.0,,2026-09-22,Deeside Power Station
+TEINDLAND WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-11-10,Teindland Wind Farm
+VOLTALIA UK LTD,1,0,0,1,0,0,0.0,,2026-11-17,Park Farm Hybrid Solar and BESS
+BLUEBELL WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-09-22,Loch Luichart Extension II
+CARE POWER (NORTH TAWTON) LIMITED,1,0,0,0,1,0,0.0,,2026-09-29,Care North Tawton BEGA
+CARE POWER (WOLVERHAMPTON) LIMITED,1,0,0,0,1,0,0.0,,2026-09-29,Care Wolverhampton BEGA
+JEPIPHANY LIMITED,1,0,0,0,0,1,0.0,,2026-09-29,Melksham Grid Park ESS & PV
+ECODEV GROUP LTD,1,0,0,1,1,2,0.0,,2026-11-17,Lambeeth 240MW
+SIRIUSECODEV (GASTARD) LTD,1,0,0,1,1,2,0.0,,2026-11-17,Gastard BESS
+Exeter Storage Limited,1,0,0,1,0,0,0.0,,2026-10-06,Exeter BESS
+HALBEATH SOLAR LTD,1,0,0,1,0,0,0.0,,2026-10-06,Halbeath
+THURROCK FLEXIBLE GENERATION LIMITED,1,0,0,1,0,0,0.0,,2026-10-06,Thurrock Power Station
+Opdenergy UK 14 Limited,1,0,0,1,0,0,0.0,,2026-10-06,Nether Pitforthie BESS
+GALILEO 14 LIMITED,1,0,0,1,0,0,0.0,,2026-10-06,Galileo 14 Ltd
+NUCLEAR RESTORATION SERVICES LIMITED,1,0,0,0,0,1,0.0,,2026-10-13,Hinkley Point B
+PELHAM ENERGY PARK LIMITED,1,0,0,1,0,0,0.0,,2026-10-13,Pelham BESS
+ANGLO ENERGY STORAGE LTD,1,0,0,1,0,0,0.0,,2026-10-13,Penn Battery Storage
+Akku Tealing Limited,1,0,0,1,0,0,0.0,,2026-10-13,Akku Tealing Battery Storage
+NORFOLK VANGUARD WEST LIMITED,1,0,0,0,2,1,0.0,,2026-10-20,Vanguard
+OAKLANDS FARM SOLAR LIMITED.,1,0,0,1,0,0,0.0,,2026-10-20,Oaklands Farm Solar PV
+ELMYA RPC UK MELBOURNE LIMITED,1,0,0,2,0,0,0.0,,2026-10-20,Elmya Melbourne BESS
+CARRINGTON STORAGE LIMITED,1,0,0,1,0,0,0.0,,2026-10-20,Carrington
+COTTAM SOLAR PROJECT LIMITED,1,0,0,1,0,0,0.0,,2026-10-20,Cottam Solar PV + BESS
+HARMONY ENERGY LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,Scotton
+NOVENTUM POWER SOLAR 2 LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,Noventum Hawthorn Pit
+ENERGYCOG LTD,1,0,0,1,0,0,0.0,,2026-10-27,Feckenham 100MW BESS
+HILL STREET SHELFCO 1 LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,Hill Street Solar PV/BESS Station
+Limekiln Extension Limited,1,0,0,1,0,0,0.0,,2026-10-27,Limekiln
+EAST ANGLIA THREE LIMITED,1,0,0,0,1,2,0.0,,2026-11-03,East Anglia Three
+SANDY KNOWE WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,Sandy Knowe Wind Farm
+Windyhill Grid 2 Ltd,1,0,0,1,0,0,0.0,,2026-10-27,WindyHill BESS2 Facility
+EEW RENEWABLES LTD,1,0,0,2,0,0,0.0,,2026-10-27,Merthyr Solar and Battery
+PELHAM GREEN ENERGY CENTRE LTD,1,0,0,1,0,0,0.0,,2026-10-27,Pelham GEC (Ethos Green)
+CREAG RIABHACH WIND FARM LTD,1,0,0,1,0,0,0.0,,2026-10-27,Creag Riabhach Wind Farm
+LOCH LIATH WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,Loch Liath Wind Farm
+POLLIE HILL WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,Pollie Hill Wind Farm
+Kona Energy Limited,1,0,0,1,0,0,0.0,,2026-10-27,Patford Bridge BESS
+Craig Watch Wind Farm Limited,1,0,0,1,0,0,0.0,,2026-10-27,Craig Watch Wind Farm
+Amersham 10 Renewables Limited,1,0,0,1,0,0,0.0,,2026-10-27,Amersham Main
+NOVENTUM POWER SOLAR 4 LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,Noventum Navenby
+BLUEFIELD RENEWABLE DEVELOPMENTS LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,BF88 Oakley
+Galileo 20 Limited,1,0,0,1,0,0,0.0,,2026-10-27,Glenmoy Wind Solar & BESS
+UK RENFREWSHIRE 1 LTD,1,0,0,1,0,0,0.0,,2026-10-27,Langbank Solar and BESS
+WELBAR ENERGY STORAGE LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,WELBAR ENERGY STORAGE
+EP UK Power Development II Ltd,1,0,0,1,0,0,0.0,,2026-10-27,South Humber Bank
+NP SPV 41 LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,NatPower Kintore2 Green Energy Park
+HARMONY TC LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,Thurcroft BESS
+HOCKLIFFE GREEN ENERGY CENTRE LTD,1,0,0,1,0,0,0.0,,2026-10-27,Hockliffe GEC (Ethos Green)
+LIGHTSOURCE SPV 204 LIMITED,1,0,0,1,0,0,0.0,,2026-10-27,Mountain Fen
+EAST CLAYDON GREEN NG LIMITED,1,0,0,0,1,2,0.0,,2026-11-03,East Claydon Green Energy Centre
+Blackdyke BESS Limited,1,0,0,0,1,2,0.0,,2026-11-03,Harker Green Energy Centre
+BW ESS DEVELOPMENT UK LIMITED,1,0,0,0,1,2,0.0,,2026-11-03,Cowley Energy Storage
+Keadby Generation Limited,1,0,0,0,0,1,0.0,,2026-11-03,Keadby
+GALILEO 15 LIMITED,1,0,0,1,0,0,0.0,,2026-11-03,Galileo 15
+MERIDIAN SOLAR FARM LIMITED,1,0,0,1,0,0,0.0,,2026-11-03,Meridian Solar Farm
+BERKSWELL ENERGY PARK LIMITED,1,0,0,1,0,0,0.0,,2026-11-03,Berkswell BESS
+Strath Tirry Wind Energy 2021 Ltd,1,0,0,1,0,0,0.0,,2026-11-03,Strath Tirry
+Tarland Limited,1,0,0,1,0,0,0.0,,2026-11-10,Tarland Battery Storage System
+THE DROVES SOLAR FARM LIMITED,1,0,0,1,0,0,0.0,,2026-11-03,The Droves (formerly Swaffham PV & BESS)
+GREENHILLS 1 LIMITED,1,0,0,1,0,0,0.0,,2026-11-03,Hill of Towie 2 Wind Farm
+KINCARDINE GRID 3 LTD,1,0,0,1,0,0,0.0,,2026-11-03,Fife Grid Services
+Uniper UK Limited,1,0,0,1,0,0,0.0,,2026-11-03,EMERGE Centre
+Galileo 21 Limited,1,0,0,1,0,0,0.0,,2026-11-03,Colmealie Wind - Solar - BESS Farm
+Luminous Energy Group Limited,1,0,0,1,0,0,0.0,,2026-11-03,Hurst BESS
+COUPAR TWO LIMITED,1,0,0,1,0,0,0.0,,2026-11-10,Coupar Solar Farm
+Irena BESS LIMITED,1,0,0,1,0,0,0.0,,2026-11-10,Braybrooke Solar and Battery Connection
+ESB (SCOTLAND) LTD,1,0,0,1,0,0,0.0,,2026-11-10,High Netherfauld Farm BESS
+CORRIEGARTH 2 WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-11-10,Corriegarth  2 Wind Farm
+EXETER MAIN BATTERY LIMITED,1,0,0,1,0,0,0.0,,2026-11-10,Exeter Main Tertiary
+GALILEO 12 LIMITED,1,0,0,1,0,0,0.0,,2026-11-10,GALILEO 12 LIMITED
+Glensalloch Wind Farm Limited,1,0,0,1,0,0,0.0,,2026-11-10,North Lowther Energy Initiative
+Black Knowe Energy Limited,1,0,0,1,0,0,0.0,,2026-11-10,Sundhope Wind Farm
+CBS ENERGY STORAGE ASSETS UK LIMITED,1,0,0,0,1,0,0.0,,2026-11-17,Dyce Energy Storage Facility
+NEW DEER ENERGY CENTRE LIMITED,1,0,0,0,0,1,0.0,,2026-11-17,New Deer Battery Storage
+ARVEN SOUTH LIMITED,1,0,0,0,0,1,0.0,,2026-11-17,Arven South Offshore Wind Farm
+JBM SOLAR PROJECTS 2 LTD,1,0,0,0,0,1,0.0,,2026-11-17,Tale Lane Solar / A008 Langford
+Torfichen Energy Limited,1,0,0,1,0,0,0.0,,2026-11-17,Torfichen Energy Park
+Apatura Project 35 Ltd,1,0,0,1,0,0,0.0,,2026-11-17,Bewley BESS
+Nembus BESS Limited,1,0,0,1,0,0,0.0,,2026-11-17,Ardleigh Solar & BESS
+ARL Energy Development Limited,1,0,0,1,0,0,0.0,,2026-11-17,Thorney Edge
+AEUK WIND PROJECT II LTD,1,0,0,1,0,0,0.0,,2026-11-17,Glenmore
+NOVENTUM POWER SOLAR 11 LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Noventum -New Marton
+LANGAGE ENERGY PARK LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Langage Battery Storage
+CHINT SOLAR UK MANAGEMENT LTD,1,0,0,1,0,0,0.0,,2026-11-17,Blackbraes PV+BESS
+LITTLEBROOK GREEN ENERGY CENTRE LTD,1,0,0,1,0,0,0.0,,2026-11-17,Littlebrook GEC (Ethos Green)
+NP SPV 29 LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,NatPower Hawthorn Pit Green Energy Park
+Corio Generation Limited,1,0,0,1,0,0,0.0,,2026-11-17,Gallos
+South West Wind Holdco Limited,1,0,0,1,0,0,0.0,,2026-11-17,Mererid Offshore Wind Farm
+REWE 2 LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,BESS Cilfynydd
+Cubico UK Development Limited,1,0,0,1,0,0,0.0,,2026-11-17,Old Stoke Rd BESS
+BEFERLEAH ENERGY PARK LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Creyke Beck PV & BESS Sub
+IBV DANETHORPE LANE SOLAR LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Kinder PV & BESS Station
+GLEN EARRACH ENERGY LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Glen Earrach PSH
+Morwind Ltd,1,0,0,1,0,0,0.0,,2026-11-17,Morwind 300
+ENERGIEKONTOR UK LTD,1,0,0,1,0,0,0.0,,2026-11-17,Tarbuckle Hill Wind Farm
+SolarNine Ltd,1,0,0,1,0,0,0.0,,2026-11-17,Cottered - PVDP
+Woodcock Faulds Battery Storage Limited,1,0,0,1,0,0,0.0,,2026-11-17,Woodcock Faulds Battery Storage
+FLEET HAMPSHIRE ENERGY LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Natpower Basingstoke Green Energy Park
+UE 1 LTD,1,0,0,1,0,0,0.0,,2026-11-17,NEL Tiger
+GREEN ENERGY MAB LTD,1,0,0,1,0,0,0.0,,2026-11-17,Feckenham Energy Park
+Llyn Lort II Energy Park Limited,1,0,0,1,0,0,0.0,,2026-11-17,Llyn Lort II Energy Park
+KXP ALPHA II LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,KXP Alpha 2 Little Horsted
+ALTNABREAC WIND FARM LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Altnabreac Windfarm
+LG-B-300,1,0,0,1,0,0,0.0,,2026-11-17,LGB300
+SCLENTEUCH ENERGY LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Sclenteuch Energy Park
+Isenau Energy Storage Resources Eight Limited,1,0,0,1,0,0,0.0,,2026-11-17,Isenau Eight
+SUPERNOVA POWER BESS HOLDINGS LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Bendle Farm
+ETP UK 2 LTD,1,0,0,1,0,0,0.0,,2026-11-17,Peterhead PV and BESS Station
+Little Harrowden 10 Renewables Limited,1,0,0,1,0,0,0.0,,2026-11-17,Little Harrowden
+APPLEFORD 2 RENEWABLES LTD,1,0,0,1,0,0,0.0,,2026-11-17,Didcot Farm
+ELEMENTS GREEN LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Overton Solar & Storage Farm
+KONA ASSET 4 LIMITED,1,0,0,1,0,0,0.0,,2026-11-17,Rhigos BESS
+USKMOUTH ENERGY STORAGE LIMITED,0,0,0,0,0,0,0.0,,,
+HD888CAP LIMITED,0,0,0,0,0,0,0.0,,,
+ZENOBE KILMARNOCK SOUTH LIMITED,0,0,0,0,0,0,0.0,,,
+KINMUCK ENERGY STORAGE LIMITED,0,0,0,0,0,0,0.0,,,
+ALLT AN TUIR RENEWABLE ENERGY PARK LIMITED,0,0,0,0,0,0,0.0,,,
+DALRIADA RENEWABLES LIMITED,0,0,0,0,0,0,0.0,,,
+Harmony HM Limited,0,0,0,0,0,0,0.0,,,
+ENERGYFARM STRATH OYKEL LLP,0,0,0,0,0,0,0.0,,,
+KILNSIDE ENERGY PARK LIMITED,0,0,0,0,0,0,0.0,,,
+Balance Power Projects Limited,0,0,0,0,0,0,0.0,,,
+AGR SOLAR 3 LIMITED,0,0,0,0,0,0,0.0,,,
+BEECHGREEN ENERGYFARM LIMITED,0,0,0,0,0,0,0.0,,,
+SOFIA OFFSHORE WIND FARM LIMITED,0,0,0,0,0,0,0.0,,,
+IGP SOLAR 22 LIMITED,0,0,0,0,0,0,0.0,,,
+West Weybridge 10 Renewables Limited,0,0,0,0,0,0,0.0,,,
+IGP ENERGY STORAGE 2 LIMITED,0,0,0,0,0,0,0.0,,,
+COSTA HEAD WIND FARM LIMITED,0,0,0,0,0,0,0.0,,,
+Dalzell (Newarthill) Ltd,0,0,0,0,0,0,0.0,,,
+QAIR SCOTLAND LIMITED,0,0,0,0,0,0,0.0,,,
+Field Kinardochy Ltd,0,0,0,0,0,0,0.0,,,
+GB WIND FARM LIMITED,0,0,0,0,0,0,0.0,,,
+Trent BESS I Limited,0,0,0,0,0,0,0.0,,,
+Trent BESS II Limited,0,0,0,0,0,0,0.0,,,
+MOWBRAY ENERGY PARK LIMITED,0,0,0,0,0,0,0.0,,,
+COTTOM TO RYHALL ENERGY LIMITED,0,0,0,0,0,0,0.0,,,
+Queequeg Renewables Ltd,0,0,0,0,0,0,0.0,,,
+NEWLANDS HILL WIND ENERGY HUB LIMITED,0,0,0,0,0,0,0.0,,,
+ENSO GREEN HOLDINGS L LIMITED,0,0,0,0,0,0,0.0,,,
+Carrog Storage Facility Limited,0,0,0,0,0,0,0.0,,,
+MUIR MHÒR OFFSHORE WIND FARM LIMITED,0,0,0,0,0,0,0.0,,,
+Whitehill Battery Storage Ltd,0,0,0,0,0,0,0.0,,,
+Flemyland Battery Storage Limited,0,0,0,0,0,0,0.0,,,
+Rashley New Energy Limited,0,0,0,0,0,0,0.0,,,
+POTENCIA ENERGY LIMITED,0,0,0,0,0,0,0.0,,,
+BSSL EAST LOTHIAN 1 LTD,0,0,0,0,0,0,0.0,,,
+LIME DOWN SOLAR PARK LIMITED,0,0,0,0,0,0,0.0,,,
+FEARNA PSH LIMITED,0,0,0,0,0,0,0.0,,,
+AGR RENEWABLES LIMITED,0,0,0,0,0,0,0.0,,,
+THORPE MARSH GREEN ENERGY HUB LIMITED,0,0,0,0,0,0,0.0,,,
+CONNECTID 1 LIMITED,0,0,0,0,0,0,0.0,,,
+SSE STAYTHORPE POWER LIMITED,0,0,0,0,0,0,0.0,,,
+AYRE OFFSHORE WIND FARM LIMITED,0,0,0,0,0,0,0.0,,,
+Don Cossack Ltd,0,0,0,0,0,0,0.0,,,
+Rosside Energy Limited,0,0,0,0,0,0,0.0,,,
+Light Valley Solar Limited,0,0,0,0,0,0,0.0,,,
+TROSTON WINDFARM LIMITED,0,0,0,0,0,0,0.0,,,
+LAIRDMANNOCH ENERGY PARK LIMITED,0,0,0,0,0,0,0.0,,,
+MAS 002 LIMITED,0,0,0,0,0,0,0.0,,,
+GLENMUCKLOCH RENEWABLE ENERGY LIMITED,0,0,0,0,0,0,0.0,,,
+BOWDUN OFFSHORE WIND FARM LIMITED,0,0,0,0,0,0,0.0,,,
+BERKSWELL BATTERY STORAGE LIMITED,0,0,0,0,0,0,0.0,,,
+CONNECTID 3 LIMITED,0,0,0,0,0,0,0.0,,,
+Kilmarnock Flexpower Ltd,0,0,0,0,0,0,0.0,,,
+CONNECTID 2 LIMITED,0,0,0,0,0,0,0.0,,,
+S4N SPITTAL LTD,0,0,0,0,0,0,0.0,,,
+ENSO GREEN HOLDINGS D LIMITED,0,0,0,0,0,0,0.0,,,
+WILSON RENEWABLES III LLP,0,0,0,0,0,0,0.0,,,
+Brunt Hill Limited,0,0,0,0,0,0,0.0,,,
+ONE EARTH SOLAR FARM LIMITED,0,0,0,0,0,0,0.0,,,
+HD144WHI LTD,0,0,0,0,0,0,0.0,,,
+Cairnmore Hill Energy Limited,0,0,0,0,0,0,0.0,,,
+GPC 678 LTD,0,0,0,0,0,0,0.0,,,
+EDF Energy Nuclear Generation Limited,0,0,0,0,0,0,0.0,,,
+FLEXION ENERGY SPV 2 LTD,0,0,0,0,0,0,0.0,,,
+CARE POWER (NEWTONWOOD) LIMITED,0,0,0,0,0,0,0.0,,,
+STRATHRORY WIND FARM LLP,0,0,0,0,0,0,0.0,,,

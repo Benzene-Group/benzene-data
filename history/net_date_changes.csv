@@ -1,0 +1,225 @@
+pid,stage,name,cust,site,type,to,mw,gate,old,new,months
+PRO-004806,,NatPower Llanteg Green Energy Park,NP SPV 30 LIMITED,South Wales West Connection Node C 400kV,Energy Storage System,NGET,47.5,1,2028-10-31,2037-12-31,110.0
+PRO-002571,,Weaver BESS,Frodsham Devco Limited,Frodsham 400kV Substation,Energy Storage System,NGET,240.0,1,2037-11-01,2028-10-27,-108.1
+PRO-003586,,Lower Pool Energy Park,Renewable Energy Systems Limited,Derbyshire Connection Node B 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,600.0,1,2030-10-31,2037-10-30,84.0
+PRO-003408,,Ninfield,Ninfield 10 Renewables Limited,Sussex and Romney Connection Node A 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,1000.0,1,2030-10-31,2037-10-31,84.0
+PRO-001493,,Thainstone Energy Park,AGILE ENERGY RECOVERY (INVERURIE) LIMITED,Kintore GSP,Waste,SHET,40.0,2,2023-07-31,2029-10-31,75.0
+PRO-005936,,Beinn Dearg,GALILEO 19 LIMITED,NEW TAYNUILT 132 KV SUBSTATION,Energy Storage System;PV Array (Photo Voltaic/solar);Wind Onshore,SHET,290.0,1,2031-10-31,2037-10-31,72.0
+PRO-002017,,Ewerby,Leoda Solar Farm Limited,Navenby 400kV Substation,Demand;Energy Storage System;PV Array (Photo Voltaic/solar),NGET,500.0,1,2029-10-30,2035-10-30,72.0
+PRO-001088,,Lister Battery (formerly Lister Drive),LISTER BATTERY LTD,Lister Drive 275kV Substation,Energy Storage System,NGET,57.0,2,2023-10-31,2029-09-30,71.0
+PRO-000511,,Shepherds Rig Wind Farm,SETT WIND DEVELOPMENT LIMITED,Shepards Rig 132/33kV,Wind Onshore,SPT,84.6,2,2024-07-30,2030-05-30,70.0
+PRO-003430,,Milligansbush Battery Storage,Milligansbush Battery Storage Ltd,Milligansbush Battery Storage 132kV Substation,Energy Storage System,SPT,200.0,1,2036-10-30,2031-03-25,-67.2
+PRO-001056,,Damhead Creek 2,VPI Power Limited,Kingsnorth 400kV Substation,CCGT (Combined Cycle Gas Turbine);Energy Storage System;OCGT (Open Cycle Gas Turbine),NGET,1800.0,,2025-08-31,2030-10-31,62.0
+PRO-003058,,L48 BESS Glen App,S4 UK DEV LTD,L48 BESS GLEN APP 275/132KV SUBSTATION,Energy Storage System,SPT,200.0,1,2028-10-31,2033-10-31,60.0
+PRO-001587,,Botley West - Cote Solar Power Station,SOLARFIVE LTD,Farmoor 400kV Substation,PV Array (Photo Voltaic/solar),NGET,840.0,2,2026-10-30,2031-10-31,60.0
+PRO-002551,,Walham 700MW BESS,GPC 1154 Ltd,Walham 400kV Substation,Energy Storage System,NGET,700.0,1,2038-10-31,2033-11-17,-59.4
+PRO-000966,,Druim Leathann BEGA,DRUIM LEATHANN WINDFARM LIMITED,Stornoway GSP,Wind Onshore,SHET,49.7,2,2027-03-31,2031-12-31,57.0
+PRO-001346,,Glen Ullinish Extension,GLEN ULLINISH WF 2 LTD,Glen Ullinish Extension 132/33kV Substation,Wind Onshore,SHET,240.0,2,2027-04-01,2031-11-25,55.8
+PRO-002585,,Aitkenhead Farm BESS,Aitkenhead Storage Facility Limited,Clydesmill 275/33kV,Demand;Energy Storage System,SPT,300.0,1,2028-10-31,2033-04-30,53.9
+PRO-001971,,Rothienorman Battery,BLACKFORD RENEWABLES LTD,Rothienorman 400kV Substation,Energy Storage System,SHET,500.0,1,2033-10-31,2029-07-30,-51.1
+PRO-003233,,Feckenham PV & BESS Station,IB VOGT UK LTD,Feckenham 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,400.0,1,2033-10-31,2037-10-30,48.0
+PRO-003686,,Daventry High Impact Green Energy Hub (HIGEH) 1,TELIS ENERGY UK LIMITED,Derbyshire Connection Node A 400kV Substation,Energy Storage System;Nuclear;PV Array (Photo Voltaic/solar);Wind Onshore,NGET,1000.0,1,2033-10-31,2037-10-30,48.0
+PRO-003727,,Willington BESS Station,IBV WILLINGTON ENERGY PARK LIMITED,Derbyshire Connection Node D 400kV Substation,Energy Storage System,NGET,240.0,1,2033-10-31,2037-10-30,48.0
+PRO-004057,,Chalmerston Windfarm,BROCKWELL ENERGY LIMITED,CHALMERSTON WINDFARM 132kV SUBSTATION,Wind Onshore,SPT,75.0,1,2033-10-31,2037-10-31,48.0
+PRO-003511,,Bradford Solar Farm,SolarFour Ltd,Staffordshire Connection Node A 400kV Substation,PV Array (Photo Voltaic/solar),NGET,960.0,1,2033-10-31,2037-10-30,48.0
+PRO-001500,,Moelfre Energy Park,MOELFRE ENERGY PARK LIMITED,Bodelwyddan 400kV Substation,Energy Storage System,NGET,158.4,1,2033-10-01,2029-10-31,-47.0
+PRO-002119,,SAGE,SAGE NORTH SEA LIMITED,St Fergus Mobil 132/11kV Substation,Demand;PV Array (Photo Voltaic/solar),SHET,20.0,1,2025-06-30,2029-04-30,46.0
+PRO-001129-2,2,Keith 132 Greener Grid Park,KEITH STORAGE SOLUTIONS LIMITED,Keith 132kV Substation,Energy Storage System;Reactive Compensation,SHET,48.0,2,2025-05-31,2029-04-01,46.0
+PRO-004073,,Beinn Ghlas,HEADWIND DEVELOPMENT SERVICES LIMITED,Taynuilt 132/33kV GSP Substation,Wind Onshore,SHET,35.0,2,2034-10-31,2031-03-28,-43.1
+PRO-000183,,Strathy South Wind,SSE GENERATION LIMITED,Strathy South 132/33kV Substation,Wind Onshore,SHET,207.6,2,2027-04-25,2030-09-30,41.2
+PRO-000467,,Rampion Extension Offshore Wind Farm,RAMPION EXTENSION DEVELOPMENT LIMITED,Bolney 400kV Substation,Wind Offshore,NGET,1200.0,,2026-08-01,2029-12-31,41.0
+PRO-001055,,Worset PV & BESS Park,Worcestershire Solar 1 Limited,Hartmoor 275kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,37.5,2,2024-06-07,2027-10-30,40.7
+PRO-002265,,Well Street Paisley,Gas Generation Property Limited,Elderslie 132/33kV,Energy Storage System,SPT,49.9,2,2025-05-06,2028-06-28,37.7
+PRO-003224,,Ratcliffe on Soar,Starlight Energy SPV 4 Limited,Derbyshire Connection Node F 132KV,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,200.0,1,2034-10-31,2037-10-31,36.0
+PRO-003534,,Ashbrook Lane BESS,Downing Renewable Developments LLP,WEST ANGLIA CONNECTION NODE B 400KV SUBSTATION,Energy Storage System,NGET,249.9,1,2031-10-31,2034-10-31,36.0
+PRO-003827,,Morton Manor PV & BESS Station,IB VOGT UK LTD,High Marnham 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,240.0,1,2037-10-31,2034-10-30,-36.0
+PRO-003181,,Solomons Farm BESS,Solomons BESS Ltd,North Kent Connection Node B 132kV Substation,Energy Storage System,NGET,240.0,1,2030-10-31,2033-10-31,36.0
+PRO-003626,,Rugby High Impact Green Energy Hub (HIGEH) 1,TELIS ENERGY UK LIMITED,Enderby 400kV Substation,Energy Storage System;Nuclear;PV Array (Photo Voltaic/solar);Wind Onshore,NGET,1000.0,1,2034-10-31,2037-10-30,36.0
+PRO-004085,,Zenobe Butler's Wood BESS,ZENOBE ENERGY LIMITED,Butlers Wood 400kV Substation,Energy Storage System,NGET,330.0,1,2037-10-31,2034-10-31,-36.0
+PRO-001728,,Merlin Offshore Wind Farm,OFFSHORE WIND LIMITED,Alverdiscott 400kV Substation,Wind Offshore,NGET,300.0,1,2028-11-01,2031-10-31,35.9
+PRO-001849,,Montreathmont Moor Forest,Montreathmont Energy Centre Limited,Lunanhead GSP,Energy Storage System;PV Array (Photo Voltaic/solar),SHET,34.38,2,2029-10-08,2026-10-31,-35.2
+PRO-002789,,St Marys Isle Solar Farm,GRUPOTEC SOLAR UK 5 LIMITED,Tongland 132/11kV,Energy Storage System;PV Array (Photo Voltaic/solar),SPT,36.0,2,2027-08-27,2030-06-14,33.6
+PRO-003710,,Kellwood Road BESS,Geocore (Kellwood) Ltd,Dumfries 132/33kV,Energy Storage System,SPT,40.0,2,2027-10-31,2030-07-30,33.0
+PRO-002300,,Rothienorman 50MW BESS,ROTHIENORMAN FLEXPOWER LTD,Rothienorman 400/33kV Substation,Energy Storage System,SHET,50.0,2,2024-10-31,2027-07-31,33.0
+PRO-004068,,Upper Beoch Windfarm,BROCKWELL ENERGY LIMITED,New Cumnock North 132kV Substation,Wind Onshore,SPT,80.0,1,2033-10-31,2036-07-31,33.0
+PRO-001087,,Fleet (Tertiary),CSE23 LIMITED,Fleet 400kV Substation,PV Array (Photo Voltaic/solar),NGET,47.5,2,2026-10-31,2029-07-30,33.0
+PRO-003977,,Middleton Farm Solar,Bluestone Middleton Farm 1 Ltd,Elderslie 132/33kV,PV Array (Photo Voltaic/solar),SPT,38.7,,2025-10-06,2028-06-28,32.7
+PRO-000856,,Kincardine Battery Storage Facility,KINCARDINE GRID 1 LTD,Fife Grid Services Facility 275kV Substation,Energy Storage System,SPT,200.0,2,2026-03-31,2028-12-15,32.5
+PRO-000429,,Fleet Tertiary,FLEET SOLAR LIMITED,Fleet 400kV Substation,Thermal,NGET,47.5,1,2025-11-30,2028-08-07,32.2
+PRO-003650,,WORSET LANE BESS,FIELD HARTMOOR LTD,Hartmoor 275kV Substation,Energy Storage System,NGET,200.0,2,2026-10-25,2029-05-31,31.2
+PRO-001082,,Monets Garden,MONETS GARDEN BATTERY LTD,Osbaldwick 400kV Substation,Energy Storage System,NGET,57.0,2,2024-10-30,2027-06-08,31.2
+PRO-000336-3,3,MeyGen Tidal,Meygrid Limited,Gills Bay GSP,Energy Storage System;Tidal,SHET,287.0,,2028-04-01,2030-10-31,31.0
+PRO-001644,,Hunterston Energy Storage Facility,HUNTERSTON GRID 1 LTD,Ayrshire Grid 400kV Substation,Energy Storage System,SPT,200.0,2,2025-08-27,2028-03-17,30.7
+PRO-002305,,Middleton BESS,Middleton Energy Storage Limited,Middleton 400KV Substation,Energy Storage System,NGET,200.0,2,2026-11-30,2029-05-31,30.0
+PRO-001419,,Neilston 400kV Greener Grid Park,Statkraft UK Ltd,Neilston 400kV Substation,Energy Storage System,SPT,600.0,2,2027-05-17,2029-10-31,29.5
+PRO-002270,,Tomchrasky Wind Farm,E Power Limited,Tomchrasky Wind Farm 132/33kV Substation,Wind Onshore,SHET,63.0,2,2029-10-31,2032-03-31,29.0
+PRO-001092,,Mannington,BAYWA R.E. UK LIMITED,Mannington 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,47.5,,2030-08-30,2028-04-28,-28.1
+PRO-001367,,Lethans Wind Farm,Lethans Wind Farm Limited,Lethans Collector Substation,Wind Onshore,SPT,132.0,2,2027-06-30,2029-10-31,28.1
+PRO-001696,,WindyHill Energy Storage Facility,Windyhill Grid 1 LTD,Windyhill 132kV,Energy Storage System,SPT,200.0,2,2025-08-27,2027-12-31,28.1
+PRO-002237,,Whitehouse BESS station,IGP INTERNATIONAL PROSPECTING LIMITED,Whitehouse 275kV Substation,Demand;Energy Storage System,SHET,249.0,1,2032-07-31,2034-10-31,27.0
+PRO-003557,,EcoKincardine,Econergy International Limited,Kincardine North 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),SPT,249.0,1,2028-07-31,2030-10-31,27.0
+PRO-001805,,Rochdale BESS,Rochdale (BES) Ltd,Rochdale 275kV Substation,Energy Storage System,NGET,57.0,2,2027-07-30,2029-10-30,27.0
+PRO-002652,,East Claydon High Impact Green Energy Hub (HIGEH) 1,EAST CLAYDON STORAGE LIMITED,East Claydon 400kV Substation,Energy Storage System;Nuclear;PV Array (Photo Voltaic/solar);Reactive Compensation;Wind Onshore,NGET,1000.0,1,2034-10-31,2036-12-06,25.2
+PRO-001084-1,1,Kirkby,KIRKBY BATTERY STORAGE LTD,Kirkby 275/33kV Substation,Energy Storage System,NGET,49.9,2,2025-09-30,2027-10-31,25.0
+PRO-001104-1,1,Bramley BESS,BRAMLEY BESS LIMITED,Bramley 400kV Substation,Energy Storage System,NGET,50.0,2,2025-09-29,2027-10-30,25.0
+PRO-004084,,Devol Moor Battery & Solar Project,Sunshine Project 03 Limited,Devol Moor 400/132kV,Energy Storage System,SPT,400.0,1,2029-10-17,2027-09-27,-24.7
+PRO-001946,,Culham Storage,CULHAM STORAGE LIMITED,Culham Jet 400kV Substation,Energy Storage System,NGET,500.0,2,2027-10-29,2029-10-31,24.1
+PRO-002532,,Newarthill Energy Park,Dalzell (Newarthill) Ltd,Newarthill Energy Park 275kV Substation,Energy Storage System,SPT,300.0,2,2027-10-28,2029-10-31,24.1
+PRO-003807,,GF Norwich BESS,GF Norwich Energy Ltd,NORTH ANGLIA CONNECTION NODE A 400kV SUBSTATION,Energy Storage System,NGET,400.0,1,2032-10-31,2034-10-31,24.0
+PRO-003916,,EPL Suffolk,EPL NEWCO9 LIMITED,North Anglia Connection Node E 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,480.0,1,2032-10-31,2034-10-31,24.0
+PRO-002213,,Ocker Hill - Gresham House,Ocker Hill Storage Limited,Ocker Hill 275kV Substation,Energy Storage System,NGET,240.0,2,2027-10-30,2029-10-30,24.0
+PRO-006617,,Frome Valley Energy Park,BIOSOUTH ENERGY LIMITED,Chickerell-Mannington 400kV Substation,Demand;Energy Storage System;PV Array (Photo Voltaic/solar),NGET,43.2,1,2037-10-31,2039-10-31,24.0
+PRO-003553,,Lethans Wind Farm Extension,LETHANS EAST WIND FARM LIMITED,Lethans Collector 132kV Substation,Wind Onshore,SPT,85.0,2,2027-10-30,2029-10-31,24.0
+PRO-001726,,Drum Farm Energy Storage Facility,Field Drum Farm Ltd,Keith 2 132/33kV GSP Substation,Energy Storage System,SHET,49.9,2,2028-10-31,2026-10-31,-24.0
+PRO-001034-2,2,Bicker Fen 1 Solar,AGR SOLAR 2 LIMITED,Bicker Fen 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,57.0,2,2035-04-01,2033-04-01,-24.0
+PRO-002191-3,3,Stoke Bardolph 400,ENSO GREEN HOLDINGS LIMITED,Stoke Bardolph 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,400.0,1,2032-10-31,2034-10-31,24.0
+PRO-003762,,Orchard BESS,RE Projects Development Limited,Staffordshire Connection Node B 132kV Substation,Energy Storage System,NGET,100.0,1,2035-10-31,2037-10-30,24.0
+PRO-004206,,Creag Dhubh,MUIRDEN ENERGY LLP,Clachan 2 132/33kV GSP Substation,Wind Onshore,SHET,27.0,2,2030-10-31,2032-10-31,24.0
+PRO-001155,,Hunterston Battery Storage Facility,HUNTERSTON GRID 1 LTD,Hunterston East 400kV substation,Energy Storage System;Reactive Compensation,SPT,200.0,2,2026-03-09,2028-03-10,24.0
+PRO-004086,,Zenobe Hawthorn Pit BESS,ZENOBE ENERGY LIMITED,Wearside Connection Node B 400kV Substation,Energy Storage System,NGET,300.0,1,2037-10-31,2035-10-30,-24.0
+PRO-001090,,Ayrshire Grid Services Facility,HUNTERSTON GRID 3 LTD,Ayrshire Grid 400kV Collector Substation,Reactive Compensation,SPT,0.0,2,2026-03-23,2028-03-24,24.0
+PRO-003644,,Epworth PV & BESS Station,IBV KELFIELD SOLAR LTD,Trent Valley North Connection Node B 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,150.0,1,2037-10-31,2035-10-30,-24.0
+PRO-002162,,Capenhurst Tertiary,ENSO GREEN HOLDINGS Q LIMITED,Capenhurst 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,57.0,1,2029-10-30,2027-10-31,-24.0
+PRO-003492,,Hawthorn BESS,REWE 8 LIMITED,Wearside Connection Node B 400kV Substation,Energy Storage System,NGET,200.0,1,2033-10-31,2035-10-30,23.9
+PRO-003449,,GF Thornton Energy BESS,THORNTON ENERGY LTD,North Humber Connection Node A 400kV Substation,Energy Storage System,NGET,400.0,1,2033-10-31,2035-10-30,23.9
+PRO-001371,,Indian Queens Energy Centre,IQ ENERGY CENTRE LIMITED,Indian Queens 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,47.5,2,2025-05-31,2027-05-30,23.9
+PRO-004061,,West Melton PV & BESS Station,IBV WEST MELTON SOLAR PARK LIMITED,Leeds North Connection Node C 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,200.0,1,2033-10-31,2035-10-30,23.9
+PRO-003960,,Great Coates BESS,BRUTON ONE BESS LIMITED,Grimsby West 400kV Substation,Energy Storage System,NGET,300.0,1,2033-10-31,2035-10-30,23.9
+PRO-003268,,FCC Thurcroft BESS,Downing Renewable Developments LLP,Leeds North Connection Node C 400kV Substation,Energy Storage System,NGET,750.0,1,2033-10-31,2035-10-30,23.9
+PRO-001558,,Berryburn Extension Wind Farm,BB2 WIND FARM LIMITED,Berryburn 275/33kV GSP Substation,Wind Onshore,SHET,43.2,2,2025-11-30,2027-10-31,23.0
+PRO-000113-2,2,Cruachan U3&4 Replacement,DRAX PUMPED STORAGE LIMITED,Cruachan 275kV Substation,Pump Storage,SPT,480.0,2,2027-06-01,2029-04-04,22.1
+PRO-001136-1,1,Alverdiscott,PIVOTED POWER LLP,Alverdiscott 400kV Substation,Energy Storage System,NGET,49.9,1,2029-10-31,2031-08-31,22.0
+PRO-002665,,Kingsnorth BESS NP,NORIKER POWER LTD,Kingsnorth 400kV Substation,Energy Storage System,NGET,500.0,1,2032-10-29,2030-12-31,-21.9
+PRO-001934,,Perwinnes,PERWINNES SOLAR AND BATTERY STORAGE LIMITED,Dyce 132/33kV GSP,Energy Storage System;PV Array (Photo Voltaic/solar),SHET,45.0,2,2027-01-15,2028-10-31,21.5
+PRO-004531,,Stoneyfield,WIND 2 LIMITED,Rothienorman 2 400/33kV GSP,Wind Onshore,SHET,15.0,,2030-09-30,2032-07-16,21.5
+PRO-002540,,Cilfynydd Grid Stability Services,CILFYNYDD GRID SERVICES LIMITED,Cilfynydd 400kV Substation,Reactive Compensation,NGET,0.0,2,2025-07-31,2027-03-31,20.0
+PRO-001132,,Sundon,SUNDON BATTERY STORAGE LIMITED,Sundon 400kV Substation,Energy Storage System,NGET,50.0,2,2025-09-05,2027-04-30,19.8
+PRO-002453,,Inchbean  Energy Park,BROCKWELL STORAGE & SOLAR LIMITED,Kilmarnock Town 275/33kV Substation,Energy Storage System,SPT,60.0,2,2025-06-30,2027-02-08,19.3
+PRO-002455,,Rowancraig Wind Farm,Koehler Renewable Energy UK Limited,ROWANCRAIG WIND FARM 33KV SUBSTATION,Wind Onshore,SPT,40.0,1,2028-10-30,2030-05-31,19.0
+PRO-001105,,Wymondley Solar Farm,AGR SOLAR 4 LIMITED,Wymondley 400/33kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,50.0,2,2025-10-31,2027-05-30,18.9
+PRO-001245,,Wymondley,Priory Generation Limited,Wymondley 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,57.0,2,2025-10-31,2027-05-30,18.9
+PRO-001049,,Fferm Solar Pentir,LIGHTSOURCE SPV 191 LIMITED,Pentir 400kV Substation,Energy Storage System,NGET,57.0,2,2027-05-01,2028-10-31,18.0
+PRO-000298,,Glen Ullinish Wind Farm,GLEN ULLINISH WF LIMITED,Glen Ullinish 132/33kV Substation,Wind Onshore,SHET,49.9,,2026-10-31,2028-04-16,17.5
+PRO-001586,,Bryn Tilti,RHIWLAS ENERGY PARK LIMITED,Chirk GSP,Wind Onshore,NGET,106.0,,2028-07-19,2027-02-04,-17.4
+PRO-001490,,Ourack Wind Farm,OURACK WIND FARM LLP,Ourack 132/33kV Substation,Energy Storage System;Wind Onshore,SHET,105.0,2,2030-10-31,2032-03-31,17.0
+PRO-000359-2,2,Windy Standard III Wind Farm,Windy Standard III Limited,Dun Hill 132/33kV,Wind Onshore,SPT,87.6,2,2026-06-01,2027-10-31,17.0
+PRO-004027,,Bramford GEC (Ethos Green),BRAMFORD GREEN ENERGY CENTRE LTD,Bramford B 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,650.0,1,2033-10-30,2032-06-01,-17.0
+PRO-001790,,Alcemi Score 2 Battery Energy Storage Facility,ALCEMI STORAGE DEVELOPMENTS 5 LIMITED,Alcemi Score Battery 400kV Substation,Energy Storage System,SHET,500.0,1,2029-10-31,2031-03-31,17.0
+PRO-001575,,Alcemi Score Battery Energy Storage Facility,ALCEMI STORAGE DEVELOPMENTS 5 LIMITED,ALCEMI SCORE BATTERY ENERGY STORAGE FACILITY 400KV SUBSTATION,Energy Storage System,SHET,500.0,1,2029-10-31,2031-03-31,17.0
+PRO-001653,,Kincardine Energy Storage Facility,KINCARDINE GRID 1 LTD,Fife Grid Services Facility 275kV Substation,Energy Storage System,SPT,200.0,2,2027-07-30,2028-12-15,16.6
+PRO-000330-2,2,Recell at Penrhos (BEGA),Recell Energy Bloom Developments Limited,Penrhos GSP,Biomass,NGET,210.0,1,2026-06-30,2027-10-31,16.0
+PRO-002578,,Medway 3 Power Station,MEDWAY POWER LIMITED,Kingsnorth 400kV Substation,Demand;LAES (Liquid Air Energy Storage),NGET,500.0,1,2030-12-31,2032-04-30,16.0
+PRO-002065,,Balbougie Energy Centre,Balbougie Energy Centre II Limited,Inverkeithing 132/33kV,Energy Storage System,SPT,42.0,2,2025-04-30,2026-07-31,15.0
+PRO-000416,,High Constellation Windfarm,HIGH CONSTELLATION WINDFARM LIMITED,High Constellation 132/33kV Substation,Wind Onshore,SHET,50.0,2,2027-07-31,2028-10-31,15.0
+PRO-001856,,New Deer BESS Station,ABBOTSHAUGH ENERGY STORAGE LIMITED,New Deer 2 400kV Substation,Energy Storage System,SHET,500.0,1,2032-07-30,2033-10-31,15.0
+PRO-003712,,Knocknagael BESS,FIELD KNOCKNAGAEL LTD,Knocknagael 132kV Substation,Energy Storage System,SHET,200.0,1,2030-10-31,2029-07-30,-15.0
+PRO-000396,,Bramley (tertiary),BRAMLEY SOLAR  LIMITED,Bramley 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,57.0,2,2026-08-16,2027-10-30,14.5
+PRO-005112,,Stella Battery Energy Storage,CAPELLA BESS LTD,Stella South GSP,Energy Storage System,NGET,78.0,2,2025-09-27,2026-11-30,14.1
+PRO-001685,,Cellarhead 400kV Energy Storage,C & S ENERGY LIMITED,Cellarhead 400kV Substation,Energy Storage System,NGET,300.0,2,2027-07-16,2028-09-13,14.0
+PRO-001113,,Warley,WARLEY BATTERY STORAGE LIMITED,Warley 275kV Substation,Energy Storage System,NGET,57.0,2,2027-08-31,2028-10-30,14.0
+PRO-000570-1,1,Loch na Cathrach Pumped Storage Hydro,STATKRAFT HIGHLANDS PSH LIMITED,Loch na Cathrach 275kV Switching Station,Pump Storage,SHET,450.0,2,2029-04-30,2030-06-28,13.9
+PRO-003728,,Walpole Grid Services Facility,Conrad (Walpole) Limited,Walpole 400kV Substation,Reactive Compensation,NGET,0.0,,2025-05-30,2026-07-13,13.4
+PRO-001608,,Chleansaid Wind Farm,ESB ASSET DEVELOPMENT UK LIMITED,Chleansaid Wind Farm 132kV Substation,Wind Onshore,SHET,96.0,2,2027-07-31,2028-09-10,13.4
+PRO-001927,,Garvary Wind Farm,GARVARY WIND FARM LIMITED,Garvary 132kV Substation,Wind Onshore,SHET,144.0,2,2028-06-30,2029-08-05,13.2
+PRO-001034-1,1,Bicker Fen 1 Solar,AGR SOLAR 2 LIMITED,Bicker Fen 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,50.0,2,2025-09-26,2026-10-31,13.1
+PRO-000430,,Enderby Tertiary,CLUMP FARM SOLAR LIMITED,Enderby 400kV Substation,PV Array (Photo Voltaic/solar),NGET,57.0,2,2027-08-01,2028-08-31,13.0
+PRO-000570-2,2,Loch na Cathrach Pumped Storage Hydro,STATKRAFT HIGHLANDS PSH LIMITED,Loch na Cathrach 275kV Switching Station,Pump Storage,SHET,550.0,2,2030-10-31,2031-11-17,12.5
+PRO-004433,,Dunan Hill,PERIGUS ENERGY UK LIMITED,Dunan Hill 400kV substation,Energy Storage System;Wind Onshore,SHET,249.9,1,2036-11-11,2035-10-31,-12.4
+PRO-001970,,Blackhillock Battery,BLACKHILLOCK FLEXPOWER LTD,Blackhillock 400kV Substation,Energy Storage System,SHET,349.0,2,2027-10-29,2028-10-31,12.1
+PRO-002191-1,1,Stoke Bardolph 400,ENSO GREEN HOLDINGS LIMITED,Stoke Bardolph 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,200.0,1,2030-10-31,2031-10-31,12.0
+PRO-003180,,Intwood Farm BESS,Intwood BESS Ltd,North Anglia Connection Node A 132kV Substation,Energy Storage System,NGET,240.0,1,2033-10-31,2034-10-31,12.0
+PRO-000153,,Lorg Wind Farm,RWE Renewables UK Onshore Wind Limited,Lorg Wind Farm 132/32kV,Wind Onshore,SPT,69.5,,2027-04-07,2028-04-07,12.0
+PRO-003692,,Zenobe Spennymoor BESS,ZENOBE ENERGY LIMITED,Wearside Connection Node D 400kV Substation,Energy Storage System,NGET,300.0,1,2034-10-30,2035-10-30,12.0
+PRO-005050,,Royle Farm BESS,ALUDRA BESS LTD,Drakelow 132kV Substation,Energy Storage System,NGET,90.0,2,2027-10-31,2028-10-31,12.0
+PRO-001743,,Cairn Duhie Wind Farm,Renewable Energy Systems Limited,Berryburn 275/33kV GSP Substation,Wind Onshore,SHET,67.2,2,2027-10-31,2028-10-31,12.0
+PRO-004217,,Cockenzie BESS,COCKENZIE STORAGE B LTD,Meadowmill 400/132kV Substation,Energy Storage System,SPT,102.0,2,2026-07-31,2027-07-31,12.0
+PRO-004351,,Jackdaw BESS,Downing Renewable Developments LLP,Leeds North Connection Node B 400kV Substation,Energy Storage System,NGET,249.9,1,2036-10-31,2035-10-31,-12.0
+PRO-001810,,Kincraig Energy Centre,KINCRAIG ENERGY CENTRE LIMITED,Dyce 132/33kV GSP,Energy Storage System;PV Array (Photo Voltaic/solar),SHET,20.62,2,2026-04-30,2025-04-30,-12.0
+PRO-003256,,Ceislein Wind Farm,RWE Renewables UK Onshore Wind Limited,Ceislien Wind Farm,Wind Onshore,SHET,85.8,1,2031-10-31,2030-10-31,-12.0
+PRO-001663-1,1,Cilfynydd Green Energy Centre,CILFYNYDD NG LIMITED,Cilfynydd 400kV Substation,Demand;Energy Storage System;PV Array (Photo Voltaic/solar);Wind Onshore,NGET,400.0,1,2028-10-30,2029-10-30,12.0
+PRO-000531,,High Marnham (Tertiary),ENSO GREEN HOLDINGS K LIMITED,High Marnham 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,57.0,2,2029-10-31,2030-10-31,12.0
+PRO-002209,,Gresham House Cockenzie BESS,COCKENZIE STORAGE LIMITED,Meadowmill 400/132kV Substation,Energy Storage System,SPT,240.0,2,2026-07-31,2027-07-31,12.0
+PRO-004417,,Denton Estate Solar PV and BESS,ELGIN ENERGY ES CO LIMITED,Navenby 132kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,129.0,1,2033-10-30,2034-10-30,12.0
+PRO-002328,,Corshellach Battery Energy Storage System,Corshellach Energy Storage Limited,Berryburn 275/33kV GSP Substation,Energy Storage System,SHET,49.9,2,2027-10-31,2028-10-31,12.0
+PRO-001501,,Tealing Solar & Storage,SIRIUS ECODEV (TEALING) LTD,Tealing IDNO 132/33kV GSP,Energy Storage System;PV Array (Photo Voltaic/solar),SHET,80.0,2,2027-10-31,2028-10-31,12.0
+PRO-001804,,Penwortham BESS,PENWORTHAM (BES) LTD,Penwortham 400kV Substation,Energy Storage System,NGET,57.0,2,2027-10-30,2028-10-30,12.0
+PRO-003801,,Ayr Energy Storage,KXP ALPHA I LIMITED,Ayr 275/33kV Substation,Energy Storage System,SPT,150.0,2,2027-10-30,2028-10-30,12.0
+PRO-003761,,Lightsource Ferryside PV,Lightsource Renewable UK Development Limited,South Wales West Connection Node C 400kV,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,240.0,1,2037-10-30,2038-10-31,12.0
+PRO-001904,,Tormsdale Windfarm,ASUK HOLDCO 1 LIMITED,Mybster 3 132/33kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),SHET,70.0,,2027-06-30,2028-06-30,12.0
+PRO-000276,,Carrington,CARRINGTON STORAGE LIMITED,Carrington 400KV Substation,Energy Storage System,NGET,680.0,2,2026-10-30,2027-10-31,12.0
+PRO-002336,,Didcot Road,DIDCOT BESS LIMITED,Didcot 400kV Substation,Energy Storage System,NGET,300.0,2,2027-10-31,2028-10-31,12.0
+PRO-001811,,Kirkton Wind Farm,Kirkton Wind Farm Limited,Connagill 275kV Substation,Wind Onshore,SHET,60.0,1,2028-10-31,2029-10-29,11.9
+PRO-004324,,West Weybridge,EL (WEST WEYBRIDGE) LIMITED,West Weybridge 275kV Substation,Energy Storage System,NGET,57.0,2,2027-10-31,2028-09-30,11.0
+PRO-002137,,Sallachy Wind Farm,SALLACHY WIND  LIMITED,Cassley GSP,Wind Onshore,SHET,49.5,,2027-08-31,2028-07-31,11.0
+PRO-002635,,Smeaton BESS,KONA ASSET 3 LIMITED,Smeaton 400kV,Energy Storage System,SPT,228.0,2,2027-09-30,2028-07-31,10.0
+PRO-003205,,Elstree Energy Storage,ELSTREE BATTERY STORAGE LIMITED,Letchmore Heath 132kV Substation,Energy Storage System,NGET,170.0,1,2029-10-01,2030-07-31,10.0
+PRO-000041,,Clashindarroch 2,VATTENFALL WIND POWER LTD,Cairnford GSP,Wind Onshore,SHET,63.0,2,2026-08-31,2027-06-04,9.1
+PRO-003600,,Glennifer Road BESS,Drax BESS Neilston Limited,Glennifer Road BESS 132kV substation,Energy Storage System,SPT,150.0,2,2027-10-30,2028-07-31,9.0
+PRO-000352-2,2,Sanquhar II Wind Farm,SANQUHAR II COMMUNITY WIND CO LTD,Sanquhar II Wind Farm Substation,Wind Onshore,SPT,250.0,2,2027-02-28,2027-11-26,8.9
+PRO-001434,,Lairg II Wind Farm,LAIRG II LLP,Lairg GSP,Wind Onshore,SHET,50.0,2,2026-10-31,2027-07-16,8.5
+PRO-001006,,Greenburn Mixed Technology,REG GREENBURN LIMITED,Greenburn Mixed Technology 132kV Substation,Wind Onshore,SPT,90.0,2,2027-10-31,2028-06-30,8.0
+PRO-001470,,Eccles BESS,Eccles Energy Centre Limited,Eccles 400kV Substation,Energy Storage System,SPT,500.0,2,2026-12-04,2026-04-12,-7.8
+PRO-001964,,Willington Energy Park,BROCKWELL STORAGE & SOLAR LIMITED,Willington 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,500.0,,2028-03-30,2028-10-31,7.1
+PRO-002613,,Red Moss Farm,QAIR RENEWABLES UK LIMITED,Red Moss Farm 132kV Substation,Energy Storage System,SPT,300.0,1,2030-10-30,2031-05-30,7.0
+PRO-002319,,Mosedale Energy,MOSEDALE ENERGY LIMITED,High Marnham 400kV Substation,Energy Storage System,NGET,249.0,1,2033-03-31,2033-10-31,7.0
+PRO-000461,,Mossy Hill Wind Farm,MOSSY HILL SHETLAND LIMITED,Mossy Hill 132kV Substation,Demand;Wind Onshore,SHET,40.0,2,2028-11-30,2029-06-29,6.9
+PRO-000094,,Chirmorie Wind Farm,CHIRMORIE WIND FARM LIMITED,Chirmorie Wind Farm substation,Wind Onshore,SPT,91.0,2,2026-10-09,2027-04-30,6.7
+PRO-001890,,Keithick 16 Solar & BESS,SIRIUS ECODEV (KEITHICK) LTD,Coupar Angus 132/33kV GSP,Energy Storage System;PV Array (Photo Voltaic/solar),SHET,16.0,2,2026-06-30,2026-12-31,6.0
+PRO-001732,,Keithick Estate,SIRIUS ECODEV (STIRLING) LTD,Coupar Angus 132/33kV GSP,Energy Storage System;PV Array (Photo Voltaic/solar),SHET,49.99,2,2026-06-30,2026-12-31,6.0
+PRO-001788,,Berkswell Energy Storage,BERKSWELL BATTERY STORAGE LIMITED,Berkswell 275kV Substation,Energy Storage System,NGET,200.0,2,2027-04-30,2027-10-31,6.0
+PRO-003543,,Rogerton Cottage BESS,DRAX BESS EK LIMITED,East Kilbride 275/33kV GSP,Energy Storage System,SPT,55.0,2,2026-10-19,2027-03-26,5.2
+PRO-001472,,Pentland Floating Offshore Wind Farm,HIGHLAND WIND LIMITED,Pentland Floating Offshore Wind Farm 132/66kV substation,Wind Offshore,SHET,100.0,2,2027-10-31,2028-04-03,5.1
+PRO-001503,,Rawhills Battery Energy Storage Facility(Coalburn 2),ALCEMI STORAGE DEVELOPMENTS 6 LIMITED,Coalburn 400kV GIS Substation,Energy Storage System,SPT,500.0,2,2027-04-16,2027-08-31,4.5
+PRO-004719,,Old Park Farm,STARLIGHT ENERGY UK LIMITED,Axminster 132kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,200.0,1,2038-10-31,2038-06-23,-4.3
+PRO-001815,,Aberthaw PV & BESS Generation,REWE 12 Limited,Aberthaw 275kV Substation,Energy Storage System,NGET,200.0,1,2029-06-30,2029-10-31,4.0
+PRO-001301-1,1,Bilbo Farm,LEL BILBO SOLAR LIMITED,Strichen 132/33kV GSP Substation,Energy Storage System;PV Array (Photo Voltaic/solar),SHET,25.0,2,2024-10-31,2024-06-30,-4.0
+PRO-001021,,Clauchrie Windfarm,ScottishPower Renewables (UK) Limited,Clauchrie 132/33KV Substation,Energy Storage System;Wind Onshore,SPT,108.0,1,2033-05-31,2033-01-30,-4.0
+PRO-001660,,Dalmarnock Road BESS,DALMARNOCK BESS LTD,DALMARNOCK 132/33KV SUBSTATION,Energy Storage System,SPT,40.0,2,2023-10-30,2024-02-23,3.8
+PRO-003083,,Wright Street BESS,P3P PARTNERS LLP,Braehead Park 132/33kV,Energy Storage System,SPT,49.9,,2025-07-16,2025-10-31,3.5
+PRO-001762,,SSE Fiddlers Ferry Battery Energy Storage,LITTLETON PASTURES SOLAR LIMITED,Fiddlers Ferry 275kV Substation,Energy Storage System,NGET,150.0,2,2026-10-30,2027-02-12,3.4
+PRO-002546,,Persley Croft BESS,Persley Croft BESS Ltd,Persley 132/33kV GSP Substation,Energy Storage System,SHET,50.0,2,2026-10-31,2026-07-30,-3.1
+PRO-002410,,Scottish Water Bonnybridge STW 60MW BESS,Bluestone Energy Ltd,Bonnybridge 132/33kV,Energy Storage System,SPT,60.0,1,2030-07-31,2030-10-31,3.0
+PRO-001832,,Littlebrook BESS,ECODEV (SOUTH) LTD,Littlebrook 132kV Substation,Energy Storage System,NGET,300.0,,2027-07-15,2027-10-15,3.0
+PRO-001551-1,1,Coylton 275kV Greener Grid Park,COYLTON ENERGY LIMITED,Coylton 275kV substation,Energy Storage System,SPT,50.0,2,2026-02-28,2026-05-18,2.6
+PRO-000352-1,1,Sanquhar II Wind Farm,SANQUHAR II COMMUNITY WIND CO LTD,Sanquhar II Wind Farm Substation,Wind Onshore,SPT,137.0,2,2026-07-31,2026-10-17,2.6
+PRO-002605,,Caegarw Farm,Downing Renewable Developments LLP,Margam B 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,350.0,1,2037-03-10,2037-05-10,2.0
+PRO-004333,,NatPower Kinoulton Green Energy Park,DALBY ENERGY LIMITED,West Anglia Connection Node C 400kV Substation,Energy Storage System,NGET,1330.0,1,2034-12-31,2034-10-31,-2.0
+PRO-002165,,Biggleswade BESS,Central Bedfordshire Council,Biggleswade 400kV Substation,Energy Storage System,NGET,57.0,1,2029-10-31,2029-09-28,-1.1
+PRO-006075,,Windburn Wind Farm,WINDBURN WIND FARM LIMITED,Devonside 132kV Substation,Energy Storage System;Wind Onshore,SPT,75.0,1,2034-10-01,2034-10-31,1.0
+PRO-003698,,Isle of Man Offshore Wind Farm,Mooir Vannin Offshore Wind Farm Limited,IMW01 OFFSHORE 275/66KV OFFSHORE SUBSTATION,Wind Offshore,NGET,1320.0,1,2037-10-30,2037-09-30,-1.0
+PRO-001924,,Field Farm,Net Zero One Ltd,Staythorpe 400kv,Energy Storage System,NGET,249.9,1,2030-10-31,2030-09-30,-1.0
+PRO-000561,,West Burton Solar Project,WEST BURTON SOLAR PROJECT LIMITED,West Burton 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,480.0,2,2028-11-30,2028-10-31,-1.0
+PRO-001836,,Kilmarnock BESS,Kilmarnock Flexpower Ltd,Boydston 400kV substation,Energy Storage System,SPT,350.0,2,2026-10-31,2026-11-30,1.0
+PRO-004520,,Glen Lednock,Glen Lednock Wind Farm Limited,Glen Lednock 132kV Substation,Energy Storage System;Wind Onshore,SHET,165.0,1,2031-10-31,2031-11-30,1.0
+PRO-002307,,Lethen Wind Farm,FRED OLSEN RENEWABLES LIMITED,Lethen Wind Farm 132/33kV Substation,Wind Onshore,SHET,114.0,1,2033-12-31,2033-12-01,-1.0
+PRO-001641,,Tarenni,TARENNI ENERGY PARK LIMITED,Rhigos 400kV Substation,Wind Onshore,NGET,188.0,1,2030-12-31,2030-12-13,-0.6
+PRO-000540,,Capenhurst,ENSO GREEN HOLDINGS Q LIMITED,Capenhurst 275kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,400.0,1,2033-09-30,2033-09-14,-0.5
+PRO-002419,,Drumfad Battery Storage System,EKU ENERGY FAUNE PROJECTS (UK) LIMITED,Helensburgh 132/33kV,Energy Storage System,SPT,39.9,2,2027-10-31,2027-10-29,-0.1
+PRO-005801,,Waltham Cross PV & BESS Sub,EPPING ENERGY PARK LIMITED,Waltham Cross B 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,249.9,1,2032-10-31,2032-10-29,-0.1
+PRO-002544,,Bradford West BESS Substation,O&G Solar (SPV 36) Limited,Bradford West 275kV Substation,Energy Storage System,NGET,249.0,,2036-10-26,2036-10-24,-0.1
+PRO-002529,,EcoWymondley,Econergy International Limited,Wymondley 2 400kV Substation,Demand;Energy Storage System;PV Array (Photo Voltaic/solar),NGET,249.0,1,2033-10-30,2033-10-31,0.0
+PRO-004126,,Bute Hydrogen Project 3,HALDANE ENERGY PROJECT 3 LIMITED,Grimsby West 400kV Substation,CCGT (Combined Cycle Gas Turbine),NGET,3600.0,1,2035-10-31,2035-10-30,-0.0
+PRO-003666,,CODDINGTON BESS,SHAW-ENERGI LTD,Trent Valley South Connection Node A 400kV,Energy Storage System,NGET,300.0,1,2034-10-31,2034-10-30,-0.0
+PRO-004139,,New Marton Solar Farm - PVDP,SolarFour Ltd,Cheshire Connection Node A 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,780.0,1,2037-10-31,2037-10-30,-0.0
+PRO-005989,,Kenwick Solar,ANESCO LIMITED,Shrewsbury 400kV Substation,PV Array (Photo Voltaic/solar),NGET,430.85,1,2037-10-31,2037-10-30,-0.0
+PRO-004124,,Bute Hydrogen Project 1,HALDANE ENERGY PROJECT 1 LIMITED,Trent Valley South Connection Node D 400kV Substation,CCGT (Combined Cycle Gas Turbine),NGET,4800.0,1,2035-10-31,2035-10-30,-0.0
+PRO-004125,,Bute Hydrogen Project 2,HALDANE ENERGY PROJECT 2 LIMITED,Creyke Beck 400kV Substation,CCGT (Combined Cycle Gas Turbine),NGET,3600.0,1,2035-10-31,2035-10-30,-0.0
+PRO-004100,,Cottam-Ryhall Solar & BESS,CRH RENEWABLES LIMITED,Trent Valley South Connection Node B 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,400.0,1,2034-10-31,2034-10-30,-0.0
+PRO-003824-1,1,Rat Hall Mod App,Kingsway Solar Farm Limited,South Anglia Connection Node C 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,200.0,1,2032-10-30,2032-10-31,0.0
+PRO-003983,,Hill Farm,QAIR RENEWABLES UK LIMITED,Capenhurst GSP,Energy Storage System,NGET,240.0,1,2037-10-31,2037-10-30,-0.0
+PRO-003815,,Leadenham High Impact Green Energy Hub,TELIS ENERGY UK LIMITED,Trent Valley South Connection Node A 400kV,Energy Storage System;Nuclear;PV Array (Photo Voltaic/solar);Wind Onshore,NGET,1000.0,1,2034-10-31,2034-10-30,-0.0
+PRO-004129,,Bute Hydrogen Project 6,Haldane Energy Project 6 Limited,Cheshire Connection Node A 400kV Substation,CCGT (Combined Cycle Gas Turbine),NGET,3600.0,1,2037-10-31,2037-10-30,-0.0
+PRO-002345,,Pentir Green Energy Centre,INNOVA RENEWABLES LIMITED,Pentir 400kV Substation,Demand;Energy Storage System;PV Array (Photo Voltaic/solar),NGET,1025.0,1,2037-10-31,2037-10-30,-0.0
+PRO-003418,,Dunstable,Connectid 9 Limited,West Anglia Connection Node A 400kV Substation,Demand;Energy Storage System;PV Array (Photo Voltaic/solar);Reactive Compensation,NGET,600.0,1,2034-10-30,2034-10-31,0.0
+PRO-003405,,Stoke Bardolph,Stoke Bardolph 10 Renewables Limited,Trent Valley South Connection Node D 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,1000.0,1,2034-10-31,2034-10-30,-0.0
+PRO-003102,,Whitson BESS NP,EQUINOR NEW ENERGY LIMITED,South Wales East Node A 275kV Substation,Energy Storage System,NGET,350.0,1,2037-10-31,2037-10-30,-0.0
+PRO-003194,,Daines NP BESS,Daines Flexpower Limited,Manchester South connection node A 400kv,Energy Storage System,NGET,500.0,1,2037-10-31,2037-10-30,-0.0
+PRO-004295,,Bicker Fen,IB VOGT UK LTD,Trent Valley South Connection Node C 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,400.0,1,2034-10-31,2034-10-30,-0.0
+PRO-001468,,Didcot Battery,DIDCOT BATTERY LIMITED,DIDCOT 400/132KV SUBSTATION,Demand;Energy Storage System,NGET,100.0,1,2027-03-30,2027-03-31,0.0
+PRO-003854,,Lightsource Enderby PV+BESS,Lightsource Renewable UK Development Limited,Derbyshire Connection Node B 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),NGET,240.0,1,2037-10-31,2037-10-30,-0.0
+PRO-001628,,Havbredey,HAVBREDEY LIMITED,New Dounreay 400kV substation,Wind Offshore,SHET,1500.0,1,2033-10-31,2033-10-30,-0.0
+PRO-003942,,Siddington BESS Station,IBV BIRTLES HILL ENERGY PARK LTD,Manchester South connection node A 400kv,Energy Storage System,NGET,240.0,1,2037-10-31,2037-10-30,-0.0
+PRO-002766,,Nant Helen,SOLAR SECURITIES LIMITED,South Wales West Connection Node A 400kV Substation,Demand;Energy Storage System;PV Array (Photo Voltaic/solar),NGET,500.0,1,2037-10-31,2037-10-30,-0.0
+PRO-004278,,NatPower Penrith Green Energy Park,LEITH ENERGY LIMITED,Lancashire Connection Node B 400kV Substation,Energy Storage System,NGET,1000.0,1,2037-10-31,2037-10-30,-0.0
+PRO-004127,,Bute Hydrogen Project 4,HALDANE ENERGY PROJECT 4 LIMITED,Teeside Connection Node 2 C 132/400kV Substation,CCGT (Combined Cycle Gas Turbine),NGET,2400.0,1,2035-10-31,2035-10-30,-0.0
+PRO-003620,,Fryston Lane 100MW BESS,GPC 2008 Ltd,Leeds North Connection Node C 132kV Substation,Energy Storage System,NGET,100.0,1,2035-10-31,2035-10-30,-0.0
