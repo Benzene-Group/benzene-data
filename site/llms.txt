@@ -17,12 +17,12 @@ Under NESO's connections reform, Gate 2 projects receive a confirmed connection 
 
 ## Selected figures
 
-All figures below are confirmed. Register figures are Benzene's analysis of the NESO TEC Register file of 16 November 2026, transmission connections only.
+All figures below are confirmed. Register figures are Benzene's analysis of the NESO TEC Register file of 19 November 2026, transmission connections only.
 
-- Capacity waiting to connect: 592.1 GW in 1,677 unbuilt projects at 1,038 sites. 81.8 GW is connected.
+- Capacity waiting to connect: 591.8 GW in 1,675 unbuilt projects at 1,037 sites. 81.8 GW is connected.
 - Capacity-weighted average wait to the contracted connection date: 6.7 years.
 - 75% of waiting capacity has a contracted date of 2031 or later.
-- Marked Gate 2: 136 projects, 25.4 GW, average wait 1.5 years. Marked Gate 1: 926 projects, 333.0 GW, average wait 8.1 years. Gate field blank: 615 projects, 233.6 GW.
+- Marked Gate 2: 141 projects, 26.4 GW, average wait 1.5 years. Marked Gate 1: 926 projects, 332.9 GW, average wait 8.1 years. Gate field blank: 608 projects, 232.5 GW.
 - September 2026 balancing costs: £541m, of which about £390m was constraint costs. NESO's month-ahead forecast was £306m. Source: https://www.neso.energy/bsuos-outturn-september-2026
 - Gate 2 Phase 1 offer deadline: Ofgem agreed on 2 October 2026 to extend it from 30 September to 31 October 2026 (its second extension). Gate 2 Phase 2 offers stay due by 31 January 2027. We have not yet seen a NESO statement that every Phase 1 offer was issued. Source: https://www.ofgem.gov.uk/transparency-document/ofgem-agreement-alternative-gate-2-whole-queue-g2twq-timetable
 
