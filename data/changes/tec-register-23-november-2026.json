@@ -1,0 +1,175 @@
+{
+ "old": "19 November 2026",
+ "new": "23 November 2026",
+ "joined": [
+  {
+   "project": "South Humber Bank",
+   "developer": "Ep UK Power Development Ii Ltd",
+   "site": "South Humber Bank 400kV Substation",
+   "tech": "CCGT (Combined Cycle Gas Turbine)",
+   "mw": 0.0,
+   "date": "",
+   "gate": "",
+   "status": "Built"
+  },
+  {
+   "project": "South Humber Bank",
+   "developer": "Ep UK Power Development Ii Ltd",
+   "site": "South Humber Bank 400kV Substation",
+   "tech": "CCGT (Combined Cycle Gas Turbine)",
+   "mw": 35.0,
+   "date": "30/10/2039",
+   "gate": "1",
+   "status": "Scoping"
+  }
+ ],
+ "left": [
+  {
+   "project": "South Humber Bank",
+   "developer": "Ep UK Power Development Ii Ltd",
+   "site": "South Humber Bank 400kV Substation",
+   "tech": "CCGT (Combined Cycle Gas Turbine)",
+   "mw": 35.0,
+   "date": "30/10/2039",
+   "gate": "1",
+   "status": "Built"
+  },
+  {
+   "project": "Ochill BESS",
+   "developer": "Carlton Power Limited",
+   "site": "Ochill 132kV Substation",
+   "tech": "Energy Storage System",
+   "mw": 49.5,
+   "date": "18/08/2028",
+   "gate": "",
+   "status": "Scoping"
+  }
+ ],
+ "dates": [
+  {
+   "project": "Glen Ullinish Wind Farm",
+   "developer": "Glen Ullinish Wf Limited",
+   "site": "Glen Ullinish 132/33kV Substation",
+   "tech": "Wind Onshore",
+   "mw": 49.9,
+   "date": "25/11/2031",
+   "gate": "2",
+   "status": "Consents Approved",
+   "was": "16/04/2028",
+   "years": 3.6
+  },
+  {
+   "project": "Lisa's Battery Storage",
+   "developer": "Potencia Energy Limited",
+   "site": "Mybster 3 132/33kV Substation",
+   "tech": "Energy Storage System",
+   "mw": 47.0,
+   "date": "30/07/2028",
+   "gate": "2",
+   "status": "Consents Approved",
+   "was": "31/10/2030",
+   "years": -2.3
+  }
+ ],
+ "other": [
+  {
+   "project": "Littlebrook BESS",
+   "developer": "Ecodev (South) Ltd",
+   "site": "Littlebrook 132kV Substation",
+   "tech": "Energy Storage System",
+   "mw": 300.0,
+   "date": "15/10/2027",
+   "gate": "2",
+   "status": "Awaiting Consents",
+   "what": "status Scoping to Awaiting Consents"
+  },
+  {
+   "project": "Bilbo Farm",
+   "developer": "Lel Bilbo Solar Limited",
+   "site": "Strichen 132/33kV GSP Substation",
+   "tech": "Energy Storage System;PV Array (Photo Voltaic/solar)",
+   "mw": 42.1,
+   "date": "31/10/2033",
+   "gate": "2",
+   "status": "Consents Approved",
+   "what": "status Scoping to Consents Approved"
+  },
+  {
+   "project": "Greenburn Mixed Technology",
+   "developer": "Reg Greenburn Limited",
+   "site": "Greenburn Mixed Technology 132kV Substation",
+   "tech": "Wind Onshore",
+   "mw": 63.0,
+   "date": "30/06/2028",
+   "gate": "2",
+   "status": "Consents Approved",
+   "what": "size 90.0 MW to 63.0 MW"
+  },
+  {
+   "project": "Glen Ullinish Wind Farm",
+   "developer": "Glen Ullinish Wf Limited",
+   "site": "Glen Ullinish 132/33kV Substation",
+   "tech": "Wind Onshore",
+   "mw": 49.9,
+   "date": "25/11/2031",
+   "gate": "2",
+   "status": "Consents Approved",
+   "what": "Gate not shown to 2"
+  },
+  {
+   "project": "Newarthill Energy Park",
+   "developer": "Dalzell (Newarthill) Ltd",
+   "site": "Newarthill Energy Park 275kV Substation",
+   "tech": "Energy Storage System",
+   "mw": 300.0,
+   "date": "31/10/2029",
+   "gate": "2",
+   "status": "Awaiting Consents",
+   "what": "status Scoping to Awaiting Consents"
+  },
+  {
+   "project": "Lisa's Battery Storage",
+   "developer": "Potencia Energy Limited",
+   "site": "Mybster 3 132/33kV Substation",
+   "tech": "Energy Storage System",
+   "mw": 47.0,
+   "date": "30/07/2028",
+   "gate": "2",
+   "status": "Consents Approved",
+   "what": "Gate not shown to 2; status Awaiting Consents to Consents Approved"
+  },
+  {
+   "project": "Templeton BESS",
+   "developer": "Templeton Battery Storage Limited",
+   "site": "Lyndhurst GSP",
+   "tech": "Energy Storage System",
+   "mw": 49.9,
+   "date": "31/10/2028",
+   "gate": "2",
+   "status": "Consents Approved",
+   "what": "status Scoping to Consents Approved"
+  },
+  {
+   "project": "Rogerton Cottage BESS",
+   "developer": "Drax Bess Ek Limited",
+   "site": "East Kilbride 275/33kV GSP",
+   "tech": "Energy Storage System",
+   "mw": 55.0,
+   "date": "26/03/2027",
+   "gate": "2",
+   "status": "Consents Approved",
+   "what": "status Scoping to Consents Approved"
+  },
+  {
+   "project": "Welbeck-Newark Solar Farm - PVDP",
+   "developer": "Solarten Ltd",
+   "site": "High Marnham 400kV Substation",
+   "tech": "Energy Storage System;PV Array (Photo Voltaic/solar)",
+   "mw": 710.0,
+   "date": "30/10/2034",
+   "gate": "1",
+   "status": "Scoping",
+   "what": "Gate not shown to 1"
+  }
+ ]
+}

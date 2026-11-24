@@ -357,24 +357,24 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
         <p class="means">A firm offer, for projects that showed NESO they are ready (for example, land secured) and needed for the 2030 clean power plan.</p>
         <ul><li>Confirmed connection date</li><li>Confirmed connection point</li><li>Secure place in the reordered queue</li></ul>
         <p class="like">Like a reserved seat. <span>You know where you sit and when the show starts.</span></p>
-        <p class="fig"><strong><!--f:n_g2-->141<!--/f--></strong> unbuilt projects, <strong><!--f:gw_g2-->26.4<!--/f--> GW</strong>. Average wait <!--f:wait_g2-->1.5<!--/f--> years.</p>
+        <p class="fig"><strong><!--f:n_g2-->143<!--/f--></strong> unbuilt projects, <strong><!--f:gw_g2-->26.5<!--/f--> GW</strong>. Average wait <!--f:wait_g2-->1.5<!--/f--> years.</p>
       </div>
       <div class="gate" style="--gc: var(--g1)">
         <div class="name"><h3>Gate 1</h3><span class="gnum">indicative</span></div>
         <p class="means">A holding position for projects not yet ready or needed. They can apply for Gate 2 later.</p>
         <ul><li>Indicative date only, which can move</li><li>Indicative location only</li><li class="no">No firm place in the queue</li></ul>
         <p class="like">Like a standby ticket. <span>You are in the building, but your seat and time can change.</span></p>
-        <p class="fig"><strong><!--f:n_g1-->926<!--/f--></strong> unbuilt projects, <strong><!--f:gw_g1-->332.9<!--/f--> GW</strong>. Average wait <!--f:wait_g1-->8.1<!--/f--> years.</p>
+        <p class="fig"><strong><!--f:n_g1-->928<!--/f--></strong> unbuilt projects, <strong><!--f:gw_g1-->333.7<!--/f--> GW</strong>. Average wait <!--f:wait_g1-->8.1<!--/f--> years.</p>
       </div>
       <div class="gate" style="--gc: var(--gn)">
         <div class="name"><h3>Blank</h3><span class="gnum">not stated</span></div>
         <p class="means">The register's Gate field is empty. The register does not say why, so we do not treat these as either gate.</p>
         <ul><li class="no">Status not stated in the register</li><li class="no">Ask the project or NESO before relying on it</li></ul>
         <p class="like">No ticket shown. <span>The register does not say which kind it holds.</span></p>
-        <p class="fig"><strong><!--f:n_gn-->608<!--/f--></strong> unbuilt projects, <strong><!--f:gw_gn-->232.5<!--/f--> GW</strong>.</p>
+        <p class="fig"><strong><!--f:n_gn-->604<!--/f--></strong> unbuilt projects, <strong><!--f:gw_gn-->231.7<!--/f--> GW</strong>.</p>
       </div>
     </div>
-    <p class="src"><span class="tag c">Confirmed</span>Definitions: <a href="https://www.neso.energy/news/connections-reform-key-unlocking-gb-growth" target="_blank" rel="noopener">NESO, connections reform</a>. Figures: our analysis of the NESO TEC Register, <!--f:tec_date-->19 November 2026<!--/f-->.</p>
+    <p class="src"><span class="tag c">Confirmed</span>Definitions: <a href="https://www.neso.energy/news/connections-reform-key-unlocking-gb-growth" target="_blank" rel="noopener">NESO, connections reform</a>. Figures: our analysis of the NESO TEC Register, <!--f:tec_date-->23 November 2026<!--/f-->.</p>
     <h3 style="margin-top:40px">When the queue is due to connect</h3>
     <p style="color:var(--fg-2);margin-top:6px;max-width:70ch">Capacity by contracted connection year. Gate 2 projects are mostly due by 2029 (<!--f:g2by2029-->86<!--/f-->% of Gate 2 capacity). Most of the rest is dated 2031 or later.</p>
     <div class="chartbox"><svg id="chart" viewBox="0 0 640 260" role="img" aria-label="Stacked columns of capacity waiting to connect by contracted year, split by Gate 2, Gate 1 and blank"></svg></div>
@@ -439,7 +439,7 @@ a.sig .go { font: 500 14px var(--sans); color: var(--accent); margin-top: auto }
   for (var i = 0; i < D.length; i += 4) m += '<circle cx="' + D[i] + '" cy="' + D[i + 1] + '" r="' + D[i + 2] / 10 + '" style="fill:' + C[D[i + 3]] + '"/>';
   var mmEl = document.getElementById('minimap'); if (mmEl) mmEl.innerHTML = m + '</g>';
 
-  var Y = /*Y*/[['2026 or earlier', 3715, 1362, 11574], ['2027', 7571, 3878, 4238], ['2028', 7213, 4823, 22011], ['2029', 4179, 9411, 31451], ['2030', 911, 10955, 23351], ['2031', 1265, 26269, 25888], ['2032', 195, 15200, 13754], ['2033', 49, 46772, 31847], ['2034', 0, 56020, 14797], ['2035', 500, 42476, 23302], ['2036', 0, 21757, 10487], ['2037', 0, 79064, 15566], ['2038', 0, 11871, 3035], ['2039', 0, 3051, 2012]]/*/Y*/;
+  var Y = /*Y*/[['2026 or earlier', 3715, 1362, 11574], ['2027', 7571, 3878, 4238], ['2028', 7233, 4823, 21912], ['2029', 4179, 9411, 31451], ['2030', 911, 10955, 23304], ['2031', 1315, 26269, 25888], ['2032', 195, 15200, 13754], ['2033', 49, 46772, 31847], ['2034', 0, 56730, 14087], ['2035', 500, 42476, 23302], ['2036', 0, 21757, 10487], ['2037', 0, 79064, 15566], ['2038', 0, 11871, 3035], ['2039', 0, 3086, 2012]]/*/Y*/;
   var W = 640, H = 260, L = 40, R = 8, T = 22, B = 40, iw = W - L - R, ih = H - T - B, top = /*TOP*/100000/*/TOP*/;
   var band = iw / Y.length, bw = Math.min(22, band * .62), sy = function (v) { return T + ih - v / top * ih; };
   var cols = ['var(--g2)', 'var(--g1)', 'var(--gn)'], names = ['Gate 2', 'Gate 1', 'Blank'], g = '';
