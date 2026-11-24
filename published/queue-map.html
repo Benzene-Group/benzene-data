@@ -218,6 +218,42 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: s
 }
 @media (prefers-reduced-motion: no-preference) { .dot { transition: opacity .15s } }
 
+/* Mobile: the site detail opens as a bottom sheet over the map */
+.sheet-head, .touchhint, .jumpmap { display: none }
+@media (hover: none) and (pointer: coarse) { .hint.mousehint { display: none } .touchhint { display: block } }
+@media (max-width: 900px) {
+  .jumpmap { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; background: var(--cta); color: var(--cta-fg); border: 0; border-radius: 8px; font: 600 15px var(--sans); padding: 12px 18px; cursor: pointer }
+  .panel { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; margin: 0; height: 56vh; height: 56dvh; max-height: calc(100dvh - 40px); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--line-2); border-bottom: 0; border-radius: 16px 16px 0 0; box-shadow: 0 -12px 36px var(--shadow);
+    padding: 0 max(16px, env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+    transform: translateY(105%); visibility: hidden; transition: transform .28s cubic-bezier(.2, .8, .2, 1), height .28s ease, visibility 0s linear .28s }
+  .panel.open { transform: none; visibility: visible; transition: transform .28s cubic-bezier(.2, .8, .2, 1), height .28s ease }
+  .panel.tall { height: 90vh; height: 90dvh }
+  .panel.dragging { transition: none }
+  .sheet-head { display: block; position: sticky; top: 0; z-index: 2; height: 54px; background: var(--card); margin: 0 -2px 2px; padding: 0 2px; border-bottom: 1px solid var(--line); touch-action: none }
+  .sheet-grab { display: block; position: absolute; left: 0; right: 96px; top: 0; height: 54px; background: none; border: 0; padding: 0; cursor: grab }
+  .sheet-grab::before { content: ''; display: block; width: 42px; height: 5px; border-radius: 3px; background: var(--line-2); margin: 10px 0 0 calc(50% + 48px - 21px) }
+  .sheet-btns { position: absolute; right: 0; top: 7px; display: flex; gap: 8px }
+  .sheet-btns button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line-2); background: var(--card); color: var(--fg); font: 500 20px/1 var(--sans); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; padding: 0 }
+  .panel h3 { font-size: 21px; line-height: 1.25; margin-top: 4px }
+  .panel .kv { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .panel .pscroll { max-height: none; overflow: visible; border: 0; border-radius: 0 }
+  .panel .pt thead { display: none }
+  .panel .pt, .panel .pt tbody { display: block }
+  .panel .pt tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; padding: 12px 2px; border-bottom: 1px solid var(--line) }
+  .panel .pt td { display: block; padding: 0; border: 0 }
+  .panel .pt td.c-n { grid-column: 1; font-weight: 500 }
+  .panel .pt td.c-mw { grid-column: 2; grid-row: 1; font-size: 15px }
+  .panel .pt td.c-mw::after { content: ' MW'; color: var(--fg-3); font-size: 12px }
+  .panel .pt td.c-meta { grid-column: 1 / -1; font-size: 13px; color: var(--fg-2); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center }
+  .panel .pt td.c-t, .panel .pt td.c-d, .panel .pt td.c-g, .panel .pt td.c-s { display: none }
+  .panel .pt small { font-weight: 400; margin-top: 2px }
+  .panel .pt .lnk { padding: 4px 0; min-height: 28px }
+  .panel table.pt tr.click { cursor: pointer }
+}
+@media (min-width: 901px) { .panel .pt td.c-meta { display: none } }
+@media (prefers-reduced-motion: reduce) { .panel { transition: none !important } }
+
 /* Site nav shared with the other pages (not sticky here: the section tabs are) */
 .sitenav { background: var(--bg-2); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px) }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px }
@@ -330,6 +366,7 @@ body.noscroll { overflow: hidden }
     <div class="fresh"><span class="live" aria-hidden="true"></span><span>Latest data: <b id="asof"></b></span><span class="fsep">Checked for a new register twice a week</span></div>
     <div class="eyebrow2">Free tool &middot; Great Britain transmission queue</div>
     <h1>See where the grid queue is longest, before you invest</h1>
+    <button type="button" class="jumpmap" id="jumpmap">Go to the map <span aria-hidden="true">&darr;</span></button>
     <p class="lede" id="lede"></p>
     <p class="sowhat"><b>So what:</b> <span>Most capacity in the queue is not due until 2031 or later. Before you pay for land, surveys or planning, find the substation nearest your site and check how much is queued there and how long it is waiting. Want it checked for you? <a href="/#contact">Ask for a free substation check</a>.</span></p>
     <div class="gdefs" aria-label="What the Gate labels mean">
@@ -401,7 +438,8 @@ body.noscroll { overflow: hidden }
           </div>
           <div class="tip" id="tip" hidden></div>
         </div>
-        <p class="hint">Zoom with the buttons, a double-click, or Ctrl and scroll. Drag to move once zoomed in. Site names appear as you zoom.</p>
+        <p class="hint touchhint">Tap a circle to see who is queued there. Pinch or use + to zoom in, and drag to move once zoomed. Site names appear as you zoom.</p>
+        <p class="hint mousehint">Zoom with the buttons, a double-click, or Ctrl and scroll. Drag to move once zoomed in. Site names appear as you zoom.</p>
         <div class="legend" id="legend"></div>
         <p class="note">Northern Ireland is drawn but not covered. Its grid is run separately by SONI as part of the all-island electricity market, so its connections are not in the NESO register and Gate 1 and Gate 2 do not apply there.</p>
         <div class="legend" id="planlegend" hidden></div>
@@ -409,7 +447,7 @@ body.noscroll { overflow: hidden }
         <p class="note" id="unmapped"></p>
         <details><summary id="unsum"></summary><div class="tablecard pscroll" style="margin-top:10px"><table id="untable"></table></div></details>
       </div>
-      <div class="panel" id="panel" aria-live="polite"></div>
+      <div class="panel" id="panel" role="region" aria-label="Site details"><div class="sheet-head" id="sheethead"><button type="button" class="sheet-grab" id="sheetgrab" aria-label="Show more or less of the details"></button><div class="sheet-btns"><button type="button" id="sheetsize" aria-label="Expand the details">&#8679;</button><button type="button" id="sheetclose" aria-label="Close the details">&times;</button></div></div><div id="pbody" aria-live="polite"></div></div>
     </div>
   </div>
 </section>
@@ -519,6 +557,7 @@ function showTab(t) {
   if (!TABS.some(x => x[0] === t)) return false; tab = t;
   for (const [k] of TABS) { $('pane-' + k).hidden = k !== t; const b = $('tb-' + k); b.setAttribute('aria-selected', k === t); b.tabIndex = k === t ? 0 : -1; }
   if (t === 'map' && V.length) drawDots();
+  if (t !== 'map' && $('panel')) $('panel').classList.remove('open', 'tall');
   return true;
 }
 function pickTab(t, focus) {
@@ -650,7 +689,7 @@ window.addEventListener('pointermove', e => {
     const mx = view.x + ((a[0] + b[0]) / 2 - r.left) / r.width * view.w, my = view.y + ((a[1] + b[1]) / 2 - r.top) / r.height * view.h;
     zoomAt(pinch.s * d / pinch.d / scale(), mx, my); suppress = true; return; }
   if (!drag) return; const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-  if (!drag.moved && Math.hypot(dx, dy) < 5) return;
+  if (!drag.moved && Math.hypot(dx, dy) < (e.pointerType === 'touch' ? 10 : 5)) return;
   drag.moved = true; suppress = true; tip.hidden = true; if (scale() <= 1.01) return;
   const u = unit(); view.x = drag.vx - dx * u; view.y = drag.vy - dy * u; box.classList.add('dragging'); applyView(false);
 });
@@ -718,12 +757,20 @@ map.addEventListener('pointermove', e => {
   const l = e.target.closest('[data-l]'); if (l && !(drag && drag.moved)) { const r = LOC.rows[+l.dataset.l], on = (LOC.ops.find(o => o.id === r.op) || {name: 'Northern Powergrid'}).name;
     const f = v => v == null || isNaN(v) ? 'not published' : (+v).toFixed(1) + ' MW';
     showTip(box, e, `<b>${esc(r.n)}</b><span>${LOCT[r.t]}${r.kv ? ', ' + r.kv + ' kV' : ''}</span><span>Generation headroom: ${f(r.g)} (${LOCN[r.gr]})</span><span>Demand headroom: ${f(r.d)}${r.dr ? ' (' + LOCN[r.dr] + ')' : ''}</span>${LOCNOTE[r.op] ? '<span>' + LOCNOTE[r.op] + '</span>' : ''}<span>Source: ${esc(on)} open data</span>`, tip); return; }
-  const c = e.target.closest('[data-i]'); if (!c || (drag && drag.moved)) { tip.hidden = true; return; }
+  const c = e.target.closest('[data-i]'); if (!c || (drag && drag.moved) || e.pointerType === 'touch') { tip.hidden = true; return; }
   const i = +c.dataset.i, s = D.sites[i], o = V[i], all = o.ps.length;
   showTip(box, e, `<b>${esc(s.n)}</b>` + (o.v > 0 ? `<span>${nf(o.v)} MW waiting, ${pl(o.mine.length, 'project')}</span><span>${o.w == null ? 'No contracted date' : 'Average wait ' + o.w.toFixed(1) + ' years'}</span>` : `<span>${pl(all, 'project')} from other developers</span>`) + (s.lq === 'r' ? '<span>Rough position</span>' : ''), tip);
 });
 map.addEventListener('pointerleave', () => { tip.hidden = true; });
-map.addEventListener('click', e => { if (suppress) return; const c = e.target.closest('[data-i]'); if (c) select(+c.dataset.i); });
+map.addEventListener('click', e => {
+  if (suppress) return; let c = e.target.closest('[data-i]');
+  if (!c && !e.target.closest('[data-l]')) { // forgiving tap: nearest circle within 22px of the finger
+    let best = null, bd = 22;
+    for (const el of $('gdots').querySelectorAll('[data-i]')) { const b = el.getBoundingClientRect(), d = Math.max(0, Math.hypot(b.left + b.width / 2 - e.clientX, b.top + b.height / 2 - e.clientY) - b.width / 2); if (d < bd) { bd = d; best = el; } }
+    c = best;
+  }
+  if (c) { tip.hidden = true; select(+c.dataset.i, {fromMap: true}); }
+});
 
 // ---------- planning layer ----------
 const PLAN = [['o', 'Operational', '#2b6cb0'], ['c', 'Consented or under construction', '#2e8b57'], ['p', 'In planning', '#e08a3c']];
@@ -765,7 +812,7 @@ function sitePanel() {
   const tech = {}; for (const p of ps) tech[p[2]] = (tech[p[2]] || 0) + p[3];
   const tl = Object.entries(tech).sort((a, b) => b[1] - a[1]);
   const pos = s.x === '' ? 'Not on the map: we could not find a location for this site.' : (s.lq === 'r' ? 'Rough position: ' : 'Approximate position: ') + esc(s.b) + '.' + (s.lq === 'r' ? ' It may be 15 km or more from the real site.' : '');
-  $('panel').innerHTML = `<div class="eyebrow">${esc(areaOf(sel))} &middot; ${esc(TO[s.to] || s.to)}${s.rg ? ' &middot; ' + esc(s.rg) + ' region' : ''}</div><h3>${esc(s.n)}</h3>
+  $('pbody').innerHTML = `<div class="eyebrow">${esc(areaOf(sel))} &middot; ${esc(TO[s.to] || s.to)}${s.rg ? ' &middot; ' + esc(s.rg) + ' region' : ''}</div><h3>${esc(s.n)}</h3>
     <div class="basis">${pos}</div>
     ${dev ? `<p class="note"><button type="button" class="btn" id="backdev">Back to ${esc(dev.name)}</button></p>` : ''}
     ${kv([['Waiting' + viewNote(), nf(sum(ps)) + ' MW'], ['Connected', nf(s.c) + ' MW'], ['Projects', ps.length], ['Developers', new Set(ps.map(p => p[7])).size], ['Average wait', (w => w == null ? 'n/a' : w.toFixed(1) + ' yrs')(wavg(ps))], ['Typical connection year', (w => w == null ? 'n/a' : String(Math.floor(TODAY.getUTCFullYear() + TODAY.getUTCMonth() / 12 + w)))(wavg(ps))]])}
@@ -773,8 +820,8 @@ function sitePanel() {
     <div class="split" role="img" aria-label="Queue split by Gate">${[['g2', s.g2], ['g1', s.g1], ['gn', s.gn]].filter(a => a[1] > 0).map(a => `<span style="background:var(--${a[0]});flex:${a[1] / tot}"></span>`).join('')}</div>
     <div class="mini">Gate 2 <b>${nf(s.g2)} MW</b> &nbsp; Gate 1 <b>${nf(s.g1)} MW</b> &nbsp; No Gate shown <b>${nf(s.gn)} MW</b></div>
     <div class="mini" style="margin-top:12px">Technology in this view</div>${tl.length ? `<div class="stack">${tl.map(x => `<span title="${esc(x[0])}" style="background:${tcol(x[0])};flex:${x[1]}"></span>`).join('')}</div><div class="skey">${tl.map(x => `<span><i style="background:${tcol(x[0])}"></i>${esc(x[0])} <b>${nf(x[1])} MW</b></span>`).join('')}</div>` : '<div class="mini">None in this view</div>'}
-    <div class="pscroll"><table><thead><tr><th>Project</th><th>Technology</th><th class="n">MW</th><th>Contracted date</th><th>Gate</th><th>Status</th></tr></thead><tbody>${
-      ps.length ? ps.map(p => `<tr${F.dev && p[7] === F.dev ? ' class="mine"' : ''}><td>${esc(p[0])}<small><button type="button" class="lnk" data-d="${esc(p[7])}">${esc(p[1])}</button></small></td><td>${esc(p[2])}</td><td class="n">${nf(p[3])}</td><td style="white-space:nowrap">${fdate(p[4])}</td><td>${gatePill(p[6])}</td><td>${esc(p[5])}</td></tr>`).join('') : '<tr><td colspan="6">No projects at this site in this view.</td></tr>'
+    <div class="pscroll"><table class="pt"><thead><tr><th>Project</th><th>Technology</th><th class="n">MW</th><th>Contracted date</th><th>Gate</th><th>Status</th></tr></thead><tbody>${
+      ps.length ? ps.map(p => `<tr${F.dev && p[7] === F.dev ? ' class="mine"' : ''}><td class="c-n">${esc(p[0])}<small><button type="button" class="lnk" data-d="${esc(p[7])}">${esc(p[1])}</button></small></td><td class="c-t">${esc(p[2])}</td><td class="n c-mw">${nf(p[3])}</td><td class="c-d" style="white-space:nowrap">${fdate(p[4])}</td><td class="c-g">${gatePill(p[6])}</td><td class="c-s">${esc(p[5])}</td><td class="c-meta"><span>${esc(p[2])}</span><span>Due ${fdate(p[4])}</span>${gatePill(p[6])}<span>${esc(p[5])}</span></td></tr>`).join('') : '<tr><td colspan="6">No projects at this site in this view.</td></tr>'
     }</tbody></table></div>
     <p class="note">Select a developer's name to see every site where it is queued. Register facts only. Planning status, revenue contracts, ownership and change alerts for these projects are part of a Benzene screening report.</p>
     ${linkLine(s.h, 'site')}`;
@@ -782,7 +829,7 @@ function sitePanel() {
 }
 function regionPanel() {
   const ids = REGION.get(selRegion), ps = ids.flatMap(i => V[i].ps);
-  $('panel').innerHTML = `<div class="eyebrow">Future connection nodes</div><h3>${esc(selRegion)}</h3>
+  $('pbody').innerHTML = `<div class="eyebrow">Future connection nodes</div><h3>${esc(selRegion)}</h3>
     <div class="basis">The register names these nodes by region and gives no site. They are drawn as dashed circles near the centre of the region, so read them as "somewhere in ${esc(selRegion)}".</div>
     ${kv([['Waiting' + viewNote(), gw(sum(ps)) + ' GW'], ['Nodes', ids.length], ['Projects', ps.length], ['Developers', new Set(ps.map(p => p[7])).size], ['Average wait', (w => w == null ? 'n/a' : w.toFixed(1) + ' yrs')(wavg(ps))]])}
     <div class="pscroll"><table><thead><tr><th>Node</th><th class="n">Waiting, MW</th><th class="n">Projects</th><th class="n">Average wait</th></tr></thead><tbody>${
@@ -796,31 +843,55 @@ function devPanel() {
   D.sites.forEach((s, i) => { if (V[i].mine.length && s.x !== '') onMap++; for (const p of V[i].mine) rows.push([i, s, p]); });
   rows.sort((a, b) => b[2][3] - a[2][3]);
   const ps = rows.map(r => r[2]), ns = new Set(rows.map(r => r[0])).size;
-  $('panel').innerHTML = `<div class="eyebrow">Developer view</div><h3>${esc(d.name)}</h3>
+  $('pbody').innerHTML = `<div class="eyebrow">Developer view</div><h3>${esc(d.name)}</h3>
     <div class="basis">Every site where this company name holds a connection agreement in the register. Related companies with a different name are listed separately.</div>
     ${kv([['Waiting' + viewNote(), gw(sum(ps)) + ' GW'], ['Projects', ps.length], ['Sites', ns], ['On the map', onMap], ['Average wait', (w => w == null ? 'n/a' : w.toFixed(1) + ' yrs')(wavg(ps))]])}
-    <div class="pscroll"><table><thead><tr><th>Project</th><th>Connection site</th><th class="n">MW</th><th>Contracted date</th><th>Gate</th></tr></thead><tbody>${
-      rows.length ? rows.map(([i, s, p]) => `<tr class="click" tabindex="0" data-i="${i}"><td>${esc(p[0])}<small>${esc(p[2])}</small></td><td>${esc(short(s.n))}</td><td class="n">${nf(p[3])}</td><td style="white-space:nowrap">${fdate(p[4])}</td><td>${gatePill(p[6])}</td></tr>`).join('') : '<tr><td colspan="5">No projects for this developer in this view.</td></tr>'
+    <div class="pscroll"><table class="pt"><thead><tr><th>Project</th><th>Connection site</th><th class="n">MW</th><th>Contracted date</th><th>Gate</th></tr></thead><tbody>${
+      rows.length ? rows.map(([i, s, p]) => `<tr class="click" tabindex="0" data-i="${i}"><td class="c-n">${esc(p[0])}<small>${esc(p[2])}</small></td><td class="c-t">${esc(short(s.n))}</td><td class="n c-mw">${nf(p[3])}</td><td class="c-d" style="white-space:nowrap">${fdate(p[4])}</td><td class="c-g">${gatePill(p[6])}</td><td class="c-meta"><span>${esc(short(s.n))}</span><span>Due ${fdate(p[4])}</span>${gatePill(p[6])}</td></tr>`).join('') : '<tr><td colspan="5">No projects for this developer in this view.</td></tr>'
     }</tbody></table></div>
     <p class="note">Sites where this developer is queued are in colour. Grey points are other sites.</p>
     ${linkLine(d.h, 'developer')}`;
   wireCopy();
 }
+
+// ---------- mobile bottom sheet ----------
+const mobile = () => matchMedia('(max-width: 900px)').matches, P = $('panel');
+function openSheet(i) {
+  if (!mobile()) return; P.classList.add('open'); P.scrollTop = 0;
+  if (i == null || box.classList.contains('full')) return;
+  requestAnimationFrame(() => { const el = $('gdots').querySelector(`[data-i="${i}"]`); if (!el) return;
+    const b = el.getBoundingClientRect(), free = innerHeight - P.offsetHeight - 24;
+    if (b.bottom > free) window.scrollBy({top: b.bottom - free, behavior: reduced() ? 'auto' : 'smooth'}); });
+}
+function closeSheet() { P.classList.remove('open', 'tall'); syncSize(); }
+function syncSize() { const t = P.classList.contains('tall'); $('sheetsize').innerHTML = t ? '&#8681;' : '&#8679;'; $('sheetsize').setAttribute('aria-label', t ? 'Show less of the details' : 'Expand the details'); }
+$('sheetclose').addEventListener('click', closeSheet);
+$('sheetsize').addEventListener('click', () => { P.classList.toggle('tall'); syncSize(); });
+$('sheetgrab').addEventListener('click', () => { if (!sd || !sd.moved) { P.classList.toggle('tall'); syncSize(); } });
+let sd = null;
+$('sheethead').addEventListener('pointerdown', e => { if (e.target.closest('.sheet-btns')) return; sd = {y: e.clientY, h: P.offsetHeight, moved: false}; P.classList.add('dragging'); $('sheethead').setPointerCapture(e.pointerId); });
+$('sheethead').addEventListener('pointermove', e => { if (!sd) return; const dy = e.clientY - sd.y; if (Math.abs(dy) > 6) sd.moved = true; if (sd.moved) P.style.height = Math.max(120, Math.min(innerHeight * .9, sd.h - dy)) + 'px'; });
+const sheetEnd = e => { if (!sd) return; const dy = e.clientY - sd.y; P.classList.remove('dragging'); P.style.height = '';
+  if (sd.moved) { if (dy > 90 && !P.classList.contains('tall')) closeSheet(); else if (dy > 60) { P.classList.remove('tall'); syncSize(); } else if (dy < -50) { P.classList.add('tall'); syncSize(); } }
+  setTimeout(() => { sd = null; }, 0); };
+$('sheethead').addEventListener('pointerup', sheetEnd); $('sheethead').addEventListener('pointercancel', sheetEnd);
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && P.classList.contains('open') && !box.classList.contains('full')) closeSheet(); });
+$('jumpmap').addEventListener('click', () => { if (tab !== 'map') pickTab('map'); scrollToMap(true); });
 function renderPanel() { if (mode === 'region') regionPanel(); else if (mode === 'dev') devPanel(); else sitePanel(); }
 function select(i, o) {
   o = o || {}; sel = i; selRegion = null; mode = 'site'; const s = D.sites[i]; if (tab !== 'map') showTab('map');
   if (o.zoom && s.x !== '') { const cx = ux(s.x), cy = uy(s.y), w = Math.min(view.w, FW / 6); view.w = w; view.h = w * FH / FW; view.x = cx - w / 2; view.y = cy - view.h / 2; applyView(false); }
-  drawDots(); sitePanel(); if (!o.quiet) setHash(s.h); if (o.scroll) scrollToMap(o.smooth);
+  drawDots(); sitePanel(); if (!o.quiet) setHash(s.h); if (o.scroll) scrollToMap(o.smooth); if (!o.quiet) openSheet(o.fromMap ? i : null);
 }
 function selectRegion(name, o) {
   o = o || {}; sel = null; selRegion = name; mode = 'region'; if (tab !== 'map') showTab('map');
   fit(REGION.get(name).map(i => D.sites[i]).filter(s => s.x !== '').map(s => [ux(s.x), uy(s.y)]), 140);
-  drawDots(); regionPanel(); setHash('region-' + slug(name)); if (o.scroll) scrollToMap(o.smooth);
+  drawDots(); regionPanel(); setHash('region-' + slug(name)); if (o.scroll) scrollToMap(o.smooth); openSheet(null);
 }
 function setDev(key, o) {
   o = o || {}; const prev = sel; F.dev = key; sel = key ? null : prev; selRegion = null; mode = key ? 'dev' : 'site'; recompute(); if (tab !== 'map') showTab('map');
   if (key) { fit(located.filter(([, i]) => V[i].mine.length).map(([s]) => [ux(s.x), uy(s.y)]), 160); setHash(DEV.get(key).h); }
-  refresh(); if (o.scroll) scrollToMap(o.smooth);
+  refresh(); if (o.scroll) scrollToMap(o.smooth); if (key) openSheet(null); else closeSheet();
 }
 $('panel').addEventListener('click', e => {
   const d = e.target.closest('[data-d]'); if (d) { setDev(d.dataset.d); return; }
