@@ -8,7 +8,14 @@ Writes:
   out/refresh.json            status: no_new_register | ready | hold, plus every change
 A figure moving by more than 10% sets status to hold: a person checks before anything is published.
 """
-import glob, json, os, re, subprocess, sys, urllib.request
+import atexit, glob, json, os, re, shutil, subprocess, sys, urllib.request
+
+# Fresh machines may lack the build's third-party packages: install them before anything is downloaded.
+try:
+    import numpy, pyproj, reportlab  # noqa: F401
+except ImportError:
+    subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', '--break-system-packages',
+                    '-r', 'requirements.txt'], check=True)
 
 API = 'https://api.neso.energy/api/3/action/package_show?id=transmission-entry-capacity-tec-register'
 HOLD_PCT = 10.0
@@ -64,6 +71,20 @@ def cell(v):
     m = re.fullmatch(r'(\d{4})-(\d{2})-(\d{2})(?:T00:00:00)?', v)
     return f'{m.group(3)}/{m.group(2)}/{m.group(1)}' if m else v
 
+# If anything below fails, remove the new register and restore archived ones, so the next
+# run retries instead of wrongly reporting no_new_register.
+moved, finished = [], False
+def _undo():
+    if finished:
+        return
+    for src, dst in reversed(moved):
+        if os.path.exists(dst):
+            shutil.move(dst, src)
+    if os.path.exists(f'inputs/{name}'):
+        os.remove(f'inputs/{name}')
+        print(f'refresh failed: removed inputs/{name} so the next run retries', file=sys.stderr)
+atexit.register(_undo)
+
 import csv
 with open(f'inputs/{name}', 'w', encoding='utf-8-sig', newline='') as f:
     w = csv.writer(f, lineterminator='\n')
@@ -73,7 +94,6 @@ with open(f'inputs/{name}', 'w', encoding='utf-8-sig', newline='') as f:
 
 repd = sorted(glob.glob('inputs/REPD_Publication_*.csv'))[-1]
 run('scripts/build.py', f'inputs/{name}', repd, 'inputs/cfd_contract_portfolio_status.csv', 'out', 'reference/pypsa-gb')
-import shutil
 shutil.copy('reference/ni.json', 'out/ni.json')
 run('scripts/make_page.py', 'out')
 upd = json.loads(run('scripts/update_home.py', 'out', 'site'))
@@ -92,7 +112,9 @@ for c in upd['changes']:
 os.makedirs('archive/tec', exist_ok=True)
 for old in current:
     if old != f'inputs/{name}':
-        shutil.move(old, os.path.join('archive/tec', os.path.basename(old)))
+        dst = os.path.join('archive/tec', os.path.basename(old))
+        shutil.move(old, dst)
+        moved.append((old, dst))
 
 # Queue watch: compare the newest archived register with the new one.
 def _regdate(p):
@@ -116,5 +138,6 @@ json.dump({'F': F, 'B': B, 'llms': open('site/llms.txt', encoding='utf-8').read(
           open('out/home.json', 'w', encoding='utf-8'), ensure_ascii=False)
 run('scripts/map_pairs.py', 'published/queue-map.html', 'out/index.html', 'out/map_pairs.json')
 
+finished = True
 write('hold' if hold else 'ready', register=name, tec_date=upd['tec_date'], changes=moves,
       held_figures=hold, map_bytes=os.path.getsize('out/index.html'))
