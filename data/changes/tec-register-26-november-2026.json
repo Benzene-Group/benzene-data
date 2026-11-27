@@ -1,0 +1,101 @@
+{
+ "old": "23 November 2026",
+ "new": "26 November 2026",
+ "joined": [],
+ "left": [
+  {
+   "project": "Coylton Farm",
+   "developer": "New Energy Partnership Limited",
+   "site": "Coylton 275/33kV Substation",
+   "tech": "Energy Storage System",
+   "mw": 300.0,
+   "date": "30/10/2037",
+   "gate": "",
+   "status": "Awaiting Consents"
+  }
+ ],
+ "dates": [
+  {
+   "project": "Gleann Eoghainn",
+   "developer": "Renantis UK Limited",
+   "site": "Dunvegan 132/33kV Grid Supply Point Substation",
+   "tech": "Wind Onshore",
+   "mw": 25.0,
+   "date": "25/11/2031",
+   "gate": "2",
+   "status": "Awaiting Consents",
+   "was": "30/11/2029",
+   "years": 2.0
+  },
+  {
+   "project": "Leithenwater Wind Farm",
+   "developer": "Leithenwater Wind Energy Hub Limited",
+   "site": "Galashiels 132/33kV",
+   "tech": "Energy Storage System;Wind Onshore",
+   "mw": 72.6,
+   "date": "05/09/2031",
+   "gate": "2",
+   "status": "Awaiting Consents",
+   "was": "02/04/2030",
+   "years": 1.4
+  },
+  {
+   "project": "BESS Cilfynydd",
+   "developer": "Rewe 2 Limited",
+   "site": "Cilfynydd 400kV Substation",
+   "tech": "Energy Storage System",
+   "mw": 200.0,
+   "date": "15/09/2037",
+   "gate": "1",
+   "status": "Scoping",
+   "was": "12/07/2029",
+   "years": 8.2
+  }
+ ],
+ "other": [
+  {
+   "project": "Gleann Eoghainn",
+   "developer": "Renantis UK Limited",
+   "site": "Dunvegan 132/33kV Grid Supply Point Substation",
+   "tech": "Wind Onshore",
+   "mw": 25.0,
+   "date": "25/11/2031",
+   "gate": "2",
+   "status": "Awaiting Consents",
+   "what": "Gate not shown to 2; status Scoping to Awaiting Consents"
+  },
+  {
+   "project": "Leithenwater Wind Farm",
+   "developer": "Leithenwater Wind Energy Hub Limited",
+   "site": "Galashiels 132/33kV",
+   "tech": "Energy Storage System;Wind Onshore",
+   "mw": 72.6,
+   "date": "05/09/2031",
+   "gate": "2",
+   "status": "Awaiting Consents",
+   "what": "Gate not shown to 2; status Scoping to Awaiting Consents"
+  },
+  {
+   "project": "Bryn Rhudd Energy Park",
+   "developer": "Bryn Rhudd Energy Park Limited",
+   "site": "Pont Abraham GSP",
+   "tech": "Wind Onshore",
+   "mw": 113.9,
+   "date": "31/10/2028",
+   "gate": "",
+   "status": "Scoping",
+   "what": "size 159.0 MW to 113.9 MW"
+  },
+  {
+   "project": "Greta III",
+   "developer": "Tagenergy Development UK Limited",
+   "site": "Drakelow 400kV Substation",
+   "tech": "Energy Storage System;PV Array (Photo Voltaic/solar)",
+   "mw": 500.0,
+   "date": "30/10/2029",
+   "gate": "1",
+   "status": "Scoping",
+   "what": "Gate not shown to 1; status Consents Approved to Scoping"
+  }
+ ]
+}

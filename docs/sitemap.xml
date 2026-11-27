@@ -125,7 +125,6 @@
 <url><loc>https://grid.benzene-group.com/substations/wearside-connection-node-d-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/fiddlers-ferry-275kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/coire-glas-gsp/</loc><lastmod>2026-11-27</lastmod></url>
-<url><loc>https://grid.benzene-group.com/substations/pont-abraham-gsp/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/north-kent-connection-node-a-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/botley-west-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/mablethorpe-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
@@ -134,6 +133,7 @@
 <url><loc>https://grid.benzene-group.com/substations/west-anglia-connection-node-b-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/pembroke-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/kincardine-north-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
+<url><loc>https://grid.benzene-group.com/substations/pont-abraham-gsp/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/south-anglia-connection-node-a-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/south-humber-connection-node-a-400kv/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/teeside-connection-node-a-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
@@ -398,7 +398,6 @@
 <url><loc>https://grid.benzene-group.com/substations/kintore-275kv/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/wylfa-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/castlemilk-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
-<url><loc>https://grid.benzene-group.com/substations/coylton-275-33kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/craig-moss-farm-132kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/smeaton-400-275kv/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/elmya-grange-400kv/</loc><lastmod>2026-11-27</lastmod></url>
@@ -532,8 +531,8 @@
 <url><loc>https://grid.benzene-group.com/substations/dalchork-132kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/osbaldwick-north-humber-connection-node-e-132kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/er-msm-energy-132kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
-<url><loc>https://grid.benzene-group.com/substations/field-glenniston-bess-132kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/westfield-400-275kv/</loc><lastmod>2026-11-27</lastmod></url>
+<url><loc>https://grid.benzene-group.com/substations/field-glenniston-bess-132kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/fort-augustus-400kv/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/fyrish-132kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
 <url><loc>https://grid.benzene-group.com/substations/staffordshire-connection-node-c-400kv-substation/</loc><lastmod>2026-11-27</lastmod></url>
