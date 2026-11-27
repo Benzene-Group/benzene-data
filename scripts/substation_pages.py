@@ -292,3 +292,8 @@ json.dump({'register_date': TEC_DATE, 'built': TODAY, 'moves_since': EV_FIRST, '
 print('api bytes', os.path.getsize(OUT + '/api/queue.json'))
 
 print('pages', len(built), 'register', TEC_DATE, 'moves window from', EV_FIRST)
+
+if __name__ == '__main__':
+    # also rebuild the Grid Delay Index page (it imports this module and reuses the page shell)
+    import runpy
+    runpy.run_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'delay_index.py'), run_name='__main__')
