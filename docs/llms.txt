@@ -1,0 +1,8 @@
+# Benzene grid connection queue by substation
+
+One page per grid connection point in Great Britain, built from NESO's TEC register of 23 November 2026, our weekly copies of it since 2 Jun 2026, and distribution operators' published headroom data.
+
+- Index: https://grid.benzene-group.com/
+- Main site: https://www.benzene-group.com/
+- Services and pricing: https://www.benzene-group.com/pricing.html
+- Contact: info@benzene-group.com
