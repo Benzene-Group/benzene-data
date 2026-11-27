@@ -1,0 +1,20 @@
+[project]
+name = "benzene-grid-mcp"
+version = "0.1.0"
+description = "MCP server for the Great Britain grid connection queue: who is queuing at each substation, which dates moved, and local network headroom. By Benzene."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Benzene", email = "info@benzene-group.com" }]
+dependencies = ["mcp>=2,<3"]
+
+[project.urls]
+Homepage = "https://www.benzene-group.com"
+Data = "https://grid.benzene-group.com"
+
+[project.scripts]
+benzene-grid-mcp = "benzene_grid_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

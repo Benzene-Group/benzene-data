@@ -240,4 +240,33 @@ open(OUT + '/CNAME', 'w').write('grid.benzene-group.com\n')
 open(OUT + '/.nojekyll', 'w').write('')
 for p in (OUT + '/index.html',):
     assert '—' not in open(p, encoding='utf-8').read()
+
+# machine-readable feed for the Benzene Grid MCP server and anyone else: docs/api/queue.json
+import pyproj
+_T = pyproj.Transformer.from_crs('EPSG:27700', 'EPSG:4326', always_xy=True)
+def _ll(x, y):
+    lon, lat = _T.transform(x, y)
+    return round(lat, 5), round(lon, 5)
+api_sites = []
+for x, short, q, m in built:
+    lat, lon = _ll(x['x'], x['y']) if x.get('x') else (None, None)
+    api_sites.append({'name': x['n'], 'short': short, 'slug': x['slug'], 'to': x.get('to', ''), 'lat': lat, 'lon': lon,
+                      'queued_mw': round(q, 1), 'connected_mw': round(x.get('c', 0), 1), 'gate2_mw': round(x.get('g2', 0), 1),
+                      'projects': [dict(zip(['project', 'customer', 'type', 'mw', 'date', 'stage', 'gate'], r)) for r in sorted(x.get('p', []), key=lambda r: r[4] or '9999')],
+                      'url': f'{HOST}/substations/{x["slug"]}/'})
+api_moves = [{'week': r['week'], 'site': r['site'], 'project': r['name'], 'customer': r['cust'], 'type': r['type'], 'mw': r['mw'],
+              'gate': r['gate'], 'old': r['old'], 'new': r['new'], 'months': float(r['months'])} for v in moves.values() for r in v]
+api_hr = []
+for r in HR['rows']:
+    lat, lon = _ll(r[4], r[5])
+    api_hr.append([r[1], OPS[r[0]]['name'], r[2], r[3], lat, lon, r[6], r[8]])
+os.makedirs(OUT + '/api', exist_ok=True)
+json.dump({'register_date': TEC_DATE, 'built': TODAY, 'moves_since': EV_FIRST, 'head': D['head'], 'sites': api_sites,
+           'moves': sorted(api_moves, key=lambda m: m['week'], reverse=True),
+           'headroom_fields': ['substation', 'operator', 'type', 'kv', 'lat', 'lon', 'generation_headroom_mw', 'demand_headroom_mw'],
+           'headroom': api_hr, 'headroom_credits': [o['credit'] + ' (' + o['date'] + ')' for o in OPS],
+           'licence': 'Queue data from NESO TEC register, NESO Open Data Licence. Headroom data credited per operator. Compiled by Benzene, benzene-group.com.'},
+          open(OUT + '/api/queue.json', 'w', encoding='utf-8'), separators=(',', ':'), ensure_ascii=False)
+print('api bytes', os.path.getsize(OUT + '/api/queue.json'))
+
 print('pages', len(built), 'register', TEC_DATE, 'moves window from', EV_FIRST)
