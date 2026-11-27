@@ -62,7 +62,7 @@ def search_sites(query: str, limit: int = 10) -> dict:
 
 @mcp.tool()
 def get_site_queue(site: str) -> dict:
-    """Everything queued at one connection point: each project, customer, MW, contracted date, stage and Gate, plus date moves of a month or more since our weekly copies began."""
+    """Everything queued at one connection point: each project, customer, MW, contracted date, stage and Gate, with Benzene's date risk and likely date (from two years of register history), plus date moves of a month or more since our weekly copies began."""
     hits = _find(site)
     if not hits:
         return {"error": f"No connection point matches '{site}'. Try search_sites first."}

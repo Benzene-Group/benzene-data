@@ -3,6 +3,7 @@
 Ask Claude (or any MCP client) about the Great Britain grid connection queue, substation by substation.
 
 - Who is queuing at a substation, for how many MW, and until when
+- A realistic date for each project: how often similar projects' dates actually slipped over two years of register history
 - Which connection dates moved in the last few weeks, later or earlier
 - Transmission connection points near a location
 - Local distribution network headroom near a location

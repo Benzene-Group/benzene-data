@@ -7,6 +7,8 @@ Writes docs/: index.html, substations/<slug>/index.html, sitemap.xml, robots.txt
 Every figure comes from those files. No hand-typed numbers.
 """
 import csv, html, json, math, os, re, sys, datetime as dt, collections
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import realistic_date as RD
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'published/queue-map.html')
@@ -149,15 +151,23 @@ for x in sites:
             + (f'. {len(mv)} connection date move{"s" if len(mv) != 1 else ""} of a month or more since {wk(EV_FIRST)}.' if mv else '.'))
     title = f'{short} grid connection queue | Benzene'
 
-    kp = f"""<div class="kpis"><div class="k"><b>{n}</b><span>projects in the queue</span></div>
+    kp = f"""<div class="kpis"><div class="k"><b>{n}</b><span>project{'s' if n != 1 else ''} in the queue</span></div>
 <div class="k"><b>{fmw(q)} MW</b><span>waiting to connect</span></div>
 <div class="k"><b>{fmw(x.get('c', 0))} MW</b><span>already connected</span></div>
 <div class="k"><b>{fmw(x.get('g2', 0))} MW</b><span>holding Gate 2</span></div>
 <div class="k"><b>{len(mv)}</b><span>date moves since {wk(EV_FIRST)}</span></div></div>"""
 
-    rows = ''.join(f"<tr><td>{E(r[0])}</td><td>{E(r[1])}</td><td>{E(r[2])}</td><td class=n>{fmw(r[3])}</td><td class=n>{fdate(r[4])}</td><td>{E(r[5])}</td><td>{E(r[6] or 'none')}</td></tr>" for r in p)
-    qtab = (f'<h2>What sits in the queue</h2><p class="note">Sorted by connection date. Register of {E(TEC_DATE)}.</p>'
-            f'<div class="tw"><table><tr><th>Project</th><th>Customer</th><th>Type</th><th class=n>MW</th><th class=n>Date</th><th>Stage</th><th>Gate</th></tr>{rows}</table></div>') if p else ''
+    risks = [RD.assess(r[2], r[4]) for r in p]
+    def rcell(a):
+        if not a: return '<td>n/a</td><td class=n></td>'
+        c = 'late' if a['risk'] == 'High' else ''
+        return f"<td class='{c}'>{a['risk']}</td><td class=n>{fdate(a['likely']) if a['likely'] != '' else ''}</td>"
+    rows = ''.join(f"<tr><td>{E(r[0])}</td><td>{E(r[1])}</td><td>{E(r[2])}</td><td class=n>{fmw(r[3])}</td><td class=n>{fdate(r[4])}</td>{rcell(a)}<td>{E(r[5])}</td><td>{E(r[6] or 'none')}</td></tr>" for r, a in zip(p, risks))
+    hi_mw = sum(r[3] for r, a in zip(p, risks) if a and a['risk'] == 'High')
+    x['_risks'] = risks
+    qtab = (f'<h2>What sits in the queue</h2><p class="note">Sorted by contracted date. Register of {E(TEC_DATE)}. '
+            f'Date risk and likely date come from how similar projects\' dates actually moved over the last two years (<a href="{HOST}/method/">how we work it out</a>).</p>'
+            f'<div class="tw"><table><tr><th>Project</th><th>Customer</th><th>Type</th><th class=n>MW</th><th class=n>Contracted date</th><th>Date risk</th><th class=n>Likely date</th><th>Stage</th><th>Gate</th></tr>{rows}</table></div>') if p else ''
 
     if mv:
         mrows = ''.join(
@@ -195,7 +205,7 @@ for x in sites:
     body = (f'<h1>{E(short)}: grid connection queue</h1><p class="sub">{E(name)} · {E(to)} · register of {E(TEC_DATE)}</p>'
             f'<p>{n} project{"s" if n != 1 else ""} with {fmw(q)} MW {"are" if n != 1 else "is"} waiting to connect here'
             + (f' (largest by capacity: {E(top_tech)})' if top_tech else '') + (f'. Contracted dates run from {fdate(first)} to {fdate(last)}.' if first else '.') + '</p>'
-            + kp + qtab + mtab + htab + cta + ntab)
+            + kp.replace('</div></div>', f'</div><div class="k"><b>{fmw(hi_mw) if p else 0} MW</b><span>at high date risk</span></div></div>', 1) + qtab + mtab + htab + cta + ntab)
 
     jsonld = {'@context': 'https://schema.org', '@type': 'Dataset', 'name': f'{short} grid connection queue',
               'description': desc, 'url': f'{HOST}/substations/{x["slug"]}/', 'dateModified': TODAY,
@@ -228,7 +238,19 @@ desc = f'Grid connection queue for every connection point in Great Britain: {h["
 open(OUT + '/index.html', 'w', encoding='utf-8').write(page('Grid connection queue by substation, Great Britain | Benzene', desc, '/', body,
      {'@context': 'https://schema.org', '@type': 'DataCatalog', 'name': 'Benzene grid connection queue by substation', 'url': HOST + '/', 'creator': {'@type': 'Organization', 'name': 'Benzene', 'url': MAIN}}))
 
-urls = [HOST + '/'] + [f'{HOST}/substations/{x["slug"]}/' for x, *_ in built]
+M = RD.model()
+mrows = ''.join(f"<tr><td>{E(k[0])}</td><td>{E(k[1])}</td><td class=n>{v['stayed']}</td><td class=n>{round(100*v['later_share'])}%</td><td class=n>{v['median_later']:.0f} months</td><td class=n>{round(100*v['left_share'])}%</td></tr>"
+                for k, v in sorted(M['table'].items(), key=lambda kv: (kv[0][0] == 'All', kv[0][0], ['under 2 years','2 to 5 years','5 years or more'].index(kv[0][1]))))
+mbody = (f'<h1>How we work out a realistic connection date</h1><p class="sub">Learned from our own copies of NESO\'s register, {wk(M["from"])} to {wk(M["to"])}.</p>'
+         '<p>A contracted connection date is a promise, not a forecast. So we checked how those promises have actually held up. We took every project waiting to connect in our earliest copy of the register, grouped them by technology and by how far away their contracted date was, and looked at where each one stood two years later: same date, moved later, moved earlier, or gone from the register.</p>'
+         '<p>For any project today, we find its group and report three things. <b>Date risk</b>: High if half or more of similar projects moved a month or more later, Medium from a quarter, otherwise Low. <b>Likely date</b>: the contracted date plus the typical move, when the risk is High; otherwise the contracted date. <b>Dropout</b>: the share of similar projects that left the register. Where a group is small, we use all technologies together.</p>'
+         '<p>The pattern is clear. Dates within two years slip far more often than dates further out, so a project\'s risk rises as its date gets closer.</p>'
+         f'<div class="tw"><table><tr><th>Technology</th><th>Contracted date was</th><th class=n>Projects still listed</th><th class=n>Moved later</th><th class=n>Typical move</th><th class=n>Left the register</th></tr>{mrows}</table></div>'
+         '<p class="note">This is a statistical view from public records, not a forecast for any single project and not engineering advice. It ignores project-specific facts like works already started. A screening report reads those properly.</p>')
+os.makedirs(OUT + '/method', exist_ok=True)
+open(OUT + '/method/index.html', 'w', encoding='utf-8').write(page('How we work out a realistic grid connection date | Benzene',
+     'How often UK grid connection dates actually slip, by technology and time to connection, from two years of NESO register copies.', '/method/', mbody))
+urls = [HOST + '/', HOST + '/method/'] + [f'{HOST}/substations/{x["slug"]}/' for x, *_ in built]
 open(OUT + '/sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                       + ''.join(f'<url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n')
 open(OUT + '/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {HOST}/sitemap.xml\n')
@@ -252,7 +274,7 @@ for x, short, q, m in built:
     lat, lon = _ll(x['x'], x['y']) if x.get('x') else (None, None)
     api_sites.append({'name': x['n'], 'short': short, 'slug': x['slug'], 'to': x.get('to', ''), 'lat': lat, 'lon': lon,
                       'queued_mw': round(q, 1), 'connected_mw': round(x.get('c', 0), 1), 'gate2_mw': round(x.get('g2', 0), 1),
-                      'projects': [dict(zip(['project', 'customer', 'type', 'mw', 'date', 'stage', 'gate'], r)) for r in sorted(x.get('p', []), key=lambda r: r[4] or '9999')],
+                      'projects': [dict(zip(['project', 'customer', 'type', 'mw', 'date', 'stage', 'gate'], r)) | {'date_risk': RD.assess(r[2], r[4])} for r in sorted(x.get('p', []), key=lambda r: r[4] or '9999')],
                       'url': f'{HOST}/substations/{x["slug"]}/'})
 api_moves = [{'week': r['week'], 'site': r['site'], 'project': r['name'], 'customer': r['cust'], 'type': r['type'], 'mw': r['mw'],
               'gate': r['gate'], 'old': r['old'], 'new': r['new'], 'months': float(r['months'])} for v in moves.values() for r in v]
