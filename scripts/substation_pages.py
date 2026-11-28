@@ -11,6 +11,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import realistic_date as RD
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if __name__ == '__main__':
+    import subprocess
+    subprocess.run([sys.executable, '-I', os.path.join(ROOT, 'scripts/history_sync.py')], check=True)
 SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'published/queue-map.html')
 OUT = os.path.join(ROOT, 'docs')
 HOST = 'https://grid.benzene-group.com'

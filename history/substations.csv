@@ -2,235 +2,242 @@ site,moves,later,earlier,projects,avg_months,net_months
 Alverdiscott 400kV Substation,8,5,3,4,7.2,57.9
 Grimsby West 400kV Substation,6,3,3,3,4.0,23.9
 High Marnham 400kV Substation,5,3,2,4,-3.4,-17.0
-Cilfynydd 400kV Substation,4,3,1,3,8.0,32.0
-Enderby 400kV Substation,4,3,1,2,12.2,49.0
+Cilfynydd 400kV Substation,5,4,1,4,26.0,130.1
 Leeds North Connection Node C 400kV Substation,4,3,1,2,11.9,47.8
+Enderby 400kV Substation,4,3,1,2,12.2,49.0
 Fiddlers Ferry 275kV Substation,3,2,1,1,1.1,3.4
 Kingsnorth 400kV Substation,3,2,1,3,18.7,56.1
 Berryburn 275/33kV GSP Substation,3,3,0,3,15.7,47.0
 Wymondley 400kV Substation,3,2,1,2,6.3,18.9
 Cellarhead 400kV Substation,3,2,1,2,4.7,14.0
 Warley 275kV Substation,3,2,1,2,4.7,14.0
-NORTH ANGLIA CONNECTION NODE A 400kV SUBSTATION,3,2,1,1,8.0,24.0
-North Anglia Connection Node E 400kV Substation,3,2,1,1,8.0,24.0
-North Anglia Connection Node A 132kV Substation,3,1,2,2,4.0,12.0
-Trent Valley South Connection Node B 400kV Substation,3,0,3,2,0.0,0.0
-South Wales West Connection Node C 400kV,3,2,1,2,40.7,122.0
 Kincardine North 400kV Substation,3,2,1,2,9.0,27.0
+NORTH ANGLIA CONNECTION NODE A 400kV SUBSTATION,3,2,1,1,8.0,24.0
+South Wales West Connection Node C 400kV,3,2,1,2,40.7,122.0
+North Anglia Connection Node A 132kV Substation,3,1,2,2,4.0,12.0
 Leeds North Connection Node C 132kV Substation,3,0,3,1,0.0,0.0
+North Anglia Connection Node E 400kV Substation,3,2,1,1,8.0,24.0
+Trent Valley South Connection Node B 400kV Substation,3,0,3,2,0.0,0.0
 Fife Grid Services Facility 275kV Substation,2,2,0,2,24.6,49.1
 Blackhillock 400kV Substation,2,2,0,1,6.0,12.1
 Ayrshire Grid 400kV Collector Substation,2,1,1,1,12.0,24.0
-Meadowmill 400/132kV Substation,2,2,0,2,12.0,24.0
 Elderslie 132/33kV,2,2,0,2,35.2,70.4
+Meadowmill 400/132kV Substation,2,2,0,2,12.0,24.0
 Lethans Collector 132kV Substation,2,1,1,1,12.0,24.0
 Newarthill Energy Park 275kV Substation,2,2,0,1,12.1,24.1
 Lethans Collector Substation,2,1,1,1,14.0,28.0
-Derbyshire Connection Node B 400kV Substation,2,1,1,2,42.0,84.0
 Pentir 400kV Substation,2,1,1,2,9.0,18.0
+Derbyshire Connection Node B 400kV Substation,2,1,1,2,42.0,84.0
 Hartmoor 275kV Substation,2,2,0,2,36.0,71.9
 Bramley 400kV Substation,2,2,0,2,19.8,39.5
 Fleet 400kV Substation,2,2,0,2,32.6,65.2
 Persley 132/33kV GSP Substation,2,0,2,1,-1.5,-3.0
+Mybster 3 132/33kV Substation,2,1,1,2,-7.5,-15.0
 Strathy South 132/33kV Substation,2,2,0,1,20.6,41.2
 Coupar Angus 132/33kV GSP,2,2,0,2,6.0,12.0
+Glen Ullinish 132/33kV Substation,2,2,0,1,30.4,60.8
 Glen Ullinish Extension 132/33kV Substation,2,2,0,1,27.9,55.8
-Ironbridge 400kV Substation,2,1,1,1,0.0,0.0
-Sheirdrim 132kV Substation,2,1,1,1,0.0,0.0
-Trent Valley South Connection Node A 400kV,2,0,2,2,0.0,0.0
-Coddington 400kV Substation,2,1,1,1,0.0,0.0
-Wearside Connection Node B 400kV Substation,2,1,1,2,-0.1,-0.1
-Frodsham 400kV Substation,2,1,1,1,-54.1,-108.2
-New Deer 2 132kV Substation,2,1,1,1,0.0,0.0
-East Anglia Connection Node E 400kV Substation,2,1,1,1,0.0,0.0
-Cheshire Connection Node A 400kV Substation,2,0,2,2,0.0,0.0
-Trent Valley South Connection Node D 400kV Substation,2,0,2,2,0.0,0.0
-Connagill 275kV Substation,2,1,1,1,6.0,11.9
-Seat Hill 132kV Substation,2,1,1,1,0.0,0.0
-West Anglia Connection Node E 400kV Substation,2,1,1,1,0.0,0.0
-Eccles 400/132kV,2,0,2,1,0.0,0.0
-Teeside Connection Node B,2,0,2,1,0.0,0.0
-Dunan Hill 400kV substation,2,0,2,1,-6.2,-12.4
-IMW01 OFFSHORE 275/66KV OFFSHORE SUBSTATION,2,1,1,1,-0.5,-1.0
-Capenhurst GSP,2,1,1,1,0.0,0.0
-Keith Solar Farm 275kV Substation,2,1,1,1,0.0,0.0
-Blyth 275kV Substation,2,1,1,1,0.0,0.0
-Solent Connection Node C 400kV,2,1,1,1,0.0,0.0
-Loch Nan Eun 275/18kV,2,1,1,1,0.0,0.0
-Letham 400/275kV substation,2,1,1,1,0.0,0.0
-DEUCHERAN HILL 2 132KV SUBSTATION,2,1,1,1,0.0,0.0
-Manchester South connection node A 400kv,2,0,2,2,0.0,0.0
-London South Connection Node A 132kV Substation,2,0,2,1,0.0,0.0
-BEAULY 02 BESS 132kV SUBSTATION,2,1,1,1,0.0,0.0
 Airds Hill WindFarm 132kV Substation,2,0,2,1,0.0,0.0
-Hams Hall 400kV Substation,2,0,2,1,0.0,0.0
+Eccles 400/132kV,2,0,2,1,0.0,0.0
+Trent Valley South Connection Node A 400kV,2,0,2,2,0.0,0.0
+Wearside Connection Node B 400kV Substation,2,1,1,2,-0.1,-0.1
+CRAIGHEAD WIND FARM 132kV SUBSTATION,2,1,1,1,0.0,0.0
+West Anglia Connection Node E 400kV Substation,2,1,1,1,0.0,0.0
+IMW01 OFFSHORE 275/66KV OFFSHORE SUBSTATION,2,1,1,1,-0.5,-1.0
+Conland Substation,2,1,1,1,0.0,0.0
+Manchester South connection node A 400kv,2,0,2,2,0.0,0.0
+Trent Valley South Connection Node D 400kV Substation,2,0,2,2,0.0,0.0
+Solent Connection Node C 400kV,2,1,1,1,0.0,0.0
+Keith Solar Farm 275kV Substation,2,1,1,1,0.0,0.0
+Seat Hill 132kV Substation,2,1,1,1,0.0,0.0
+North Anglia Connection Node B 400kV Substation,2,1,1,1,0.0,0.0
+Cheshire Connection Node A 400kV Substation,2,0,2,2,0.0,0.0
+DEUCHERAN HILL 2 132KV SUBSTATION,2,1,1,1,0.0,0.0
+Dunan Hill 400kV substation,2,0,2,1,-6.2,-12.4
+North Anglia Connection Node A 400kV,2,1,1,1,0.0,0.0
+Blyth 275kV Substation,2,1,1,1,0.0,0.0
+Loch Nan Eun 275/18kV,2,1,1,1,0.0,0.0
+Teeside Connection Node B,2,0,2,1,0.0,0.0
+Frodsham 400kV Substation,2,1,1,1,-54.1,-108.2
 L48 BESS GLEN APP 275/132KV SUBSTATION,2,1,1,1,30.0,60.0
 Cowley 400kV Substation,2,1,1,1,0.0,0.0
-Uskmouth 132kV Substation,2,1,1,1,0.0,0.0
+Coddington 400kV Substation,2,1,1,1,0.0,0.0
+Ironbridge 400kV Substation,2,1,1,1,0.0,0.0
+Sheirdrim 132kV Substation,2,1,1,1,0.0,0.0
+Mid Hill 132kV Substation,2,0,2,1,0.0,0.0
+Letham 400/275kV substation,2,1,1,1,0.0,0.0
+London South Connection Node A 132kV Substation,2,0,2,1,0.0,0.0
+Hams Hall 400kV Substation,2,0,2,1,0.0,0.0
 Longside 400kV Substation,2,1,1,1,0.0,0.0
+BEAULY 02 BESS 132kV SUBSTATION,2,1,1,1,0.0,0.0
+Capenhurst GSP,2,1,1,1,0.0,0.0
 West Anglia Connection Node G 400kV Substation,2,1,1,1,0.0,0.0
-Whitburn 400kV substation,2,1,1,1,0.0,0.0
-Marston Vale 400kV Substation,2,0,2,1,0.0,0.0
-North Anglia Connection Node B 400kV Substation,2,1,1,1,0.0,0.0
 West Saval Substation 132 kV,2,1,1,1,0.0,0.0
 Waltham Cross B 400kV Substation,2,1,1,1,-0.1,-0.1
-North Anglia Connection Node A 400kV,2,1,1,1,0.0,0.0
-Conland Substation,2,1,1,1,0.0,0.0
+New Deer 2 132kV Substation,2,1,1,1,0.0,0.0
+Uskmouth 132kV Substation,2,1,1,1,0.0,0.0
+Whitburn 400kV substation,2,1,1,1,0.0,0.0
+East Anglia Connection Node E 400kV Substation,2,1,1,1,0.0,0.0
+Marston Vale 400kV Substation,2,0,2,1,0.0,0.0
+Connagill 275kV Substation,2,1,1,1,6.0,11.9
 Knocknagael 132kV Substation,2,1,1,1,-7.5,-15.0
-CRAIGHEAD WIND FARM 132kV SUBSTATION,2,1,1,1,0.0,0.0
-Mid Hill 132kV Substation,2,0,2,1,0.0,0.0
 Stoke Bardolph 400kV Substation,2,2,0,2,18.0,36.0
-Necton 400kV Substation,2,1,1,1,0.0,0.0
 Bicker Fen 400kV Substation,2,1,1,2,-5.5,-10.9
+Necton 400kV Substation,2,1,1,1,0.0,0.0
 Breakish 132kV Substation,2,1,1,1,0.0,0.0
-Sanquhar II Wind Farm Substation,2,2,0,2,5.8,11.5
 Loch na Cathrach 275kV Switching Station,2,2,0,2,13.2,26.4
+Sanquhar II Wind Farm Substation,2,2,0,2,5.8,11.5
 Carrington 400KV Substation,1,1,0,1,12.0,12.0
 Broxburn 132/33kV,1,0,1,1,-26.0,-26.0
 Hunterston East 400kV substation,1,1,0,1,24.0,24.0
 Ayrshire Grid 400kV Substation,1,1,0,1,30.7,30.7
-Dun Hill 132/33kV,1,1,0,1,17.0,17.0
+Inverkeithing 132/33kV,1,1,0,1,15.0,15.0
 Coalburn 400kV Substation,1,1,0,1,5.1,5.1
 Kilmarnock Town 275/33kV Substation,1,1,0,1,19.3,19.3
-Inverkeithing 132/33kV,1,1,0,1,15.0,15.0
 Coalburn 400kV GIS Substation,1,1,0,1,4.5,4.5
+Dun Hill 132/33kV,1,1,0,1,17.0,17.0
+Windyhill 132kV,1,1,0,1,28.1,28.1
 Dyce 132/33kV GSP,1,0,1,1,-12.0,-12.0
-Shepards Rig 132/33kV,1,1,0,1,70.0,70.0
 Ayr 275/33kV Substation,1,1,0,1,12.0,12.0
 Boydston 400kV substation,1,1,0,1,1.0,1.0
-Windyhill 132kV,1,1,0,1,28.1,28.1
-DALMARNOCK 132/33KV SUBSTATION,1,1,0,1,3.8,3.8
-Helensburgh 132/33kV,1,0,1,1,-0.1,-0.1
-Penrhos GSP,1,1,0,1,16.0,16.0
-Cumberhead 33kV,1,1,0,1,4.3,4.3
+Shepards Rig 132/33kV,1,1,0,1,70.0,70.0
 Lairg II 132kV Substation,1,1,0,1,8.5,8.5
+Helensburgh 132/33kV,1,0,1,1,-0.1,-0.1
+Cumberhead 33kV,1,1,0,1,4.3,4.3
 Enoch Hill 132/33kV Substation,1,1,0,1,10.5,10.5
-Ayr 275/33kV,1,1,0,1,13.0,13.0
-Greenburn Mixed Technology 132kV Substation,1,1,0,1,8.0,8.0
 Douglas West Extension Windfarm,1,1,0,1,3.2,3.2
+Greenburn Mixed Technology 132kV Substation,1,1,0,1,8.0,8.0
+DALMARNOCK 132/33KV SUBSTATION,1,1,0,1,3.8,3.8
+Penrhos GSP,1,1,0,1,16.0,16.0
+Ayr 275/33kV,1,1,0,1,13.0,13.0
+Walpole 400kV Substation,1,1,0,1,13.4,13.4
 Glennifer Road BESS 132kV substation,1,1,0,1,9.0,9.0
 Lister Drive 275kV Substation,1,1,0,1,71.0,71.0
-Walpole 400kV Substation,1,1,0,1,13.4,13.4
 Rothienorman 400/33kV Substation,1,1,0,1,33.0,33.0
 Osbaldwick 400kV Substation,1,1,0,1,31.2,31.2
 East Kilbride 275/33kV GSP,1,1,0,1,5.2,5.2
-Braehead Park 132/33kV,1,1,0,1,3.5,3.5
-Eccles 400kV Substation,1,0,1,1,-7.8,-7.8
-Kirkby 275kV Substation,1,1,0,1,25.0,25.0
-Rochdale 275kV Substation,1,1,0,1,27.0,27.0
 Penwortham 400kV Substation,1,1,0,1,12.0,12.0
+Braehead Park 132/33kV,1,1,0,1,3.5,3.5
 Berkswell 275kV Substation,1,1,0,1,6.0,6.0
+Eccles 400kV Substation,1,0,1,1,-7.8,-7.8
+Rochdale 275kV Substation,1,1,0,1,27.0,27.0
+Kirkby 275kV Substation,1,1,0,1,25.0,25.0
 Coylton 275kV substation,1,1,0,1,2.6,2.6
-High Constellation 132/33kV Substation,1,1,0,1,15.0,15.0
 Keith 132kV Substation,1,1,0,1,46.0,46.0
+High Constellation 132/33kV Substation,1,1,0,1,15.0,15.0
 Chleansaid Wind Farm 132kV Substation,1,1,0,1,13.4,13.4
 Culham Jet 400kV Substation,1,1,0,1,24.1,24.1
-Indian Queens 400kV Substation,1,1,0,1,23.9,23.9
 Mannington 400kV Substation,1,0,1,1,-28.1,-28.1
 Tongland 132/33kV Substation,1,1,0,1,33.6,33.6
-Drakelow 132kV Substation,1,1,0,1,12.0,12.0
-Dyce 132/33kV Substation,1,1,0,1,21.5,21.5
-Neilston 400kV Substation,1,1,0,1,29.5,29.5
-Cassley GSP,1,1,0,1,11.0,11.0
-Mybster 3 132/33kV Substation,1,1,0,1,12.0,12.0
+Indian Queens 400kV Substation,1,1,0,1,23.9,23.9
 Littlebrook 132kV Substation,1,1,0,1,3.0,3.0
+Neilston 400kV Substation,1,1,0,1,29.5,29.5
+Drakelow 132kV Substation,1,1,0,1,12.0,12.0
+Cassley GSP,1,1,0,1,11.0,11.0
+Dyce 132/33kV Substation,1,1,0,1,21.5,21.5
 Stranoch Wind 132/33kV Substation,1,1,0,1,2.3,2.3
 Pencloe 132/33kV Substation,1,1,0,1,9.8,9.8
 Cruachan 275kV Substation,1,1,0,1,22.1,22.1
+Dumfries 132/33kV,1,1,0,1,33.0,33.0
 Bolney 400kV Substation,1,1,0,1,41.0,41.0
 Lorg Wind Farm 132/32kV,1,1,0,1,12.0,12.0
-Dumfries 132/33kV,1,1,0,1,33.0,33.0
-Glen Ullinish 132/33kV Substation,1,1,0,1,17.5,17.5
-Pentland Floating Offshore Wind Farm 132/66kV substation,1,1,0,1,5.1,5.1
 Wymondley 400/33kV Substation,1,1,0,1,18.9,18.9
 Keith 2 132/33kV GSP Substation,1,0,1,1,-24.0,-24.0
+Pentland Floating Offshore Wind Farm 132/66kV substation,1,1,0,1,5.1,5.1
 DIDCOT 400/132KV SUBSTATION,1,0,1,1,0.0,0.0
+Chirk GSP,1,0,1,1,-17.4,-17.4
 Willington 400kV Substation,1,1,0,1,7.1,7.1
 Devol Moor 400/132kV,1,0,1,1,-24.7,-24.7
-Chirk GSP,1,0,1,1,-17.4,-17.4
-West Weybridge 275kV Substation,1,1,0,1,11.0,11.0
 Middleton 400KV Substation,1,1,0,1,30.0,30.0
+West Weybridge 275kV Substation,1,1,0,1,11.0,11.0
 Smeaton 400kV,1,1,0,1,10.0,10.0
-Milligansbush Battery Storage 132kV Substation,1,0,1,1,-67.2,-67.2
-Feckenham 400kV Substation,1,1,0,1,48.0,48.0
-Derbyshire Connection Node F 132KV,1,1,0,1,36.0,36.0
-Whitehouse 275kV Substation,1,1,0,1,27.0,27.0
-Wymondley 2 400kV Substation,1,0,1,1,0.0,0.0
-Derbyshire Connection Node A 400kV Substation,1,1,0,1,48.0,48.0
+West Anglia Connection Node C 400kV Substation,1,0,1,1,-2.0,-2.0
+Trent Valley North Connection Node B 400kV Substation,1,0,1,1,-24.0,-24.0
+Biggleswade 400kV Substation,1,0,1,1,-1.1,-1.1
+Capenhurst 400kV Substation,1,0,1,1,-24.0,-24.0
+Lancashire Connection Node B 400kV Substation,1,0,1,1,0.0,0.0
+New Cumnock North 132kV Substation,1,1,0,1,33.0,33.0
+South Wales West Connection Node A 400kV Substation,1,0,1,1,0.0,0.0
+ROWANCRAIG WIND FARM 33KV SUBSTATION,1,1,0,1,19.0,19.0
+New Deer 2 400kV Substation,1,1,0,1,15.0,15.0
 Bodelwyddan 400kV Substation,1,0,1,1,-47.0,-47.0
-Derbyshire Connection Node D 400kV Substation,1,1,0,1,48.0,48.0
-Chickerell-Mannington 400kV Substation,1,1,0,1,24.0,24.0
+ALCEMI SCORE BATTERY ENERGY STORAGE FACILITY 400KV SUBSTATION,1,1,0,1,17.0,17.0
+Whitehouse 275kV Substation,1,1,0,1,27.0,27.0
+Capenhurst 275kV Substation,1,0,1,1,-0.5,-0.5
+Devonside 132kV Substation,1,1,0,1,1.0,1.0
+WEST ANGLIA CONNECTION NODE B 400KV SUBSTATION,1,1,0,1,36.0,36.0
+Glen Lednock 132kV Substation,1,1,0,1,1.0,1.0
 Clydesmill 275/33kV,1,1,0,1,53.9,53.9
 Shrewsbury 400kV Substation,1,0,1,1,0.0,0.0
-Creyke Beck 400kV Substation,1,0,1,1,0.0,0.0
-Stella South GSP,1,1,0,1,14.1,14.1
-Wearside Connection Node D 400kV Substation,1,1,0,1,12.0,12.0
-NEW TAYNUILT 132 KV SUBSTATION,1,1,0,1,72.0,72.0
-East Claydon 400kV Substation,1,1,0,1,25.2,25.2
-St Fergus Mobil 132/11kV Substation,1,1,0,1,46.0,46.0
-CHALMERSTON WINDFARM 132kV SUBSTATION,1,1,0,1,48.0,48.0
-Devonside 132kV Substation,1,1,0,1,1.0,1.0
-Capenhurst 275kV Substation,1,0,1,1,-0.5,-0.5
-WEST ANGLIA CONNECTION NODE B 400KV SUBSTATION,1,1,0,1,36.0,36.0
-South Anglia Connection Node C 400kV Substation,1,0,1,1,0.0,0.0
-North Humber Connection Node A 400kV Substation,1,1,0,1,23.9,23.9
-Bramford B 400kV Substation,1,0,1,1,-17.0,-17.0
-Navenby 400kV Substation,1,1,0,1,72.0,72.0
-Staythorpe 400kv,1,0,1,1,-1.0,-1.0
-Kintore GSP,1,0,1,1,0.0,0.0
-Ceislien Wind Farm,1,0,1,1,-12.0,-12.0
-Alcemi Score Battery 400kV Substation,1,1,0,1,17.0,17.0
-North Kent Connection Node B 132kV Substation,1,1,0,1,36.0,36.0
-New Cumnock North 132kV Substation,1,1,0,1,33.0,33.0
-South Wales East Node A 275kV Substation,1,0,1,1,0.0,0.0
-Walham 400kV Substation,1,0,1,1,-59.4,-59.4
-Aberthaw 275kV Substation,1,1,0,1,4.0,4.0
-Rhigos 400kV Substation,1,0,1,1,-0.6,-0.6
-Staffordshire Connection Node B 132kV Substation,1,1,0,1,24.0,24.0
-Trent Valley South Connection Node C 400kV Substation,1,0,1,1,0.0,0.0
-Butlers Wood 400kV Substation,1,0,1,1,-36.0,-36.0
-Navenby 132kV Substation,1,1,0,1,12.0,12.0
-Red Moss Farm 132kV Substation,1,1,0,1,7.0,7.0
-Margam B 400kV Substation,1,1,0,1,2.0,2.0
-New Dounreay 400kV substation,1,0,1,1,0.0,0.0
-New Deer 2 400kV Substation,1,1,0,1,15.0,15.0
-Trent Valley North Connection Node B 400kV Substation,1,0,1,1,-24.0,-24.0
-West Anglia Connection Node C 400kV Substation,1,0,1,1,-2.0,-2.0
 Sussex and Romney Connection Node A 400kV Substation,1,1,0,1,84.0,84.0
-Bonnybridge 132/33kV,1,1,0,1,3.0,3.0
-Staffordshire Connection Node A 400kV Substation,1,1,0,1,48.0,48.0
-ROWANCRAIG WIND FARM 33KV SUBSTATION,1,1,0,1,19.0,19.0
-Glen Lednock 132kV Substation,1,1,0,1,1.0,1.0
-ALCEMI SCORE BATTERY ENERGY STORAGE FACILITY 400KV SUBSTATION,1,1,0,1,17.0,17.0
-Biggleswade 400kV Substation,1,0,1,1,-1.1,-1.1
-Rothienorman 400kV Substation,1,0,1,1,-51.1,-51.1
-South Wales West Connection Node A 400kV Substation,1,0,1,1,0.0,0.0
-Letchmore Heath 132kV Substation,1,1,0,1,10.0,10.0
-Lethen Wind Farm 132/33kV Substation,1,0,1,1,-1.0,-1.0
-Lancashire Connection Node B 400kV Substation,1,0,1,1,0.0,0.0
-Capenhurst 400kV Substation,1,0,1,1,-24.0,-24.0
+Navenby 132kV Substation,1,1,0,1,12.0,12.0
+CHALMERSTON WINDFARM 132kV SUBSTATION,1,1,0,1,48.0,48.0
+New Dounreay 400kV substation,1,0,1,1,0.0,0.0
 Teeside Connection Node 2 C 132/400kV Substation,1,0,1,1,0.0,0.0
+Wearside Connection Node D 400kV Substation,1,1,0,1,12.0,12.0
+Bramford B 400kV Substation,1,0,1,1,-17.0,-17.0
+NEW TAYNUILT 132 KV SUBSTATION,1,1,0,1,72.0,72.0
+Feckenham 400kV Substation,1,1,0,1,48.0,48.0
+Alcemi Score Battery 400kV Substation,1,1,0,1,17.0,17.0
+Lethen Wind Farm 132/33kV Substation,1,0,1,1,-1.0,-1.0
+Staythorpe 400kv,1,0,1,1,-1.0,-1.0
+East Claydon 400kV Substation,1,1,0,1,25.2,25.2
+Ceislien Wind Farm,1,0,1,1,-12.0,-12.0
+Margam B 400kV Substation,1,1,0,1,2.0,2.0
+Navenby 400kV Substation,1,1,0,1,72.0,72.0
+Chickerell-Mannington 400kV Substation,1,1,0,1,24.0,24.0
+South Anglia Connection Node C 400kV Substation,1,0,1,1,0.0,0.0
+Stella South GSP,1,1,0,1,14.1,14.1
+Kintore GSP,1,0,1,1,0.0,0.0
+Creyke Beck 400kV Substation,1,0,1,1,0.0,0.0
+Letchmore Heath 132kV Substation,1,1,0,1,10.0,10.0
+Butlers Wood 400kV Substation,1,0,1,1,-36.0,-36.0
+North Humber Connection Node A 400kV Substation,1,1,0,1,23.9,23.9
+Derbyshire Connection Node D 400kV Substation,1,1,0,1,48.0,48.0
+Staffordshire Connection Node A 400kV Substation,1,1,0,1,48.0,48.0
+Trent Valley South Connection Node C 400kV Substation,1,0,1,1,0.0,0.0
+Staffordshire Connection Node B 132kV Substation,1,1,0,1,24.0,24.0
+Aberthaw 275kV Substation,1,1,0,1,4.0,4.0
+Walham 400kV Substation,1,0,1,1,-59.4,-59.4
+North Kent Connection Node B 132kV Substation,1,1,0,1,36.0,36.0
+Red Moss Farm 132kV Substation,1,1,0,1,7.0,7.0
+Bonnybridge 132/33kV,1,1,0,1,3.0,3.0
+Rhigos 400kV Substation,1,0,1,1,-0.6,-0.6
+Rothienorman 400kV Substation,1,0,1,1,-51.1,-51.1
+Milligansbush Battery Storage 132kV Substation,1,0,1,1,-67.2,-67.2
+St Fergus Mobil 132/11kV Substation,1,1,0,1,46.0,46.0
+Wymondley 2 400kV Substation,1,0,1,1,0.0,0.0
+Derbyshire Connection Node A 400kV Substation,1,1,0,1,48.0,48.0
+South Wales East Node A 275kV Substation,1,0,1,1,0.0,0.0
+Derbyshire Connection Node F 132KV,1,1,0,1,36.0,36.0
 Lunanhead GSP,1,0,1,1,-35.2,-35.2
 Farmoor 400kV Substation,1,1,0,1,60.0,60.0
 Humber Refinery 400kV Substation,1,1,0,1,16.0,16.0
 Ocker Hill 275kV Substation,1,1,0,1,24.0,24.0
-Tealing IDNO 132/33kV GSP,1,1,0,1,12.0,12.0
-Strichen 132/33kV GSP Substation,1,0,1,1,-4.0,-4.0
-West Burton 400kV Substation,1,0,1,1,-1.0,-1.0
 Axminster 132kV Substation,1,0,1,1,-4.3,-4.3
 Braintree 400kV Substation,1,1,0,1,30.9,30.9
 Sundon 400kV Substation,1,1,0,1,19.8,19.8
-Gills Bay GSP,1,1,0,1,31.0,31.0
-Leeds North Connection Node B 400kV Substation,1,0,1,1,-12.0,-12.0
-Mossy Hill 132kV Substation,1,1,0,1,6.9,6.9
+West Burton 400kV Substation,1,0,1,1,-1.0,-1.0
+Tealing IDNO 132/33kV GSP,1,1,0,1,12.0,12.0
+Strichen 132/33kV GSP Substation,1,0,1,1,-4.0,-4.0
 Bradford West 275kV Substation,1,0,1,1,-0.1,-0.1
+Leeds North Connection Node B 400kV Substation,1,0,1,1,-12.0,-12.0
 Didcot 400kV Substation,1,1,0,1,12.0,12.0
-Ourack 132/33kV Substation,1,1,0,1,17.0,17.0
-Taynuilt 132/33kV GSP Substation,1,0,1,1,-43.1,-43.1
+Mossy Hill 132kV Substation,1,1,0,1,6.9,6.9
+Gills Bay GSP,1,1,0,1,31.0,31.0
 Tomchrasky Wind Farm 132/33kV Substation,1,1,0,1,29.0,29.0
 Stornoway GSP,1,1,0,1,57.0,57.0
+Ourack 132/33kV Substation,1,1,0,1,17.0,17.0
 Garvary 132kV Substation,1,1,0,1,13.2,13.2
-Rothienorman 2 400/33kV GSP,1,1,0,1,21.5,21.5
-West Anglia Connection Node A 400kV Substation,1,0,1,1,0.0,0.0
-Clachan 2 132/33kV GSP Substation,1,1,0,1,24.0,24.0
+Taynuilt 132/33kV GSP Substation,1,0,1,1,-43.1,-43.1
 Clauchrie 132/33KV Substation,1,0,1,1,-4.0,-4.0
+Rothienorman 2 400/33kV GSP,1,1,0,1,21.5,21.5
+Clachan 2 132/33kV GSP Substation,1,1,0,1,24.0,24.0
+West Anglia Connection Node A 400kV Substation,1,0,1,1,0.0,0.0
+Norwich Main 400kV Substation,1,1,0,1,16.2,16.2
+Melksham 400kV Substation,1,1,0,1,6.2,6.2
+Sellindge 400kV Substation,1,1,0,1,14.6,14.6
+Spennymoor 400kV Substation,1,1,0,1,11.1,11.1
+Galashiels 132/33kV,1,1,0,1,17.1,17.1
+Dunvegan 132/33kV Grid Supply Point Substation,1,1,0,1,23.8,23.8
+ACHANY EXTENSION WIND FARM 132/33KV Substation,1,1,0,1,11.9,11.9

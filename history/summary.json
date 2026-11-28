@@ -25,25 +25,26 @@
   "2026-10-27",
   "2026-11-03",
   "2026-11-10",
-  "2026-11-17"
+  "2026-11-17",
+  "2026-11-26"
  ],
  "first": "2026-05-19",
- "last": "2026-11-17",
+ "last": "2026-11-26",
  "rows_first": 2229,
- "rows_last": 2188,
+ "rows_last": 2185,
  "kinds": {
-  "joined": 80,
-  "left": 121,
-  "gate": 569,
-  "site": 213,
-  "mw": 37,
-  "status": 194,
-  "date": 353
+  "joined": 83,
+  "left": 127,
+  "gate": 583,
+  "site": 217,
+  "status": 206,
+  "date": 363,
+  "mw": 41
  },
- "date_later": 215,
- "date_earlier": 85,
- "net_rows_changed": 224,
- "net_later": 158,
- "net_earlier": 40,
- "developers_with_date_moves": 242
+ "date_later": 224,
+ "date_earlier": 86,
+ "net_rows_changed": 233,
+ "net_later": 166,
+ "net_earlier": 41,
+ "developers_with_date_moves": 250
 }

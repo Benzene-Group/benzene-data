@@ -1,0 +1,29 @@
+pid,name,site,type,mw_connected,contracted_before,seen_connected_between,months_after_contracted
+PRO-001581-1,Sizing John (Rainhill),Rainhill GSP,Energy Storage System,57.0,2024-10-31,2024-12-06 and 2025-08-12,9.4
+PRO-001624-1,Zenobe Blackhillock 300 MW,Blackhillock 275kV Substation,Energy Storage System,210.0,2024-02-01,2024-12-06 and 2025-08-12,18.3
+PRO-001624-2,Zenobe Blackhillock 300 MW,Blackhillock 275kV Substation,Energy Storage System,210.0,2026-04-01,2024-12-06 and 2025-08-12,-7.6
+PRO-001048,Wilton Lion BESS,Greystones A 275kV Substation,Energy Storage System,150.0,2025-10-13,2026-02-17 and 2026-02-24,4.4
+PRO-000494-1,Thurrock Power Station,Tilbury 275kV Substation,Energy Storage System;Gas Reciprocating,300.0,2025-06-30,2026-03-17 and 2026-03-24,8.8
+PRO-005115,KXP Immingham,Grimsby West 400/132 GSP,Energy Storage System,80.0,2024-12-31,2026-03-31 and 2026-04-07,15.2
+PRO-001028,Capenhurst Tertiary Connection,Capenhurst 275kV Substation,Energy Storage System,57.0,2023-10-31,2026-06-09 and 2026-06-16,31.5
+PRO-001687,Zenobe Kilmarnock South,Kilmarnock South 400kV Substation,Energy Storage System,300.0,2025-08-29,2026-06-09 and 2026-06-16,9.6
+PRO-000053,Immingham,Humber Refinery 400kV Substation,Energy Storage System;Gas Reciprocating,1268.0,2027-07-01,2026-06-16 and 2026-06-23,-12.3
+PRO-001484-1,Thornton Facility,Thornton 400kV Substation,Energy Storage System;PV Array (Photo Voltaic/solar),99.98,2025-09-24,2026-06-23 and 2026-06-30,9.2
+PRO-000220,Uskmouth,Uskmouth 132kV Substation,Energy Storage System,349.9,2025-03-31,2026-06-23 and 2026-06-30,15.0
+PRO-001459,Coalburn Battery Energy Storage Facility,Coalburn 400kV Substation,Energy Storage System,500.0,2026-04-03,2026-06-30 and 2026-07-07,3.1
+PRO-000520,Crystal Rig IV Wind Farm,Crystal Rig 400kV substation,Wind Onshore,48.2,2025-10-13,2026-07-07 and 2026-07-14,9.0
+PRO-000423,Cumberhead West Wind Farm,Cumberhead 33kV,Wind Onshore,114.0,2025-12-08,2026-07-07 and 2026-07-14,7.2
+PRO-000422,Douglas West Extension,Douglas West Extension Windfarm,Wind Onshore,60.0,2025-10-05,2026-07-07 and 2026-07-14,9.3
+PRO-000152,Enoch Hill,Enoch Hill 132/33kV Substation,Energy Storage System;Wind Onshore,69.0,2026-04-16,2026-07-07 and 2026-07-14,2.9
+PRO-000250-2,JG Pears,High Marnham 275kV Substation,CHP (Combined Heat and Power);Energy Storage System;PV Array (Photo Voltaic/solar);Wind Onshore,17.0,2025-11-30,2026-07-07 and 2026-07-14,7.4
+PRO-000404,Sofia Offshore Wind Farm,Lackenby 400kV Substation,Wind Offshore,1320.0,2026-01-30,2026-07-07 and 2026-07-14,5.4
+PRO-000250,JG Pears,High Marnham 275kV Substation,CHP (Combined Heat and Power);Energy Storage System;PV Array (Photo Voltaic/solar);Wind Onshore,30.0,,2026-07-28 and 2026-08-04,
+PRO-000494-2,Thurrock Power Station,Tilbury 275kV Substation,Energy Storage System;Gas Reciprocating,75.0,2026-06-30,2026-08-18 and 2026-08-25,1.8
+PRO-000323-1,Pencloe Windfarm,Pencloe 132/33kV Substation,Energy Storage System;Wind Onshore,81.0,2026-04-24,2026-08-25 and 2026-09-01,4.3
+PRO-000512,Whitegate Tertiary Connection,Whitegate 275kV Substation,Energy Storage System,57.0,2024-06-30,2026-09-22 and 2026-09-29,27.0
+PRO-000053-1,Immingham,Humber Refinery 400kV Substation,Energy Storage System;Gas Reciprocating,1268.0,,2026-10-13 and 2026-10-20,
+PRO-001667,Almondell Lodge BESS & Solar Development,Broxburn 132/33kV,Energy Storage System,50.0,2024-04-30,2026-10-20 and 2026-10-27,29.9
+PRO-002359,Holmston Farm Battery Energy Storage System,Ayr 275/33kV,Energy Storage System,49.9,2026-07-31,2026-10-27 and 2026-11-03,3.1
+PRO-004156,Newtonwood BESS,Chesterfield GSP,Energy Storage System,49.9,2023-08-15,2026-10-27 and 2026-11-03,38.6
+PRO-001735-1,WELBAR ENERGY STORAGE,Hams Hall 400kV Substation,Energy Storage System,349.9,2026-10-30,2026-10-27 and 2026-11-03,0.1
+PRO-001812,Strathrory Wind Farm,Alness GSP,Wind Onshore,36.0,2024-03-31,2026-11-03 and 2026-11-10,31.3

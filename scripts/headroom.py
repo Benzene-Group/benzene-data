@@ -1,3 +1,4 @@
+import os
 """Combine distribution network capacity heat maps into data/headroom.json for the queue map.
 
 Inputs (inputs/headroom/), downloaded from each operator's open data portal:
@@ -87,6 +88,10 @@ def main():
         rows.append([3, r['n'], {'GSP': 'G', 'BSP': 'B'}.get(r['t'], 'P'), kv(r.get('kv')), e, n, mw(r['g']), rag(r['gr']), mw(r['d']), rag(r['dr'])])
     out = {'ops': OPS, 'rows': rows}
     json.dump(out, open('data/headroom.json', 'w'), separators=(',', ':'), ensure_ascii=False)
+    # keep a dated copy of every refresh: a headroom history nobody else keeps
+    import datetime as _dt
+    os.makedirs('data/headroom-history', exist_ok=True)
+    json.dump(out, open(f'data/headroom-history/{_dt.date.today().isoformat()}.json', 'w'), separators=(',', ':'), ensure_ascii=False)
     from collections import Counter
     print(len(rows), 'rows', dict(Counter(r[0] for r in rows)), 'ratings', dict(Counter(r[7] for r in rows)))
 
