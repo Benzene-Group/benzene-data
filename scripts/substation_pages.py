@@ -106,7 +106,7 @@ def page(title, desc, path, body, jsonld=None):
 <footer><p>Benzene: UK grid connection intelligence. <a href="{MAIN}/">benzene-group.com</a> · <a href="mailto:info@benzene-group.com">info@benzene-group.com</a></p>
 <p>Queue data: NESO Transmission Entry Capacity (TEC) register of {E(TEC_DATE)}, used under the NESO Open Data Licence. Date moves: our weekly copies of the register. Local capacity: {E('; '.join(o['credit'] + ' (' + o['date'] + ')' for o in OPS))}.
 This page is information, not engineering, legal or investment advice.</p>
-<p>Benzene Company Ltd, registered in England and Wales, company number 17593082.</p></footer></body></html>"""
+<p>Built and maintained by Benzene. Founder: Ben Kennedy. Benzene Company Ltd, registered in England and Wales, company number 17593082.</p></footer></body></html>"""
 
 
 def nearest_sites(x, k=5):
@@ -159,10 +159,10 @@ for x in sites:
 
     risks = [RD.assess(r[2], r[4]) for r in p]
     def rcell(a):
-        if not a: return '<td>n/a</td><td class=n></td>'
+        if not a: return '<td>Date passed or not given</td><td class=n></td>'
         c = 'late' if a['risk'] == 'High' else ''
         return f"<td class='{c}'>{a['risk']}</td><td class=n>{fdate(a['likely']) if a['likely'] != '' else ''}</td>"
-    rows = ''.join(f"<tr><td>{E(r[0])}</td><td>{E(r[1])}</td><td>{E(r[2])}</td><td class=n>{fmw(r[3])}</td><td class=n>{fdate(r[4])}</td>{rcell(a)}<td>{E(r[5])}</td><td>{E(r[6] or 'none')}</td></tr>" for r, a in zip(p, risks))
+    rows = ''.join(f"<tr><td>{E(r[0])}</td><td>{E(r[1])}</td><td>{E(r[2])}</td><td class=n>{fmw(r[3])}</td><td class=n>{fdate(r[4])}</td>{rcell(a)}<td>{E(r[5])}</td><td>{E(r[6] or 'Not stated')}</td></tr>" for r, a in zip(p, risks))
     hi_mw = sum(r[3] for r, a in zip(p, risks) if a and a['risk'] == 'High')
     x['_risks'] = risks
     qtab = (f'<h2>What sits in the queue</h2><p class="note">Sorted by contracted date. Register of {E(TEC_DATE)}. '

@@ -20,6 +20,7 @@ for r in ev:
         b['earlier'] += 1
 months = sorted(bym)
 latest = months[-1]
+ev_last = max(r['week'] for r in ev)
 L = bym[latest]
 later_all = [float(r['months']) for r in ev if float(r['months']) > 0]
 tot_later, tot_earlier = len(later_all), len(ev) - len(later_all)
@@ -33,11 +34,11 @@ def mname(m):
 rows = ''.join(f"<tr><td>{mname(m)}</td><td class=n>{bym[m]['later']}</td><td class=n>{bym[m]['earlier']}</td><td class=n>{SP.fmw(bym[m]['mw_later'])} MW</td><td class=n>{bym[m]['months_later']:,.0f}</td></tr>" for m in reversed(months))
 nrows = ''.join(f"<tr><td>{E(k)}</td><td class=n>{v['stayed']}</td><td class=n>{round(100*v['later_share'])}%</td><td class=n>{v['median_later']:.0f} months</td></tr>" for k, v in sorted(near.items(), key=lambda kv: -kv[1]['later_share']))
 body = (f'<h1>Grid Delay Index</h1><p class="sub">How often Great Britain\'s grid connection dates move, from our weekly copies of NESO\'s register. Updated with each new register.</p>'
-        f'<div class="kpis"><div class="k"><b>{L["later"]}</b><span>dates pushed later in {mname(latest)}</span></div>'
-        f'<div class="k"><b>{SP.fmw(L["mw_later"])} MW</b><span>of projects pushed later in {mname(latest)}</span></div>'
+        f'<div class="kpis"><div class="k"><b>{L["later"]}</b><span>dates pushed later in {mname(latest)} (to {SP.wk(ev_last)})</span></div>'
+        f'<div class="k"><b>{SP.fmw(L["mw_later"])} MW</b><span>of projects pushed later in {mname(latest)} (to {SP.wk(ev_last)})</span></div>'
         f'<div class="k"><b>{len(ev)}</b><span>moves of a month or more since {SP.wk(SP.EV_FIRST)}</span></div>'
         f'<div class="k"><b>{round(100*alln["later_share"])}%</b><span>of projects within two years of their date moved later (two-year view)</span></div></div>'
-        f'<h2>Month by month</h2><p>Each row counts connection dates that moved by a month or more between weekly copies of the register. {tot_later} moved later and {tot_earlier} earlier since {SP.wk(SP.EV_FIRST)}; the typical later move was {st.median(later_all):.0f} months.</p>'
+        f'<h2>Month by month</h2><p>Each row counts connection dates that moved by a month or more between weekly copies of the register. {tot_later} moved later and {tot_earlier} earlier between {SP.wk(SP.EV_FIRST)} and {SP.wk(ev_last)}; the typical later move was {st.median(later_all):.0f} months.</p>'
         f'<div class="tw"><table><tr><th>Month seen</th><th class=n>Later</th><th class=n>Earlier</th><th class=n>MW pushed later</th><th class=n>Months of delay added</th></tr>{rows}</table></div>'
         f'<h2>The two-year view: near dates slip most</h2><p>We compared every project waiting in our register copy of {SP.wk(M["from"])} with where it stood on {SP.wk(M["to"])}. Of projects whose contracted date was under two years away, {round(100*alln["later_share"])}% had moved a month or more later, typically by {alln["median_later"]:.0f} months, and {round(100*alln["left_share"])}% had left the register.</p>'
         f'<div class="tw"><table><tr><th>Technology</th><th class=n>Projects</th><th class=n>Moved later</th><th class=n>Typical move</th></tr>{nrows}</table></div>'
